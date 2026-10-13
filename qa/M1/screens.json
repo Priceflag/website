@@ -2,7 +2,7 @@
   "check": "screens",
   "title": "Screenshots, horizontal overflow, CLS (Chromium 375/768/1440)",
   "status": "PASS",
-  "durationMs": 25447,
+  "durationMs": 25700,
   "pages": {
     "index": {
       "status": "PASS",
@@ -68,7 +68,7 @@
           "shifts": [
             {
               "value": 0.000013253922325102879,
-              "t": 366,
+              "t": 655,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -91,7 +91,7 @@
           "shifts": [
             {
               "value": 0.000004417974108367627,
-              "t": 363,
+              "t": 433,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -117,7 +117,7 @@
           "shifts": [
             {
               "value": 0.000029546090534979427,
-              "t": 432,
+              "t": 458,
               "sources": [
                 "#text"
               ]
@@ -137,7 +137,7 @@
           "shifts": [
             {
               "value": 0.00002195216049382716,
-              "t": 328,
+              "t": 459,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -160,7 +160,7 @@
           "shifts": [
             {
               "value": 0.000007317386831275721,
-              "t": 393,
+              "t": 477,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -202,7 +202,7 @@
           "shifts": [
             {
               "value": 0.000010513117283950619,
-              "t": 364,
+              "t": 410,
               "sources": [
                 "#text"
               ]
@@ -224,7 +224,7 @@
           "shifts": [
             {
               "value": 0.000003504372427983539,
-              "t": 380,
+              "t": 478,
               "sources": [
                 "#text"
               ]
@@ -251,7 +251,7 @@
           "shifts": [
             {
               "value": 0.00027160493827160494,
-              "t": 310,
+              "t": 488,
               "sources": [
                 "#text"
               ]
@@ -271,7 +271,7 @@
           "shifts": [
             {
               "value": 0.00028293788580246917,
-              "t": 408,
+              "t": 484,
               "sources": [
                 "#text"
               ]
@@ -365,7 +365,7 @@
           "shifts": [
             {
               "value": 0.000013253922325102879,
-              "t": 366,
+              "t": 655,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -388,7 +388,7 @@
           "shifts": [
             {
               "value": 0.000004417974108367627,
-              "t": 363,
+              "t": 433,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -414,7 +414,7 @@
           "shifts": [
             {
               "value": 0.000029546090534979427,
-              "t": 432,
+              "t": 458,
               "sources": [
                 "#text"
               ]
@@ -434,7 +434,7 @@
           "shifts": [
             {
               "value": 0.00002195216049382716,
-              "t": 328,
+              "t": 459,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -457,7 +457,7 @@
           "shifts": [
             {
               "value": 0.000007317386831275721,
-              "t": 393,
+              "t": 477,
               "sources": [
                 "#text",
                 "h1.pf-sheet-title"
@@ -499,7 +499,7 @@
           "shifts": [
             {
               "value": 0.000010513117283950619,
-              "t": 364,
+              "t": 410,
               "sources": [
                 "#text"
               ]
@@ -521,7 +521,7 @@
           "shifts": [
             {
               "value": 0.000003504372427983539,
-              "t": 380,
+              "t": 478,
               "sources": [
                 "#text"
               ]
@@ -548,7 +548,7 @@
           "shifts": [
             {
               "value": 0.00027160493827160494,
-              "t": 310,
+              "t": 488,
               "sources": [
                 "#text"
               ]
@@ -568,7 +568,7 @@
           "shifts": [
             {
               "value": 0.00028293788580246917,
-              "t": 408,
+              "t": 484,
               "sources": [
                 "#text"
               ]

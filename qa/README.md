@@ -127,3 +127,4 @@ Everything in `html-validate:recommended` stays on, including all `wcag/*` rules
 - External link results depend on the network and on remote bot filtering at run time.
 
 - `QA_BLOCKED_BROWSERS` (comma list, e.g. `firefox`): a browser that cannot launch on this machine and is logged as BLOCKED in `OVERHAUL_LOG.md` is reported WARN instead of FAIL in strict runs. It still FAILs if it launches and finds errors.
+- `QA_BYPASS`: Vercel Protection Bypass for Automation secret for protected previews. Sent only to the preview host; never logged. Lighthouse does not use it (protected previews are scored locally).

@@ -2,7 +2,7 @@
   "check": "keyboard",
   "title": "Keyboard: tab order, reachability, visible focus (1440 + 375)",
   "status": "PASS",
-  "durationMs": 9298,
+  "durationMs": 9528,
   "pages": {
     "index": {
       "status": "PASS",

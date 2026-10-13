@@ -3,8 +3,8 @@
   "baseUrl": "local (qa/serve.mjs) @ working tree",
   "strict": true,
   "fast": false,
-  "startedAt": "2026-10-13T21:50:33.291Z",
-  "durationMs": 96227,
+  "startedAt": "2026-10-13T22:12:42.840Z",
+  "durationMs": 95421,
   "overall": "WARN",
   "pages": [
     "index",
@@ -16,7 +16,7 @@
   "checks": {
     "console": {
       "status": "WARN",
-      "durationMs": 7349,
+      "durationMs": 7358,
       "pages": {
         "index": "WARN",
         "about": "WARN",
@@ -27,7 +27,7 @@
     },
     "screens": {
       "status": "PASS",
-      "durationMs": 25447,
+      "durationMs": 25700,
       "pages": {
         "index": "PASS",
         "about": "PASS",
@@ -38,7 +38,7 @@
     },
     "axe": {
       "status": "WARN",
-      "durationMs": 10225,
+      "durationMs": 10349,
       "pages": {
         "index": "PASS",
         "about": "WARN",
@@ -49,7 +49,7 @@
     },
     "html": {
       "status": "PASS",
-      "durationMs": 281,
+      "durationMs": 262,
       "pages": {
         "index": "PASS",
         "about": "PASS",
@@ -60,7 +60,7 @@
     },
     "links": {
       "status": "PASS",
-      "durationMs": 7117,
+      "durationMs": 6974,
       "pages": {
         "index": "PASS",
         "about": "PASS",
@@ -71,7 +71,7 @@
     },
     "keyboard": {
       "status": "PASS",
-      "durationMs": 9298,
+      "durationMs": 9528,
       "pages": {
         "index": "PASS",
         "about": "PASS",
@@ -82,7 +82,7 @@
     },
     "nojs": {
       "status": "WARN",
-      "durationMs": 3965,
+      "durationMs": 3670,
       "pages": {
         "index": "PASS",
         "about": "WARN",
@@ -93,12 +93,12 @@
     },
     "unit": {
       "status": "PASS",
-      "durationMs": 8329,
+      "durationMs": 7845,
       "pages": {}
     },
     "lighthouse": {
       "status": "PASS",
-      "durationMs": 69151,
+      "durationMs": 69275,
       "pages": {
         "index": "PASS",
         "about": "PASS",

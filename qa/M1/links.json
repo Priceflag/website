@@ -2,7 +2,7 @@
   "check": "links",
   "title": "Link crawl (static + rendered DOM), #-links, anchors",
   "status": "PASS",
-  "durationMs": 7117,
+  "durationMs": 6974,
   "pages": {
     "index": {
       "status": "PASS",
@@ -190,13 +190,13 @@
     },
     "urls": [
       {
-        "url": "http://127.0.0.1:49857/",
+        "url": "http://127.0.0.1:52038/",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/",
+        "final": "http://127.0.0.1:52038/",
         "internal": true,
         "kinds": [
           "a"
@@ -213,13 +213,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/about",
+        "url": "http://127.0.0.1:52038/about",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/about",
+        "final": "http://127.0.0.1:52038/about",
         "internal": true,
         "kinds": [
           "a"
@@ -234,13 +234,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/contact",
+        "url": "http://127.0.0.1:52038/contact",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/contact",
+        "final": "http://127.0.0.1:52038/contact",
         "internal": true,
         "kinds": [
           "a"
@@ -321,13 +321,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/legal",
+        "url": "http://127.0.0.1:52038/legal",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/legal",
+        "final": "http://127.0.0.1:52038/legal",
         "internal": true,
         "kinds": [
           "a"
@@ -361,13 +361,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/favicon.ico",
+        "url": "http://127.0.0.1:52038/favicon.ico",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/favicon.ico",
+        "final": "http://127.0.0.1:52038/favicon.ico",
         "internal": true,
         "kinds": [
           "link"
@@ -384,13 +384,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/favicon.svg",
+        "url": "http://127.0.0.1:52038/favicon.svg",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/favicon.svg",
+        "final": "http://127.0.0.1:52038/favicon.svg",
         "internal": true,
         "kinds": [
           "link"
@@ -407,13 +407,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/apple-touch-icon.png",
+        "url": "http://127.0.0.1:52038/apple-touch-icon.png",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/apple-touch-icon.png",
+        "final": "http://127.0.0.1:52038/apple-touch-icon.png",
         "internal": true,
         "kinds": [
           "link"
@@ -430,13 +430,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/hero-1671.webp",
+        "url": "http://127.0.0.1:52038/uploads/hero-1671.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/hero-1671.webp",
+        "final": "http://127.0.0.1:52038/uploads/hero-1671.webp",
         "internal": true,
         "kinds": [
           "link",
@@ -488,13 +488,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/site.css",
+        "url": "http://127.0.0.1:52038/site.css",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/site.css",
+        "final": "http://127.0.0.1:52038/site.css",
         "internal": true,
         "kinds": [
           "link"
@@ -508,13 +508,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/sections/pf-review.js",
+        "url": "http://127.0.0.1:52038/sections/pf-review.js",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/sections/pf-review.js",
+        "final": "http://127.0.0.1:52038/sections/pf-review.js",
         "internal": true,
         "kinds": [
           "script"
@@ -528,13 +528,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/hero-720.webp",
+        "url": "http://127.0.0.1:52038/uploads/hero-720.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/hero-720.webp",
+        "final": "http://127.0.0.1:52038/uploads/hero-720.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -548,13 +548,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/hero-1080.webp",
+        "url": "http://127.0.0.1:52038/uploads/hero-1080.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/hero-1080.webp",
+        "final": "http://127.0.0.1:52038/uploads/hero-1080.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -568,13 +568,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/summit-lime.webp",
+        "url": "http://127.0.0.1:52038/uploads/summit-lime.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/summit-lime.webp",
+        "final": "http://127.0.0.1:52038/uploads/summit-lime.webp",
         "internal": true,
         "kinds": [
           "img"
@@ -621,13 +621,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/summit-painting-3.webp",
+        "url": "http://127.0.0.1:52038/uploads/summit-painting-3.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/summit-painting-3.webp",
+        "final": "http://127.0.0.1:52038/uploads/summit-painting-3.webp",
         "internal": true,
         "kinds": [
           "link",
@@ -645,13 +645,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/favicon.png",
+        "url": "http://127.0.0.1:52038/favicon.png",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/favicon.png",
+        "final": "http://127.0.0.1:52038/favicon.png",
         "internal": true,
         "kinds": [
           "link"
@@ -686,13 +686,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/summit-painting-3-720.webp",
+        "url": "http://127.0.0.1:52038/uploads/summit-painting-3-720.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/summit-painting-3-720.webp",
+        "final": "http://127.0.0.1:52038/uploads/summit-painting-3-720.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -708,13 +708,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/uploads/summit-painting-3-1080.webp",
+        "url": "http://127.0.0.1:52038/uploads/summit-painting-3-1080.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/uploads/summit-painting-3-1080.webp",
+        "final": "http://127.0.0.1:52038/uploads/summit-painting-3-1080.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -730,13 +730,13 @@
         ]
       },
       {
-        "url": "http://127.0.0.1:49857/mark.svg",
+        "url": "http://127.0.0.1:52038/mark.svg",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "http://127.0.0.1:49857/mark.svg",
+        "final": "http://127.0.0.1:52038/mark.svg",
         "internal": true,
         "kinds": [
           "css-block"
@@ -855,7 +855,7 @@
     "skipped": [
       {
         "page": "index",
-        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review",
+        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review&body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20",
         "reason": "scheme"
       },
       {

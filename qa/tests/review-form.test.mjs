@@ -244,17 +244,16 @@ test('email and store validation edge cases', async () => {
   await ctx.close();
 });
 
-test('without the script the form posts to a mail client, never a GET with data in the URL', async () => {
+test('without JavaScript the form is replaced by an email link and never puts data in a URL', async () => {
   const ctx = await browser.newContext({ javaScriptEnabled: false });
   const page = await ctx.newPage();
   await page.goto(srv.url + '/');
-  const f = await page.$eval('form[data-pf-review]', (el) => ({ action: el.getAttribute('action'), method: el.method, enctype: el.enctype, novalidate: el.noValidate,
-    extras: [...el.querySelectorAll('input[type=hidden], [name=pf_hp_field]')].map((i) => i.disabled) }));
-  assert.equal(f.novalidate, false, 'native validation applies without the script');
-  assert.ok(f.extras.every(Boolean), 'empty extras stay out of the email');
-  assert.ok(f.action.startsWith('mailto:hello@priceflag.org'));
+  const f = await page.$eval('form[data-pf-review]', (el) => ({ action: el.getAttribute('action'), method: el.method }));
+  assert.equal(f.action, null, 'no mailto action (mixed-content warning on https)');
   assert.equal(f.method, 'post');
-  assert.equal(f.enctype, 'text/plain');
+  assert.equal(await page.isVisible('#rv-email'), false);
+  const href = await page.getAttribute('#review noscript ~ *, #review .pf-form-note a[href^="mailto:"]', 'href').catch(() => null);
+  assert.ok(await page.isVisible('#review a[href^="mailto:hello@priceflag.org"]'));
   await ctx.close();
 });
 

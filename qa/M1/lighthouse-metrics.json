@@ -1,10 +1,10 @@
 {
   "index": {
-    "first-contentful-paint": 1559.758,
-    "largest-contentful-paint": 1877.398,
+    "first-contentful-paint": 1659.493,
+    "largest-contentful-paint": 1877.486,
     "total-blocking-time": 0,
     "cumulative-layout-shift": 0,
-    "speed-index": 1559.758,
+    "speed-index": 1659.493,
     "runs": 3,
     "allPerformance": [
       0.99,
@@ -12,6 +12,8 @@
       0.99
     ],
     "failedAudits": [
+      "mainthread-work-breakdown",
+      "bootup-time",
       "image-delivery-insight",
       "network-dependency-tree-insight",
       "render-blocking-insight"
@@ -19,11 +21,11 @@
     "warnings": []
   },
   "about": {
-    "first-contentful-paint": 1557.857,
-    "largest-contentful-paint": 1557.857,
+    "first-contentful-paint": 1568.682,
+    "largest-contentful-paint": 1568.682,
     "total-blocking-time": 0,
     "cumulative-layout-shift": 0,
-    "speed-index": 1557.857,
+    "speed-index": 1568.682,
     "runs": 3,
     "allPerformance": [
       0.99,
@@ -38,11 +40,11 @@
     "warnings": []
   },
   "contact": {
-    "first-contentful-paint": 1754.761,
-    "largest-contentful-paint": 1754.761,
+    "first-contentful-paint": 1629.215,
+    "largest-contentful-paint": 1629.215,
     "total-blocking-time": 0,
     "cumulative-layout-shift": 0,
-    "speed-index": 1754.761,
+    "speed-index": 1629.215,
     "runs": 3,
     "allPerformance": [
       0.99,
@@ -57,11 +59,11 @@
     "warnings": []
   },
   "legal": {
-    "first-contentful-paint": 1733.472,
-    "largest-contentful-paint": 1733.472,
+    "first-contentful-paint": 1721.086,
+    "largest-contentful-paint": 1721.086,
     "total-blocking-time": 0,
     "cumulative-layout-shift": 0,
-    "speed-index": 1733.472,
+    "speed-index": 1721.086,
     "runs": 3,
     "allPerformance": [
       0.99,

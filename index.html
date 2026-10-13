@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
 <link rel="stylesheet" href="site.css">
+<noscript><style>.pf-form-fields{display:none;}</style></noscript>
 <script src="sections/pf-review.js" defer></script>
 <script type="application/ld+json">
 {
@@ -223,8 +224,9 @@
         <h2 class="pf-h2" id="review-title">Get a free price review</h2>
         <p class="pf-lede">Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.</p>
       </div>
-      <!-- Without the form script this posts to a mail client (text/plain), so nothing lands in a URL. -->
-      <form class="pf-form" data-pf-review aria-describedby="review-note" action="mailto:hello@priceflag.org?subject=Free%20price%20review" method="post" enctype="text/plain">
+      <!-- The script sends this form. With JavaScript off the fields are hidden and an email link takes their place.
+           method="post" with no action keeps typed details out of the URL even if the script fails to load. -->
+      <form class="pf-form" data-pf-review aria-describedby="review-note" method="post">
         <div class="pf-form-fields">
           <div class="pf-form-row">
             <div class="pf-field">
@@ -261,7 +263,9 @@
         <p class="pf-form-status" data-pf-status tabindex="-1"></p>
         <p class="pf-visually-hidden" data-pf-live role="status" aria-live="polite"></p>
         <button class="pf-btn pf-btn--ghost pf-form-again" type="button" data-pf-again hidden>Send another request</button>
-        <noscript><p class="pf-form-note">With JavaScript off, the button opens your email app with these details filled in. You can also write to <a href="mailto:hello@priceflag.org?subject=Free%20price%20review">hello@priceflag.org</a>.</p></noscript>
+        <noscript>
+          <p class="pf-form-note">Email your store address and the price you are thinking about changing to <a href="mailto:hello@priceflag.org?subject=Free%20price%20review&amp;body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20">hello@priceflag.org</a>. We reply within 48 hours.</p>
+        </noscript>
       </form>
     </div>
   </section>

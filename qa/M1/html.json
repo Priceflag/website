@@ -2,7 +2,7 @@
   "check": "html",
   "title": "html-validate (served HTML)",
   "status": "PASS",
-  "durationMs": 281,
+  "durationMs": 262,
   "pages": {
     "index": {
       "status": "PASS",

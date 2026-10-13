@@ -63,13 +63,38 @@ if (!remote) {
   server = await startServer({ port: Number(env.QA_PORT || 0), root: siteRoot });
   baseUrl = server.url;
 }
+// QA_BYPASS: a Vercel "Protection Bypass for Automation" secret for protected
+// previews. It is sent only to the preview host (never to fonts or other
+// third parties) and is never written to any report.
+const bypass = remote ? env.QA_BYPASS : '';
+const baseHost = remote ? new URL(baseUrl).host : '';
+if (bypass) {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = (input, init = {}) => {
+    const url = new URL(typeof input === 'string' ? input : input.url);
+    if (url.host !== baseHost) return realFetch(input, init);
+    const headers = new Headers(init.headers || {});
+    headers.set('x-vercel-protection-bypass', bypass);
+    return realFetch(input, { ...init, headers });
+  };
+}
+function withBypass(browser) {
+  if (!bypass) return browser;
+  const newContext = browser.newContext.bind(browser);
+  browser.newContext = async (opts) => {
+    const c = await newContext(opts);
+    await c.route((u) => u.host === baseHost, (route) => route.continue({ headers: { ...route.request().headers(), 'x-vercel-protection-bypass': bypass } }));
+    return c;
+  };
+  return browser;
+}
 log(`label=${label} base=${baseUrl}${env.QA_GIT_REF ? ` gitRef=${env.QA_GIT_REF}` : ''} strict=${strict} fast=${fast} checks=${checks.join(',')} pages=${pages.map((p) => p.name).join(',')}`);
 
 const launchers = { chromium, firefox, webkit };
 const browsers = {};
 const ctx = {
   baseUrl, pages, outDir, fast, remote, strict, log,
-  getBrowser: (name) => (browsers[name] ||= launchers[name].launch({ headless: true })),
+  getBrowser: (name) => (browsers[name] ||= launchers[name].launch({ headless: true }).then(withBypass)),
 };
 
 function gitRev(ref) {

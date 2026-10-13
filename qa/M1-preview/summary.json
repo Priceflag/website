@@ -1,0 +1,69 @@
+{
+  "label": "M1-preview",
+  "baseUrl": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app",
+  "strict": true,
+  "fast": false,
+  "startedAt": "2026-10-13T21:59:45.700Z",
+  "durationMs": 8818,
+  "overall": "WARN",
+  "pages": [
+    "index",
+    "about",
+    "contact",
+    "legal"
+  ],
+  "checks": {
+    "console": {
+      "status": "WARN",
+      "durationMs": 5669,
+      "pages": {
+        "index": "WARN",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN"
+      }
+    },
+    "links": {
+      "status": "PASS",
+      "durationMs": 7061,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS"
+      }
+    },
+    "html": {
+      "status": "PASS",
+      "durationMs": 631,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS"
+      }
+    },
+    "axe": {
+      "status": "WARN",
+      "durationMs": 7430,
+      "pages": {
+        "index": "PASS",
+        "about": "WARN",
+        "contact": "PASS",
+        "legal": "PASS"
+      }
+    },
+    "nojs": {
+      "status": "WARN",
+      "durationMs": 3129,
+      "pages": {
+        "index": "PASS",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN"
+      }
+    }
+  },
+  "lighthouse": null,
+  "lighthouseRegression": null
+}

@@ -11,5 +11,5 @@ Unique URLs checked: 34 (18 internal, 16 external).
 | signin | PASS | 0 / 0 | 11 | 0 | 0 | 0 |  |
 
 
-Skipped (not fetched): mailto:hello@priceflag.org?subject=Free%20price%20review [scheme], https://fonts.googleapis.com [preconnect], https://fonts.gstatic.com [preconnect], mailto:hello@priceflag.org [scheme], mailto:nithin@priceflag.org [scheme], mailto:kabir@priceflag.org [scheme]
+Skipped (not fetched): mailto:hello@priceflag.org?subject=Free%20price%20review&body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20 [scheme], https://fonts.googleapis.com [preconnect], https://fonts.gstatic.com [preconnect], mailto:hello@priceflag.org [scheme], mailto:nithin@priceflag.org [scheme], mailto:kabir@priceflag.org [scheme]
 

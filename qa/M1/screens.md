@@ -20,12 +20,12 @@ CLS FAIL > 0.1, WARN > 0.01 (load CLS, measured before any scrolling). Horizonta
 | signin | 768 | PASS | no | 0.0003 | 0.0003 | screens/signin-768.png |  |
 | signin | 1440 | PASS | no | 0.0000 | 0.0000 | screens/signin-1440.png |  |
 
-- about@768 layout shifts: 0.0000@366ms [#text, h1.pf-sheet-title]
-- about@1440 layout shifts: 0.0000@363ms [#text, h1.pf-sheet-title]
-- contact@375 layout shifts: 0.0000@432ms [#text]
-- contact@768 layout shifts: 0.0000@328ms [#text, h1.pf-sheet-title]
-- contact@1440 layout shifts: 0.0000@393ms [#text, h1.pf-sheet-title]
-- legal@768 layout shifts: 0.0000@364ms [#text]
-- legal@1440 layout shifts: 0.0000@380ms [#text]
-- signin@375 layout shifts: 0.0003@310ms [#text]
-- signin@768 layout shifts: 0.0003@408ms [#text]
+- about@768 layout shifts: 0.0000@655ms [#text, h1.pf-sheet-title]
+- about@1440 layout shifts: 0.0000@433ms [#text, h1.pf-sheet-title]
+- contact@375 layout shifts: 0.0000@458ms [#text]
+- contact@768 layout shifts: 0.0000@459ms [#text, h1.pf-sheet-title]
+- contact@1440 layout shifts: 0.0000@477ms [#text, h1.pf-sheet-title]
+- legal@768 layout shifts: 0.0000@410ms [#text]
+- legal@1440 layout shifts: 0.0000@478ms [#text]
+- signin@375 layout shifts: 0.0003@488ms [#text]
+- signin@768 layout shifts: 0.0003@484ms [#text]

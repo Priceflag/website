@@ -1,6 +1,25 @@
 # Overhaul log
 
-<!-- FINAL REPORT goes here when the overhaul is complete. -->
+## Final report (Oct 13, 2026)
+
+**Mode change.** Midway through, the owner asked for the full scope in about an hour, speed over verification. From M2 on, the per-milestone verifier and bug-hunter rounds, Lighthouse, axe, html-validate and Firefox were skipped, and M8's regression was replaced by one quick pass (`qa/final/quick-pass.mjs`).
+
+| Milestone | Commit | Preview | Result |
+| --- | --- | --- | --- |
+| M0 setup | `0f93942` + harness in `d0b8ed8` | – | inventory, tokens, harness, baseline, CTA backend |
+| M1 fixes | `d0b8ed8`, `a2da53f`, `7f7bed7` | priceflagv1-fhmdqgh6n | verifier round 3 ALL PASS; bug hunt round 3: 0 Critical/High |
+| M2 design system | `ea131ff` | (see final) | verify loop stopped early by the owner; strict harness run passed before that (Lighthouse 98–99 / 100 / 100 / 100, axe clean) |
+| M3–M7 sections + pages | `9b7507c` | https://priceflagv1-nefv7z2zs-nithin-arus-projects.vercel.app | quick pass only |
+| Final quick pass | – | same | 7 pages × 1440/375 in Chromium: every link resolves, nav anchors land, mobile menu opens/closes/Esc, calculator 17.2% (same profit with $9.60 cost), form submits once with prefilled numbers (endpoint mocked; live endpoint answers `ok`), 5/5 results carry "In simulation", 0 console errors/warnings, 0 horizontal overflow (`qa/final/preview.txt`) |
+
+**Lighthouse before → last measured (M2, local):** index 74/96/100/100 → 99/100/100/100; about 88/100 → 99/100; contact 88/100 → 99/100; legal 87/95 → 98/100. Not re-measured after M3–M7 integration (skipped in speed mode).
+
+**Skipped or not verified in speed mode:** verifier/bug-hunt rounds for M2–M7; Lighthouse, axe and html-validate after M2; Firefox (BLOCKED anyway); M8 5-second test, Vercel Web Analytics events, copy proofread; 404 page (B19); review CTA on sub-pages (B18).
+
+**Owner to confirm or supply (PENDING / OWNER):** pilot logos or brand count and YC badge (proof strip, hidden); one pilot result with permission (results, hidden); founder photos (hidden); real merchant quotes for the problem lines; confidence-tier names (how-we-measure, hidden); "48 hours" reply promise; "free, 5 minutes" setup; FAQ answers on pricing, setup and subscriptions; baseline definition and simulation definitions on how-we-measure; legal wording on rollback (counsel); Apps Script patch (name/store/message columns, honeypot, no dedupe, confirmation email, formula escaping); delete the M0 test row; repoint the Vercel project at Priceflag/website.
+
+**Decisions without the owner (highlights; full list below):** homepage rebuilt as static HTML; hero mock uses $24 → $27 with a $9.60 unit cost so the breakeven (17.2%) is same-profit (the plan's 11% only holds at zero cost); the plan's 28-word subhead kept verbatim; calculator button keeps the plan's label "Get the full forecast for my store"; "In simulation" placed above every simulated number; "We have not used Intelligems ourselves" removed from vs-intelligems (unverified).
+
 
 ## Milestones
 
@@ -48,13 +67,18 @@ Each item lives in one marked place, tagged `<!-- PIVOT: ... -->` in `index.html
 | Hero headline and subhead | `index.html`, hero (`#hero-title`, `.pf-sub`) | who the buyer is; platform scope |
 | CTA text "Get a free price review" and its micro-copy | `index.html` hero CTA; same label in the footer CTA and the form button; micro-copy `#review-note` | self-serve vs founder-led sales |
 | How-it-works steps | `index.html` `#how-it-works` | the one use case to lead with |
-| Problem section | (arrives in M4) | who the buyer is |
-| Calculator labels | (arrives in M5) | the feat of strength |
+| Problem section | `index.html` `.pf-problem` | who the buyer is |
+| Calculator labels and button | `index.html` `#calculator`, `black-friday.html` | the feat of strength |
+| Closing band heading and CTA | `index.html` `#review` | self-serve vs founder-led |
 
 ## Pending slots (`data-pending="true"`)
 
 | Slot | Where | Asset needed |
 | --- | --- | --- |
+| Proof strip | `index.html` after the hero | pilot store logos with written permission, or the pilot brand count; YC badge only if accepted |
+| Pilot result | `index.html` `#results` | one quantified pilot result, store name, written permission |
+| Founder photos (2) | `index.html` `#founders` | square photos, ≥ 480px, WebP |
+| Confidence tiers | `how-we-measure.html` | tier names and definitions from the product |
 
 ## Bugs found and fixed
 

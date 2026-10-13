@@ -1,0 +1,10 @@
+NOTES
+calc cost 0 → You can lose up to 11.1% of orders and still make the same profit.
+          Profit per or
+1440 form payload: price=24 testPrice=27 cost=9.6 page startsWith priceflag.org=true
+1440 buttons: Menu | Get my free price review | Send another request
+calc cost 0 → You can lose up to 11.1% of orders and still make the same profit.
+          Profit per or
+375 form payload: price=24 testPrice=27 cost=9.6 page startsWith priceflag.org=true
+375 buttons: Menu | Get my free price review | Send another request
+PROBLEMS: none

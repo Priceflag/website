@@ -48,7 +48,7 @@ for (const width of [1440, 375]) {
         }
       } else {
         for (const h of ['#how-it-works', '#faq', '#founders', '#review']) {
-          await p.click(`.pf-nav a[href="${h}"] >> visible=true`); await p.waitForTimeout(400);
+          await p.click(`.pf-nav a[href="${h}"] >> visible=true`); await p.waitForTimeout(1500);
           const top = await p.$eval(h, (el) => el.getBoundingClientRect().top);
           if (top < 0 || top > 400) problems.push(`nav ${h} landed at ${Math.round(top)}px`);
         }

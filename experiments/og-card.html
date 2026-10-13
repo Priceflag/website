@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Renders at exactly 1200x630 for link previews. Mirrors the footer slab:
+     neon ground, dark ink, the wordmark oversized and flush. */
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;overflow:hidden;}
+  body{
+    background:#030818;
+    color:#d8f24b;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:64px 72px 62px;
+    position:relative;
+  }
+  .bg{position:absolute;inset:0;z-index:-2;}
+  .bg img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+  /* Two layers: an even knock-down, then extra weight top and bottom where
+     the type sits. The plume is the brightest thing in frame and it runs
+     through the middle-right, so the flat layer carries most of the work. */
+  .scrim{position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg,rgba(3,8,24,.74) 0%,rgba(3,8,24,.18) 30%,rgba(3,8,24,.30) 52%,
+                            rgba(3,8,24,.72) 68%,rgba(3,8,24,.90) 100%),
+      rgba(3,8,24,.16);}
+  .shop,.tag,.line,.mark{
+    text-shadow:0 1px 2px rgba(3,8,24,.92),0 2px 14px rgba(3,8,24,.85),0 0 34px rgba(3,8,24,.55);
+  }
+  .shop svg{filter:drop-shadow(0 1px 3px rgba(3,8,24,.92));}
+  .top{display:flex;align-items:center;justify-content:space-between;}
+  .shop{display:flex;align-items:center;gap:13px;font-size:26px;font-weight:500;letter-spacing:-.01em;}
+  .shop svg{width:30px;height:30px;flex:none;}
+  .tag{
+    font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(216,242,75,.78);
+  }
+  .line{
+    font-family:'Hedvig Letters Serif',Georgia,serif;
+    font-size:50px;line-height:1.14;letter-spacing:-.012em;
+    max-width:20ch;
+  }
+  /* The wordmark is the floor of the card, ink flush to the left gutter. */
+  .mark{
+    font-family:'Hedvig Letters Serif',Georgia,serif;
+    font-size:196px;line-height:1;letter-spacing:-.028em;
+    margin-bottom:-12px;
+  }
+  .rule{height:1px;background:rgba(216,242,75,.34);margin:0 0 26px;}
+</style>
+</head>
+<body>
+  <div class="bg"><img src="/uploads/IMG_6461.webp" alt=""></div>
+  <div class="scrim"></div>
+  <div class="top">
+    <span class="shop">
+      <svg viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>
+      A tool for Shopify
+    </span>
+    <span class="tag">priceflag.org</span>
+  </div>
+
+  <div class="line">Simulate &amp; safely roll&nbsp;out price&nbsp;changes</div>
+
+  <div>
+    <div class="rule"></div>
+    <div class="mark">Priceflag</div>
+  </div>
+</body>
+</html>

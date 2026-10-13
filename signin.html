@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in – Priceflag</title>
+<meta name="description" content="Sign in to Priceflag. We email you a link — no password to remember.">
+<link rel="canonical" href="https://signin.priceflag.org/">
+<!-- A sign-in screen has nothing to offer a search result, and indexing it only
+     splits the ranking of the page that does. -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:title" content="Sign in – Priceflag">
+<meta property="og:description" content="Sign in to Priceflag. We email you a link — no password to remember.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<link rel="icon" href="https://priceflag.org/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://priceflag.org/favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="https://priceflag.org/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<style>
+  /* ---------------------------------------------------------------------
+     Sign in — signin.priceflag.org
+
+     A deliberately plain static page: no framework, no build step, and no
+     Supabase key in the markup. The form POSTs an email address to the app on
+     dashboard.priceflag.org, which is the only thing that talks to Supabase.
+     Everything here is presentation plus one fetch.
+
+     The palette, the type and the pill button are lifted from index.html on
+     purpose — this is the first authenticated screen a merchant sees, and it
+     should feel like the same product as the page they clicked from.
+     --------------------------------------------------------------------- */
+  :root{
+    --pf-ink:#030818;        /* page ground */
+    --pf-cream:#f3ecde;      /* primary text on dark */
+    --pf-lime:#d8f24b;       /* accent */
+    --pf-navy:#071238;       /* text on cream fills */
+    --pf-ease:cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *{box-sizing:border-box;}
+  html{background:var(--pf-ink);overscroll-behavior-y:none;-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;min-height:100svh;background:var(--pf-ink);color:var(--pf-cream);
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    overscroll-behavior-y:none;
+  }
+  a{color:var(--pf-cream);text-decoration:none;}
+  a:hover{color:var(--pf-lime);}
+  ::selection{background:var(--pf-lime);color:var(--pf-navy);}
+
+  /* ---------- the hero card ----------
+     Same 24px-radius inset card as the marketing hero, so the two screens read
+     as one surface. On a phone it goes full-bleed: a 24px inset around a
+     viewport-height card wastes the only space there is. */
+  .pf-shell{position:relative;min-height:100svh;padding:16px 16px 0;}
+  .pf-card{
+    position:relative;overflow:hidden;border-radius:24px;
+    min-height:calc(100svh - 16px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  @media (max-width:600px){
+    .pf-shell{padding:0;}
+    .pf-card{border-radius:0;min-height:100svh;}
+  }
+
+  .pf-media{position:absolute;inset:0;}
+  .pf-media img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;
+    /* Mobile crops hard: hold the centre-right so the rider survives the crop
+       rather than being cut off with the empty left of the frame kept. */
+    object-position:62% center;
+  }
+  @media (min-width:900px){
+    .pf-media img{object-position:center;}
+  }
+  /* Darkened top and bottom so the wordmark and the legal line stay legible
+     over whatever photograph is behind them, and the middle stays open. */
+  /* Two washes, because they do different jobs. The vertical one is light —
+     the photograph is already dark and a heavy wash would flatten the sunset
+     and lose the ridgeline. The horizontal one is the real work: it deepens the
+     empty left third the panel sits on, and fades out before the rider and the
+     snow plume on the right, which are the reason to use this image at all. */
+  /* Mobile default: a strong, fairly even wash. The phone crop lands on the
+     brightest part of the frame — the sunset break and the lit snow — with the
+     heading and the panel sitting directly on it, and there is no empty left
+     third to hide in. Cream on that sky is unreadable without this. */
+  .pf-scrim{
+    position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(180deg, rgba(3,8,24,0.80) 0%, rgba(3,8,24,0.62) 30%,
+                              rgba(3,8,24,0.66) 70%, rgba(3,8,24,0.90) 100%);
+  }
+  /* Desktop can afford to be light, because .pf-scrim--side is doing the
+     legibility work over the left column and the right side is meant to stay
+     open. Applying the mobile values here would flatten the whole picture. */
+  @media (min-width:900px){
+    .pf-scrim{
+      background:
+        linear-gradient(180deg, rgba(3,8,24,0.58) 0%, rgba(3,8,24,0.10) 22%,
+                                rgba(3,8,24,0.12) 68%, rgba(3,8,24,0.72) 100%);
+    }
+  }
+  /* Desktop only: on a phone the image is cropped to its centre and there is no
+     empty left third to darken, so this would just dim the whole frame. */
+  .pf-scrim--side{display:none;}
+  @media (min-width:900px){
+    .pf-scrim--side{
+      display:block;position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg, rgba(3,8,24,0.90) 0%, rgba(3,8,24,0.72) 26%,
+                                        rgba(3,8,24,0.30) 48%, rgba(3,8,24,0) 66%);
+    }
+  }
+  /* The same fractal-noise grain as the marketing hero, inlined as a data URL
+     so the page has no image dependency beyond the photograph itself. */
+  .pf-grain{
+    position:absolute;inset:0;pointer-events:none;opacity:0.28;
+    background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");
+  }
+
+  /* ---------- layout ---------- */
+  .pf-top{
+    position:absolute;top:0;left:0;right:0;z-index:3;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:22px clamp(20px,4vw,40px);
+  }
+  .pf-wordmark{
+    display:inline-flex;align-items:center;gap:.45em;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:20px;font-weight:400;letter-spacing:-0.01em;color:var(--pf-cream);
+    text-shadow:0 1px 14px rgba(3,8,24,0.7);
+  }
+  /* The hiker ahead of the wordmark. A CSS mask, so it takes currentColor.
+     The URL stays relative: this page is also served on
+     signin.priceflag.org, where a relative path is same-origin and so
+     clears its own img-src 'self' without a cross-origin mask fetch. */
+  .pf-hiker{
+    display:none;width:0.87em;height:1.6em;margin-block:-0.3em;flex:none;
+    background-color:currentColor;
+    -webkit-mask:url(mark.svg) center/contain no-repeat;
+            mask:url(mark.svg) center/contain no-repeat;
+    filter:drop-shadow(0 1px 14px rgba(3,8,24,0.7));
+  }
+  @supports ((mask-image:url(mark.svg)) or (-webkit-mask-image:url(mark.svg))){
+    .pf-hiker{display:inline-block;}
+  }
+
+  .pf-main{
+    position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;
+    padding:96px 20px 80px;display:flex;justify-content:center;
+  }
+  .pf-panel{width:100%;max-width:452px;}
+
+  /* Left column on anything wide enough to have one. Centring the form here
+     would put it straight over the rider and the lit snow. */
+  @media (min-width:900px){
+    .pf-main{justify-content:flex-start;padding-left:clamp(40px,6vw,96px);}
+    .pf-panel{max-width:436px;}
+    .pf-panel h1{text-align:left;}
+    .pf-note,.pf-sent{text-align:left;}
+    .pf-legal{text-align:left;padding-left:clamp(40px,6vw,96px);}
+  }
+
+  .pf-eyebrow{
+    display:flex;align-items:center;gap:9px;justify-content:flex-start;
+    font-size:13px;letter-spacing:0.01em;color:rgba(243,236,222,0.86);
+    text-shadow:0 1px 12px rgba(3,8,24,0.8);
+  }
+  .pf-eyebrow svg{width:1em;height:1em;fill:currentColor;flex:none;opacity:0.9;}
+
+  h1{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-weight:400;font-size:clamp(38px,6vw,56px);line-height:1.06;
+    letter-spacing:-0.015em;margin:16px 0 0;color:#fff;text-align:center;
+    text-shadow:0 4px 50px rgba(3,8,24,0.7);text-wrap:balance;
+  }
+
+  /* ---------- the form card ----------
+     A frosted panel rather than a plain box: it has to sit on an unpredictable
+     photograph and stay readable, and a backdrop blur does that without
+     flattening the image behind it to a solid colour. */
+  .pf-form{
+    margin-top:28px;padding:22px;border-radius:20px;
+    background:rgba(7,18,56,0.42);
+    border:1px solid rgba(243,236,222,0.14);
+    backdrop-filter:blur(22px) saturate(140%);
+    -webkit-backdrop-filter:blur(22px) saturate(140%);
+    box-shadow:0 24px 60px -22px rgba(3,8,24,0.9), inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+  @supports not (backdrop-filter:blur(4px)){
+    .pf-form{background:rgba(7,18,56,0.88);}
+  }
+
+  label{display:block;font-size:13px;font-weight:500;color:rgba(243,236,222,0.78);margin-bottom:8px;}
+
+  input[type="email"]{
+    width:100%;padding:14px 16px;border-radius:12px;
+    font-family:inherit;font-size:16px;/* 16px: anything smaller zooms on iOS */
+    color:var(--pf-cream);background:rgba(3,8,24,0.55);
+    border:1px solid rgba(243,236,222,0.20);
+    transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  input[type="email"]::placeholder{color:rgba(243,236,222,0.38);}
+  input[type="email"]:hover{border-color:rgba(243,236,222,0.32);}
+  input[type="email"]:focus{
+    outline:none;background:rgba(3,8,24,0.72);
+    border-color:rgba(216,242,75,0.66);
+    box-shadow:0 0 0 4px rgba(216,242,75,0.14);
+  }
+  input[type="email"]:disabled{opacity:0.55;cursor:not-allowed;}
+
+  /* ---------- the pill button, matching index.html ---------- */
+  .pf-btn{
+    --pf-bg:#d8f24b; --pf-fg:#13200a; --pf-glow:216,242,75;
+    position:relative;isolation:isolate;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;margin-top:14px;padding:15px clamp(16px,5vw,32px);border:0;border-radius:999px;
+    font-family:inherit;font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1;
+    color:var(--pf-fg);cursor:pointer;text-decoration:none;white-space:nowrap;
+    background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.06) 55%,rgba(255,255,255,0)),var(--pf-bg);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.80),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 1px 2px rgba(3,8,24,.45),
+      0 10px 30px -8px rgba(var(--pf-glow),.60),
+      0 0 0 6px rgba(var(--pf-glow),.10);
+    transition:transform .34s var(--pf-ease), box-shadow .34s var(--pf-ease), filter .34s ease;
+  }
+  .pf-btn::before{
+    content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
+    border:1px solid rgba(255,255,255,.18);opacity:.55;
+    transition:inset .34s var(--pf-ease),opacity .34s ease,border-color .34s ease;
+  }
+  .pf-btn:hover:not(:disabled){
+    transform:translateY(-2px);filter:brightness(1.05);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.90),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 2px 4px rgba(3,8,24,.42),
+      0 18px 44px -10px rgba(var(--pf-glow),.78),
+      0 0 0 9px rgba(var(--pf-glow),.13);
+  }
+  .pf-btn:hover:not(:disabled)::before{inset:-7px;opacity:.9;border-color:rgba(255,255,255,.30);}
+  .pf-btn:active:not(:disabled){transform:translateY(0) scale(.985);transition-duration:.09s;}
+  .pf-btn:focus-visible{outline:2px solid rgba(255,255,255,.85);outline-offset:5px;}
+  .pf-btn:disabled{cursor:progress;filter:saturate(0.5) brightness(0.9);}
+
+  .pf-note{
+    margin:16px 0 0;font-size:12.5px;line-height:1.5;
+    color:rgba(243,236,222,0.58);text-align:center;text-wrap:pretty;
+  }
+  .pf-note a{color:rgba(243,236,222,0.78);text-decoration:underline;text-underline-offset:2px;}
+
+  /* ---------- messages ----------
+     One region, three tones. It is an aria-live region so that a screen reader
+     announces "check your email" — which is otherwise a purely visual change
+     that leaves a non-sighted person waiting for something that already
+     happened. */
+  .pf-msg{
+    margin:0 0 16px;padding:12px 14px;border-radius:12px;
+    font-size:13.5px;line-height:1.5;text-wrap:pretty;
+  }
+  .pf-msg[hidden]{display:none;}
+  .pf-msg--error{
+    background:rgba(255,138,120,0.12);border:1px solid rgba(255,138,120,0.34);color:#ffd8d0;
+  }
+  .pf-msg--info{
+    background:rgba(243,236,222,0.10);border:1px solid rgba(243,236,222,0.22);color:rgba(243,236,222,0.9);
+  }
+
+  /* ---------- the sent state ----------
+     Replaces the form rather than sitting under it. Leaving a filled-in form on
+     screen after a successful send invites a second submit, which only burns
+     Supabase's per-address rate limit and invalidates the link just sent. */
+  .pf-sent{text-align:center;}
+  .pf-sent h2{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-weight:400;font-size:26px;line-height:1.2;margin:0 0 10px;color:#fff;
+  }
+  .pf-sent p{margin:0;font-size:14.5px;line-height:1.6;color:rgba(243,236,222,0.8);text-wrap:pretty;}
+  .pf-sent strong{color:var(--pf-cream);font-weight:600;}
+  .pf-linkbtn{
+    /* padding:0 made this a 16px-tall tap target, and it is the only way back
+       out of the sent state. The negative margin keeps the optical 18px gap. */
+    margin-top:6px;background:none;border:0;padding:12px 16px;cursor:pointer;
+    min-height:44px;
+    font-family:inherit;font-size:13.5px;color:rgba(243,236,222,0.72);
+    text-decoration:underline;text-underline-offset:3px;
+  }
+  .pf-linkbtn:hover{color:var(--pf-lime);}
+
+  .pf-legal{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    padding:0 clamp(20px,4vw,40px) 26px;text-align:center;
+    font-size:13px;color:rgba(243,236,222,0.58);
+  }
+  /* 12px links with no padding sat ~14px tall and 22px off the bottom edge,
+     which on iOS is inside the home-indicator swipe zone. */
+  .pf-legal a{color:rgba(243,236,222,0.74);display:inline-block;padding:8px 3px;}
+
+  /* ---------- short viewports ----------
+     A landscape phone is ~393px tall. The desktop 96/80 padding plus a
+     headline sized on 6vw — a width function, in a viewport constrained by
+     height — pushed the submit button 16px below the fold on an 852x393
+     screen. Sizing the headline on min(vw,vh) and tightening the vertical
+     rhythm brings the whole card back inside one screen. Also catches the
+     keyboard-open case on a 375x667 phone, where the visual viewport
+     collapses to roughly the same height. */
+  @media (max-height:560px){
+    .pf-main{padding:56px 20px 40px;}
+    h1{font-size:clamp(28px,min(6vw,7.4vh),56px);}
+    .pf-form{margin-top:18px;padding:16px;}
+    .pf-legal{position:static;padding-top:18px;}
+  }
+  /* iOS scrolls only the focused field into view; without this the button
+     lands under the keyboard even though the page can be panned to it. */
+  #pf-email{scroll-margin-bottom:120px;}
+
+  /* ---------- entrance ----------
+     One short rise, matching the marketing hero's vocabulary. Kept to the panel
+     so the photograph is painted immediately and never fades in under the text. */
+  @keyframes pfRise{
+    from{opacity:0;transform:translate3d(0,14px,0);filter:blur(6px);}
+    to  {opacity:1;transform:none;filter:blur(0);}
+  }
+  .pf-panel{animation:pfRise 800ms var(--pf-ease) 60ms both;}
+
+  @media (prefers-reduced-motion: reduce){
+    .pf-panel{animation:none;}
+    .pf-btn,.pf-btn::before{transition:none;}
+    .pf-btn:hover{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="pf-shell">
+  <div class="pf-card">
+
+    <div class="pf-media">
+      <!-- ================================================================
+           HERO IMAGE
+
+           Served from priceflag.org because this page deploys from the same
+           Vercel project; the absolute URL survives even if the host rewrite
+           is ever changed, which a relative path would not.
+
+           The layout above is composed around THIS photograph: the rider and
+           the lit snow sit right of centre, so the panel is held in the dark
+           left third and a horizontal scrim deepens it. Swapping in an image
+           with a different centre of interest means revisiting .pf-scrim--side
+           and the 900px block, not just this line.
+
+           `object-position` favours the right on desktop so the sunset and the
+           ridgeline stay in frame, and centre on mobile where the crop is tight.
+           ================================================================ -->
+      <img src="https://priceflag.org/uploads/signin-hero.webp"
+           alt=""
+           fetchpriority="high"
+           decoding="async">
+    </div>
+    <div class="pf-scrim"></div>
+    <div class="pf-scrim--side"></div>
+    <div class="pf-grain"></div>
+
+    <header class="pf-top">
+      <a class="pf-wordmark" href="https://priceflag.org/"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
+    </header>
+
+    <main class="pf-main">
+      <div class="pf-panel">
+
+        <p class="pf-eyebrow">
+          <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>
+          <span>Your pricing control room</span>
+        </p>
+
+        <h1>Sign in to Priceflag</h1>
+    
+        <div class="pf-form">
+          <!-- Announced when it changes; empty and hidden until then. -->
+          <p class="pf-msg pf-msg--error" id="pf-error" role="alert" hidden></p>
+          <p class="pf-msg pf-msg--info" id="pf-info" role="status" hidden></p>
+
+          <form id="pf-form" novalidate>
+            <label for="pf-email">Your work email</label>
+            <input id="pf-email" name="email" type="email" inputmode="email"
+                   autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false"
+                   placeholder="you@yourstore.com" required>
+            <button class="pf-btn" id="pf-submit" type="submit">
+              <span id="pf-submit-label">Email me a sign-in link</span>
+            </button>
+          </form>
+
+          <div class="pf-sent" id="pf-sent" hidden>
+            <h2>Check your email</h2>
+            <p>We sent a sign-in link to <strong id="pf-sent-address"></strong>. It works once and expires in an hour.</p>
+            <button class="pf-linkbtn" type="button" id="pf-again">Use a different address</button>
+          </div>
+
+          <p class="pf-note">
+            Already installed Priceflag on Shopify? You can also open it straight from your
+            Shopify admin — no sign-in needed.
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+    <p class="pf-legal">
+      By signing in you agree to our <a id="pf-terms" href="https://priceflag.org/legal#terms">terms</a>
+      and <a id="pf-privacy" href="https://priceflag.org/legal#privacy">privacy policy</a>.
+    </p>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===================== CONFIG — edit here when hosts move ==================
+     APP_ORIGIN is where the app lives. The magic-link endpoint and the ?next=
+     validation both key off it, and the CSP's connect-src in vercel.json must
+     name the same host — change them together or the fetch gets blocked.
+     The legal URLs are written onto the footer links; the same values sit in
+     the markup as static fallbacks for the no-JS case.
+     ========================================================================= */
+  var APP_ORIGIN  = 'https://dashboard.priceflag.org';
+  var TERMS_URL   = 'https://priceflag.org/legal#terms';
+  var PRIVACY_URL = 'https://priceflag.org/legal#privacy';
+  /* =============================== end CONFIG ============================== */
+
+  var ENDPOINT = APP_ORIGIN + '/api/auth/magic-link';
+
+  var form     = document.getElementById('pf-form');
+  var email    = document.getElementById('pf-email');
+  var submit   = document.getElementById('pf-submit');
+  var label    = document.getElementById('pf-submit-label');
+  var errorBox = document.getElementById('pf-error');
+  var infoBox  = document.getElementById('pf-info');
+  var sent     = document.getElementById('pf-sent');
+  var sentAddr = document.getElementById('pf-sent-address');
+  var again    = document.getElementById('pf-again');
+
+  /* The CONFIG block owns these; the markup's hrefs are the no-JS fallback. */
+  document.getElementById('pf-terms').href = TERMS_URL;
+  document.getElementById('pf-privacy').href = PRIVACY_URL;
+
+  function show(node, text) {
+    node.textContent = text;
+    node.hidden = false;
+  }
+  function clearMessages() {
+    errorBox.hidden = true;
+    infoBox.hidden = true;
+  }
+
+  /* ------------------------------------------------------------------
+     Messages the app redirects here with. Every one of these is a state a
+     real person hits — an expired link is by far the most common — so each
+     says what happened and what to do, rather than a code.
+     ------------------------------------------------------------------ */
+  var REASONS = {
+    link_expired:        'That sign-in link has expired. Enter your email and we will send a fresh one.',
+    link_invalid:        'That sign-in link was not valid. It may have already been used — here is a new start.',
+    link_missing:        'That link was incomplete. Enter your email and we will send another.',
+    link_unbound:        'That link was opened in a different browser to the one that asked for it, so we did not sign you in. Request a fresh link here and open it in this browser.',
+    auth_not_configured: 'Sign-in is not switched on for this deployment yet. Please let us know.',
+    sign_in_required:    'Please sign in to open that page.'
+  };
+
+  var params = new URLSearchParams(location.search);
+
+  var reason = params.get('error');
+  if (reason !== null) {
+    show(errorBox, REASONS[reason] || 'We could not sign you in. Enter your email to try again.');
+  } else if (params.get('signed_out') === '1') {
+    show(infoBox, 'You are signed out.');
+  }
+
+  /* A path the app asked us to return to after sign-in.
+     Validated by RESOLUTION, not by prefix. "starts with / but not //" looks
+     right and is not: WHATWG URL treats a backslash like a slash, so
+     "/\evil.com" passes that test and then resolves to https://evil.com/.
+     This value is about to be sent to an endpoint that puts it inside an
+     email, so it gets the same treatment the server gives it. */
+  var next = (function (raw) {
+    if (raw === null || raw === '') return null;
+    try {
+      var resolved = new URL(raw, APP_ORIGIN);
+      if (resolved.origin !== APP_ORIGIN) return null;
+      return resolved.pathname + resolved.search;
+    } catch (e) {
+      return null;
+    }
+  })(params.get('next'));
+
+  /* Strip the query so a refresh after reading the message does not replay it,
+     and so an error does not survive in a copied URL. */
+  if (location.search !== '') {
+    history.replaceState(null, '', location.pathname);
+  }
+
+  var busy = false;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (busy) return;
+
+    var address = email.value.trim();
+    /* The browser's own validity check, since the form is novalidate — we want
+       our message and our styling, not the native bubble. */
+    if (address === '' || address.indexOf('@') < 1 || address.indexOf('.', address.indexOf('@')) < 0) {
+      clearMessages();
+      show(errorBox, 'Enter an email address so we know where to send the link.');
+      email.focus();
+      return;
+    }
+
+    busy = true;
+    clearMessages();
+    submit.disabled = true;
+    email.disabled = true;
+    label.textContent = 'Sending…';
+
+    var payload = { email: address };
+    if (next !== null) payload.next = next;
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      /* Cookies must flow: the response sets a short-lived HttpOnly nonce that
+         binds the emailed link to THIS browser, so that forwarding the link to
+         somebody else cannot sign them into your account. Without 'include'
+         the browser discards that cookie and every link fails to bind.
+         signin. and dashboard. are the same site, so this is not a
+         third-party cookie and is unaffected by third-party cookie blocking. */
+      credentials: 'include',
+      body: JSON.stringify(payload)
+    }).then(function (response) {
+      return response.json().then(function (body) {
+        return { ok: response.ok, body: body };
+      }).catch(function () {
+        return { ok: response.ok, body: null };
+      });
+    }).then(function (result) {
+      if (!result.ok) {
+        var message = result.body && result.body.error && result.body.error.message;
+        throw new Error(message || 'We could not send that link. Try again in a moment.');
+      }
+      sentAddr.textContent = address;
+      form.hidden = true;
+      sent.hidden = false;
+      again.focus();
+    }).catch(function (failure) {
+      /* A fetch that never reached the server rejects with a TypeError whose
+         message is browser argot ("Failed to fetch", "Load failed") — replace
+         it. Errors we threw ourselves carry the server's message; keep those. */
+      var offline = (failure instanceof TypeError) || !failure.message;
+      show(errorBox, offline
+        ? 'We could not reach Priceflag. Check your connection and try again.'
+        : failure.message);
+      email.focus();
+    }).then(function () {
+      busy = false;
+      submit.disabled = false;
+      email.disabled = false;
+      label.textContent = 'Email me a sign-in link';
+    });
+  });
+
+  again.addEventListener('click', function () {
+    clearMessages();
+    sent.hidden = true;
+    form.hidden = false;
+    email.value = '';
+    email.focus();
+  });
+})();
+</script>
+
+</body>
+</html>

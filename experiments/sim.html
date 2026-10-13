@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag — the simulation, on a Galton board</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<style>
+  html{background:#030818;}
+  body{margin:0;background:#030818;color:#f3ecde;}
+  ::selection{background:#d8f24b;color:#071238;}
+
+  /* Demo-only chrome. None of this is part of the section — the section
+     brings its own DOM and its own stylesheet. */
+  .demo-bar{
+    position:fixed;top:0;left:0;right:0;z-index:20;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;
+    padding:9px clamp(16px,4vw,40px);
+    border-bottom:1px solid rgba(128,128,128,0.28);
+    background:rgba(8,10,20,0.72);backdrop-filter:blur(12px);
+    font-family:'Inter',system-ui,sans-serif;font-size:11.5px;
+    letter-spacing:0.02em;color:#cfd4e6;
+  }
+  .demo-bar strong{
+    font-family:'Hedvig Letters Serif',Georgia,serif;font-weight:400;
+    font-size:16px;letter-spacing:-0.01em;color:#f3ecde;
+  }
+  .demo-btns{display:flex;gap:6px;flex-wrap:wrap;}
+  .demo-btns button{
+    font:inherit;color:#f3ecde;background:transparent;cursor:pointer;
+    border:1px solid rgba(243,236,222,0.24);border-radius:999px;padding:5px 11px;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .demo-btns button:hover{border-color:#d8f24b;color:#d8f24b;}
+  .demo-btns button:focus-visible{outline:2px solid #93aaff;outline-offset:3px;}
+  #demo-state{font-variant-numeric:tabular-nums;opacity:.75;}
+
+  /* Scroll runway either side, so the pin has somewhere to start and finish
+     and the acts get exercised end to end. The lead-in is dark like the
+     section's first act; the run-out is cream, like its last — which is the
+     hand-off the page relies on. */
+  .lead{
+    min-height:120vh;background:#030818;display:flex;align-items:center;
+    justify-content:center;padding:0 clamp(20px,5vw,72px);
+  }
+  .lead p{
+    max-width:22ch;margin:0;font-family:'Hedvig Letters Serif',Georgia,serif;
+    font-size:clamp(26px,4vw,48px);line-height:1.15;letter-spacing:-.015em;
+    color:rgba(243,236,222,.62);
+  }
+  .tail{
+    min-height:110vh;background:#f3ecde;color:#0d2168;
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:clamp(60px,10vh,120px) clamp(20px,5vw,72px);
+  }
+  .tail div{max-width:64ch;}
+  .tail h2{
+    font-family:'Hedvig Letters Serif',Georgia,serif;font-weight:400;
+    font-size:clamp(24px,3.4vw,38px);line-height:1.15;margin:0 0 18px;
+  }
+  .tail p{
+    font-family:'Inter',system-ui,sans-serif;font-size:14px;line-height:1.75;
+    color:rgba(13,33,104,.74);margin:0 0 14px;
+  }
+  .tail code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;}
+  .tail ul{margin:0 0 14px;padding-left:20px;font-family:'Inter',system-ui,sans-serif;
+    font-size:14px;line-height:1.75;color:rgba(13,33,104,.74);}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  <strong>pf-sim</strong>
+  <span id="demo-state">p = 0.000 · act 1</span>
+  <span class="demo-btns">
+    <button type="button" data-act="0">01</button>
+    <button type="button" data-act="1">02</button>
+    <button type="button" data-act="2">03</button>
+    <button type="button" data-act="3">04</button>
+    <button type="button" data-act="4">05</button>
+    <button type="button" id="demo-probe">Probe</button>
+    <button type="button" id="demo-toggle">Unmount</button>
+  </span>
+</div>
+
+<div class="lead"><p>Everything above here is the demo harness, not the section.</p></div>
+
+<!-- The section builds everything it needs inside this empty div. -->
+<div id="host"></div>
+
+<div class="tail">
+  <div>
+    <h2>What just happened</h2>
+    <p>
+      A Galton board drops beads through a lattice of pegs. Each peg deflects a
+      bead left or right at random, and the beads pile into a bell curve. It is
+      the cleanest demonstration ever built that individual randomness produces
+      a predictable distribution — which is the whole claim Priceflag makes
+      about a price change.
+    </p>
+    <ul>
+      <li><strong>01 Proposal</strong> — the price waits in the hopper.</li>
+      <li><strong>02 Simulation</strong> — one bead per simulated future; one peg per market uncertainty. The posterior on elasticity visibly tightens as the trials accumulate.</li>
+      <li><strong>03 Forecast</strong> — the pile <em>is</em> the distribution. The band is its 10th to 90th percentile, which by construction is the published elasticity band.</li>
+      <li><strong>04 Rollout</strong> — the board reclines into a shop floor and real orders arrive in neon, landing inside the forecast as exposure steps 5 → 20 → 50 → 100%.</li>
+      <li><strong>05 Guardrail</strong> — real orders start clearing the floor. Past the third breach the machine runs backwards and the price returns to $48.00.</li>
+    </ul>
+    <p>
+      Standalone harness for <code>sections/pf-sim.js</code>. The module owns its
+      markup and its stylesheet; this page supplies only the fonts, the runway
+      above and below, and the mount / probe buttons. <em>Probe</em> prints the
+      rendered state to the console — which is how this is verified, because
+      screenshots are unreliable here: the document reports itself as hidden.
+    </p>
+    <h2>Form factors</h2>
+    <p>
+      One layout rule, driven by the pinned stage's own aspect ratio rather than
+      by any device guess. Wide-and-short — a landscape phone, a landscape
+      tablet, any desktop window — sets the copy beside the board
+      (<code>.pfm-side</code>). Everything taller stacks the copy above it
+      (<code>.pfm-stack</code>), with the board starting below the measured
+      bottom of the copy rather than at a guessed fraction of the height. A
+      stage under 560px tall additionally gets <code>.pfm-short</code>, which
+      compresses the type without removing anything: all five acts, the pour,
+      the recline, the rollout and the reversal are identical at every size.
+    </p>
+    <p>
+      The price chip above the hopper has its own reserved band, computed before
+      the board is given a pixel: <code>safeTop → chip → by0</code>, where
+      <code>safeTop</code> already clears the device's safe-area inset
+      <em>and</em> whatever the host page keeps pinned over the top of the stage
+      — the demo bar here, the site nav on the landing page, found by hit-testing
+      the top edge. Resize the window, or rotate the device, and it re-lays out
+      live; a wall-clock watchdog catches size drift even when
+      <code>ResizeObserver</code> is silenced. Nothing in the module calls
+      <code>preventDefault</code> or sets <code>touch-action</code>, so touch
+      scrolling and pinch-zoom stay with the page.
+    </p>
+  </div>
+</div>
+
+<script src="../sections/pf-sim.js"></script>
+<script>
+(function () {
+  var host = document.getElementById('host');
+  var stateEl = document.getElementById('demo-state');
+  var toggle = document.getElementById('demo-toggle');
+  var probe = document.getElementById('demo-probe');
+  var cleanup = null;
+
+  /* Must match T.ACTS in the module. Demo-only; the section does not expose
+     these because nothing outside it needs them. */
+  var ACT_P = [0.06, 0.27, 0.49, 0.69, 0.90];
+
+  function mount() {
+    cleanup = window.initPfSim(host);
+    toggle.textContent = 'Unmount';
+  }
+  function unmount() {
+    if (cleanup) cleanup();
+    cleanup = null;
+    toggle.textContent = 'Mount';
+    stateEl.textContent = 'unmounted — host empty: ' + (host.childNodes.length === 0);
+  }
+
+  toggle.addEventListener('click', function () {
+    if (cleanup) unmount(); else mount();
+  });
+
+  /* Scroll the window to the point where a given act is centred. The section
+     itself never moves the scroll position; this is harness convenience. */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('[data-act]'),
+    function (b) {
+      b.addEventListener('click', function () {
+        var sec = host.querySelector('.pfm-root');
+        if (!sec) return;
+        var top = sec.getBoundingClientRect().top + window.pageYOffset;
+        var span = sec.offsetHeight - window.innerHeight;
+        window.scrollTo({
+          top: top + span * ACT_P[+b.getAttribute('data-act')],
+          behavior: 'smooth'
+        });
+      });
+    }
+  );
+
+  probe.addEventListener('click', function () {
+    var p = window.initPfSim.probe;
+    if (!p) { console.log('no instance mounted'); return; }
+    var out = {
+      progress: p.state.p,
+      act: p.state.act + 1,
+      tilt: +p.state.tilt.toFixed(3),
+      rev: +p.state.rev.toFixed(3),
+      counts: p.counts(),
+      figures: p.figures().map(function (f) { return f.num + ' / ' + f.lab; }),
+      background: p.bg(),
+      ink: p.ink(),
+      geometry: {
+        rows: p.geom.rows, bins: p.geom.bins, nMax: p.geom.nMax,
+        beadR: +p.geom.r.toFixed(2), perRow: p.geom.perRow
+      },
+      /* Orientation and the reserved band above the board. `chrome` is the
+         height of whatever the host page keeps pinned over the top of the
+         stage — on this harness, the demo bar; on the site, the nav. The chip
+         must always start below it. */
+      layout: p.layoutInfo(),
+      chip: (function () {
+        var b = p.chipBox(), l = p.layoutInfo();
+        return {
+          top: +b.top.toFixed(1), bottom: +b.bottom.toFixed(1),
+          clearOfChrome: +(b.top - l.chrome).toFixed(1),
+          insideBand: b.top >= l.safeTop - 0.5 && b.bottom <= l.by0 + 0.5
+        };
+      })(),
+      histogram: p.histogram(),
+      liveHistogram: p.liveHistogram()
+    };
+    console.log(out);
+    stateEl.textContent = 'act ' + out.act + ' · ' + out.layout.mode +
+      (out.layout.short ? '/short' : '') +
+      ' · chip clears chrome by ' + out.chip.clearOfChrome + 'px' +
+      ' · pile ' + out.counts.landed + ' · live ' + out.counts.live;
+  });
+
+  /* A read-only progress readout, so the harness proves the section is
+     tracking document scroll rather than trapping it. */
+  function readout() {
+    var p = window.initPfSim.probe;
+    if (p && cleanup) {
+      var li = p.layoutInfo();
+      stateEl.textContent = 'p = ' + p.state.p.toFixed(3) +
+        ' · act ' + (p.state.act + 1) +
+        ' · ' + li.w + '×' + li.h + ' ' + li.mode + (li.short ? '/short' : '') +
+        ' · pile ' + p.counts().landed +
+        ' · live ' + p.counts().live;
+    }
+    setTimeout(readout, 160);
+  }
+
+  mount();
+  readout();
+})();
+</script>
+
+</body>
+</html>

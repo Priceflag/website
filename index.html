@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag</title>
+<meta name="description" content="Priceflag forecasts a price change, rolls it out gradually across your products, and reverts it automatically if it stops paying. Every shopper always sees the same price. Built for Shopify.">
+<link rel="canonical" href="https://priceflag.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:url" content="https://priceflag.org/">
+<meta property="og:title" content="Priceflag — See what a price change will do before it goes live">
+<meta property="og:description" content="Priceflag forecasts a price change, rolls it out gradually across your products, and reverts it automatically if it stops paying. Every shopper always sees the same price. Built for Shopify.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Priceflag — a tool for Shopify. Simulate and safely roll out price changes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Priceflag — See what a price change will do before it goes live">
+<meta name="twitter:description" content="Priceflag forecasts a price change, rolls it out gradually across your products, and reverts it automatically if it stops paying. Every shopper always sees the same price. Built for Shopify.">
+<meta name="twitter:image" content="https://priceflag.org/og-v7.jpg">
+<meta name="twitter:image:alt" content="Priceflag — a tool for Shopify. Simulate and safely roll out price changes.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="hero-new.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<!-- support.js is deferred, so the raw template element must be hidden from
+     the first parse; support.js reuses this style by id and removes it to
+     fail open if the runtime cannot boot. -->
+<style id="dc-hide-raw">x-dc{display:none!important}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://priceflag.org/#org",
+      "name": "Priceflag",
+      "alternateName": ["Price Flag", "Priceflag.org"],
+      "url": "https://priceflag.org/",
+      "logo": "https://priceflag.org/favicon.png",
+      "description": "Priceflag forecasts a price change, rolls it out gradually, and reverts it automatically if it stops paying."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://priceflag.org/#website",
+      "url": "https://priceflag.org/",
+      "name": "Priceflag",
+      "publisher": {"@id": "https://priceflag.org/#org"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Priceflag",
+      "url": "https://priceflag.org/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Pricing optimization for Shopify",
+      "operatingSystem": "Web",
+      "publisher": {"@id": "https://priceflag.org/#org"},
+      "description": "Simulate and safely roll out price changes on Shopify. Priceflag forecasts a price change, rolls it out gradually, and reverts it automatically if it stops paying."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://priceflag.org/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the forecast work, and how much data do I need?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Before anything goes live, Priceflag fits your own order history, up to the last 180 days, and shows a range for the change in units and profit, never a single number. It also gives you a break-even in plain words, for example: you can sell up to 14% fewer units and still make the same profit, and the forecast expects about 9%. Higher-volume products give tighter ranges. If a product has too few orders for a trustworthy forecast, we say so and take smaller steps instead of inventing confidence."}
+        },
+        {
+          "@type": "Question",
+          "name": "How is the rollout staged, and will shoppers see different prices?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. Rollouts add products, not visitors. A pass might go live on two products, then three, then all six, with each step held for a few days before the next begins. At every moment every shopper sees the same price for the same product, so there is no price discrimination and no split testing on your customers. Prices are written to your Shopify catalog like a manual edit in the admin, so your storefront and structured data stay in sync."}
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from an A/B testing app?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A/B apps split your traffic, wait, and hand you a chart to interpret. Priceflag forecasts first, rolls out gradually to a slice of your catalog, then compares real daily orders against the range it expected. It keeps checking after the rollout, and every change is journaled so it can be undone. The goal is not an experiment result. It is a price that is still working next quarter."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a price change hurts sales?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Priceflag checks your orders every day against the expected range. One bad day is noted. Two in a row crosses your limit, and it acts the way you chose: pause the rollout and email you, or restore the original prices automatically. Every change sits in your price journal next to the price it replaced, so Undo puts all of them back with one click and then reads Shopify back to confirm the catalog matches. Afterwards you get an audit trail of what changed, what triggered it and when."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does it change prices without asking me?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Only if you decide it should. Priceflag only touches the products you pick. By default it proposes and you approve before anything is applied, including before a rollout reaches 100% of your selection. Autonomy is something you grant deliberately, per collection or per product, once you have watched the limits hold, and you can revoke it at any time."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my prices if I uninstall?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Uninstalling removes our write access, so whatever price is live at that moment stays live. We do not roll anything back on the way out, because a silent rewrite of your catalog would be one more price change you never asked for. If you want the originals back, run Undo from your price journal before you uninstall, or ask us for your price history export and restore them yourself."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="./support.js" defer></script>
+<script src="./sections/pf-compare.js" defer></script>
+<script src="./sections/pf-demo.js" defer></script>
+<script src="./sections/pf-workflow.js" defer></script>
+<script src="./sections/pf-faq.js" defer></script>
+<script src="./sections/pf-hero-logos.js" defer></script>
+<script src="./sections/pf-waitlist.js" defer></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail" data-bg-color="#0d2168"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0d2168"></rect><text x="50" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#f3ecde">Pf</text><rect x="30" y="68" width="40" height="2" fill="#d8f24b"></rect></svg></template>
+<style>
+  html{overscroll-behavior-y:none;background:#030818;}
+  body{margin:0;padding:0;background:#030818;overscroll-behavior-y:none;}
+  a{color:#f3ecde;text-decoration:none;}
+  a:hover{color:#d8f24b;}
+  ::selection{background:#d8f24b;color:#071238;}
+  [data-scroller]{scrollbar-width:none;}
+  [data-scroller]::-webkit-scrollbar{display:none;}
+  /* The dc runtime truncates inline-style data URLs at the first comma, so the grain lives here. */
+  [data-grain]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");}
+
+  /* ---------- page-load intro ----------
+     Class-driven only. The scroll handler owns inline filter/opacity on the
+     hero image, hero content and dark overlay, so the intro animates a wrapper
+     and the content's children instead, then tears itself down at the end. */
+  .pf-intro{
+    --pf-ease:      cubic-bezier(0.22, 1, 0.36, 1);
+    --pf-ease-zoom: cubic-bezier(0.58, 0.04, 0.16, 1);
+  }
+  .pf-grain{opacity:0.5;}
+
+  .pf-intro .pf-hero-media,
+  .pf-intro .pf-grain,
+  .pf-intro .pf-title,
+  .pf-intro .pf-eyebrow,
+  .pf-intro .pf-cta,
+  .pf-intro .pf-sub,
+  .pf-intro .pf-hero-foot{opacity:0;}
+  .pf-intro .pf-hero-media{will-change:transform,filter,opacity;}
+
+  .pf-intro-go .pf-hero-media{
+    animation:pfMediaFade 1000ms var(--pf-ease) both,
+              pfMediaZoom 2200ms var(--pf-ease-zoom) both;
+  }
+  .pf-intro-go .pf-grain   {animation:pfGrainIn 1000ms var(--pf-ease)   80ms both;}
+  .pf-intro-go .pf-title   {animation:pfRiseLg  1050ms var(--pf-ease)  420ms both;}
+  .pf-intro-go .pf-cta     {animation:pfRise     800ms var(--pf-ease) 1080ms both;}
+  .pf-intro-go .pf-eyebrow {animation:pfRise     800ms var(--pf-ease) 1360ms both;}
+  .pf-intro-go .pf-sub     {animation:pfRise     800ms var(--pf-ease)  820ms both;}
+  .pf-intro-go .pf-hero-foot{animation:pfRise    800ms var(--pf-ease) 1500ms both;}
+
+  .pf-intro-done .pf-hero-media,
+  .pf-intro-done .pf-grain,
+  .pf-intro-done .pf-title,
+  .pf-intro-done .pf-eyebrow,
+  .pf-intro-done .pf-cta,
+  .pf-intro-done .pf-sub,
+  .pf-intro-done .pf-hero-foot{
+    animation:none;opacity:1;transform:none;filter:none;will-change:auto;
+  }
+  .pf-intro-done .pf-grain{opacity:0.5;}
+
+  @keyframes pfMediaFade{
+    from{opacity:0;filter:blur(18px);}
+    to  {opacity:1;filter:blur(0px);}
+  }
+  @keyframes pfMediaZoom{
+    from{transform:scale3d(1.11,1.11,1);}
+    to  {transform:scale3d(1,1,1);}
+  }
+  @keyframes pfGrainIn{ from{opacity:0;} to{opacity:0.5;} }
+  @keyframes pfRiseLg{
+    from{opacity:0;transform:translate3d(0,30px,0) scale3d(0.985,0.985,1);filter:blur(12px);}
+    to  {opacity:1;transform:translate3d(0,0,0) scale3d(1,1,1);filter:blur(0px);}
+  }
+  @keyframes pfRise{
+    from{opacity:0;transform:translate3d(0,12px,0);filter:blur(6px);}
+    to  {opacity:1;transform:translate3d(0,0,0);filter:blur(0px);}
+  }
+
+  /* ---------- hero platform cluster ----------
+     Seats the badge stack at the head of the eyebrow. It sizes itself in em
+     off the eyebrow's own font-size, so it tracks every clamp() below with
+     no breakpoint of its own. */
+  .pf-hero-logos{flex:none;}
+
+  /* ---------- brand lockup ----------
+     The hiker rides ahead of the wordmark at the wordmark's own size. It is a
+     CSS mask rather than an <img> so the one file takes currentColor: cream on
+     the dark nav, footer ink on the lime footer. Hidden outright where mask
+     is unsupported — the wordmark alone is the fallback, not a filled box. */
+  .pf-hiker{
+    display:none;width:0.87em;height:1.6em;margin-block:-0.3em;flex:none;
+    background-color:currentColor;
+    -webkit-mask:url(mark.svg) center/contain no-repeat;
+            mask:url(mark.svg) center/contain no-repeat;
+  }
+  @supports ((mask-image:url(mark.svg)) or (-webkit-mask-image:url(mark.svg))){
+    .pf-hiker{display:inline-block;}
+  }
+
+  /* ---------- glass pill buttons ----------
+     Kept in the stylesheet, not inline: the dc runtime truncates inline style
+     values at the first comma, which would shred these multi-stop shadows. */
+  .pf-btn{
+    --pf-bg:#d8f24b; --pf-fg:#13200a; --pf-glow:216,242,75;
+    position:relative;isolation:isolate;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 32px;border:0;border-radius:999px;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1;
+    color:var(--pf-fg);cursor:pointer;text-decoration:none;white-space:nowrap;
+    background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.06) 55%,rgba(255,255,255,0)),var(--pf-bg);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.80),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 1px 2px rgba(3,8,24,.45),
+      0 8px 22px -10px rgba(var(--pf-glow),.42),
+      0 0 0 5px rgba(var(--pf-glow),.07);
+    transition:transform .34s cubic-bezier(.22,1,.36,1),
+               box-shadow .34s cubic-bezier(.22,1,.36,1),
+               filter .34s ease;
+  }
+  /* the sheen ring hugging the pill */
+  .pf-btn::before{
+    content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
+    border:1px solid rgba(255,255,255,.18);opacity:.55;
+    transition:inset .34s cubic-bezier(.22,1,.36,1),opacity .34s ease,border-color .34s ease;
+  }
+  /* the glass highlight that sweeps across on hover */
+  .pf-btn::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.55) 50%,transparent 64%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+    opacity:0;
+    transition:background-position 1.7s cubic-bezier(.25,.9,.3,1),opacity .34s ease;
+  }
+  .pf-btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.05);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.90),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 2px 4px rgba(3,8,24,.42),
+      0 14px 34px -12px rgba(var(--pf-glow),.55),
+      0 0 0 8px rgba(var(--pf-glow),.10);
+  }
+  .pf-btn:hover::before{inset:-7px;opacity:.9;border-color:rgba(255,255,255,.30);}
+  .pf-btn:hover::after{background-position:175% 0;opacity:1;}
+  .pf-btn:active{
+    transform:translateY(0) scale(.985);
+    transition-duration:.09s;
+    box-shadow:
+      inset 0 2px 4px rgba(0,0,0,.24),
+      inset 0 1px 0 rgba(255,255,255,.35),
+      0 1px 2px rgba(3,8,24,.5);
+  }
+  .pf-btn:focus-visible{outline:2px solid rgba(255,255,255,.85);outline-offset:5px;}
+  .pf-btn,.pf-btn:hover,.pf-btn:focus,.pf-btn:active,.pf-btn:visited{color:var(--pf-fg);}
+  .pf-btn-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:currentColor;opacity:.75;flex:none;
+  }
+  /* Sign In keeps its cream fill; neutral glow so it doesn't read as lime. */
+  .pf-btn--light{--pf-bg:#f3ecde;--pf-fg:#071238;--pf-glow:243,236,222;}
+  .pf-btn--sm{padding:8px 18px;font-size:13px;gap:7px;}
+  .pf-btn--sm::before{inset:-3px;}
+  .pf-btn--sm:hover::before{inset:-5px;}
+
+  @media (prefers-reduced-motion: reduce){
+    .pf-btn,.pf-btn::before,.pf-btn::after{transition:none;}
+    .pf-btn:hover{transform:none;}
+    .pf-btn::after{display:none;}
+  }
+
+  /* ---------- scroll choreography ---------- */
+  [data-hero-copy]{will-change:filter,opacity;}
+  [data-enter]{will-change:opacity,transform,filter;}
+
+  @media (prefers-reduced-motion: reduce){
+    [data-hero-copy]{filter:none !important;transform:none !important;}
+    [data-enter]{opacity:1 !important;transform:none !important;filter:none !important;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .pf-intro .pf-hero-media,
+    .pf-intro .pf-title,
+    .pf-intro .pf-eyebrow,
+    .pf-intro .pf-cta,
+    .pf-intro .pf-sub,
+    .pf-intro .pf-hero-foot{
+      animation:none !important;opacity:1 !important;transform:none !important;
+      filter:none !important;will-change:auto !important;
+    }
+    .pf-intro .pf-grain{animation:none !important;opacity:0.5 !important;}
+  }
+  /* ---------- footer: the neon slab ----------
+     Everything here is in the stylesheet rather than inline because the dc
+     runtime truncates inline style attribute values at the first comma, and
+     these rules are almost entirely commas: multi-stop box-shadows, rgba(),
+     clamp(), font stacks, transitions and gradients. */
+  /* Fills any elastic-scroll gap below the footer with the same neon. */
+  .pf-foot{box-shadow:0 50vh 0 0 #dcf34a;
+    --pf-ink:#0d1f00;                  /* 13.78:1 on #d8f24b — AAA */
+    --pf-ink-soft:rgba(13,31,0,.68);   /* 5.36:1 on #d8f24b — AA   */
+    --pf-rule:rgba(13,31,0,.20);
+    position:relative;z-index:2;
+    background:#dcf34a;
+    color:var(--pf-ink);
+    border-radius:26px 26px 0 0;
+    overflow:hidden;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .pf-foot-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 100%;pointer-events:none;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.55) 38%,#000 62%);
+            mask-image:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.55) 38%,#000 62%);}
+  .pf-foot-inner{position:relative;
+    box-sizing:border-box;
+    max-width:1520px;margin:0 auto;
+    padding:clamp(32px,4vw,56px) clamp(20px,4vw,64px) clamp(18px,2.2vw,30px);
+  }
+  /* the page sets a{color:#f3ecde} and a:hover{color:#d8f24b} globally;
+     without these three rules every footer link goes neon-on-neon on hover. */
+  .pf-foot a{color:var(--pf-ink);text-decoration:none;}
+  .pf-foot a:visited{color:var(--pf-ink);}
+  .pf-foot a:hover,.pf-foot a:focus{color:#030818;}
+  .pf-foot a:focus-visible{outline:2px solid #0d1f00;outline-offset:4px;border-radius:3px;}
+
+  .pf-foot-top{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:clamp(30px,4vw,72px);flex-wrap:wrap;
+  }
+  .pf-foot-lead{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:clamp(16px,1.8vw,24px);flex:1 1 380px;min-width:0;
+  }
+  .pf-foot-mark{
+    display:inline-flex;align-items:center;gap:.45em;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-0.01em;line-height:1;
+  }
+  .pf-foot-head{
+    margin:0;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-weight:400;font-size:clamp(29px,3.4vw,50px);
+    line-height:1.1;letter-spacing:-0.02em;text-wrap:balance;
+  }
+  .pf-foot-shop{white-space:nowrap;}
+  /* Shopify green #95BF47 measures 1.70:1 against #d8f24b, so the mark takes
+     the footer ink colour instead and reads as part of the lockup. */
+  .pf-foot-shop svg{
+    width:.665em;height:.76em;vertical-align:-.035em;margin:0 .17em 0 .07em;fill:currentColor;
+  }
+  .pf-foot-cta{margin-top:clamp(2px,0.6vw,8px);}
+  .pf-foot-cta svg{width:17px;height:17px;flex:none;margin-right:-3px;}
+
+  /* dark pill: a neon pill on neon is invisible, so the fill inverts while the
+     physical language of .pf-btn (radius, inset highlight, lift, sheen) stays. */
+  .pf-btn--dark{
+    --pf-fg:#f4f7ea;
+    background:linear-gradient(180deg,rgba(255,255,255,.17),rgba(255,255,255,0) 52%),#0d1f00;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.24),
+      inset 0 -1px 0 rgba(0,0,0,.35),
+      0 1px 2px rgba(13,31,0,.32),
+      0 10px 26px -10px rgba(13,31,0,.55);
+  }
+  .pf-btn--dark::before{border-color:rgba(13,31,0,.30);opacity:.75;}
+  .pf-btn--dark::after{
+    background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.34) 50%,transparent 66%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+  }
+  .pf-btn--dark:hover{
+    filter:brightness(1.12);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.30),
+      inset 0 -1px 0 rgba(0,0,0,.38),
+      0 2px 4px rgba(13,31,0,.30),
+      0 18px 40px -12px rgba(13,31,0,.62);
+  }
+  .pf-btn--dark:hover::before{border-color:rgba(13,31,0,.46);opacity:1;}
+  .pf-btn--dark:active{
+    box-shadow:
+      inset 0 2px 5px rgba(0,0,0,.45),
+      inset 0 1px 0 rgba(255,255,255,.12),
+      0 1px 2px rgba(13,31,0,.34);
+  }
+  .pf-btn--dark:focus-visible{outline:2px solid #0d1f00;outline-offset:5px;}
+  /* `.pf-foot a` scores 0-1-1 and would otherwise beat `.pf-btn`'s 0-1-0 and
+     repaint the pill's label in the dark ink colour. Re-assert it at 0-2-0. */
+  .pf-foot .pf-btn,
+  .pf-foot .pf-btn:hover,
+  .pf-foot .pf-btn:focus,
+  .pf-foot .pf-btn:active,
+  .pf-foot .pf-btn:visited{color:var(--pf-fg);}
+
+  .pf-foot-nav{
+    display:flex;gap:clamp(34px,5vw,92px);flex:0 1 auto;padding-top:clamp(4px,1vw,10px);
+  }
+  .pf-foot-col{
+    list-style:none;margin:0;padding:0;
+    display:flex;flex-direction:column;gap:clamp(10px,1vw,13px);min-width:max-content;
+  }
+  .pf-foot-link{
+    position:relative;display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;line-height:1.25;letter-spacing:-0.005em;width:max-content;
+  }
+  .pf-foot-link::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+    background:currentColor;transform:scaleX(0);transform-origin:left center;
+    transition:transform .34s cubic-bezier(.22,1,.36,1);
+  }
+  /* 15px/1.25 gives a 19px tap target, and the footer is the densest stack of
+     links on the page. Grow the box on touch only — on a mouse the tighter
+     column is the better-looking one, and the underline sweep is keyed to the
+     text box, so the padding goes on the row rather than the anchor. */
+  @media (pointer:coarse){
+    .pf-foot-link{padding-block:13px;}
+    .pf-foot-link::after{bottom:11px;}
+    .pf-foot-col{gap:0;}
+    .pf-foot-legal a{display:inline-block;padding-block:13px;}
+    .pf-foot-mark{display:inline-block;padding-block:13px;}
+  }
+  .pf-foot-link:hover::after,.pf-foot-link:focus-visible::after{transform:scaleX(1);}
+  .pf-foot-link svg{width:15px;height:15px;flex:none;fill:currentColor;}
+
+  /* The giant wordmark is real Hedvig set as SVG <text>. The viewBox is the
+     measured INK box of "Priceflag" at font-size 1000 (x 30 -> 3926, ascender
+     -804, descender +257), so width:100% puts the glyph ink itself flush with
+     the content box rather than leaving the side bearings as a gap.
+     textLength pins the advance to Hedvig's own 3931.02 units, so a fallback
+     serif is squeezed onto the identical measure while the webfont loads. The
+     root <svg> keeps its default overflow:hidden, so no font can push a pixel
+     past the edge and raise a scrollbar. */
+  .pf-foot-word{display:block;width:100%;height:auto;margin-top:clamp(32px,4vw,56px);}
+  .pf-foot-word text{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:1000px;font-weight:400;fill:#0d1f00;
+  }
+
+  .pf-foot-bar{
+    margin-top:clamp(26px,2.4vw,34px);
+    border-top:1px solid var(--pf-rule);
+    padding-top:clamp(16px,1.6vw,22px);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px clamp(20px,3vw,40px);flex-wrap:wrap;
+    font-size:13.5px;line-height:1.4;letter-spacing:-0.005em;color:var(--pf-ink-soft);
+  }
+  .pf-foot-legal{display:flex;gap:clamp(18px,2.4vw,34px);flex-wrap:wrap;}
+  .pf-foot-legal a{color:var(--pf-ink-soft);}
+  .pf-foot-legal a:hover,.pf-foot-legal a:focus{color:#0d1f00;}
+
+  @media (max-width:900px){
+    .pf-foot-top{flex-direction:column;align-items:stretch;}
+    /* flex-basis is the MAIN axis: once the row turns into a column, the lead's
+       `flex:1 1 380px` becomes a 380px minimum *height* and tears a hole
+       between the CTA and the links. Reset it. */
+    .pf-foot-lead{flex:0 0 auto;}
+    .pf-foot-nav{
+      padding-top:0;
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(14px,3vw,26px) clamp(24px,6vw,60px);
+      max-width:440px;
+    }
+  }
+  @media (max-width:359px){
+    .pf-foot-nav{grid-template-columns:1fr;gap:clamp(10px,3vw,13px);}
+    .pf-foot-col + .pf-foot-col{
+      padding-top:clamp(10px,3vw,13px);
+      border-top:1px solid var(--pf-rule);
+    }
+    .pf-foot-bar{justify-content:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pf-foot-link::after{transition:none;}
+  }
+
+  /* ==================================================================
+     RESPONSIVE SHELL — nav, hero, statement, footer, every form factor.
+     ------------------------------------------------------------------
+     All of it lives here rather than on the elements for two reasons:
+     the dc runtime truncates inline style values at the first comma
+     (every clamp() below would be shredded), and beating the template's
+     existing inline styles needs !important, which an attribute cannot
+     express. Nothing here touches opacity / transform / filter on
+     [data-hero-copy] or [data-enter] — the scroll handler owns those
+     inline and an !important here would freeze the choreography.
+     ================================================================== */
+
+  /* iOS inflates text in landscape unless this is pinned. */
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+
+  :root{
+    /* Live height of the sticky nav. The hero used to hard-code 41px,
+       which stopped being true the moment the nav grew a second row or
+       44px tap targets. componentDidMount measures the real nav and
+       writes the true value here; these defaults keep the very first
+       paint correct before that lands. */
+    --pf-nav-h:43px;
+    --pf-gutter:clamp(14px,4.4vw,28px);
+  }
+  @media (max-width:900px),(pointer:coarse){ :root{--pf-nav-h:56px;} }
+
+  /* ---------- nav ---------- */
+  .pf-nav{
+    padding-left:var(--pf-gutter)!important;
+    padding-right:var(--pf-gutter)!important;
+    column-gap:12px;
+  }
+  /* children are: [mark/About/FAQ div] [centre link] [Sign In div] */
+  .pf-nav > div:first-of-type{gap:clamp(18px,3.2vw,34px)!important;min-width:0;}
+  .pf-nav > div:first-of-type > a:first-child{flex:none;padding:9px 0;margin:-9px 0;}
+  .pf-nav > div:last-of-type{flex:none;}
+  /* Padding grows the hit box; the equal negative margin hands the space
+     back to layout, so spacing is pixel-identical to before. */
+  [data-pf-i="1"],[data-pf-i="2"],
+  [data-pf-i="5"],[data-pf-i="6"]{padding:7px 8px;margin:-7px -8px;}
+  /* Without this the centre link squeezes to one word per line long
+     before it runs out of room, and reads as a 100px-tall stack. */
+  .pf-nav a{white-space:nowrap;}
+
+  @media (max-width:900px){
+    [data-pf-i="3"]{font-size:13px!important;}
+  }
+  /* Below this the centred link cannot clear the clusters either side at any
+     legible size — the three columns overlap and the Sign In pill is pushed
+     off the right edge. The row drops to the two that must always work: the
+     mark cluster and the right-hand links. */
+  /* 619 -> 679 -> 769 -> 680 -> 590, and now back up. Legal and Contact take
+     the right cluster from 78px to 203px, which hands the binding constraint
+     back to that side: measured across 560-1280 the right gap sits pinned at
+     the grid's own 12px column-gap out to ~680px, then opens 0.5px per px of
+     viewport. 740 is where it clears 48px, so the row splits below it. */
+  @media (max-width:739px){
+    .pf-nav{display:flex!important;justify-content:space-between;}
+    [data-pf-i="3"]{display:none!important;}
+  }
+
+  /* Touch tap targets. Height only — the pills keep their width, so the
+     row stays visually the same weight while every target clears 44px. */
+  @media (max-width:900px),(pointer:coarse){
+    .pf-nav{padding-top:6px!important;padding-bottom:6px!important;}
+    .pf-nav a{
+      box-sizing:border-box;min-height:44px;
+      display:inline-flex;align-items:center;
+    }
+    .pf-nav > div:first-of-type > a:first-child{padding:0;margin:0;}
+    [data-pf-i="1"],[data-pf-i="2"],
+    [data-pf-i="5"],[data-pf-i="6"]{padding:0 6px;margin:0 -6px;}
+    .pf-btn--sm{min-height:44px;}
+  }
+  /* Below ~373px the two clusters stop fitting side by side. The left one
+     carries min-width:0 so it is the one that gives, but .pf-nav a is nowrap,
+     so it does not reflow — it spills, and FAQ prints straight over Legal on a
+     360px Android. Nothing here can be made narrower without going under the
+     44px targets, so one link has to leave, and Legal is the one: it is also
+     in the footer and linked from the contact page, and it is the link nobody
+     reaches for on a phone. Same move the centre link makes at 739px. */
+  @media (max-width:379px){
+    [data-pf-i="5"]{display:none!important;}
+  }
+
+  /* 320px and narrower: the left cluster gets the last of its slack so
+     the hit boxes stay separated and Sign In keeps its full width. */
+  @media (max-width:359px){
+    .pf-nav > div:first-of-type{gap:14px!important;}
+    [data-pf-i="1"],[data-pf-i="2"],
+    [data-pf-i="5"],[data-pf-i="6"]{padding:0 4px;margin:0 -4px;}
+  }
+
+  /* ---------- hero ----------
+     100vh is the LARGE viewport on mobile: with the toolbar showing the
+     hero overflowed the fold, and the section no longer lined up with
+     what you could actually see. svh is the toolbar-visible height, so
+     the hero is exactly one screen and the statement starts precisely at
+     the fold. The fixed card takes lvh instead — the toolbar-hidden
+     height — so when the bar retracts mid-scroll the card has already
+     covered that strip and no gap is ever revealed. */
+  [data-screen-label="Hero"]{height:calc(100vh - var(--pf-nav-h))!important;}
+  @supports (height:100svh){
+    [data-screen-label="Hero"]{height:calc(100svh - var(--pf-nav-h))!important;}
+  }
+  [data-hero-card]{
+    top:var(--pf-nav-h)!important;
+    left:clamp(12px,3.2vw,24px)!important;
+    right:clamp(12px,3.2vw,24px)!important;
+    bottom:auto!important;
+    height:calc(100vh - var(--pf-nav-h))!important;
+    border-radius:clamp(18px,5vw,24px) clamp(18px,5vw,24px) 0 0!important;
+  }
+  @supports (height:100lvh){
+    [data-hero-card]{height:calc(100lvh - var(--pf-nav-h))!important;}
+  }
+  /* The card is deliberately lvh (see above) so no gap is revealed when the
+     toolbar retracts. The copy is inset:0 inside it and justify-content:center,
+     so it was centring on the toolbar-hidden height while the toolbar was still
+     showing — the lockup sat ~55-70px below optical centre on iOS Safari, which
+     is exactly the state the hero is first seen in. Pin the copy box to the
+     small viewport and let the card keep its larger one. */
+  [data-hero-copy]{
+    padding-left:clamp(20px,6vw,96px)!important;
+    padding-right:clamp(20px,6vw,96px)!important;
+    bottom:auto!important;
+    height:calc(100vh - var(--pf-nav-h))!important;
+  }
+  @supports (height:100svh){
+    [data-hero-copy]{height:calc(100svh - var(--pf-nav-h))!important;}
+  }
+  /* ---------- hero layout ----------
+     Full-bleed art, copy stacked top-left on the open night sky, and a
+     quiet info row pinned to the bottom edge. The storefront lives in the
+     lower right of the image, so the copy column never reaches it. */
+  [data-hero-card]{
+    left:0!important;right:0!important;border-radius:0!important;
+    border-top:1px solid rgba(243,236,222,0.08);
+  }
+  [data-hero-img]{object-position:right bottom!important;}
+  .pf-hero-wash{background:linear-gradient(90deg, rgba(3,8,24,0.78) 0%, rgba(3,8,24,0.5) 30%, rgba(3,8,24,0) 58%);}
+  [data-hero-copy]{
+    box-sizing:border-box;
+    justify-content:space-between!important;
+    padding-left:clamp(20px,5.6vw,80px)!important;
+    padding-right:clamp(20px,5.6vw,80px)!important;
+    padding-top:clamp(28px,6vh,64px)!important;
+    padding-bottom:clamp(22px,4.6vh,44px)!important;
+  }
+  .pf-hero-top{display:flex;flex-direction:column;align-items:flex-start;max-width:100%;}
+
+  /* Tag + link, the way a release note leads a page. */
+  .pf-eyebrow{
+    display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:clamp(13px,1.1vw,15px);line-height:1.4;color:#d8f24b;
+  }
+  .pf-eyebrow:hover{color:#d8f24b;}
+  .pf-tag{
+    display:inline-block;padding:4px 9px 3px;border-radius:3px;
+    background:#d8f24b;color:#071238;
+    font-size:.8em;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  }
+  .pf-eyebrow-link{border-bottom:1px solid rgba(216,242,75,0.45);padding-bottom:1px;transition:border-color .2s ease;}
+  .pf-eyebrow:hover .pf-eyebrow-link{border-color:#d8f24b;}
+  .pf-eyebrow-arrow{transition:transform .25s cubic-bezier(.22,1,.36,1);}
+  .pf-eyebrow:hover .pf-eyebrow-arrow{transform:translateX(3px);}
+
+  .pf-title{
+    margin:clamp(22px,4.4vh,44px) 0 0!important;
+    font-size:clamp(46px,5.1vw,92px)!important;
+    line-height:1.02!important;letter-spacing:-0.022em!important;
+    max-width:13em;
+  }
+  .pf-title-accent{color:#d8f24b;display:block;}
+  .pf-title-lead{display:block;color:#f3ecde;}
+
+  .pf-sub{
+    margin:clamp(20px,3.6vh,36px) 0 0;max-width:31em;
+    font-size:clamp(16px,1.35vw,20px);line-height:1.55;
+    color:rgba(243,236,222,0.84);text-wrap:pretty;
+    text-shadow:0 1px 16px rgba(3,8,24,0.8);
+  }
+  .pf-cta{
+    margin-top:clamp(24px,4.4vh,44px)!important;
+    display:flex;flex-wrap:wrap;gap:14px;
+  }
+
+  /* Secondary pill: same physics as .pf-btn, no fill. */
+  .pf-btn--ghost{
+    --pf-fg:#f3ecde;--pf-glow:243,236,222;
+    background:rgba(3,8,24,0.62);
+    box-shadow:inset 0 0 0 1px rgba(243,236,222,0.26),0 1px 2px rgba(3,8,24,.45);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  .pf-btn--ghost::before{opacity:0;}
+  .pf-btn--ghost::after{background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.14) 50%,transparent 64%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;}
+  .pf-btn--ghost:hover{
+    filter:none;background:rgba(18,26,48,0.78);
+    box-shadow:inset 0 0 0 1px rgba(243,236,222,0.42),0 2px 4px rgba(3,8,24,.42);
+  }
+  .pf-btn--ghost:active{box-shadow:inset 0 0 0 1px rgba(243,236,222,0.42);}
+
+  /* ---------- hero bottom row ---------- */
+  .pf-hero-foot{
+    display:flex;align-items:flex-end;width:100%;color:#f3ecde;
+  }
+  .pf-works{
+    display:flex;align-items:center;gap:16px;font-size:clamp(14px,1.2vw,17px);
+    text-shadow:0 1px 12px rgba(3,8,24,0.85),0 1px 3px rgba(3,8,24,0.9);
+  }
+  .pf-works-label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,236,222,0.8);}
+
+  /* Portrait / narrow: the shop is cropped to the lower right and the sky
+     fills the top, so the copy stays up there and the art anchors low. */
+  @media (max-width:767px){
+    [data-hero-img]{object-position:78% 0!important;}
+    [data-hero-copy]{justify-content:flex-start!important;}
+    .pf-hero-wash{background:linear-gradient(180deg, rgba(3,8,24,0.84) 0%, rgba(3,8,24,0.74) 40%, rgba(3,8,24,0.55) 62%, rgba(3,8,24,0.35) 78%, rgba(3,8,24,0.78) 100%);}
+    .pf-eyebrow-arrow{display:none;}
+    .pf-title{font-size:clamp(38px,11vw,56px)!important;text-shadow:0 1px 3px rgba(3,8,24,0.9),0 4px 50px rgba(3,8,24,0.7)!important;}
+    .pf-sub{font-size:16px;text-shadow:0 1px 4px rgba(3,8,24,0.95),0 1px 16px rgba(3,8,24,0.8)!important;}
+    .pf-hero-foot{margin-top:auto;}
+    .pf-works{font-size:14px;}
+  }
+  @media (max-width:767px) and (max-height:700px){
+    .pf-sub{display:none;}
+  }
+  /* Short screens (landscape phones, small laptops): drop the bottom row
+     rather than let it collide with the CTAs. */
+  @media (max-height:620px){
+    .pf-hero-foot{display:none;}
+    .pf-title{font-size:clamp(32px,5vw,52px)!important;margin-top:14px!important;}
+    .pf-sub{margin-top:14px;font-size:15px;}
+    .pf-cta{margin-top:18px!important;}
+  }
+  /* ---------- statement ---------- */
+  [data-screen-label="Statement"]{
+    padding-top:clamp(16px,3vh,40px)!important;
+    padding-bottom:clamp(32px,6vh,72px)!important;
+  }
+  /* 64px of gutter left 192px of measure on a 320px phone. */
+  [data-screen-label="Statement"] > [data-enter]{
+    padding-left:clamp(20px,5.4vw,64px)!important;
+    padding-right:clamp(20px,5.4vw,64px)!important;
+  }
+  @media (max-width:479px){
+    [data-screen-label="Statement"] > [data-enter] > div{
+      font-size:clamp(26px,7.6vw,34px)!important;
+    }
+  }
+
+  /* ---------- footer ---------- */
+  /* The giant wordmark is width:100% of the content box, so it can never
+     raise a scrollbar; the top row and the legal bar are the two places
+     that could, and both are already wrapping. This just keeps the CTA
+     from being a full-bleed block once the lead becomes a column. */
+  .pf-foot-cta{align-self:flex-start;}
+  @media (max-width:479px){
+    .pf-foot-word{margin-top:clamp(30px,7vw,44px);}
+  }
+</style>
+</helmet>
+<div ref="{{ scrollerRef }}" class="pf-intro" data-scroller="1" style="font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;">
+
+  <nav class="pf-nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:#030818;">
+    <div style="display:flex;align-items:center;gap:34px;justify-self:start;">
+      <a href="#" data-pf-go="top" aria-label="Priceflag — back to top" style="display:inline-flex;align-items:center;color:#f3ecde;font-size:22px;"><span class="pf-hiker" aria-hidden="true"></span></a>
+      <a class="pf-nav-item" data-pf-i="1" href="/about" style="font-size:13px;">About</a>
+      <a class="pf-nav-item" data-pf-i="2" data-pf-go="faq" href="#" style="font-size:13px;">FAQ</a>
+    </div>
+    <a class="pf-nav-item" data-pf-i="3" href="https://youtu.be/vfZ26mCQ79A" target="_blank" rel="noopener noreferrer" style="justify-self:center;color:#d8f24b;font-size:14px;">Learn more about the team ↗</a>
+    <div style="display:flex;align-items:center;gap:22px;justify-self:end;">
+      <a class="pf-nav-item" data-pf-i="5" href="/legal" style="font-size:13px;">Legal</a>
+      <a class="pf-nav-item" data-pf-i="6" href="/contact" style="font-size:13px;">Contact</a>
+      <a class="pf-nav-item pf-btn pf-btn--light pf-btn--sm" data-pf-i="4" href="https://signin.priceflag.org" rel="noopener">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- The card is FIXED. A scrim on the card darkens the whole painting
+       to #030818 as the hero scrolls away, so the handoff is a field going
+       dark rather than the next section's background sliding up as a bar. -->
+  <section data-screen-label="Hero" style="height:calc(100vh - 41px);position:relative;background:#030818;">
+      <div ref="{{ heroCardRef }}" data-hero-card="1" style="position:fixed;top:41px;left:24px;right:24px;bottom:0;overflow:hidden;border-radius:24px 24px 0 0;">
+        <!-- Painting: the crowd switchbacks up in an S, the Priceflag climber goes straight up the spine. Together they draw a $. -->
+        <div class="pf-hero-media" style="position:absolute;inset:0;">
+          <img ref="{{ heroImgRef }}" data-hero-img="1" src="hero-new.png" alt="" width="1671" height="941" fetchpriority="high" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right bottom;">
+        </div>
+        <div class="pf-hero-wash" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;"></div>
+        <div class="pf-grain" data-grain="1" style="position:absolute;inset:0;pointer-events:none;"></div>
+        <div ref="{{ heroDimRef }}" data-hero-dim="1" aria-hidden="true" style="position:absolute;inset:0;background:#030818;opacity:0;pointer-events:none;"></div>
+        <div ref="{{ heroContentRef }}" data-hero-copy="1" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;text-align:left;padding:0 24px;">
+          <div class="pf-hero-top">
+            <a class="pf-eyebrow" href="#" data-pf-go="demo"><span class="pf-tag">AI Pricing</span><span class="pf-eyebrow-link">Built for Shopify stores. See it work</span><span class="pf-eyebrow-arrow" aria-hidden="true">&rarr;</span></a>
+            <h1 class="pf-title" style="font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;font-weight:400;color:#f3ecde;text-shadow:0 4px 50px rgba(3,8,24,0.7);text-wrap:balance;"><span class="pf-title-lead">Change your store's prices</span> <span class="pf-title-accent">without losing sales.</span></h1>
+            <p class="pf-sub">Priceflag forecasts each price change, rolls it out gradually across your products, and reverts it on its own if it stops paying. Every shopper always sees the same price.</p>
+            <div class="pf-cta">
+              <!-- TODO: point href at the real booking link; until then it scrolls
+                   to the email capture so the button is never a dead end. -->
+              <a class="pf-btn" href="#" data-pf-go="waitlist"><span class="pf-btn-dot"></span>Get a free price review</a>
+              <a class="pf-btn pf-btn--ghost" href="#" data-pf-go="demo">See how it works</a>
+            </div>
+          </div>
+          <div class="pf-hero-foot">
+            <div class="pf-works"><span class="pf-works-label">Works with</span><span ref="{{ heroLogosRef }}" class="pf-hero-logos" data-pf-section="hero-logos"></span><span>Shopify &amp; more</span></div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section data-screen-label="Statement" style="position:relative;z-index:2;margin-top:0;display:flex;align-items:flex-start;padding:3vh 0 6vh;background:transparent;">
+    <div ref="{{ statementTextRef }}" data-enter="1" style="position:relative;z-index:1;max-width:1180px;padding:0 64px;">
+      <div style="font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;font-weight:400;font-size:clamp(34px, 3.8vw, 56px);line-height:1.22;letter-spacing:-0.015em;color:#f3ecde;text-wrap:pretty;text-shadow:0 2px 30px rgba(3,8,24,0.9);">See the predicted impact on profit before anything goes live. Roll the change out gradually. We watch your real orders and put it back if it stops paying.</div>
+    </div>
+  </section>
+  <!-- Each module builds its own DOM inside its host. -->
+  <section data-screen-label="Sections" style="position:relative;z-index:2;background:#030818;">
+    <div ref="{{ compareRef }}"  data-pf-section="compare"></div>
+    <div ref="{{ simRef }}"      data-pf-section="sim"></div>
+    <div ref="{{ workflowRef }}" data-pf-section="workflow"></div>
+    <div ref="{{ faqRef }}"      data-pf-section="faq"></div>
+    <div ref="{{ waitlistRef }}" data-pf-section="waitlist"></div>
+  </section>
+
+  <section data-screen-label="Footer" class="pf-foot" role="contentinfo">
+  <img class="pf-foot-art" src="uploads/summit-lime.webp" alt="" width="1855" height="848" loading="lazy" decoding="async">
+  <div class="pf-foot-inner" ref="{{ footerInnerRef }}" data-enter="1">
+
+    <div class="pf-foot-top">
+      <div class="pf-foot-lead">
+        <a class="pf-foot-mark" href="#" data-pf-go="top"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
+
+        <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span> &amp; more</h2>
+
+        <!-- TODO: point href at the real booking link (see hero CTA). -->
+        <a class="pf-btn pf-btn--dark pf-foot-cta" href="#" data-pf-go="waitlist">
+          Get a free price review
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <nav class="pf-foot-nav" aria-label="Footer">
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="#" data-pf-go="top">Home</a></li>
+          <li><a class="pf-foot-link" href="/about">About</a></li>
+          <li><a class="pf-foot-link" href="#" data-pf-go="partners">Partners</a></li>
+          <li><a class="pf-foot-link" href="#" data-pf-go="demo">Demo</a></li>
+          <li><a class="pf-foot-link" href="https://youtu.be/vfZ26mCQ79A" target="_blank" rel="noopener noreferrer">Team ↗</a></li>
+        </ul>
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="https://x.com/Priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
+          <li><a class="pf-foot-link" href="https://www.linkedin.com/company/priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+      <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
+    </svg>
+
+    <div class="pf-foot-bar">
+      <span>Built by Humans in San Francisco&#44; CA</span>
+      <div class="pf-foot-legal">
+        <a href="/contact">Contact</a>
+        <a href="/legal">Legal</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  scrollerRef = React.createRef();
+  heroImgRef = React.createRef(); heroContentRef = React.createRef();
+  heroDimRef = React.createRef();
+  statementTextRef = React.createRef(); footerInnerRef = React.createRef();
+  compareRef = React.createRef(); simRef = React.createRef();
+  workflowRef = React.createRef();
+  faqRef = React.createRef();
+  heroLogosRef = React.createRef(); heroCardRef = React.createRef();
+  waitlistRef = React.createRef();
+
+  /* Every scroll tunable in one place. */
+  FX = {
+    // Hero copy: gone by half a viewport, linear, max 12px of blur.
+    FADE_SPAN: 0.5, FADE_BLUR: 12,
+    // Sections rising into view.
+    ENTER_SPAN:0.55, ENTER_SPAN_FOOT:0.40, ENTER_RISE:34, ENTER_BLUR:7
+  };
+  _prev = new WeakMap();
+  _reduce = false;
+
+  _clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
+  // Reacts on the very first pixel of scroll, then lands softly.
+  _easeOut = (t) => 1 - Math.pow(1 - t, 2.2);
+  // Soft at both ends but still alive near 0, so motion never pops.
+  _easeSmooth = (t) => t * t * (3 - 2 * t);
+
+  // Write only on change; once a value saturates the writes stop entirely.
+  _set = (el, prop, val) => {
+    if (!el) return;
+    let m = this._prev.get(el);
+    if (!m) { m = {}; this._prev.set(el, m); }
+    if (m[prop] === val) return;
+    m[prop] = val;
+    el.style[prop] = val;
+  };
+
+  // Soft entrance for anything rising into view.
+  // `span` is per-element: the footer is tall and the page is short, so it
+  // needs a quicker ramp or it never finishes resolving before the bottom.
+  _reveal = (el, top, vh, span) => {
+    if (!el || top === null) return;
+    const e = this._easeOut(this._clamp01((vh - top) / (vh * (span || this.FX.ENTER_SPAN))));
+    this._set(el, 'opacity', e.toFixed(4));
+    this._set(el, 'transform', 'translate3d(0,' + ((1 - e) * this.FX.ENTER_RISE).toFixed(2) + 'px,0)');
+    this._set(el, 'filter', e > 0.995 ? 'none' : 'blur(' + ((1 - e) * this.FX.ENTER_BLUR).toFixed(2) + 'px)');
+  };
+
+  _revealStatic = (el) => {
+    if (!el) return;
+    this._set(el, 'opacity', '1');
+    this._set(el, 'transform', 'none');
+    this._set(el, 'filter', 'none');
+  };
+
+  applyScrollFx = () => {
+    const FX = this.FX;
+    const vh = window.innerHeight || 1;
+    const y  = window.scrollY || window.pageYOffset || 0;
+
+    const copy = this.heroContentRef.current;
+    const stmt = this.statementTextRef.current;
+    const foot = this.footerInnerRef.current;
+    // pf-workflow paints the statement solid, which scrolls up as a bar.
+    // Keep that section clear so the fixed scrim is what darkens the field.
+    const stmtSec = stmt && stmt.parentElement;
+    if (stmtSec && !this._stmtClear) {
+      stmtSec.style.setProperty('background-color', 'transparent', 'important');
+      this._stmtClear = true;
+    }
+
+    // Reads first, so we never thrash layout.
+    const stmtY = stmt ? stmt.getBoundingClientRect().top : null;
+    const footY = foot ? foot.getBoundingClientRect().top : null;
+    const room  = Math.max(1, document.documentElement.scrollHeight - vh);
+
+    // The hero copy scrubs straight off scroll position — linear, no easing,
+    // fully gone by half a viewport.
+    const p = this._clamp01(y / (vh * FX.FADE_SPAN));
+    // Darken the whole fixed painting in place. A solid section scrolling up
+    // over it read as a bar. The scrim lives on the card, so the field goes
+    // to #030818 everywhere at once. Once it is fully dark the card is
+    // dropped; it matches the page and must not stay fixed over later sections.
+    const card = this.heroCardRef.current;
+    const heroH = card && card.parentElement ? card.parentElement.offsetHeight : vh;
+    const stmtH = stmtSec ? stmtSec.offsetHeight : 0;
+    // Fully navy by the time the next section reaches the fold, so its
+    // background meets a field that is already the same color.
+    const dimSpan = Math.max(vh * 0.42, heroH + stmtH - vh);
+    const dim = this._easeSmooth(this._clamp01(y / dimSpan));
+    this._set(this.heroDimRef.current, 'opacity', dim.toFixed(4));
+    const cardGone = dim >= 0.999;
+    this._set(card, 'opacity', cardGone ? '0' : '1');
+    this._set(card, 'visibility', cardGone ? 'hidden' : 'visible');
+
+    if (this._reduce) {
+      this._set(copy, 'opacity', String(1 - p));
+      this._set(copy, 'filter', 'none');
+      this._revealStatic(stmt);
+      this._revealStatic(foot);
+      return;
+    }
+
+    this._set(copy, 'opacity', String(1 - p));
+    this._set(copy, 'filter', p > 0 ? 'blur(' + (p * FX.FADE_BLUR).toFixed(2) + 'px)' : 'none');
+    this._set(copy, 'pointerEvents', p >= 1 ? 'none' : '');
+
+    this._reveal(stmt, stmtY, vh);
+    // The footer is last on the page, so normalise its reveal against the
+    // travel it actually has left, or it rests permanently faded.
+    if (foot && footY !== null) {
+      const topAtBottom = footY - (room - y);
+      const travel = Math.max(1, vh - topAtBottom);
+      const e = this._easeOut(this._clamp01((vh - footY) / travel));
+      this._set(foot, 'opacity', e.toFixed(4));
+      this._set(foot, 'transform', 'translate3d(0,' + ((1 - e) * FX.ENTER_RISE).toFixed(2) + 'px,0)');
+      this._set(foot, 'filter', e > 0.995 ? 'none' : 'blur(' + ((1 - e) * FX.ENTER_BLUR).toFixed(2) + 'px)');
+    }
+  };
+
+  onScroll = () => {
+    if (this.tick) return; this.tick = true;
+    requestAnimationFrame(() => { this.tick = false; this.applyScrollFx(); });
+  };
+
+  /* ======================================================================
+     IN-PAGE NAVIGATION
+     ----------------------------------------------------------------------
+     Every in-page link carries data-pf-go="<key>"; one delegated listener
+     resolves the key to a live element and tweens the window to it. Keys
+     rather than ids because two of the destinations — the platform marquee
+     and the FAQ accordion — are built by a section module at runtime and
+     have no markup in this file to hang an id on.
+
+     Duration is FIXED, not proportional to distance: the longest hop on the
+     page is the footer back to the top, and a distance-scaled tween turns
+     that into a ten-second crawl.
+     ==================================================================== */
+  NAV_MS  = 900;   // unhurried, but never a crawl on long jumps
+  NAV_GAP = 12;    // breathing room between the nav's underside and the target
+
+  // Symmetric cubic: leaves and lands soft, spends its speed in the middle.
+  _easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  _now = () => (window.performance && performance.now ? performance.now() : Date.now());
+
+  /* The nav is sticky at top:0, so its height IS the strip that covers any
+     target. Measured live — the same source syncNav publishes as --pf-nav-h,
+     read here directly so a scroll can never race the variable. */
+  _navOffset = () => {
+    const nav = document.querySelector('.pf-nav');
+    const h = nav ? nav.getBoundingClientRect().height : 0;
+    /* Clearing the nav is the floor, not the goal: a target parked flush under
+       it reads as jammed against the top of the screen. Add a slice of the
+       viewport so the destination sits a little into the frame, clamped so it
+       stays sensible on a short landscape phone and a tall monitor alike. */
+    const vh = window.innerHeight || 800;
+    const air = Math.round(Math.min(Math.max(vh * 0.13, 44), 150));
+    return Math.round(h || this._navH || 43) + air;
+  };
+
+  /* Scroll position that parks `el` just under the nav.
+     getBoundingClientRect() is post-transform, and the scroll choreography
+     parks [data-enter] blocks up to ENTER_RISE px low while they are still
+     resolving — aim at the layout position or the element overshoots up by
+     exactly that much once it finishes revealing. */
+  _navTarget = (el) => {
+    if (!el || !el.getBoundingClientRect) return null;
+    const y = window.scrollY || window.pageYOffset || 0;
+    let top = el.getBoundingClientRect().top + y;
+    const m = /translate3d\([^,]*,\s*(-?[\d.]+)px/.exec((el.style && el.style.transform) || '');
+    if (m) top -= parseFloat(m[1]);
+    return top - this._navOffset();
+  };
+
+  _in = (root, sel) => (root && root.querySelector ? root.querySelector(sel) : null);
+
+  /* The simulation is the one target that is not a place on the page but a
+     place in a story. It pins itself and reads its own progress straight off
+     its layout box: p = -rect.top / (height - viewport). At its exact top p is
+     0 — and act 1's copy fades IN across the first 2% of p, so p=0 is a stage
+     with nothing written on it. So aim at a progress, not at an edge: a hair
+     past the fade-in, a fifth of the way through act 1, curtain already up.
+     No nav offset here — the stage is pinned under the nav by design and the
+     module hit-tests the nav's band out of its own drawing area. */
+  SIM_P = 0.035;
+  _simTarget = () => {
+    const el = this.simRef.current;
+    if (!el || !el.getBoundingClientRect) return null;
+    const r = el.getBoundingClientRect();
+    const span = r.height - (window.innerHeight || 0);
+    // Reduced motion unpins the section and it stops being taller than the
+    // screen; then it is an ordinary block and wants the ordinary offset.
+    if (!(span > 0)) return this._navTarget(el);
+    return r.top + (window.scrollY || window.pageYOffset || 0) + span * this.SIM_P;
+  };
+
+  /* Resolved on every use, never cached: the modules mount late, the FAQ
+     panels open and close, and the page reflows on rotate. */
+  _resolveTarget = (key) => {
+    const faq = this.faqRef.current;
+    switch (key) {
+      case 'top':      return 0;
+      case 'bottom':   return document.documentElement.scrollHeight;
+      case 'waitlist': return this._navTarget(this.waitlistRef.current);
+      case 'about':    return this._navTarget(this.statementTextRef.current);
+      case 'demo':     return this._simTarget();
+      case 'workflow':
+      case 'how-it-works': return this._navTarget(this.workflowRef.current);
+      // Marquee and accordion are two halves of one module; the label is the
+      // marquee's first painted line, the accordion starts at .pff-faq-sec.
+      case 'partners': return this._navTarget(this._in(faq, '.pff-mq-label') || this._in(faq, '.pff-mq') || faq);
+      case 'faq':      return this._navTarget(this._in(faq, '.pff-faq-sec') || this._in(faq, '.pff-list') || faq);
+      default:         return null;
+    }
+  };
+
+  _clampY = (v) => {
+    const max = Math.max(0, (document.documentElement.scrollHeight || 0) - (window.innerHeight || 0));
+    return Math.max(0, Math.min(max, Math.round(v)));
+  };
+
+  _stopNav = () => {
+    if (this._navRaf) { cancelAnimationFrame(this._navRaf); this._navRaf = 0; }
+    if (this._navGuard) { clearTimeout(this._navGuard); this._navGuard = 0; }
+  };
+
+  /* Land: re-measure once and correct. Between the first reading and the last
+     frame a module can size itself or a reveal can finish, and a 30px miss on
+     arrival is exactly the miss the user notices. */
+  _land = (key) => {
+    this._stopNav();
+    const again = this._resolveTarget(key);
+    if (again !== null) {
+      const want = this._clampY(again);
+      if (Math.abs(want - (window.scrollY || window.pageYOffset || 0)) > 2) window.scrollTo(0, want);
+    }
+    /* The scroll listener defers to rAF, which is paused whenever the document
+       is hidden. Drive the choreography directly so the hero fade is right at
+       the end of a programmatic scroll no matter what the frame clock did. */
+    this.applyScrollFx();
+  };
+
+  goTo = (key) => {
+    const raw = this._resolveTarget(key);
+    if (raw === null) return;
+    const to = this._clampY(raw);
+    const from = window.scrollY || window.pageYOffset || 0;
+    this._stopNav();
+
+    if (this._reduce || Math.abs(to - from) < 2) { window.scrollTo(0, to); this._land(key); return; }
+
+    const t0 = this._now();
+    const step = () => {
+      const t = this._clamp01((this._now() - t0) / this.NAV_MS);
+      window.scrollTo(0, Math.round(from + (to - from) * this._easeInOut(t)));
+      if (t < 1) { this._navRaf = requestAnimationFrame(step); }
+      else { this._navRaf = 0; this._land(key); }
+    };
+    this._navRaf = requestAnimationFrame(step);
+    /* rAF does not tick while document.hidden. A tween that never gets a frame
+       still has to arrive, so a timer lands it; in the normal case _land has
+       already cleared this before it can fire. */
+    this._navGuard = setTimeout(() => { window.scrollTo(0, to); this._land(key); }, this.NAV_MS + 90);
+  };
+
+  onNavClick = (e) => {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target && e.target.closest ? e.target.closest('[data-pf-go]') : null;
+    if (!a) return;
+    e.preventDefault();
+    this.goTo(a.getAttribute('data-pf-go'));
+  };
+
+  // Any real scrolling gesture wins over a tween in flight.
+  onNavInterrupt = () => { if (this._navRaf || this._navGuard) this._stopNav(); };
+
+  /* The hero used to assume a 41px nav. That stops being true the moment
+     the nav takes 44px tap targets, the wordmark's webfont lands, or a
+     narrow viewport reflows the row — and a wrong value either overlaps
+     the nav or tears a gap under it. So measure the real thing and
+     publish it as --pf-nav-h; the hero height and the fixed card are both
+     expressed against it. Deliberately no rAF and no ResizeObserver:
+     document.hidden starves both here, and this has to be right anyway. */
+  _navH = 0;
+  syncNav = () => {
+    const nav = document.querySelector('.pf-nav');
+    if (!nav) return;
+    const h = Math.round(nav.getBoundingClientRect().height);
+    if (h > 0 && h !== this._navH) {
+      this._navH = h;
+      document.documentElement.style.setProperty('--pf-nav-h', h + 'px');
+    }
+  };
+  onViewport = () => { this.syncNav(); this.applyScrollFx(); };
+
+  componentDidMount() {
+    // First: the intro pre-hides the hero in CSS, so if anything below throws
+    // the runtime would swallow it and leave the page invisible.
+    this.startIntro();
+    this.mountSections();
+    this.onResize = () => this.onViewport();
+    window.addEventListener('resize', this.onResize);
+    /* iOS fires orientationchange BEFORE innerWidth/innerHeight settle,
+       and on some builds without a following resize, so re-measure a few
+       times across the rotation instead of trusting the first reading.
+       Timers keep running while document.hidden; rAF does not. */
+    this.onOrient = () => {
+      this.onViewport();
+      this.orientT1 = setTimeout(this.onViewport, 120);
+      this.orientT2 = setTimeout(this.onViewport, 420);
+    };
+    window.addEventListener('orientationchange', this.onOrient);
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', this.onResize);
+    this.syncNav();
+    // The wordmark's webfont changes the nav's height when it swaps in.
+    try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(this.onViewport, () => {}); } catch (e) {}
+    try {
+      this._mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this._reduce = this._mq.matches;
+      this._onMq = () => { this._reduce = this._mq.matches; this.applyScrollFx(); };
+      if (this._mq.addEventListener) this._mq.addEventListener('change', this._onMq);
+      else this._mq.addListener(this._onMq);
+    } catch (e) {}
+    /* One delegated listener for every in-page link — nav, footer and the
+       CTAs — so links the section modules add later work with no re-binding. */
+    document.addEventListener('click', this.onNavClick);
+    window.addEventListener('wheel', this.onNavInterrupt, { passive: true });
+    window.addEventListener('touchstart', this.onNavInterrupt, { passive: true });
+    window.addEventListener('keydown', this.onNavInterrupt);
+    // The document is the scroll container now, so listen on the window.
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.applyScrollFx();   // correct first frame, including a reload mid-page
+  }
+  startIntro = () => {
+    const root = this.scrollerRef.current; if (!root) return;
+    const go = () => {
+      if (this.introStarted) return;
+      this.introStarted = true;
+      clearTimeout(this.introFallback);
+      // Two frames, so the pre-hidden state is guaranteed to have painted first.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        root.classList.add('pf-intro-go');
+        this.introDone = setTimeout(() => root.classList.add('pf-intro-done'), 2400);
+      }));
+    };
+    const im = this.heroImgRef.current;
+    if (im && !im.complete) {
+      im.addEventListener('load', go, { once: true });
+      im.addEventListener('error', go, { once: true });
+      this.introFallback = setTimeout(go, 1200);   // never block on a slow image
+    } else { go(); }
+  };
+  mountSections() {
+    // Independent: one module failing must not take the page with it.
+    //
+    // The four modules load with `defer`, so they are NOT guaranteed to have
+    // executed by the time the dc runtime mounts this component. Giving up on
+    // a missing global left that section permanently empty — pf-faq.js is last
+    // in the list and lost the race in the wild. So keep retrying instead.
+    this.sectionCleanups = [];
+    this.pendingMounts = [
+      ['initPfCompare', this.compareRef],
+      ['initPfDemo', this.simRef],
+      ['initPfWorkflow', this.workflowRef],
+      ['initPfFaq', this.faqRef],
+      ['initPfWaitlist', this.waitlistRef],
+      ['initPfHeroLogos', this.heroLogosRef]
+    ];
+    this.tryMountSections();
+    if (this.pendingMounts.length) {
+      this.mountTimer = setInterval(() => this.tryMountSections(), 60);
+      this.onLoadMount = () => this.tryMountSections();
+      window.addEventListener('load', this.onLoadMount);
+      // A script that never arrives shouldn't leave a timer running forever.
+      this.mountGiveUp = setTimeout(() => this.stopMountRetries(), 15000);
+    }
+  }
+  tryMountSections() {
+    this.pendingMounts = this.pendingMounts.filter(([fn, ref]) => {
+      const el = ref.current;
+      if (!el || typeof window[fn] !== 'function') return true;   // retry later
+      try { this.sectionCleanups.push(window[fn](el)); }
+      catch (e) { console.error(fn + ' failed to mount', e); }
+      return false;
+    });
+    if (!this.pendingMounts.length) this.stopMountRetries();
+  }
+  stopMountRetries() {
+    if (this.mountTimer) { clearInterval(this.mountTimer); this.mountTimer = 0; }
+    if (this.mountGiveUp) { clearTimeout(this.mountGiveUp); this.mountGiveUp = 0; }
+    if (this.onLoadMount) { window.removeEventListener('load', this.onLoadMount); this.onLoadMount = null; }
+  }
+  componentWillUnmount() {
+    this.stopMountRetries();
+    (this.sectionCleanups || []).forEach(fn => { try { if (fn) fn(); } catch (e) {} });
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('orientationchange', this.onOrient);
+    if (window.visualViewport) window.visualViewport.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    document.removeEventListener('click', this.onNavClick);
+    window.removeEventListener('wheel', this.onNavInterrupt);
+    window.removeEventListener('touchstart', this.onNavInterrupt);
+    window.removeEventListener('keydown', this.onNavInterrupt);
+    this._stopNav();
+    cancelAnimationFrame(this.raf);
+    clearTimeout(this.introFallback); clearTimeout(this.introDone);
+    clearTimeout(this.orientT1); clearTimeout(this.orientT2);
+    if (this._mq) {
+      if (this._mq.removeEventListener) this._mq.removeEventListener('change', this._onMq);
+      else this._mq.removeListener(this._onMq);
+    }
+  }
+  renderVals() {
+    return {
+      scrollerRef: this.scrollerRef,
+      heroImgRef: this.heroImgRef, heroContentRef: this.heroContentRef, heroDimRef: this.heroDimRef, onScroll: this.onScroll,
+      statementTextRef: this.statementTextRef, footerInnerRef: this.footerInnerRef,
+      compareRef: this.compareRef, simRef: this.simRef,
+      workflowRef: this.workflowRef,
+      faqRef: this.faqRef, waitlistRef: this.waitlistRef,
+      heroLogosRef: this.heroLogosRef, heroCardRef: this.heroCardRef,
+      goJoin: () => this.goTo('waitlist')
+    };
+  }
+}
+</script>
+</body>
+</html>

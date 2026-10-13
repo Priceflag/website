@@ -1,0 +1,14 @@
+# Prototypes and analysis notes — not part of the site.
+experiments/
+
+# Repo documentation. The deployment serves this directory verbatim, so anything
+# left in would be fetchable at priceflag.org/README.md.
+README.md
+
+# Design sources. The page serves the .webp/.jpg derivatives, not these.
+uploads/IMG_6461.png
+uploads/new-hero.png
+uploads/signin-hero.png
+uploads/hero2.jpg
+
+Priceflag-standalone.html

@@ -1,0 +1,26 @@
+{
+  "check": "nojs",
+  "title": "No-JS rendering (H1, primary CTA, text)",
+  "status": "PASS",
+  "durationMs": 714,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "textLength": 2005,
+      "h1Visible": true,
+      "h1Text": "Change your store's prices\nwithout losing sales.",
+      "ctaVisible": true,
+      "ctaCount": 2
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "textLength": 2005,
+      "h1Visible": true,
+      "h1Text": "Change your store's prices\nwithout losing sales.",
+      "ctaVisible": true,
+      "ctaCount": 2
+    }
+  }
+}

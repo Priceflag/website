@@ -1,0 +1,46 @@
+/* ---------- breakeven calculator (h2, figure, body) ----------
+   Three sizes: the section heading (--pf-text-h2), the answer number (--pf-text-figure, the section's
+   display size) and body (--pf-text-body) for everything else. Panel 24px, fields 12px, button pill. */
+.pf-calc .pf-lede{max-width:var(--pf-measure-long);}
+.pf-calc-panel{display:grid;margin-top:var(--pf-space-8);border-radius:var(--pf-radius-card);background:var(--pf-navy-900);
+  box-shadow:inset 0 0 0 1px rgba(243,236,222,.14);}
+.pf-calc-panel > *{min-width:0;}
+.pf-calc-inputs,.pf-calc-result{padding:clamp(22px,3vw,40px);}
+.pf-calc-inputs{display:grid;gap:var(--pf-space-5);align-content:start;}
+.pf-calc-result{display:flex;flex-direction:column;align-items:flex-start;gap:var(--pf-space-5);border-top:1px solid var(--pf-line);}
+@media (min-width:900px){
+  .pf-calc-panel{grid-template-columns:minmax(0,5fr) minmax(0,6fr);}
+  .pf-calc-result{border-top:0;border-left:1px solid var(--pf-line);padding-left:clamp(28px,4vw,56px);}
+}
+
+/* Fields: label above, "$" shown inside the field but not part of its value. */
+.pf-calc-field{display:grid;gap:var(--pf-space-2);}
+.pf-calc-field label{font-weight:500;color:var(--pf-cream);}
+.pf-calc-hint{font-weight:400;color:var(--pf-cream-muted);}
+.pf-calc-well{position:relative;}
+.pf-calc-cur{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--pf-cream-muted);pointer-events:none;
+  font:400 var(--pf-text-body)/1 var(--pf-sans);}
+.pf-calc-well input{width:100%;min-height:48px;padding:12px 14px 12px 30px;border-radius:var(--pf-radius-field);border:1px solid var(--pf-line-control);
+  background:var(--pf-navy-950);color:var(--pf-cream);font:400 var(--pf-text-body)/1.4 var(--pf-sans);font-variant-numeric:tabular-nums;}
+.pf-calc-well input:focus-visible{outline-offset:1px;border-color:var(--pf-cream);border-radius:var(--pf-radius-field);}
+.pf-calc-well input[aria-invalid="true"]{border-color:var(--pf-bad);}
+.pf-calc-err{color:var(--pf-bad);}
+.pf-calc-err:empty{display:none;}
+.pf-calc-note{color:var(--pf-cream-muted);}
+
+/* Answer. The number is the one lime element in the section. */
+.pf-calc-out{display:block;max-width:30em;}
+.pf-calc-answer,.pf-calc-support{display:block;overflow-wrap:anywhere;}
+.pf-calc-answer{color:var(--pf-cream);text-wrap:pretty;}
+.pf-calc-figure{display:block;margin:var(--pf-space-1) 0 var(--pf-space-2);font:600 var(--pf-text-figure)/1.05 var(--pf-sans);
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--pf-lime);}
+.pf-calc-figure:empty{display:none;}
+.pf-calc-support{margin-top:var(--pf-space-3);color:var(--pf-cream-muted);}
+.pf-calc-support:empty{display:none;}
+.pf-calc-result .pf-btn{margin-top:auto;}
+
+/* The only motion: the new answer number fades in, 200ms. None under reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .pf-calc-figure.is-fresh{animation:pf-calc-in var(--pf-dur-fast) var(--pf-ease);}
+  @keyframes pf-calc-in{from{opacity:0;}to{opacity:1;}}
+}

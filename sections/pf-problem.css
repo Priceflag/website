@@ -1,0 +1,10 @@
+/* ---------- problem (type sizes: h3 for the heading, h2 for the three lines) ----------
+   Layout family: large-type stacked lines. From 960px the lines step to the right like a switchback,
+   so the three read as one descent; below that they stack flush left. */
+.pf-problem-title{font-family:var(--pf-sans);font-weight:500;font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);color:var(--pf-cream-muted);max-width:var(--pf-measure);}
+.pf-problem-lines{list-style:none;margin:var(--pf-space-8) 0 0;padding:0;display:grid;gap:clamp(24px,3.4vw,44px);}
+.pf-problem-lines li{min-width:0;max-width:19em;font-family:var(--pf-serif);font-weight:400;font-size:var(--pf-text-h2);line-height:var(--pf-lh-heading);letter-spacing:var(--pf-track-heading);color:var(--pf-cream);text-wrap:balance;overflow-wrap:anywhere;}
+@media (min-width:960px){
+  .pf-problem-lines li:nth-child(2){margin-left:clamp(48px,7vw,120px);}
+  .pf-problem-lines li:nth-child(3){margin-left:clamp(96px,14vw,240px);}
+}

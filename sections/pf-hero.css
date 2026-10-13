@@ -1,0 +1,111 @@
+/* ---------- hero (M3) ----------
+   Copy type sizes (three): display (h1), lead (sub, CTA label, "Talk to a founder"), small (micro-copy).
+   The h1 uses the display token, capped by its column width (container query) at 1024px and up so the headline stays on two lines next to the mock.
+   Product mock (a UI, not copy) uses three UI sizes: 15px (--pf-text-small: labels, meta, status, caption),
+   17px (--pf-text-body: sentences, stage %), 24px (--pf-mock-lg: title and the forecast figure). Nothing in it is below 15px.
+   Layout: stacked (copy, then mock) below 1024px; copy left, mock right at 1024px and up, over the painting.
+   Replaces site.css "hero" block: .pf-hero, .pf-hero-media(+img), .pf-hero-wash, .pf-grain, .pf-hero-copy, .pf-hero-top,
+   .pf-title(-lead/-accent), .pf-sub, .pf-cta, .pf-hero-foot(+svg) and the max-width:767px hero rules. */
+
+.pf-hero{position:relative;isolation:isolate;overflow:hidden;min-height:0;border-top:0;background:var(--pf-navy-950);}
+.pf-hero-media,.pf-hero-media img{position:absolute;inset:0;width:100%;height:100%;}
+.pf-hero-media img{object-fit:cover;object-position:78% 0;}
+.pf-hero-wash{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,8,24,.86) 0%,rgba(3,8,24,.8) 40%,rgba(3,8,24,.72) 70%,rgba(3,8,24,.84) 100%);}
+.pf-hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");}
+
+.pf-hero-inner{position:relative;z-index:1;display:grid;gap:var(--pf-space-8);width:100%;max-width:var(--pf-max);margin:0 auto;
+  padding:clamp(24px,5vh,56px) var(--pf-gutter) clamp(40px,7vh,72px);}
+.pf-hero-text,.pf-hero-mock{min-width:0;}
+
+.pf-hero-title{font-size:var(--pf-text-display);line-height:var(--pf-lh-display);letter-spacing:var(--pf-track-display);color:var(--pf-cream);text-shadow:var(--pf-text-shadow-art);text-wrap:balance;}
+.pf-hero-title-lead,.pf-hero-title-accent{display:block;}
+.pf-hero-title-accent{color:var(--pf-lime);}
+.pf-hero-sub{margin-top:clamp(16px,2.8vh,28px);max-width:33em;font-size:var(--pf-text-lead);line-height:var(--pf-lh-body);color:var(--pf-cream-strong);text-wrap:pretty;text-shadow:var(--pf-text-shadow-art);}
+
+.pf-hero-actions{margin-top:clamp(22px,4vh,36px);display:grid;grid-template-columns:auto auto;grid-template-areas:"cta alt" "note note";
+  justify-content:start;align-items:center;gap:var(--pf-space-3) var(--pf-space-7);}
+.pf-hero-cta{grid-area:cta;justify-self:start;font-size:var(--pf-text-lead);min-height:52px;}
+.pf-hero-note{grid-area:note;font-size:var(--pf-text-small);line-height:var(--pf-lh-body);color:var(--pf-cream-muted);text-shadow:var(--pf-text-shadow-art);}
+.pf-hero-alt{grid-area:alt;justify-self:start;display:inline-flex;align-items:center;min-height:44px;font-size:var(--pf-text-lead);color:var(--pf-cream);
+  text-decoration:underline;text-decoration-color:var(--pf-line-control);text-decoration-thickness:1px;text-underline-offset:.28em;text-shadow:var(--pf-text-shadow-art);
+  transition:color var(--pf-dur-fast) var(--pf-ease),text-decoration-color var(--pf-dur-fast) var(--pf-ease);}
+.pf-hero-alt:hover{color:var(--pf-lime);text-decoration-color:currentColor;}
+@media (max-width:519px){
+  .pf-hero-actions{grid-template-columns:minmax(0,1fr);grid-template-areas:"cta" "note" "alt";row-gap:var(--pf-space-2);}
+  .pf-hero-note{margin-top:var(--pf-space-1);}
+}
+
+/* ---------- product mock ---------- */
+.pf-hero-mock{
+  --pf-mock-lg:24px;
+  margin:0;width:100%;max-width:520px;display:grid;gap:var(--pf-space-5);
+  padding:clamp(20px,2.2vw,28px);border-radius:var(--pf-radius-card);
+  background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-line),var(--pf-shadow-raised);
+  color:var(--pf-cream);font-size:var(--pf-text-body);line-height:1.45;font-variant-numeric:tabular-nums;
+}
+.pf-hero-mock dl,.pf-hero-mock dd,.pf-hero-mock ol{margin:0;}
+.pf-hero-mock dt,.pf-mock-label,.pf-mock-skus,.pf-mock-status,.pf-mock-scale,.pf-mock-caption{font-size:var(--pf-text-small);line-height:1.4;color:var(--pf-cream-muted);}
+.pf-hero-mock dt,.pf-hero-mock dd,.pf-mock-status,.pf-mock-caption{overflow-wrap:anywhere;}
+
+.pf-mock-head{display:grid;gap:var(--pf-space-3);padding-bottom:var(--pf-space-4);border-bottom:1px solid var(--pf-line-faint);}
+.pf-mock-title{font-family:var(--pf-sans);font-weight:600;font-size:var(--pf-mock-lg);line-height:1.2;letter-spacing:-.01em;text-wrap:balance;}
+.pf-mock-pair{white-space:nowrap;}
+@media (max-width:299px){.pf-mock-pair{white-space:normal;}}
+.pf-mock-meta{display:flex;flex-wrap:wrap;gap:var(--pf-space-2) var(--pf-space-7);}
+.pf-mock-meta dd{font-weight:500;}
+
+.pf-mock-figs{display:grid;gap:var(--pf-space-4);}
+.pf-mock-fig dd{margin-top:2px;}
+.pf-mock-fig strong{font-weight:600;color:var(--pf-lime);}
+.pf-mock-fig .pf-mock-num{display:block;font-size:var(--pf-mock-lg);line-height:1.2;color:var(--pf-cream);}
+
+/* Range: the track runs from 0% to the breakeven (−17.2%); the band is the forecast (−4% to −11%). */
+.pf-mock-track{position:relative;height:12px;border-radius:var(--pf-radius-pill);background:rgba(243,236,222,.1);}
+.pf-mock-band{position:absolute;top:0;bottom:0;left:23.3%;width:40.7%;border-radius:var(--pf-radius-pill);background:var(--pf-peri);}
+.pf-mock-mark{position:absolute;top:-6px;bottom:-6px;right:0;width:2px;background:var(--pf-cream);}
+.pf-mock-scale{display:flex;justify-content:space-between;gap:var(--pf-space-3);margin-top:var(--pf-space-2);}
+
+.pf-mock-rollout{display:grid;gap:var(--pf-space-3);padding-top:var(--pf-space-4);border-top:1px solid var(--pf-line-faint);}
+.pf-mock-label{font-family:var(--pf-sans);font-weight:500;}
+.pf-mock-stages{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--pf-space-2);}
+.pf-mock-stages li{position:relative;padding-top:var(--pf-space-4);min-width:0;}
+.pf-mock-stages li::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:var(--pf-radius-pill);background:rgba(243,236,222,.16);
+  transition:background-color var(--pf-dur-base) var(--pf-ease);}
+.pf-mock-stages li:has(~ li[aria-current="step"])::before{background:var(--pf-cream-muted);}
+.pf-mock-stages li[aria-current="step"]::before{background:var(--pf-lime);}
+.pf-mock-pct{display:block;font-weight:600;transition:color var(--pf-dur-base) var(--pf-ease);}
+.pf-mock-stages li[aria-current="step"] .pf-mock-pct{color:var(--pf-lime);}
+.pf-mock-skus{display:block;}
+.pf-mock-caption{padding-top:var(--pf-space-4);border-top:1px solid var(--pf-line-faint);}
+
+/* Very narrow (200% zoom on a phone): stack the stages so 15px labels never clip. */
+@media (max-width:299px){.pf-mock-stages{grid-template-columns:minmax(0,1fr);}}
+
+@media (prefers-reduced-motion:reduce){
+  .pf-mock-stages li::before,.pf-mock-pct,.pf-hero-alt{transition:none;}
+}
+
+/* ---------- desktop: copy left, mock right, over the painting ---------- */
+@media (min-width:1024px){
+  .pf-hero{display:flex;align-items:center;min-height:calc(100vh - var(--pf-nav-h));}
+  @supports (height:100svh){.pf-hero{min-height:calc(100svh - var(--pf-nav-h));}}
+  .pf-hero-media img{object-position:right bottom;}
+  .pf-hero-wash{background:linear-gradient(90deg,rgba(3,8,24,.84) 0%,rgba(3,8,24,.76) 46%,rgba(3,8,24,.4) 62%,rgba(3,8,24,0) 78%);}
+  .pf-hero-inner{grid-template-columns:minmax(0,1fr) clamp(340px,28vw,420px);align-items:center;column-gap:clamp(32px,3.2vw,56px);}
+  /* The first headline line is about 12em wide: cap the display size to the copy column so it stays on two lines. */
+  .pf-hero-text{container-type:inline-size;}
+  .pf-hero-title{font-size:min(var(--pf-text-display),4.4vw);}
+  @supports (width:1cqi){.pf-hero-title{font-size:min(var(--pf-text-display),calc(100cqi / 12.3));}}
+  .pf-hero-mock{justify-self:end;}
+}
+
+/* ---------- proof strip slot (hidden until real assets exist) ---------- */
+.pf-hero-proof{border-top:1px solid var(--pf-line-faint);border-bottom:1px solid var(--pf-line-faint);}
+.pf-hero-proof-inner{max-width:var(--pf-max);margin:0 auto;padding:var(--pf-space-7) var(--pf-gutter);display:flex;flex-wrap:wrap;align-items:center;gap:var(--pf-space-5) var(--pf-space-9);}
+.pf-hero-proof-lead{font-size:var(--pf-text-small);color:var(--pf-cream-muted);}
+.pf-hero-proof-logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--pf-space-5) var(--pf-space-9);}
+.pf-hero-proof-logos li{font-size:var(--pf-text-small);color:var(--pf-cream-muted);}
+.pf-hero-proof-logos img{height:28px;width:auto;}
+.pf-hero-proof-yc{font-size:var(--pf-text-small);color:var(--pf-cream-muted);margin-left:auto;}

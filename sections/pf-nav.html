@@ -1,0 +1,17 @@
+<!-- Section: nav (M3). Replaces <nav class="pf-nav"> in index.html. Needs sections/pf-nav.css and sections/pf-nav.js (defer).
+     Desktop (768px and up): one row: logo, How it works, FAQ, Founders, Sign in, CTA.
+     Below 768px: logo, Menu button, CTA (CTA moves into the menu below 360px). With JS off there is no Menu button and the links show as a wrapped row. -->
+<nav class="pf-nav" aria-label="Main" data-pf-nav>
+  <a class="pf-nav-logo" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  <button class="pf-nav-toggle" type="button" aria-expanded="false" aria-controls="pf-nav-menu" hidden><span class="pf-visually-hidden">Menu</span></button>
+  <ul class="pf-nav-menu" id="pf-nav-menu">
+    <li><a class="pf-nav-link" href="#how-it-works">How it works</a></li>
+    <li><a class="pf-nav-link" href="#faq">FAQ</a></li>
+    <li><a class="pf-nav-link" href="#founders">Founders</a></li>
+    <li class="pf-nav-signin"><a class="pf-btn pf-btn--light pf-btn--sm" href="https://signin.priceflag.org" rel="noopener">Sign in</a></li>
+    <!-- PIVOT: CTA text. Narrow-screen copy of the nav CTA; only one of the two is ever displayed. -->
+    <li class="pf-nav-menu-cta"><a class="pf-btn pf-btn--sm" href="#review">Get my free price review</a></li>
+  </ul>
+  <!-- PIVOT: CTA text (same label as the hero, closing band and form button). -->
+  <a class="pf-btn pf-btn--sm pf-nav-cta" href="#review">Get my free price review</a>
+</nav>

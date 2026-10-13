@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday breakeven calculator — Priceflag</title>
+<meta name="description" content="Before you discount for Black Friday, see how many more orders the discount needs to make the same profit. Free breakeven calculator.">
+<link rel="canonical" href="https://priceflag.org/black-friday">
+<meta name="theme-color" content="#030818">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:url" content="https://priceflag.org/black-friday">
+<meta property="og:title" content="Before you discount for Black Friday: Priceflag breakeven calculator">
+<meta property="og:description" content="A discount needs more orders than it feels like it does. Enter your price, discount and unit cost to see how many.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Before you discount for Black Friday: Priceflag breakeven calculator">
+<meta name="twitter:description" content="A discount needs more orders than it feels like it does. Enter your price, discount and unit cost to see how many.">
+<meta name="twitter:image" content="https://priceflag.org/og-v7.jpg">
+<meta name="twitter:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="sections/pf-calc.css">
+<script src="sections/pf-calc-math.js" defer></script>
+<script src="sections/pf-calc.js" defer></script>
+<style>
+  /* Black Friday breakeven: the paper sub-page family (how-we-measure.html), but the page scrolls
+     normally so the calculator can sit in a navy band between two paper sheets, styled exactly as
+     on the homepage (sections/pf-calc.css). Page-specific selectors are prefixed .pf-bf-.
+     Type per sheet: h1/h2 = h3 token, lead, body, small. */
+  body{padding:clamp(14px,3.5vh,34px) var(--pf-space-4) var(--pf-space-8);}
+
+  .pf-bf-sheet{
+    width:min(720px,100%);margin:0 auto;
+    background:var(--pf-paper);color:var(--pf-paper-text);
+    box-shadow:var(--pf-shadow-raised);
+    --pad:clamp(18px,4vw,40px);
+  }
+  .pf-bf-sheet a{color:var(--pf-link-on-paper);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .pf-bf-sheet a:hover{color:var(--pf-paper-ink);}
+  .pf-bf-sheet :focus-visible{outline-color:var(--pf-focus-on-paper);}
+  .pf-bf-sheet strong{color:var(--pf-paper-ink);font-weight:600;}
+
+  /* header row: back arrow, title, mark */
+  .pf-bf-top{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:var(--pf-space-3);padding:var(--pad) var(--pad) 0;}
+  .pf-bf-title{margin:0;text-align:center;color:var(--pf-paper-ink);
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);}
+  .pf-bf-sheet .pf-bf-icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;
+    border-radius:var(--pf-radius-pill);color:var(--pf-paper-ink);text-decoration:none;
+    transition:background-color var(--pf-dur-fast) ease;}
+  .pf-bf-sheet .pf-bf-icon:hover{background:color-mix(in srgb,var(--pf-paper-ink) 7%,transparent);color:var(--pf-paper-ink);}
+  .pf-bf-arrow{font-size:var(--pf-text-h3);line-height:1;}
+  .pf-bf-mark{justify-self:end;font-size:var(--pf-text-h3);}
+
+  .pf-bf-body{padding:var(--pf-space-5) var(--pad) var(--pf-space-7);}
+  .pf-bf-lede{font-size:var(--pf-text-lead);line-height:var(--pf-lh-body);color:var(--pf-paper-ink);max-width:var(--pf-measure-long);}
+  .pf-bf-section{margin-top:var(--pf-space-7);padding-top:var(--pf-space-6);border-top:1px solid var(--pf-line-paper);}
+  .pf-bf-section:first-child{margin-top:0;padding-top:0;border-top:0;}
+  .pf-bf-section h2{color:var(--pf-paper-ink);font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);}
+  .pf-bf-section p,.pf-bf-section li{max-width:var(--pf-measure-long);overflow-wrap:anywhere;}
+  .pf-bf-section p{margin-top:var(--pf-space-3);}
+  .pf-bf-note{font-size:var(--pf-text-small);line-height:1.5;color:var(--pf-paper-muted);}
+
+  /* worked example: three lines of arithmetic */
+  .pf-bf-sum{margin:var(--pf-space-4) 0 0;padding:0;}
+  .pf-bf-sum > div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--pf-space-1) var(--pf-space-4);
+    padding:var(--pf-space-3) 0;border-top:1px solid var(--pf-line-paper);}
+  .pf-bf-sum > div:first-child{border-top:0;}
+  .pf-bf-sum dt{min-width:0;}
+  .pf-bf-sum dd{margin:0;color:var(--pf-paper-ink);font-weight:600;font-variant-numeric:tabular-nums;}
+
+  /* rollout stages, as on How we measure */
+  .pf-bf-stages{list-style:none;margin:var(--pf-space-4) 0 0;padding:0;display:grid;gap:var(--pf-space-2);grid-template-columns:repeat(3,minmax(0,1fr));}
+  .pf-bf-stages li{min-width:0;padding:var(--pf-space-3) clamp(10px,2.4vw,16px);border:1px solid var(--pf-line-paper);border-radius:var(--pf-radius-field);}
+  .pf-bf-stages b{display:block;color:var(--pf-paper-ink);font-weight:600;font-variant-numeric:tabular-nums;}
+  .pf-bf-stages span{display:block;font-size:var(--pf-text-small);color:var(--pf-paper-muted);}
+
+  /* the navy band that carries the homepage calculator */
+  .pf-bf-band.pf-section{padding-inline:0;padding-block:clamp(48px,7vw,96px);max-width:1080px;}
+  .pf-bf-band .pf-calc-panel{margin-top:var(--pf-space-6);}
+
+  /* tear line + the one CTA */
+  .pf-bf-tear{height:0;border-top:1px dashed var(--pf-line-paper);}
+  .pf-bf-foot{padding:var(--pf-space-5) var(--pad) var(--pf-space-6);}
+  .pf-bf-foot .pf-btn{width:100%;min-height:48px;}
+  .pf-bf-sheet .pf-bf-foot .pf-btn{color:var(--pf-lime-ink);text-decoration:none;}
+
+  @media (max-width:520px){
+    body{padding:0 0 var(--pf-space-7);}
+    .pf-bf-band.pf-section{padding-inline:var(--pf-space-4);}
+  }
+  @media print{
+    .pf-skip,.pf-bf-foot,.pf-bf-tear,.pf-calc-result .pf-btn{display:none!important;}
+    .pf-bf-sheet{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<main id="main">
+
+<div class="pf-bf-sheet">
+  <header class="pf-bf-top">
+    <a class="pf-bf-icon" href="/" aria-label="Back to priceflag.org"><span class="pf-bf-arrow" aria-hidden="true">&larr;</span></a>
+    <h1 class="pf-bf-title">Before you discount for Black Friday</h1>
+    <a class="pf-bf-icon pf-bf-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  </header>
+
+  <div class="pf-bf-body">
+    <p class="pf-bf-lede">A discount comes out of your profit per order, not out of your price. So it takes more extra orders to pay for itself than the percentage on the banner suggests. Here is how many.</p>
+
+    <section class="pf-bf-section" aria-labelledby="bf-why">
+      <h2 id="bf-why">Why 25% off needs more than 25% more orders</h2>
+      <p>Every order still costs you the same to make and ship. When you take money off the price, all of it comes out of what is left after that cost. A 25% cut in price can be a much bigger cut in profit per order.</p>
+      <p>To make the same profit, you need enough extra orders to make up the difference. The thinner your margin, the more you need.</p>
+    </section>
+
+    <section class="pf-bf-section" aria-labelledby="bf-example">
+      <h2 id="bf-example">A worked example</h2>
+      <p>A product sells for $40.00 and costs $16.00 a unit. You plan 25% off for Black Friday, so it sells for $30.00.</p>
+      <dl class="pf-bf-sum">
+        <div><dt>Profit per order at $40.00</dt><dd>$24.00</dd></div>
+        <div><dt>Profit per order at $30.00</dt><dd>$14.00</dd></div>
+        <div><dt>Orders needed for the same profit</dt><dd>71.5% more</dd></div>
+      </dl>
+      <p>The price dropped by a quarter, but profit per order dropped by more than 40%. If you sold 100 of these last month, you need about 172 at the discount just to stand still.</p>
+      <p class="pf-bf-note">Example numbers. $24.00 &divide; $14.00 is 1.714, so you need 71.43% more orders, shown rounded up to 71.5%.</p>
+    </section>
+  </div>
+</div>
+
+<!-- Section: breakeven calculator, from sections/pf-calc.html, with a Black Friday default (25% off)
+     and the CTA pointing at the homepage review form. -->
+<section class="pf-section pf-calc pf-bf-band" id="calculator" aria-labelledby="calc-title">
+  <h2 class="pf-h2" id="calc-title">Try your own discount</h2>
+  <p class="pf-lede">Enter today's price, the Black Friday price and what one unit costs you. Profit per order here is price minus unit cost.</p>
+  <div class="pf-calc-panel" data-pf-calc>
+    <div class="pf-calc-inputs" role="group" aria-label="Your numbers">
+      <div class="pf-calc-field">
+        <label for="calc-price">Current price</label>
+        <div class="pf-calc-well">
+          <span class="pf-calc-cur" aria-hidden="true">$</span>
+          <input id="calc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="40.00" readonly aria-describedby="calc-price-err" data-pf-calc-field="price">
+        </div>
+        <p class="pf-calc-err" id="calc-price-err" data-pf-calc-err="price"></p>
+      </div>
+      <div class="pf-calc-field">
+        <label for="calc-new">Black Friday price</label>
+        <div class="pf-calc-well">
+          <span class="pf-calc-cur" aria-hidden="true">$</span>
+          <input id="calc-new" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="30.00" readonly aria-describedby="calc-new-err" data-pf-calc-field="newPrice">
+        </div>
+        <p class="pf-calc-err" id="calc-new-err" data-pf-calc-err="newPrice"></p>
+      </div>
+      <div class="pf-calc-field">
+        <label for="calc-cost">Unit cost <span class="pf-calc-hint">(what one unit costs you to make and ship)</span></label>
+        <div class="pf-calc-well">
+          <span class="pf-calc-cur" aria-hidden="true">$</span>
+          <input id="calc-cost" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="16.00" readonly aria-describedby="calc-cost-err" data-pf-calc-field="cost">
+        </div>
+        <p class="pf-calc-err" id="calc-cost-err" data-pf-calc-err="cost"></p>
+      </div>
+      <p class="pf-calc-note" data-pf-calc-note>These are example numbers. Turn on JavaScript to try your own.</p>
+    </div>
+    <div class="pf-calc-result">
+      <output class="pf-calc-out" for="calc-price calc-new calc-cost" aria-live="polite" aria-atomic="true" data-pf-calc-out>
+        <span class="pf-calc-answer" data-pf-calc-answer>You need <strong class="pf-calc-figure" data-pf-calc-figure>71.5%</strong> more orders to make the same profit.</span>
+        <span class="pf-calc-support" data-pf-calc-support>Profit per order goes from $24.00 to $14.00.</span>
+      </output>
+      <a class="pf-btn" href="/#review" data-pf-calc-cta>Get my free price review</a>
+    </div>
+  </div>
+</section>
+
+<div class="pf-bf-sheet">
+  <div class="pf-bf-body">
+    <section class="pf-bf-section" aria-labelledby="bf-check">
+      <h2 id="bf-check">Check the breakeven before you set the discount</h2>
+      <p>Set the discount from the number of orders you can realistically get, not from what looks good on a banner. If 71.5% more orders sounds unlikely, a smaller discount, or a discount on fewer products, may make you more money.</p>
+    </section>
+
+    <section class="pf-bf-section" aria-labelledby="bf-rollout">
+      <h2 id="bf-rollout">Roll the discount out in stages</h2>
+      <p>Priceflag can roll a price change out by product, so a bad discount reaches a slice of your catalog first. Every shopper always sees the same price.</p>
+      <ol class="pf-bf-stages">
+        <li><b>25%</b><span>of the products you picked</span></li>
+        <li><b>50%</b><span>of the products you picked</span></li>
+        <li><b>All</b><span>of the products you picked</span></li>
+      </ol>
+      <p>If real orders fall outside the expected range, a guardrail trips: the rollout pauses and you get an alert. It never rolls a price back by itself; you decide what happens next. <a href="/how-we-measure">How we measure</a></p>
+    </section>
+  </div>
+  <div class="pf-bf-tear" aria-hidden="true"></div>
+  <footer class="pf-bf-foot">
+    <a class="pf-btn" href="/#review">Get my free price review</a>
+  </footer>
+</div>
+
+</main>
+
+</body>
+</html>

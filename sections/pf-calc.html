@@ -1,0 +1,45 @@
+<!-- Section: breakeven calculator (M5). Paste inside <main>, before #review.
+     Needs in <head>: <link rel="stylesheet" href="sections/pf-calc.css">,
+     <script src="sections/pf-calc-math.js" defer></script> and <script src="sections/pf-calc.js" defer></script> (in that order).
+     Without JavaScript the example answer below is what shows; the fields stay read-only and the button is a plain link to #review. -->
+  <section class="pf-section pf-calc" id="calculator" aria-labelledby="calc-title">
+    <!-- PIVOT: calculator heading, lede, field labels and button text (depend on the lead use case and the CTA model). -->
+    <h2 class="pf-h2" id="calc-title">Find your breakeven before you change a price</h2>
+    <p class="pf-lede">Enter today's price, the new price and what one unit costs you. Profit per order here is price minus unit cost.</p>
+    <div class="pf-calc-panel" data-pf-calc>
+      <div class="pf-calc-inputs" role="group" aria-label="Your numbers">
+        <div class="pf-calc-field">
+          <label for="calc-price">Current price</label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="24.00" readonly aria-describedby="calc-price-err" data-pf-calc-field="price">
+          </div>
+          <p class="pf-calc-err" id="calc-price-err" data-pf-calc-err="price"></p>
+        </div>
+        <div class="pf-calc-field">
+          <label for="calc-new">New price</label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-new" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="27.00" readonly aria-describedby="calc-new-err" data-pf-calc-field="newPrice">
+          </div>
+          <p class="pf-calc-err" id="calc-new-err" data-pf-calc-err="newPrice"></p>
+        </div>
+        <div class="pf-calc-field">
+          <label for="calc-cost">Unit cost <span class="pf-calc-hint">(what one unit costs you to make and ship)</span></label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-cost" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="9.60" readonly aria-describedby="calc-cost-err" data-pf-calc-field="cost">
+          </div>
+          <p class="pf-calc-err" id="calc-cost-err" data-pf-calc-err="cost"></p>
+        </div>
+        <p class="pf-calc-note" data-pf-calc-note>These are example numbers. Turn on JavaScript to try your own.</p>
+      </div>
+      <div class="pf-calc-result">
+        <output class="pf-calc-out" for="calc-price calc-new calc-cost" aria-live="polite" aria-atomic="true" data-pf-calc-out>
+          <span class="pf-calc-answer" data-pf-calc-answer>You can lose up to <strong class="pf-calc-figure" data-pf-calc-figure>17.2%</strong> of orders and still make the same profit.</span>
+          <span class="pf-calc-support" data-pf-calc-support>Profit per order goes from $14.40 to $17.40.</span>
+        </output>
+        <a class="pf-btn" href="#review" data-pf-calc-cta>Get the full forecast for my store</a>
+      </div>
+    </div>
+  </section>

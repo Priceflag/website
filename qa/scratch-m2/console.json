@@ -1,0 +1,34 @@
+{
+  "check": "console",
+  "title": "Console errors/warnings, page errors, failed requests (3 browsers)",
+  "status": "PASS",
+  "durationMs": 2479,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    }
+  },
+  "data": {
+    "launchErrors": {},
+    "results": {
+      "index": {
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      }
+    }
+  }
+}

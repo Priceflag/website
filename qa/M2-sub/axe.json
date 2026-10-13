@@ -1,0 +1,354 @@
+{
+  "check": "axe",
+  "title": "axe-core accessibility (375 + 1440)",
+  "status": "PASS",
+  "durationMs": 7539,
+  "pages": {
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    }
+  },
+  "data": {
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 0,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    }
+  }
+}

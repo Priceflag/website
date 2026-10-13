@@ -1,0 +1,70 @@
+{
+  "label": "scratch-m2",
+  "baseUrl": "local (qa/serve.mjs) @ working tree",
+  "strict": false,
+  "fast": true,
+  "startedAt": "2026-10-13T22:22:26.390Z",
+  "durationMs": 13862,
+  "overall": "PASS",
+  "pages": [
+    "index"
+  ],
+  "checks": {
+    "console": {
+      "status": "PASS",
+      "durationMs": 2479,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "screens": {
+      "status": "PASS",
+      "durationMs": 4793,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "axe": {
+      "status": "PASS",
+      "durationMs": 3328,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "html": {
+      "status": "PASS",
+      "durationMs": 198,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "links": {
+      "status": "PASS",
+      "durationMs": 4169,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "keyboard": {
+      "status": "PASS",
+      "durationMs": 3471,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "nojs": {
+      "status": "PASS",
+      "durationMs": 714,
+      "pages": {
+        "index": "PASS"
+      }
+    },
+    "unit": {
+      "status": "PASS",
+      "durationMs": 8336,
+      "pages": {}
+    }
+  },
+  "lighthouse": null,
+  "lighthouseRegression": null
+}

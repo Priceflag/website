@@ -1,0 +1,1442 @@
+{
+  "check": "keyboard",
+  "title": "Keyboard: tab order, reachability, visible focus (1440 + 375)",
+  "status": "PASS",
+  "durationMs": 7274,
+  "pages": {
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 7,
+          "focused": 7,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag Syndicate provides needed support for Priceflag. C",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 7,
+          "focused": 7,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag Syndicate provides needed support for Priceflag. C",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 11,
+          "focused": 11,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "The two documents that govern using Priceflag: the Privacy P",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 11,
+          "focused": 11,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "The two documents that govern using Priceflag: the Privacy P",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "data": {
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 7,
+          "focused": 7,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag Syndicate provides needed support for Priceflag. C",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 7,
+          "focused": 7,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "Priceflag Syndicate provides needed support for Priceflag. C",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 11,
+          "focused": 11,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "The two documents that govern using Priceflag: the Privacy P",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 11,
+          "focused": 11,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "main",
+              "text": "The two documents that govern using Priceflag: the Privacy P",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

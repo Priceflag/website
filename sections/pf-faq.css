@@ -1,0 +1,25 @@
+/* ---------- FAQ (h2, lead for questions, body) ----------
+   Layout family: two columns, heading left and the question list right (stacked below 960px).
+   Native <details>/<summary>: works without JS. Class names avoid site.css's older .pf-faq rules. */
+.pf-faq-section{padding:var(--pf-section-y) var(--pf-gutter);max-width:var(--pf-max);margin:0 auto;}
+.pf-faq-grid{display:grid;gap:var(--pf-space-8);}
+.pf-faq-grid > *{min-width:0;}
+@media (min-width:960px){
+  .pf-faq-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--pf-space-10);}
+  .pf-faq-head{position:sticky;top:calc(var(--pf-nav-h) + var(--pf-space-7));align-self:start;}
+}
+.pf-faq-title{font-size:var(--pf-text-h2);line-height:var(--pf-lh-heading);letter-spacing:var(--pf-track-heading);}
+.pf-faq-lede{margin-top:var(--pf-space-4);max-width:var(--pf-measure);color:var(--pf-cream-muted);}
+
+.pf-faq-items{border-top:1px solid var(--pf-line);}
+.pf-faq-item{border-bottom:1px solid var(--pf-line);}
+.pf-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:var(--pf-space-5);min-height:56px;padding:var(--pf-space-4) 0;
+  cursor:pointer;list-style:none;font-size:var(--pf-text-lead);line-height:1.4;color:var(--pf-cream);overflow-wrap:anywhere;}
+.pf-faq-item summary::-webkit-details-marker{display:none;}
+.pf-faq-item summary::after{content:"+";flex:none;font-size:1.3em;line-height:1;color:var(--pf-lime);transition:transform var(--pf-dur-fast) var(--pf-ease);}
+.pf-faq-item[open] summary::after{transform:rotate(45deg);}
+.pf-faq-item summary:hover{color:var(--pf-lime);}
+.pf-faq-item p{padding:0 0 var(--pf-space-6);max-width:var(--pf-measure-long);color:var(--pf-cream-muted);overflow-wrap:anywhere;}
+.pf-faq-item p a{color:var(--pf-cream);text-underline-offset:.25em;}
+.pf-faq-item p a:hover{color:var(--pf-lime);}
+@media (prefers-reduced-motion:reduce){.pf-faq-item summary::after{transition:none;}}

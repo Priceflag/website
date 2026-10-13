@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["qa/serve.mjs", "8910"],
+      "port": 8910
+    },
+    {
       "name": "static",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8901"],

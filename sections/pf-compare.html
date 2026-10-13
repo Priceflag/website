@@ -1,0 +1,44 @@
+<!-- Section: comparison (M4). Priceflag vs price A/B testing vs changing it all at once. Needs sections/pf-compare.css.
+     Under 880px each row becomes a card; the column name comes from data-label so every value stays labeled. -->
+<section class="pf-section pf-compare" id="compare" aria-labelledby="compare-title">
+  <h2 class="pf-h2" id="compare-title">Three ways to change a price</h2>
+  <table class="pf-compare-table">
+    <caption>Priceflag vs price A/B testing vs changing it all at once</caption>
+    <thead>
+      <tr>
+        <td class="pf-compare-corner"></td>
+        <th scope="col" class="pf-compare-us">Priceflag</th>
+        <th scope="col">Price A/B testing</th>
+        <th scope="col">Changing it all at once</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Every shopper sees the same price</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Shoppers are split between prices.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Works without weeks of split traffic</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">It needs weeks of split traffic.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Limits the damage if the price is wrong</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span><span class="pf-compare-note">Rolled out by SKU cohort and paused by a guardrail.</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Partly</span><span class="pf-compare-note">Only the test group sees it.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Every product changes at once.</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Every change journaled and reversible</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Depends on the app</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Unless you keep your own records.</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- LINK-LIVE-IN-M7 -->
+  <p class="pf-compare-more"><a href="/vs-intelligems">Read the full comparison with Intelligems</a></p>
+</section>

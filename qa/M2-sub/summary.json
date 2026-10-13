@@ -1,0 +1,46 @@
+{
+  "label": "M2-sub",
+  "baseUrl": "local (qa/serve.mjs) @ working tree",
+  "strict": false,
+  "fast": false,
+  "startedAt": "2026-10-13T22:31:13.562Z",
+  "durationMs": 51185,
+  "overall": "PASS",
+  "pages": [
+    "about",
+    "contact",
+    "legal"
+  ],
+  "checks": {
+    "lighthouse": {
+      "status": "PASS",
+      "durationMs": 51180,
+      "pages": {
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS"
+      }
+    }
+  },
+  "lighthouse": {
+    "about": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "contact": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "legal": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  "lighthouseRegression": null
+}

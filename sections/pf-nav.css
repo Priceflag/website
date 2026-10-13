@@ -1,0 +1,86 @@
+/* ---------- nav (M3) ----------
+   Type: one size (--pf-text-small, 15px). The hiker mark is artwork (22px) outside the type scale.
+   Height: 64px at 768px and up, 56px below. --pf-nav-h is set to the real height so site.css's
+   scroll-padding-top keeps anchored headings clear of the sticky bar.
+   Sticky everywhere from 360px up, except below 768px with JS off (the wrapped link row would be too tall to pin).
+   Below 360px (a phone at 200% zoom) it is never sticky.
+   Replaces site.css "nav (small)" block: .pf-nav, .pf-nav-group, .pf-nav a, .pf-nav-logo, .pf-nav .pf-btn,
+   .pf-nav-wide, .pf-nav-narrow-hide and the max-width:359px nav rule. */
+
+:root{--pf-nav-h:64px;}
+@media (max-width:767px){:root{--pf-nav-h:56px;}}
+
+.pf-nav{
+  position:sticky;top:0;z-index:var(--pf-z-nav);
+  display:flex;flex-wrap:wrap;align-items:center;gap:0 var(--pf-space-3);
+  min-height:var(--pf-nav-h);
+  /* Above --pf-max the bar's content lines up with the page content (hero, sections) instead of the window edge. */
+  padding:0 max(var(--pf-gutter),calc((100% - var(--pf-max)) / 2 + var(--pf-gutter)));
+  background:var(--pf-navy-950);border-bottom:1px solid var(--pf-line-faint);
+  font-size:var(--pf-text-small);line-height:1.2;
+}
+.pf-nav a{text-decoration:none;overflow-wrap:anywhere;}
+.pf-nav-logo{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin-left:-12px;font-size:22px;color:var(--pf-cream);}
+.pf-nav-menu{list-style:none;margin:0;padding:0;display:flex;flex:1 1 auto;align-items:center;gap:0 clamp(16px,2.4vw,32px);min-width:0;}
+.pf-nav-menu li{min-width:0;}
+.pf-nav-link{display:inline-flex;align-items:center;min-height:44px;color:var(--pf-cream);}
+.pf-nav-link:hover{color:var(--pf-lime);}
+.pf-nav-signin{margin-left:auto;}
+.pf-nav .pf-btn{min-height:44px;padding:10px 18px;font-size:var(--pf-text-small);}
+.pf-nav-menu-cta{display:none;}
+
+/* Menu button: a quiet outlined circle (secondary weight) with a two-bar glyph and a visually hidden "Menu" label,
+   only shown below 768px once JS is running. Kept to 44px so logo, Menu and the CTA share one row down to 360px. */
+.pf-nav-toggle{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:auto;padding:0;
+  border:0;border-radius:var(--pf-radius-pill);background:transparent;box-shadow:inset 0 0 0 1px var(--pf-line-control);
+  color:var(--pf-cream);font:500 var(--pf-text-small)/1.2 var(--pf-sans);letter-spacing:var(--pf-track-button);cursor:pointer;
+}
+.pf-nav-toggle::before,.pf-nav-toggle::after{content:"";position:absolute;left:13px;right:13px;height:2px;border-radius:var(--pf-radius-pill);background:currentColor;}
+.pf-nav-toggle::before{top:17px;}
+.pf-nav-toggle::after{bottom:17px;}
+.pf-nav-toggle:hover{box-shadow:inset 0 0 0 1px var(--pf-cream);}
+.pf-nav-toggle:focus-visible{border-radius:var(--pf-radius-pill);}
+.pf-nav-toggle[aria-expanded="true"]{background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-cream);}
+.pf-nav-toggle[hidden]{display:none;}
+
+@media (min-width:768px){
+  .pf-nav{flex-wrap:nowrap;}
+  .pf-nav-toggle{display:none;}
+}
+
+@media (max-width:767px){
+  .pf-nav{position:relative;}
+  .pf-nav[data-pf-nav="ready"]{position:sticky;}
+  .pf-nav-cta{margin-left:auto;}
+  .pf-nav-toggle:not([hidden]) ~ .pf-nav-cta{margin-left:0;}
+
+  /* JS off: the list is a wrapped row under the logo, so every link stays reachable. */
+  .pf-nav-menu{order:3;flex:1 1 100%;flex-wrap:wrap;gap:0 var(--pf-space-5);padding-bottom:var(--pf-space-2);}
+  .pf-nav-signin{margin-left:0;}
+
+  /* JS on: the list becomes a non-modal disclosure panel under the bar. */
+  .pf-nav[data-pf-nav="ready"] .pf-nav-menu{
+    display:none;position:absolute;top:100%;left:0;right:0;order:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    padding:var(--pf-space-2) var(--pf-gutter) var(--pf-space-6);
+    background:var(--pf-navy-950);border-bottom:1px solid var(--pf-line);
+    max-height:calc(100vh - var(--pf-nav-h));overflow-y:auto;
+  }
+  .pf-nav[data-pf-nav="ready"][data-open] .pf-nav-menu{display:flex;}
+  .pf-nav[data-pf-nav="ready"] .pf-nav-link{display:flex;min-height:48px;border-bottom:1px solid var(--pf-line-faint);}
+  .pf-nav[data-pf-nav="ready"] .pf-nav-signin,
+  .pf-nav[data-pf-nav="ready"] .pf-nav-menu-cta{margin-top:var(--pf-space-4);}
+}
+
+/* Below 360px the bar keeps only logo + Menu; the CTA moves into the menu. */
+@media (max-width:359px){
+  .pf-nav .pf-nav-cta{display:none;}
+  .pf-nav-menu-cta{display:block;}
+}
+
+/* A phone at 200% zoom: never sticky. */
+@media (max-width:359px){
+  .pf-nav,.pf-nav[data-pf-nav="ready"]{position:relative;}
+  html{scroll-padding-top:var(--pf-space-3);}
+}

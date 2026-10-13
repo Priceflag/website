@@ -200,9 +200,15 @@
     }
     window.addEventListener('pageshow', function (e) { if (e.persisted) restoreSent(); });
 
+    // A reload or navigation aborts the request in flight; keep the pending
+    // flag then, so the next visit can say the request may have arrived.
+    var leaving = false;
+    window.addEventListener('pagehide', function () { leaving = true; });
+    window.addEventListener('pageshow', function () { leaving = false; });
+
     function finish() {
       busy = false;
-      store(function (ss) { ss.removeItem(PENDING_KEY); });
+      if (!leaving) store(function (ss) { ss.removeItem(PENDING_KEY); });
       button.removeAttribute('aria-disabled');
       button.textContent = buttonLabel;
       announce('');

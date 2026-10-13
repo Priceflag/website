@@ -267,7 +267,7 @@ test('emoji and other astral characters never hang the form', async () => {
     await fill(page, data);
     await page.click('#review button[type=submit]');
     await page.waitForSelector('form[data-state="sent"], [data-pf-status][data-kind="error"]', { timeout: 5000 });
-    assert.equal(await page.textContent('#review button[type=submit]'), 'Get a free price review', label);
+    assert.equal(await page.textContent('#review button[type=submit]'), 'Get my free price review', label);
     if (calls.length) {
       const b = JSON.parse(calls[0]);
       assert.ok(b.page.length <= 300 && b.ua.length <= 300, label);
@@ -328,7 +328,7 @@ test('leaving mid-send and coming back says the request may have arrived', async
   const { ctx, page } = await openForm(() => new Promise(() => {})); // never answers
   await fill(page);
   await page.click('#review button[type=submit]');
-  await page.waitForTimeout(150);
+  await page.waitForSelector('#review button[aria-disabled="true"]');
   await page.reload();
   assert.match(await status(page).textContent(), /may already have reached us/);
   await ctx.close();

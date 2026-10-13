@@ -1,0 +1,70 @@
+{
+  "@type": "FAQPage",
+  "@id": "https://priceflag.org/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will shoppers see different prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you change prices automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data do you read?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our privacy policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the forecast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See how we measure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I undo everything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about subscriptions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: kabir@priceflag.org."
+      }
+    }
+  ]
+}

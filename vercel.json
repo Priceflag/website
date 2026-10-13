@@ -4,7 +4,10 @@
   "rewrites": [
     { "source": "/about",   "destination": "/about.html" },
     { "source": "/legal",   "destination": "/legal.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/how-we-measure", "destination": "/how-we-measure.html" },
+    { "source": "/vs-intelligems", "destination": "/vs-intelligems.html" },
+    { "source": "/black-friday", "destination": "/black-friday.html" }
   ],
 
   "redirects": [

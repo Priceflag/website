@@ -1,0 +1,47 @@
+<!-- Section: FAQ (M6). Replaces the old #faq section. Native <details>, no JS. Type: h2, lead (questions), body.
+     The FAQPage JSON-LD in sections/pf-faq.jsonld carries the same question and answer text; change both together. -->
+<section class="pf-faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="pf-faq-grid">
+    <div class="pf-faq-head">
+      <h2 class="pf-faq-title" id="faq-title">Questions worth asking</h2>
+      <p class="pf-faq-lede">Short answers about prices, data, cost and undo.</p>
+    </div>
+    <div class="pf-faq-items">
+      <details class="pf-faq-item">
+        <summary>Will shoppers see different prices?</summary>
+        <p>No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>Do you change prices automatically?</summary>
+        <p>Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>What data do you read?</summary>
+        <p>Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our <a href="/legal">privacy policy</a>.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>How accurate is the forecast?</summary>
+        <p>It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See <a href="/how-we-measure">how we measure</a>.</p>
+      </details>
+      <!-- OWNER: pricing answer pending -->
+      <details class="pf-faq-item">
+        <summary>What does it cost?</summary>
+        <p>The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe.</p>
+      </details>
+      <!-- OWNER: confirm -->
+      <details class="pf-faq-item">
+        <summary>How long does setup take?</summary>
+        <p>Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>Can I undo everything?</summary>
+        <p>Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first.</p>
+      </details>
+      <!-- OWNER: confirm subscription behaviour (Shopify selling plans) -->
+      <details class="pf-faq-item">
+        <summary>What about subscriptions?</summary>
+        <p>Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: <a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>

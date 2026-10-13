@@ -1,0 +1,85 @@
+<!-- Section: hero + proof strip slot (M3). Replaces <section class="pf-hero"> in index.html (keep the existing hero image preload in <head>).
+     Needs sections/pf-hero.css and sections/pf-hero.js (defer). Type in the copy: display (h1), lead (sub, CTA, founder link), small (micro-copy).
+     The product mock is a UI and uses its own 15/17/24px sizes (see pf-hero.css). -->
+<section class="pf-hero" aria-labelledby="hero-title">
+  <picture class="pf-hero-media">
+    <img src="uploads/hero-1671.webp" srcset="uploads/hero-720.webp 720w, uploads/hero-1080.webp 1080w, uploads/hero-1671.webp 1671w" sizes="100vw" width="1671" height="941" fetchpriority="high" decoding="async"
+      alt="A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit.">
+  </picture>
+  <div class="pf-hero-wash" aria-hidden="true"></div>
+  <div class="pf-hero-grain" aria-hidden="true"></div>
+
+  <div class="pf-hero-inner">
+    <div class="pf-hero-text">
+      <!-- PIVOT: hero headline (names the platform: Shopify). Listed in OVERHAUL_LOG.md "Pivot-dependent copy". -->
+      <h1 class="pf-hero-title" id="hero-title"><span class="pf-hero-title-lead">Change your Shopify prices</span> <span class="pf-hero-title-accent">without losing sales.</span></h1>
+      <!-- PIVOT: hero subhead (90-day forecast, rollout by product, pause on a tripped guardrail). -->
+      <p class="pf-hero-sub">See a price change's 90-day impact before it goes live. Roll it out a few products at a time, and we pause it the moment it stops paying.</p>
+      <div class="pf-hero-actions">
+        <!-- PIVOT: CTA text (self-serve vs founder-led). Same label in the nav, closing band and form button. -->
+        <a class="pf-btn pf-hero-cta" href="#review" aria-describedby="pf-hero-note">Get my free price review</a>
+        <p class="pf-hero-note" id="pf-hero-note">Free. We send your report within 48 hours. No app install needed.</p>
+        <a class="pf-hero-alt" href="mailto:hello@priceflag.org?subject=Talk%20to%20a%20founder">Talk to a founder</a>
+      </div>
+    </div>
+
+    <!-- Example product UI. Arithmetic (integer cents, see qa/briefs/COMMON.md): margin 2400-960 = 1440, 2700-960 = 1740;
+         same-profit loss = 1 - 1440/1740 = 17.24% -> shown as 17.2% (rounded down). Forecast -4% to -11% sits inside it.
+         Stages: 25% of 12 SKUs = 3, 50% = 6, 100% = 12. -->
+    <figure class="pf-hero-mock" aria-labelledby="pf-mock-title" data-pf-mock>
+        <div class="pf-mock-head">
+          <h2 class="pf-mock-title" id="pf-mock-title">12 SKUs: <span class="pf-mock-pair">$24.00 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $27.00</span></h2>
+          <dl class="pf-mock-meta">
+            <div><dt>Unit cost</dt><dd>$9.60</dd></div>
+            <div><dt>Margin per order</dt><dd><span class="pf-mock-pair">$14.40 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $17.40</span></dd></div>
+          </dl>
+        </div>
+
+        <dl class="pf-mock-figs">
+          <div class="pf-mock-fig">
+            <dt>Breakeven</dt>
+            <dd>You can lose up to <strong>17.2%</strong> of orders and still make the same profit.</dd>
+          </div>
+          <div class="pf-mock-fig">
+            <dt>Forecast range, 90 days</dt>
+            <dd><strong class="pf-mock-num">−4% to −11%</strong> orders over 90 days</dd>
+          </div>
+        </dl>
+
+        <!-- Visual of the two numbers above (orders change from 0% to −20%); the text carries the meaning. -->
+        <div class="pf-mock-range" aria-hidden="true">
+          <div class="pf-mock-track">
+            <span class="pf-mock-band"></span>
+            <span class="pf-mock-mark"></span>
+          </div>
+          <div class="pf-mock-scale"><span>0%</span><span>Breakeven −17.2%</span></div>
+        </div>
+
+        <div class="pf-mock-rollout">
+          <h3 class="pf-mock-label">Rollout by SKU</h3>
+          <ol class="pf-mock-stages" data-stage="100">
+            <li data-step="25"><span class="pf-mock-pct">25%</span> <span class="pf-mock-skus">3 SKUs</span></li>
+            <li data-step="50"><span class="pf-mock-pct">50%</span> <span class="pf-mock-skus">6 SKUs</span></li>
+            <li data-step="100" aria-current="step"><span class="pf-mock-pct">100%</span> <span class="pf-mock-skus">12 SKUs</span></li>
+          </ol>
+          <p class="pf-mock-status" data-pf-mock-status>Live on 12 of 12 SKUs. Every shopper sees the same price.</p>
+        </div>
+      <figcaption class="pf-mock-caption">Example forecast for an illustrative store. Numbers are an example, not a customer result.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PENDING: pilot store logos with written permission (or the count of pilot brands), YC badge only if accepted -->
+<section class="pf-hero-proof" aria-label="Pilot brands" data-pending="true">
+  <div class="pf-hero-proof-inner">
+    <p class="pf-hero-proof-lead">Working with [N] Shopify brands in our pilot</p>
+    <ul class="pf-hero-proof-logos">
+      <li>[Pilot store logo 1: SVG or WebP with width and height, alt text = the store's name, written permission on file]</li>
+      <li>[Pilot store logo 2]</li>
+      <li>[Pilot store logo 3]</li>
+      <li>[Pilot store logo 4]</li>
+    </ul>
+    <!-- PENDING: YC badge, only if Priceflag is accepted to Y Combinator -->
+    <p class="pf-hero-proof-yc" data-pending="true">[YC badge: "Backed by Y Combinator"]</p>
+  </div>
+</section>

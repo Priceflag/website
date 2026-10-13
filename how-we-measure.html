@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we measure — Priceflag</title>
+<meta name="description" content="How Priceflag forecasts a price change: a 90-day range with a breakeven, fitted to your own orders, and what our simulated results mean.">
+<link rel="canonical" href="https://priceflag.org/how-we-measure">
+<meta name="theme-color" content="#030818">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:url" content="https://priceflag.org/how-we-measure">
+<meta property="og:title" content="How we measure: Priceflag forecasts, rollouts and simulation results">
+<meta property="og:description" content="A forecast is a 90-day range with a breakeven, fitted to your own orders. Here is how it is checked, and what our simulated numbers mean.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How we measure: Priceflag forecasts, rollouts and simulation results">
+<meta name="twitter:description" content="A forecast is a 90-day range with a breakeven, fitted to your own orders. Here is how it is checked, and what our simulated numbers mean.">
+<meta name="twitter:image" content="https://priceflag.org/og-v7.jpg">
+<meta name="twitter:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="uploads/summit-painting-3.webp" imagesrcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" imagesizes="100vw" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* How we measure: a paper sheet over the summit painting, the same family as about.html.
+     Every value comes from tokens.css. site.css supplies .pf-btn, .pf-skip, .pf-hiker and the
+     [data-pending] rule; everything page-specific is prefixed .pf-hwm-.
+     Type per section: sheet header = h3 token (title) + lead; content sections = h3 token (h2),
+     body, small. Three sizes at most anywhere. */
+
+  /* html carries the navy ground (site.css); body stays clear so the fixed painting shows. */
+  body{
+    background:transparent;
+    color:var(--pf-paper-text);
+    /* The sheet is bound to the screen and only its copy scrolls, as on About.
+       svh so a phone's collapsing toolbar cannot push the button off-screen. */
+    height:100vh;height:100svh;
+    display:flex;align-items:center;justify-content:center;
+    padding:clamp(14px,3.5vh,34px) var(--pf-space-4);
+    overflow:hidden;
+  }
+
+  /* ---------- the painting ---------- */
+  .pf-hwm-bg{position:fixed;inset:0;z-index:-1;}
+  .pf-hwm-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
+  .pf-hwm-bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,
+      color-mix(in srgb,var(--pf-navy-950) 34%,transparent) 0%,
+      color-mix(in srgb,var(--pf-navy-950) 16%,transparent) 30%,
+      color-mix(in srgb,var(--pf-navy-950) 20%,transparent) 70%,
+      color-mix(in srgb,var(--pf-navy-950) 44%,transparent) 100%);
+  }
+
+  /* ---------- the sheet ---------- */
+  .pf-hwm-sheet{
+    position:relative;
+    display:flex;flex-direction:column;
+    width:min(640px,100%);
+    max-height:min(860px,100%);
+    background:var(--pf-paper);
+    box-shadow:var(--pf-shadow-raised);
+    --pad:clamp(18px,4vw,32px);
+    --foot-top:var(--pf-space-5);
+    --foot-bottom:var(--pf-space-6);
+    --cta-h:48px;
+    --tear:calc(var(--foot-top) + var(--cta-h) + var(--foot-bottom));
+    --notch:12px;
+  }
+  /* The ticket notches, punched where the tear line meets the edges. */
+  @supports ((-webkit-mask-composite:source-in) or (mask-composite:intersect)){
+    .pf-hwm-sheet{
+      -webkit-mask-image:
+        radial-gradient(var(--notch) at 0 calc(100% - var(--tear)),transparent 97%,#000),
+        radial-gradient(var(--notch) at 100% calc(100% - var(--tear)),transparent 97%,#000);
+              mask-image:
+        radial-gradient(var(--notch) at 0 calc(100% - var(--tear)),transparent 97%,#000),
+        radial-gradient(var(--notch) at 100% calc(100% - var(--tear)),transparent 97%,#000);
+      -webkit-mask-composite:source-in;
+              mask-composite:intersect;
+    }
+  }
+  .pf-hwm-sheet a{color:var(--pf-link-on-paper);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .pf-hwm-sheet a:hover{color:var(--pf-paper-ink);}
+  .pf-hwm-sheet :focus-visible{outline-color:var(--pf-focus-on-paper);}
+
+  /* ---------- header row: back arrow, title, mark ---------- */
+  .pf-hwm-top{
+    flex:none;
+    display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:var(--pf-space-3);
+    padding:var(--pad) var(--pad) 0;
+  }
+  .pf-hwm-title{
+    margin:0;text-align:center;color:var(--pf-paper-ink);
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
+  }
+  .pf-hwm-sheet .pf-hwm-icon{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:var(--pf-radius-pill);
+    color:var(--pf-paper-ink);text-decoration:none;
+    transition:background-color var(--pf-dur-fast) ease;
+  }
+  .pf-hwm-sheet .pf-hwm-icon:hover{background:color-mix(in srgb,var(--pf-paper-ink) 7%,transparent);color:var(--pf-paper-ink);}
+  .pf-hwm-sheet .pf-hwm-icon:focus-visible{border-radius:var(--pf-radius-pill);}
+  .pf-hwm-arrow{font-size:var(--pf-text-h3);line-height:1;}
+  .pf-hwm-mark{justify-self:end;font-size:var(--pf-text-h3);}
+
+  /* ---------- body ---------- */
+  /* min-height:0 lets the flex child scroll instead of growing the sheet. */
+  .pf-hwm-main{
+    flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
+    padding:var(--pf-space-5) var(--pad) var(--pf-space-7);
+    scrollbar-width:thin;scrollbar-color:var(--pf-line-paper) transparent;
+  }
+  .pf-hwm-main:focus-visible{outline:var(--pf-focus-width) solid var(--pf-focus-on-paper);outline-offset:-4px;border-radius:0;}
+  .pf-hwm-lede{font-size:var(--pf-text-lead);line-height:var(--pf-lh-body);color:var(--pf-paper-ink);max-width:var(--pf-measure-long);}
+
+  .pf-hwm-section{margin-top:var(--pf-space-8);padding-top:var(--pf-space-6);border-top:1px solid var(--pf-line-paper);}
+  .pf-hwm-section h2{
+    color:var(--pf-paper-ink);
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
+  }
+  .pf-hwm-section p,.pf-hwm-section li,.pf-hwm-section dd{max-width:var(--pf-measure-long);overflow-wrap:anywhere;}
+  .pf-hwm-section p{margin-top:var(--pf-space-3);}
+  .pf-hwm-sheet strong{color:var(--pf-paper-ink);font-weight:600;}
+  .pf-hwm-note{font-size:var(--pf-text-small);line-height:1.5;color:var(--pf-paper-muted);}
+
+  /* The rollout stages: a real sequence, so the numbers carry meaning. */
+  .pf-hwm-stages{list-style:none;margin:var(--pf-space-4) 0 0;padding:0;display:grid;gap:var(--pf-space-2);
+    grid-template-columns:repeat(3,minmax(0,1fr));}
+  .pf-hwm-stages li{min-width:0;padding:var(--pf-space-3) clamp(10px,2.4vw,16px);border:1px solid var(--pf-line-paper);border-radius:var(--pf-radius-field);}
+  .pf-hwm-stages b{display:block;color:var(--pf-paper-ink);font-weight:600;font-variant-numeric:tabular-nums;}
+  .pf-hwm-stages span{display:block;font-size:var(--pf-text-small);color:var(--pf-paper-muted);}
+
+  /* The five simulation numbers: figure, then what it means. */
+  .pf-hwm-results{margin:var(--pf-space-5) 0 0;padding:0;}
+  .pf-hwm-results > div{padding:var(--pf-space-4) 0;border-top:1px solid var(--pf-line-paper);}
+  .pf-hwm-results > div:first-child{border-top:0;padding-top:0;}
+  .pf-hwm-results dt{color:var(--pf-paper-ink);font-weight:600;overflow-wrap:anywhere;}
+  .pf-hwm-results dt b{font-variant-numeric:tabular-nums;}
+  .pf-hwm-results dd{margin:var(--pf-space-1) 0 0;font-size:var(--pf-text-small);line-height:1.5;}
+
+  .pf-hwm-tiers{margin:var(--pf-space-4) 0 0;padding:0;}
+  .pf-hwm-tiers dt{color:var(--pf-paper-ink);font-weight:600;}
+  .pf-hwm-tiers dd{margin:var(--pf-space-1) 0 var(--pf-space-3);}
+
+  /* ---------- tear line + the one CTA ---------- */
+  .pf-hwm-tear{flex:none;height:0;border-top:1px dashed var(--pf-line-paper);}
+  .pf-hwm-foot{flex:none;padding:var(--foot-top) var(--pad) var(--foot-bottom);}
+  .pf-hwm-foot .pf-btn{width:100%;min-height:var(--cta-h);padding-block:var(--pf-space-3);}
+  .pf-hwm-sheet .pf-hwm-foot .pf-btn{color:var(--pf-lime-ink);text-decoration:none;}
+  .pf-hwm-sheet .pf-hwm-foot .pf-btn:focus-visible{outline-color:var(--pf-focus-on-paper);}
+
+  @media (max-width:520px){
+    body{padding:0;}
+    .pf-hwm-sheet{width:100%;height:100%;max-height:100%;}
+  }
+  /* Short viewports (a laptop at 200% zoom, a phone on its side): a bound sheet would leave a
+     sliver of copy between the header and the button, so the whole page scrolls instead. */
+  @media (max-height:540px){
+    body{height:auto;min-height:100vh;display:block;overflow:visible;padding:var(--pf-space-4);}
+    .pf-hwm-sheet{max-height:none;height:auto;margin:0 auto;}
+    .pf-hwm-main{overflow:visible;}
+  }
+
+  @media print{
+    .pf-hwm-bg,.pf-skip,.pf-hwm-foot,.pf-hwm-tear{display:none!important;}
+    html,body{background:var(--pf-paper);}
+    body{height:auto;display:block;overflow:visible;padding:0;}
+    .pf-hwm-sheet{width:auto;max-height:none;box-shadow:none;-webkit-mask-image:none;mask-image:none;}
+    .pf-hwm-main{overflow:visible;}
+  }
+</style>
+</head>
+<body>
+
+<div class="pf-hwm-bg" aria-hidden="true">
+  <img src="uploads/summit-painting-3.webp" srcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+</div>
+
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<div class="pf-hwm-sheet">
+
+  <header class="pf-hwm-top">
+    <a class="pf-hwm-icon" href="/" aria-label="Back to priceflag.org"><span class="pf-hwm-arrow" aria-hidden="true">&larr;</span></a>
+    <h1 class="pf-hwm-title">How we measure</h1>
+    <a class="pf-hwm-icon pf-hwm-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  </header>
+
+  <main id="main" class="pf-hwm-main" tabindex="0">
+    <p class="pf-hwm-lede">Every Priceflag forecast is a range, fitted to your own orders and checked against real orders as the change rolls out. This page explains each part, and where the numbers on our homepage come from.</p>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-forecast">
+      <h2 id="hwm-forecast">What a forecast is</h2>
+      <p>Before a price change goes live, Priceflag shows a range for the change in orders and in profit over the 90 days after the change. It is always a range, never a single number, because the width of the range is what you have to plan around.</p>
+      <p>Each forecast also gives you a breakeven in plain words: you can lose up to a certain share of orders and still make the same profit.</p>
+      <p class="pf-hwm-note">Example: a product that costs $9.60 to make goes from $24.00 to $27.00. The profit per order rises from $14.40 to $17.40, so you can lose up to 17.2% of orders and still make the same profit.</p>
+    </section>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-window">
+      <h2 id="hwm-window">The 90-day window and the baseline</h2>
+      <!-- OWNER: confirm the exact baseline definition -->
+      <p>A forecast covers the 90 days after the change. It compares against the old price over the same 90 days: what the product would have sold had you left its price alone.</p>
+    </section>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-data">
+      <h2 id="hwm-data">Where the forecast comes from</h2>
+      <p>Priceflag fits each forecast to your store's own order history, up to the last 180 days. Products that sell more give tighter ranges.</p>
+      <p>If a product has too few orders for a trustworthy forecast, Priceflag says so and takes smaller steps instead of showing confidence it does not have.</p>
+    </section>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-tiers">
+      <h2 id="hwm-tiers">How sure we are</h2>
+      <p>Every forecast is labeled with how sure we are. A forecast marked <strong>Fitted</strong> was fitted to your own orders.</p>
+      <!-- PENDING: confidence tier names and definitions from the product -->
+      <dl class="pf-hwm-tiers" data-pending="true">
+        <dt>Fitted</dt>
+        <dd>Fitted to your own orders.</dd>
+      </dl>
+    </section>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-rollout">
+      <h2 id="hwm-rollout">How a rollout is checked</h2>
+      <p>A change rolls out by product and over time, never by visitor. Every shopper sees the same price.</p>
+      <ol class="pf-hwm-stages">
+        <li><b>25%</b><span>of the products you picked</span></li>
+        <li><b>50%</b><span>of the products you picked</span></li>
+        <li><b>All</b><span>of the products you picked</span></li>
+      </ol>
+      <p>At each stage, real daily orders are compared against the range the forecast expected. Two bad days in a row trip the guardrail. In the beta, a tripped guardrail pauses the rollout and emails you. It never rolls a price back by itself; you decide what happens next.</p>
+    </section>
+
+    <section class="pf-hwm-section" aria-labelledby="hwm-sim">
+      <h2 id="hwm-sim">What &ldquo;simulated&rdquo; means</h2>
+      <p>The numbers on our homepage come from simulated test rollouts, not from live customer stores. Here is what each one means, in simulation.</p>
+      <!-- OWNER: check every definition against SIMULATION_RESULTS.md -->
+      <dl class="pf-hwm-results">
+        <div>
+          <dt><b>93%</b> of forecast ranges contained the outcome</dt>
+          <dd>Of the forecast ranges in the simulation, 93% contained the simulated outcome.</dd>
+        </div>
+        <div>
+          <dt><b>4.7-point</b> median miss</dt>
+          <dd>The typical distance, in percentage points, between the forecast and the simulated outcome.</dd>
+        </div>
+        <div>
+          <dt><b>82%</b> of demand shocks caught, median day 6</dt>
+          <dd>The share of simulated demand shocks the guardrail caught, and the median day of the rollout on which it caught them.</dd>
+        </div>
+        <div>
+          <dt><b>7%</b> false pauses</dt>
+          <dd>A false pause is a pause triggered when the price was in fact fine.</dd>
+        </div>
+        <div>
+          <dt><b>100%</b> of prices restored after rollback</dt>
+          <dd>Every simulated rollback put the old price back.</dd>
+        </div>
+      </dl>
+      <p><a href="https://github.com/nithinaru/priceflag/blob/main/docs/SIMULATION_RESULTS.md">Read the simulation write-up</a></p>
+    </section>
+  </main>
+
+  <div class="pf-hwm-tear" aria-hidden="true"></div>
+  <footer class="pf-hwm-foot">
+    <a class="pf-btn" href="/#review">Get my free price review</a>
+  </footer>
+
+</div>
+
+</body>
+</html>

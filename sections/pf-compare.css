@@ -1,0 +1,33 @@
+/* ---------- comparison (type sizes: h2, body, small) ----------
+   Layout family: a real data table. The Priceflag column is a raised navy panel with a lime top edge.
+   Every value is a word; the icons only repeat it (check = yes, cross = no, half circle = partly / depends).
+   Under 880px each row becomes a card and each value gets its column name from data-label. */
+.pf-compare-table{width:100%;margin-top:var(--pf-space-8);border-collapse:separate;border-spacing:0;table-layout:fixed;}
+.pf-compare-table caption{caption-side:top;text-align:left;padding-bottom:var(--pf-space-5);font-size:var(--pf-text-small);color:var(--pf-cream-muted);overflow-wrap:anywhere;}
+.pf-compare-table th,.pf-compare-table td{padding:var(--pf-space-5) var(--pf-space-5);text-align:left;vertical-align:top;overflow-wrap:anywhere;}
+.pf-compare-table thead th{vertical-align:bottom;font-weight:600;}
+.pf-compare-table thead .pf-compare-corner{width:30%;}
+.pf-compare-table tbody th,.pf-compare-table tbody td{border-top:1px solid var(--pf-line);}
+.pf-compare-table tbody th{font-weight:400;color:var(--pf-cream);padding-left:0;}
+.pf-compare-table .pf-compare-us{background:var(--pf-navy-900);}
+.pf-compare-table thead .pf-compare-us{border-radius:var(--pf-radius-card) var(--pf-radius-card) 0 0;box-shadow:inset 0 3px 0 var(--pf-lime);color:var(--pf-cream);}
+.pf-compare-table tbody tr:last-child .pf-compare-us{border-radius:0 0 var(--pf-radius-card) var(--pf-radius-card);}
+.pf-compare-v{display:flex;align-items:flex-start;gap:var(--pf-space-2);font-weight:600;}
+.pf-compare-icon{width:20px;height:20px;flex:none;margin-top:.15em;color:var(--pf-cream-muted);}
+.pf-compare-us .pf-compare-icon{color:var(--pf-lime);}
+.pf-compare-note{display:block;margin-top:var(--pf-space-1);padding-left:28px;font-size:var(--pf-text-small);line-height:1.5;color:var(--pf-cream-muted);}
+.pf-compare-more{margin-top:var(--pf-space-7);}
+.pf-compare-more a{display:inline-flex;align-items:center;min-height:44px;}
+
+@media (max-width:879px){
+  .pf-compare-table,.pf-compare-table caption,.pf-compare-table tbody,.pf-compare-table tr,.pf-compare-table th,.pf-compare-table td{display:block;}
+  /* column headers stay in the accessibility tree; each value shows its column name instead */
+  .pf-compare-table thead{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  .pf-compare-table caption{padding-bottom:0;}
+  .pf-compare-table tbody tr{margin-top:var(--pf-space-4);padding:var(--pf-space-5);border-radius:var(--pf-radius-card);background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-line);}
+  .pf-compare-table tbody th{padding:0 0 var(--pf-space-3);border-top:0;font-weight:600;}
+  .pf-compare-table tbody td{padding:var(--pf-space-3) 0;}
+  .pf-compare-table tbody td::before{content:attr(data-label);display:block;margin-bottom:var(--pf-space-1);font-size:var(--pf-text-small);color:var(--pf-cream-muted);}
+  .pf-compare-table .pf-compare-us,.pf-compare-table tbody tr:last-child .pf-compare-us{background:none;border-radius:0;}
+  .pf-compare-table tbody .pf-compare-us::before{color:var(--pf-lime);}
+}

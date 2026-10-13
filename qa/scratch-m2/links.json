@@ -1,0 +1,489 @@
+{
+  "check": "links",
+  "title": "Link crawl (static + rendered DOM), #-links, anchors",
+  "status": "PASS",
+  "durationMs": 4169,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 22,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 40,
+        "rendered": 39
+      }
+    }
+  },
+  "data": {
+    "pages": {
+      "index": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 22,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 40,
+          "rendered": 39
+        }
+      }
+    },
+    "urls": [
+      {
+        "url": "http://127.0.0.1:54374/",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/about",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/about",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/contact",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/contact",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://signin.priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://youtu.be/vfZ26mCQ79A",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://x.com/Priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://www.linkedin.com/company/priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/legal",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/legal",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/favicon.ico",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/favicon.ico",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/favicon.svg",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/favicon.svg",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/apple-touch-icon.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/apple-touch-icon.png",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/uploads/hero-1671.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/uploads/hero-1671.webp",
+        "internal": true,
+        "kinds": [
+          "link",
+          "img",
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=optional",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/tokens.css",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/tokens.css",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/site.css",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/site.css",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/sections/pf-review.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/sections/pf-review.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/uploads/hero-720.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/uploads/hero-720.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/uploads/hero-1080.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/uploads/hero-1080.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:54374/uploads/summit-lime.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:54374/uploads/summit-lime.webp",
+        "internal": true,
+        "kinds": [
+          "img"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/og-v7.jpg",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "meta-image"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      }
+    ],
+    "anchorIssues": [],
+    "skipped": [
+      {
+        "page": "index",
+        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review&body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20",
+        "reason": "scheme"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      }
+    ],
+    "jsLinks": []
+  }
+}

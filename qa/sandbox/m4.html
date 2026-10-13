@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M4 sandbox: problem, how it works, comparison</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../sections/pf-problem.css">
+<link rel="stylesheet" href="../../sections/pf-how.css">
+<link rel="stylesheet" href="../../sections/pf-compare.css">
+<script src="../../sections/pf-how.js" defer></script>
+</head>
+<body>
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<nav class="pf-nav" aria-label="Main">
+  <div class="pf-nav-group">
+    <a class="pf-nav-logo" href="../../" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a class="pf-nav-wide" href="/about">About</a>
+  </div>
+  <div class="pf-nav-group">
+    <a class="pf-nav-narrow-hide" href="/contact">Contact</a>
+    <a class="pf-btn pf-btn--light pf-btn--sm" href="https://signin.priceflag.org" rel="noopener">Sign in</a>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="pf-section" aria-labelledby="sandbox-title">
+    <h1 class="pf-h2" id="sandbox-title">M4 sandbox (stand-in for the hero)</h1>
+  </section>
+
+<!-- Section: problem, in merchants' words (M4). Goes right after the hero / proof strip, in the old .pf-statement slot. -->
+<section class="pf-section pf-problem" aria-labelledby="problem-title">
+  <!-- PIVOT: problem section (whose pain we lead with). Listed in OVERHAUL_LOG.md. -->
+  <!-- PENDING: replace with real quotes from pilot calls (with permission) -->
+  <h2 class="pf-problem-title" id="problem-title">What changing a price feels like today</h2>
+  <ul class="pf-problem-lines">
+    <li>You haven't changed prices in a year because it's scary.</li>
+    <li>When you do, it goes store-wide at once.</li>
+    <li>You find out it hurt weeks later in your P&amp;L.</li>
+  </ul>
+  <!-- /PIVOT -->
+</section>
+
+<!-- Section: how it works (M4). Replaces the old #how-it-works section; keeps id="how-it-works" and the how-title heading id.
+     Needs sections/pf-how.css and sections/pf-how.js (defer). With JS off the rollout visual shows its final state. -->
+<section class="pf-section pf-how" id="how-it-works" aria-labelledby="how-title">
+  <!-- PIVOT: how-it-works steps (the one use case to lead with). Listed in OVERHAUL_LOG.md. -->
+  <h2 class="pf-h2" id="how-title">How a price change goes live</h2>
+  <ol class="pf-how-steps">
+    <li class="pf-how-step">
+      <h3 class="pf-how-name">Connect Shopify</h3>
+      <!-- OWNER: confirm "free, 5 minutes" setup time is true -->
+      <p class="pf-how-desc">Free, and it takes about 5 minutes. Connecting changes no prices.</p>
+      <figure class="pf-how-ui" aria-label="Example: a connected store">
+        <p class="pf-how-store"><svg class="pf-how-shop" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg><span class="pf-how-domain">yourstore.myshopify.com</span></p>
+        <p class="pf-how-ok"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Connected</p>
+        <p class="pf-how-muted">Reading up to 180 days of orders</p>
+      </figure>
+    </li>
+    <li class="pf-how-step">
+      <h3 class="pf-how-name">Propose a price</h3>
+      <p class="pf-how-desc">Pick the products and type the new price. Priceflag touches nothing else.</p>
+      <figure class="pf-how-ui" aria-label="Example: a proposed price">
+        <div class="pf-how-price">
+          <p class="pf-how-field"><span class="pf-how-muted">Current price</span> <span class="pf-how-num">$24.00</span></p>
+          <svg class="pf-how-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <p class="pf-how-field pf-how-field--new"><span class="pf-how-muted">New price</span> <span class="pf-how-num">$27.00</span></p>
+        </div>
+        <p class="pf-how-muted">12 SKUs selected. Unit cost $9.60.</p>
+      </figure>
+    </li>
+    <li class="pf-how-step">
+      <h3 class="pf-how-name">See the forecast and the breakeven</h3>
+      <p class="pf-how-desc">The forecast is a range built from your own order history, shown next to your breakeven.</p>
+      <figure class="pf-how-ui" aria-label="Example: forecast and breakeven">
+        <p class="pf-how-break">Lose up to <span class="pf-how-num pf-how-lime">17.2%</span> of orders and keep the same profit.</p>
+        <div class="pf-how-range" aria-hidden="true"><span class="pf-how-band"></span><span class="pf-how-mark"></span></div>
+        <p class="pf-how-key"><span class="pf-how-swatch pf-how-swatch--range" aria-hidden="true"></span>Forecast, next 90 days: <span class="pf-how-num">5%</span> to <span class="pf-how-num">12%</span> fewer orders</p>
+        <p class="pf-how-key"><span class="pf-how-swatch pf-how-swatch--mark" aria-hidden="true"></span>Breakeven: <span class="pf-how-num">17.2%</span> fewer orders</p>
+      </figure>
+    </li>
+    <li class="pf-how-step">
+      <h3 class="pf-how-name">Roll out by SKU cohort, with guardrails set before launch</h3>
+      <p class="pf-how-desc">The price goes live on 25% of the selected SKUs, then 50%, then all. Every shopper sees the same price.</p>
+      <figure class="pf-how-ui" aria-label="Example: rollout stages and guardrail">
+        <ol class="pf-how-stages" data-pf-rollout>
+          <li><span class="pf-how-stage">25%</span> <span class="pf-how-muted">3 SKUs</span></li>
+          <li><span class="pf-how-stage">50%</span> <span class="pf-how-muted">6 SKUs</span></li>
+          <li><span class="pf-how-stage">All</span> <span class="pf-how-muted">12 SKUs</span></li>
+        </ol>
+        <p class="pf-how-guard"><span class="pf-how-muted">Guardrail</span> Pause if orders fall below the range 2 days in a row</p>
+        <p class="pf-how-muted">If it trips, the rollout pauses and we email you. Every change is journaled and can be undone.</p>
+      </figure>
+    </li>
+  </ol>
+  <p class="pf-how-note">Example numbers: a $24.00 product with a $9.60 unit cost, moving to $27.00 across 12 SKUs.</p>
+  <!-- /PIVOT -->
+</section>
+
+  <!-- (calculator, another builder) -->
+
+<!-- Section: comparison (M4). Priceflag vs price A/B testing vs changing it all at once. Needs sections/pf-compare.css.
+     Under 880px each row becomes a card; the column name comes from data-label so every value stays labeled. -->
+<section class="pf-section pf-compare" id="compare" aria-labelledby="compare-title">
+  <h2 class="pf-h2" id="compare-title">Three ways to change a price</h2>
+  <table class="pf-compare-table">
+    <caption>Priceflag vs price A/B testing vs changing it all at once</caption>
+    <thead>
+      <tr>
+        <td class="pf-compare-corner"></td>
+        <th scope="col" class="pf-compare-us">Priceflag</th>
+        <th scope="col">Price A/B testing</th>
+        <th scope="col">Changing it all at once</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Every shopper sees the same price</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Shoppers are split between prices.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Works without weeks of split traffic</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">It needs weeks of split traffic.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Limits the damage if the price is wrong</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span><span class="pf-compare-note">Rolled out by SKU cohort and paused by a guardrail.</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Partly</span><span class="pf-compare-note">Only the test group sees it.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Every product changes at once.</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Every change journaled and reversible</th>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Depends on the app</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Unless you keep your own records.</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- LINK-LIVE-IN-M7 -->
+  <p class="pf-compare-more"><a href="/vs-intelligems">Read the full comparison with Intelligems</a></p>
+</section>
+
+  <section class="pf-section" id="review" aria-labelledby="review-title"><h2 class="pf-h2" id="review-title">Review form stand-in</h2></section>
+  <section class="pf-section" id="faq" aria-labelledby="faq-title"><h2 class="pf-h2" id="faq-title">FAQ stand-in</h2></section>
+</main>
+</body>
+</html>

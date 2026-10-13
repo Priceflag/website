@@ -1,0 +1,67 @@
+/* ---------- how it works (type sizes: h2, h3, body) ----------
+   Layout family: a 4-step sequence, one small product visual per step. 1 column under 720px, 2 up to 1199px, 4 from 1200px.
+   Visuals are real text in a framed example panel; numbers use the mono stack at body size (not a new size).
+   Subgrid keeps titles, descriptions and panels on shared rows so the four panels line up. */
+.pf-how-steps{list-style:none;margin:var(--pf-space-9) 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--pf-space-9) var(--pf-space-7);counter-reset:pf-how;}
+@media (min-width:720px){.pf-how-steps{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (min-width:1200px){.pf-how-steps{grid-template-columns:repeat(4,minmax(0,1fr));}}
+.pf-how-step{counter-increment:pf-how;min-width:0;display:grid;grid-template-rows:auto auto 1fr;row-gap:var(--pf-space-3);align-content:start;padding-top:var(--pf-space-5);border-top:1px solid var(--pf-line);}
+@supports (grid-template-rows:subgrid){
+  @media (min-width:720px){.pf-how-step{grid-row:span 3;grid-template-rows:subgrid;}}
+}
+.pf-how-name{font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);}
+/* The ol already numbers the steps for assistive tech; the visible numeral is hidden from it. */
+.pf-how-name::before{content:counter(pf-how);content:counter(pf-how) / "";display:block;margin-bottom:var(--pf-space-2);color:var(--pf-lime);}
+.pf-how-desc{color:var(--pf-cream-muted);max-width:40ch;}
+
+/* the example panel */
+.pf-how-ui{align-self:start;margin:var(--pf-space-3) 0 0;padding:var(--pf-space-5);display:grid;gap:var(--pf-space-3);min-width:0;
+  border-radius:var(--pf-radius-card);background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-line),var(--pf-shadow-raised);}
+.pf-how-ui p{line-height:1.4;}
+.pf-how-num{font-family:var(--pf-mono);font-variant-numeric:tabular-nums;letter-spacing:0;overflow-wrap:anywhere;}
+.pf-how-muted{color:var(--pf-cream-muted);}
+.pf-how-lime{color:var(--pf-lime);}
+
+/* 1. connect */
+.pf-how-store{display:flex;align-items:center;gap:var(--pf-space-2);min-width:0;}
+.pf-how-domain{font-weight:500;min-width:0;overflow-wrap:anywhere;}
+.pf-how-shop{width:.9em;height:1em;flex:none;fill:currentColor;}
+.pf-how-ok{display:flex;align-items:center;gap:var(--pf-space-2);font-weight:600;}
+.pf-how-ok svg{width:20px;height:20px;flex:none;color:var(--pf-lime);}
+
+/* 2. propose */
+.pf-how-price{display:grid;justify-items:start;gap:var(--pf-space-1);}
+.pf-how-field{width:100%;min-width:0;display:grid;gap:var(--pf-space-1);padding:var(--pf-space-2) var(--pf-space-3);border-radius:var(--pf-radius-field);border:1px solid var(--pf-line);background:var(--pf-navy-950);}
+.pf-how-field--new{border-color:var(--pf-lime);}
+.pf-how-arrow{width:20px;height:20px;margin-left:var(--pf-space-3);transform:rotate(90deg);color:var(--pf-cream-muted);}
+
+/* 3. forecast and breakeven: the band and the marker repeat the two lines under them, in text */
+.pf-how-break{font-weight:600;}
+.pf-how-range{position:relative;height:28px;}
+.pf-how-range::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--pf-line-control);}
+/* axis runs 0% to 20% fewer orders: band 5% to 12%, breakeven 17.2% */
+.pf-how-band{position:absolute;top:8px;bottom:8px;left:25%;width:35%;border-radius:var(--pf-radius-sm);background:var(--pf-peri);}
+.pf-how-mark{position:absolute;top:0;bottom:0;left:86%;width:3px;border-radius:2px;background:var(--pf-lime);}
+.pf-how-key{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 var(--pf-space-2);color:var(--pf-cream-muted);}
+.pf-how-key .pf-how-num{color:var(--pf-cream);}
+.pf-how-swatch{flex:none;align-self:center;width:14px;height:10px;border-radius:2px;}
+.pf-how-swatch--range{background:var(--pf-peri);}
+.pf-how-swatch--mark{width:3px;height:16px;background:var(--pf-lime);}
+
+/* 4. rollout: three stages; pf-how.js advances them once when they scroll into view (final state is the default) */
+.pf-how-stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--pf-space-2);}
+.pf-how-stages li{position:relative;min-width:0;display:grid;padding-top:var(--pf-space-4);line-height:1.3;}
+.pf-how-stages li::before,.pf-how-stages li::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;border-radius:2px;}
+.pf-how-stages li::before{background:var(--pf-line);}
+.pf-how-stages li::after{background:var(--pf-lime);transform-origin:left center;transition:transform var(--pf-dur-slow) var(--pf-ease);}
+.pf-how-stage{font-weight:600;font-variant-numeric:tabular-nums;transition:color var(--pf-dur-base) ease;}
+.pf-how-stages[data-stage="0"] li::after,
+.pf-how-stages[data-stage="1"] li:nth-child(n+2)::after,
+.pf-how-stages[data-stage="2"] li:nth-child(3)::after{transform:scaleX(0);}
+.pf-how-stages[data-stage="0"] li .pf-how-stage,
+.pf-how-stages[data-stage="1"] li:nth-child(n+2) .pf-how-stage,
+.pf-how-stages[data-stage="2"] li:nth-child(3) .pf-how-stage{color:var(--pf-cream-subtle);}
+.pf-how-guard{display:grid;gap:var(--pf-space-1);padding-top:var(--pf-space-3);border-top:1px solid var(--pf-line);}
+@media (prefers-reduced-motion:reduce){.pf-how-stages li::after,.pf-how-stage{transition:none;}}
+
+.pf-how-note{margin-top:var(--pf-space-8);color:var(--pf-cream-muted);max-width:var(--pf-measure-long);}

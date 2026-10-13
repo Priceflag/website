@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandbox: breakeven calculator</title>
+<meta name="robots" content="noindex">
+<!-- Sandbox for M5 (not deployed: qa/ is in .vercelignore). Body scaffolding mirrors index.html;
+     the #review section is a verbatim copy of index.html so the calculator prefill can be tested. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../sections/pf-calc.css">
+<noscript><style>.pf-form-fields{display:none;}</style></noscript>
+<script src="../../sections/pf-review.js" defer></script>
+<script src="../../sections/pf-calc-math.js" defer></script>
+<script src="../../sections/pf-calc.js" defer></script>
+</head>
+<body>
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<nav class="pf-nav" aria-label="Main">
+  <div class="pf-nav-group">
+    <a class="pf-nav-logo" href="../../" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a class="pf-nav-wide" href="/about">About</a>
+  </div>
+  <div class="pf-nav-group">
+    <a class="pf-nav-narrow-hide" href="/contact">Contact</a>
+    <a class="pf-btn pf-btn--light pf-btn--sm" href="https://signin.priceflag.org" rel="noopener">Sign in</a>
+  </div>
+</nav>
+
+<main id="main">
+<!-- Section: breakeven calculator (M5). Paste inside <main>, before #review.
+     Needs in <head>: <link rel="stylesheet" href="sections/pf-calc.css">,
+     <script src="sections/pf-calc-math.js" defer></script> and <script src="sections/pf-calc.js" defer></script> (in that order).
+     Without JavaScript the example answer below is what shows; the fields stay read-only and the button is a plain link to #review. -->
+  <section class="pf-section pf-calc" id="calculator" aria-labelledby="calc-title">
+    <!-- PIVOT: calculator heading, lede, field labels and button text (depend on the lead use case and the CTA model). -->
+    <h2 class="pf-h2" id="calc-title">Find your breakeven before you change a price</h2>
+    <p class="pf-lede">Enter today's price, the new price and what one unit costs you. Profit per order here is price minus unit cost.</p>
+    <div class="pf-calc-panel" data-pf-calc>
+      <div class="pf-calc-inputs" role="group" aria-label="Your numbers">
+        <div class="pf-calc-field">
+          <label for="calc-price">Current price</label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="24.00" readonly aria-describedby="calc-price-err" data-pf-calc-field="price">
+          </div>
+          <p class="pf-calc-err" id="calc-price-err" data-pf-calc-err="price"></p>
+        </div>
+        <div class="pf-calc-field">
+          <label for="calc-new">New price</label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-new" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="27.00" readonly aria-describedby="calc-new-err" data-pf-calc-field="newPrice">
+          </div>
+          <p class="pf-calc-err" id="calc-new-err" data-pf-calc-err="newPrice"></p>
+        </div>
+        <div class="pf-calc-field">
+          <label for="calc-cost">Unit cost <span class="pf-calc-hint">(what one unit costs you to make and ship)</span></label>
+          <div class="pf-calc-well">
+            <span class="pf-calc-cur" aria-hidden="true">$</span>
+            <input id="calc-cost" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="9.60" readonly aria-describedby="calc-cost-err" data-pf-calc-field="cost">
+          </div>
+          <p class="pf-calc-err" id="calc-cost-err" data-pf-calc-err="cost"></p>
+        </div>
+        <p class="pf-calc-note" data-pf-calc-note>These are example numbers. Turn on JavaScript to try your own.</p>
+      </div>
+      <div class="pf-calc-result">
+        <output class="pf-calc-out" for="calc-price calc-new calc-cost" aria-live="polite" aria-atomic="true" data-pf-calc-out>
+          <span class="pf-calc-answer" data-pf-calc-answer>You can lose up to <strong class="pf-calc-figure" data-pf-calc-figure>17.2%</strong> of orders and still make the same profit.</span>
+          <span class="pf-calc-support" data-pf-calc-support>Profit per order goes from $14.40 to $17.40.</span>
+        </output>
+        <a class="pf-btn" href="#review" data-pf-calc-cta>Get the full forecast for my store</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-section" id="review" aria-labelledby="review-title">
+    <div class="pf-review">
+      <div>
+        <h2 class="pf-h2" id="review-title">Get a free price review</h2>
+        <p class="pf-lede">Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.</p>
+      </div>
+      <!-- The script sends this form. With JavaScript off the fields are hidden and an email link takes their place.
+           method="post" with no action keeps typed details out of the URL even if the script fails to load. -->
+      <form class="pf-form" data-pf-review aria-describedby="review-note" method="post">
+        <div class="pf-form-fields">
+          <div class="pf-form-row">
+            <div class="pf-field">
+              <label for="rv-email">Email</label>
+              <input id="rv-email" name="email" type="email" autocomplete="email" required aria-describedby="rv-email-err">
+              <p class="pf-field-error" id="rv-email-err" data-pf-error="email"></p>
+            </div>
+            <div class="pf-field">
+              <label for="rv-store">Store address</label>
+              <input id="rv-store" name="store" type="text" inputmode="url" autocomplete="url" required placeholder="yourstore.com" aria-describedby="rv-store-err">
+              <p class="pf-field-error" id="rv-store-err" data-pf-error="store"></p>
+            </div>
+          </div>
+          <div class="pf-field" style="margin-top:20px">
+            <label for="rv-name">Name <span class="pf-opt">(optional)</span></label>
+            <input id="rv-name" name="name" type="text" autocomplete="name" maxlength="120">
+          </div>
+          <div class="pf-field" style="margin-top:20px">
+            <label for="rv-message">Which price are you thinking about changing? <span class="pf-opt">(optional)</span></label>
+            <textarea id="rv-message" name="message"></textarea>
+          </div>
+          <input type="hidden" name="price" disabled>
+          <input type="hidden" name="newPrice" disabled>
+          <input type="hidden" name="cost" disabled>
+          <div class="pf-hp" aria-hidden="true">
+            <label for="rv-hp">Leave this empty</label>
+            <input id="rv-hp" name="pf_hp_field" type="text" tabindex="-1" autocomplete="new-password" disabled>
+          </div>
+          <div style="margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+            <button class="pf-btn" type="submit">Get a free price review</button>
+            <p class="pf-form-note" id="review-note">Free. We reply within 48 hours. No app install needed.</p>
+          </div>
+        </div>
+        <p class="pf-form-status" data-pf-status tabindex="-1"></p>
+        <p class="pf-visually-hidden" data-pf-live role="status" aria-live="polite"></p>
+        <button class="pf-btn pf-btn--ghost pf-form-again" type="button" data-pf-again hidden>Send another request</button>
+        <noscript>
+          <p class="pf-form-note">Email your store address and the price you are thinking about changing to <a href="mailto:hello@priceflag.org?subject=Free%20price%20review&amp;body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20">hello@priceflag.org</a>. We reply within 48 hours.</p>
+        </noscript>
+      </form>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* ---------- founders (h2, h3, body) ----------
+   Layout family: two-person text row. Heading on top, the two founders side by side with one vertical rule
+   between them. With photos hidden the row is pure type, so there are no empty boxes. */
+.pf-founders{padding:var(--pf-section-y) var(--pf-gutter);max-width:var(--pf-max);margin:0 auto;}
+.pf-founders > *,.pf-founders-people > *{min-width:0;}
+.pf-founders-title{font-size:var(--pf-text-h2);line-height:var(--pf-lh-heading);letter-spacing:var(--pf-track-heading);max-width:18em;}
+.pf-founders-lede{margin-top:var(--pf-space-4);max-width:var(--pf-measure);color:var(--pf-cream-muted);}
+
+.pf-founders-people{list-style:none;margin:var(--pf-space-9) 0 0;padding:0;display:grid;gap:var(--pf-space-8);}
+.pf-founders-person{padding-top:var(--pf-space-6);border-top:1px solid var(--pf-line);}
+@media (min-width:768px){
+  .pf-founders-people{grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--pf-line);}
+  .pf-founders-person{border-top:0;padding:var(--pf-space-7) var(--pf-space-9) 0 0;}
+  .pf-founders-person + .pf-founders-person{border-left:1px solid var(--pf-line);padding-left:var(--pf-space-9);padding-right:0;}
+}
+.pf-founders-name{font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);color:var(--pf-cream);}
+.pf-founders-role{margin-top:var(--pf-space-3);max-width:34ch;color:var(--pf-cream-muted);}
+.pf-founders-mail{margin-top:var(--pf-space-3);}
+.pf-founders-mail a{display:inline-flex;align-items:center;min-height:44px;color:var(--pf-cream);overflow-wrap:anywhere;
+  text-decoration:underline;text-decoration-color:var(--pf-line-control);text-underline-offset:.25em;}
+.pf-founders-mail a:hover{color:var(--pf-lime);text-decoration-color:currentColor;}
+
+/* Photo slot, shown once real photos replace data-pending. Square, card radius. */
+.pf-founders-photo{width:min(160px,40%);aspect-ratio:1;margin-bottom:var(--pf-space-5);border-radius:var(--pf-radius-card);overflow:hidden;background:var(--pf-navy-900);}
+.pf-founders-photo img{width:100%;height:100%;object-fit:cover;}

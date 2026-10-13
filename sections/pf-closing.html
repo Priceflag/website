@@ -1,0 +1,56 @@
+<!-- Section: closing CTA band (M6). Replaces the old #review section and keeps id="review".
+     The form's ids, names, attributes, data-attributes, hidden inputs, honeypot, noscript and status/live/again elements
+     are unchanged from index.html because sections/pf-review.js and qa/tests/review-form.test.mjs depend on them.
+     Only wrappers changed: the two inline-style wrappers became .pf-closing-gap and .pf-closing-submit. Type: h2, body, small. -->
+<section class="pf-closing" id="review" aria-labelledby="review-title">
+  <div class="pf-closing-band">
+    <div class="pf-closing-head">
+      <!-- PIVOT: CTA text (self-serve vs founder-led): heading, button label and micro-copy. Listed in OVERHAUL_LOG.md. -->
+      <h2 class="pf-closing-title" id="review-title">See what your next price change will do.</h2>
+      <p class="pf-closing-lede">Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.</p>
+    </div>
+    <!-- The script sends this form. With JavaScript off the fields are hidden and an email link takes their place.
+         method="post" with no action keeps typed details out of the URL even if the script fails to load. -->
+    <form class="pf-form" data-pf-review aria-describedby="review-note" method="post">
+      <div class="pf-form-fields">
+        <div class="pf-form-row">
+          <div class="pf-field">
+            <label for="rv-email">Email</label>
+            <input id="rv-email" name="email" type="email" autocomplete="email" required aria-describedby="rv-email-err">
+            <p class="pf-field-error" id="rv-email-err" data-pf-error="email"></p>
+          </div>
+          <div class="pf-field">
+            <label for="rv-store">Store address</label>
+            <input id="rv-store" name="store" type="text" inputmode="url" autocomplete="url" required placeholder="yourstore.com" aria-describedby="rv-store-err">
+            <p class="pf-field-error" id="rv-store-err" data-pf-error="store"></p>
+          </div>
+        </div>
+        <div class="pf-field pf-closing-gap">
+          <label for="rv-name">Name <span class="pf-opt">(optional)</span></label>
+          <input id="rv-name" name="name" type="text" autocomplete="name" maxlength="120">
+        </div>
+        <div class="pf-field pf-closing-gap">
+          <label for="rv-message">Which price are you thinking about changing? <span class="pf-opt">(optional)</span></label>
+          <textarea id="rv-message" name="message"></textarea>
+        </div>
+        <input type="hidden" name="price" disabled>
+        <input type="hidden" name="newPrice" disabled>
+        <input type="hidden" name="cost" disabled>
+        <div class="pf-hp" aria-hidden="true">
+          <label for="rv-hp">Leave this empty</label>
+          <input id="rv-hp" name="pf_hp_field" type="text" tabindex="-1" autocomplete="new-password" disabled>
+        </div>
+        <div class="pf-closing-submit">
+          <button class="pf-btn" type="submit">Get my free price review</button>
+          <p class="pf-form-note" id="review-note">Free. We send your report within 48 hours. No app install needed.</p>
+        </div>
+      </div>
+      <p class="pf-form-status" data-pf-status tabindex="-1"></p>
+      <p class="pf-visually-hidden" data-pf-live role="status" aria-live="polite"></p>
+      <button class="pf-btn pf-btn--ghost pf-form-again" type="button" data-pf-again hidden>Send another request</button>
+      <noscript>
+        <p class="pf-form-note">Email your store address and the price you are thinking about changing to <a href="mailto:hello@priceflag.org?subject=Free%20price%20review&amp;body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20">hello@priceflag.org</a>. We send your report within 48 hours.</p>
+      </noscript>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<!-- Section: results (M6). Simulation numbers only, each labeled "In simulation" with what it was measured across.
+     Numbers come from docs/OVERHAUL_PROMPT.md "Honesty guardrails"; add no others. Type: h2, figure, body. -->
+<section class="pf-results" id="results" aria-labelledby="results-title">
+  <h2 class="pf-results-title" id="results-title">How Priceflag performed in simulation</h2>
+  <p class="pf-results-lede">These numbers come from our simulation of test rollouts, not from a live store.</p>
+
+  <!-- PENDING: one quantified pilot result, store name, written permission -->
+  <figure class="pf-results-pilot" data-pending="true">
+    <p class="pf-results-pilot-text">Pilot result goes here: one number, what it was measured against, and the store's name.</p>
+    <figcaption class="pf-results-pilot-who">Store name, with written permission</figcaption>
+  </figure>
+
+  <div class="pf-results-feature">
+    <p class="pf-results-tag">In simulation</p>
+    <p class="pf-results-claim"><span class="pf-results-fig">93%</span> of forecast ranges contained the real outcome.</p>
+    <p class="pf-results-base">Measured across our simulated test rollouts. A forecast is a range with a breakeven, and this is how often the outcome landed inside it.</p>
+  </div>
+
+  <ul class="pf-results-list">
+    <li class="pf-results-item">
+      <p class="pf-results-tag">In simulation</p>
+      <p class="pf-results-claim"><span class="pf-results-fig">4.7</span> point median miss between the forecast and the outcome.</p>
+      <p class="pf-results-base">Measured across our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-tag">In simulation</p>
+      <p class="pf-results-claim"><span class="pf-results-fig">82%</span> of demand shocks caught, at a median of day 6.</p>
+      <p class="pf-results-base">Measured across the demand shocks in our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-tag">In simulation</p>
+      <p class="pf-results-claim"><span class="pf-results-fig">7%</span> false pauses, where a guardrail paused a rollout that did not need it.</p>
+      <p class="pf-results-base">Measured across our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-tag">In simulation</p>
+      <p class="pf-results-claim"><span class="pf-results-fig">100%</span> of prices restored after rollback.</p>
+      <p class="pf-results-base">Measured across the rollbacks in our simulated test rollouts.</p>
+    </li>
+  </ul>
+
+  <p class="pf-results-links"><a href="/how-we-measure">How we measure</a> <a href="https://github.com/nithinaru/priceflag/blob/main/docs/SIMULATION_RESULTS.md" rel="noopener">Simulation write-up</a></p>
+</section>

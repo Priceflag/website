@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandbox: nav and hero (M3)</title>
+<meta name="robots" content="noindex">
+<link rel="preload" as="image" href="../../uploads/hero-1671.webp" imagesrcset="../../uploads/hero-720.webp 720w, ../../uploads/hero-1080.webp 1080w, ../../uploads/hero-1671.webp 1671w" imagesizes="100vw" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../site.css">
+<link rel="stylesheet" href="../../sections/pf-nav.css">
+<link rel="stylesheet" href="../../sections/pf-hero.css">
+<script src="../../sections/pf-nav.js" defer></script>
+<script src="../../sections/pf-hero.js" defer></script>
+</head>
+<body>
+<!-- Generated from sections/pf-nav.html and sections/pf-hero.html (image paths rewritten for qa/sandbox/). Not deployed. -->
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<!-- Section: nav (M3). Replaces <nav class="pf-nav"> in index.html. Needs sections/pf-nav.css and sections/pf-nav.js (defer).
+     Desktop (768px and up): one row: logo, How it works, FAQ, Founders, Sign in, CTA.
+     Below 768px: logo, Menu button, CTA (CTA moves into the menu below 360px). With JS off there is no Menu button and the links show as a wrapped row. -->
+<nav class="pf-nav" aria-label="Main" data-pf-nav>
+  <a class="pf-nav-logo" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  <button class="pf-nav-toggle" type="button" aria-expanded="false" aria-controls="pf-nav-menu" hidden><span class="pf-visually-hidden">Menu</span></button>
+  <ul class="pf-nav-menu" id="pf-nav-menu">
+    <li><a class="pf-nav-link" href="#how-it-works">How it works</a></li>
+    <li><a class="pf-nav-link" href="#faq">FAQ</a></li>
+    <li><a class="pf-nav-link" href="#founders">Founders</a></li>
+    <li class="pf-nav-signin"><a class="pf-btn pf-btn--light pf-btn--sm" href="https://signin.priceflag.org" rel="noopener">Sign in</a></li>
+    <!-- PIVOT: CTA text. Narrow-screen copy of the nav CTA; only one of the two is ever displayed. -->
+    <li class="pf-nav-menu-cta"><a class="pf-btn pf-btn--sm" href="#review">Get my free price review</a></li>
+  </ul>
+  <!-- PIVOT: CTA text (same label as the hero, closing band and form button). -->
+  <a class="pf-btn pf-btn--sm pf-nav-cta" href="#review">Get my free price review</a>
+</nav>
+
+<main id="main">
+<!-- Section: hero + proof strip slot (M3). Replaces <section class="pf-hero"> in index.html (keep the existing hero image preload in <head>).
+     Needs sections/pf-hero.css and sections/pf-hero.js (defer). Type in the copy: display (h1), lead (sub, CTA, founder link), small (micro-copy).
+     The product mock is a UI and uses its own 15/17/24px sizes (see pf-hero.css). -->
+<section class="pf-hero" aria-labelledby="hero-title">
+  <picture class="pf-hero-media">
+    <img src="../../uploads/hero-1671.webp" srcset="../../uploads/hero-720.webp 720w, ../../uploads/hero-1080.webp 1080w, ../../uploads/hero-1671.webp 1671w" sizes="100vw" width="1671" height="941" fetchpriority="high" decoding="async"
+      alt="A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit.">
+  </picture>
+  <div class="pf-hero-wash" aria-hidden="true"></div>
+  <div class="pf-hero-grain" aria-hidden="true"></div>
+
+  <div class="pf-hero-inner">
+    <div class="pf-hero-text">
+      <!-- PIVOT: hero headline (names the platform: Shopify). Listed in OVERHAUL_LOG.md "Pivot-dependent copy". -->
+      <h1 class="pf-hero-title" id="hero-title"><span class="pf-hero-title-lead">Change your Shopify prices</span> <span class="pf-hero-title-accent">without losing sales.</span></h1>
+      <!-- PIVOT: hero subhead (90-day forecast, rollout by product, pause on a tripped guardrail). -->
+      <p class="pf-hero-sub">See a price change's 90-day impact before it goes live. Roll it out a few products at a time, and we pause it the moment it stops paying.</p>
+      <div class="pf-hero-actions">
+        <!-- PIVOT: CTA text (self-serve vs founder-led). Same label in the nav, closing band and form button. -->
+        <a class="pf-btn pf-hero-cta" href="#review" aria-describedby="pf-hero-note">Get my free price review</a>
+        <p class="pf-hero-note" id="pf-hero-note">Free. We send your report within 48 hours. No app install needed.</p>
+        <a class="pf-hero-alt" href="mailto:hello@priceflag.org?subject=Talk%20to%20a%20founder">Talk to a founder</a>
+      </div>
+    </div>
+
+    <!-- Example product UI. Arithmetic (integer cents, see qa/briefs/COMMON.md): margin 2400-960 = 1440, 2700-960 = 1740;
+         same-profit loss = 1 - 1440/1740 = 17.24% -> shown as 17.2% (rounded down). Forecast -4% to -11% sits inside it.
+         Stages: 25% of 12 SKUs = 3, 50% = 6, 100% = 12. -->
+    <figure class="pf-hero-mock" aria-labelledby="pf-mock-title" data-pf-mock>
+        <div class="pf-mock-head">
+          <h2 class="pf-mock-title" id="pf-mock-title">12 SKUs: <span class="pf-mock-pair">$24.00 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $27.00</span></h2>
+          <dl class="pf-mock-meta">
+            <div><dt>Unit cost</dt><dd>$9.60</dd></div>
+            <div><dt>Margin per order</dt><dd><span class="pf-mock-pair">$14.40 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $17.40</span></dd></div>
+          </dl>
+        </div>
+
+        <dl class="pf-mock-figs">
+          <div class="pf-mock-fig">
+            <dt>Breakeven</dt>
+            <dd>You can lose up to <strong>17.2%</strong> of orders and still make the same profit.</dd>
+          </div>
+          <div class="pf-mock-fig">
+            <dt>Forecast range, 90 days</dt>
+            <dd><strong class="pf-mock-num">−4% to −11%</strong> orders over 90 days</dd>
+          </div>
+        </dl>
+
+        <!-- Visual of the two numbers above (orders change from 0% to −20%); the text carries the meaning. -->
+        <div class="pf-mock-range" aria-hidden="true">
+          <div class="pf-mock-track">
+            <span class="pf-mock-band"></span>
+            <span class="pf-mock-mark"></span>
+          </div>
+          <div class="pf-mock-scale"><span>0%</span><span>Breakeven −17.2%</span></div>
+        </div>
+
+        <div class="pf-mock-rollout">
+          <h3 class="pf-mock-label">Rollout by SKU</h3>
+          <ol class="pf-mock-stages" data-stage="100">
+            <li data-step="25"><span class="pf-mock-pct">25%</span> <span class="pf-mock-skus">3 SKUs</span></li>
+            <li data-step="50"><span class="pf-mock-pct">50%</span> <span class="pf-mock-skus">6 SKUs</span></li>
+            <li data-step="100" aria-current="step"><span class="pf-mock-pct">100%</span> <span class="pf-mock-skus">12 SKUs</span></li>
+          </ol>
+          <p class="pf-mock-status" data-pf-mock-status>Live on 12 of 12 SKUs. Every shopper sees the same price.</p>
+        </div>
+      <figcaption class="pf-mock-caption">Example forecast for an illustrative store. Numbers are an example, not a customer result.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PENDING: pilot store logos with written permission (or the count of pilot brands), YC badge only if accepted -->
+<section class="pf-hero-proof" aria-label="Pilot brands" data-pending="true">
+  <div class="pf-hero-proof-inner">
+    <p class="pf-hero-proof-lead">Working with [N] Shopify brands in our pilot</p>
+    <ul class="pf-hero-proof-logos">
+      <li>[Pilot store logo 1: SVG or WebP with width and height, alt text = the store's name, written permission on file]</li>
+      <li>[Pilot store logo 2]</li>
+      <li>[Pilot store logo 3]</li>
+      <li>[Pilot store logo 4]</li>
+    </ul>
+    <!-- PENDING: YC badge, only if Priceflag is accepted to Y Combinator -->
+    <p class="pf-hero-proof-yc" data-pending="true">[YC badge: "Backed by Y Combinator"]</p>
+  </div>
+</section>
+
+  <section class="pf-section" id="how-it-works" aria-labelledby="how-it-works-t">
+    <h2 class="pf-h2" id="how-it-works-t">How it works</h2>
+    <p class="pf-lede">Sandbox filler so the in-page anchors resolve and scroll-padding can be checked.</p>
+    <div style="height:60vh"></div>
+  </section>
+  <section class="pf-section" id="faq" aria-labelledby="faq-t">
+    <h2 class="pf-h2" id="faq-t">FAQ</h2>
+    <p class="pf-lede">Sandbox filler so the in-page anchors resolve and scroll-padding can be checked.</p>
+    <div style="height:60vh"></div>
+  </section>
+  <section class="pf-section" id="founders" aria-labelledby="founders-t">
+    <h2 class="pf-h2" id="founders-t">Founders</h2>
+    <p class="pf-lede">Sandbox filler so the in-page anchors resolve and scroll-padding can be checked.</p>
+    <div style="height:60vh"></div>
+  </section>
+  <section class="pf-section" id="review" aria-labelledby="review-t">
+    <h2 class="pf-h2" id="review-t">Get my free price review</h2>
+    <p class="pf-lede">Sandbox filler so the in-page anchors resolve and scroll-padding can be checked.</p>
+    <div style="height:60vh"></div>
+  </section>
+</main>
+</body>
+</html>

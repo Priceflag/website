@@ -1,10 +1,47 @@
 {
   "$comment": "Pages under test. Add a page = add one line. name: output file stem; path: URL path; lighthouse: include in the Lighthouse 90+ requirement; skipOnRemote: skip when QA_BASE_URL is set (page behaves differently in production).",
   "pages": [
-    { "name": "index",   "path": "/",            "lighthouse": true },
-    { "name": "about",   "path": "/about",       "lighthouse": true },
-    { "name": "contact", "path": "/contact",     "lighthouse": true },
-    { "name": "legal",   "path": "/legal",       "lighthouse": true },
-    { "name": "signin",  "path": "/signin.html", "lighthouse": false, "skipOnRemote": true, "$comment": "vercel.json 308-redirects /signin.html to dashboard.priceflag.org in production; tested locally only, excluded from the Lighthouse requirement." }
+    {
+      "name": "index",
+      "path": "/",
+      "lighthouse": true
+    },
+    {
+      "name": "about",
+      "path": "/about",
+      "lighthouse": true
+    },
+    {
+      "name": "contact",
+      "path": "/contact",
+      "lighthouse": true
+    },
+    {
+      "name": "legal",
+      "path": "/legal",
+      "lighthouse": true
+    },
+    {
+      "name": "signin",
+      "path": "/signin.html",
+      "lighthouse": false,
+      "skipOnRemote": true,
+      "$comment": "vercel.json 308-redirects /signin.html to dashboard.priceflag.org in production; tested locally only, excluded from the Lighthouse requirement."
+    },
+    {
+      "name": "how-we-measure",
+      "path": "/how-we-measure",
+      "lighthouse": true
+    },
+    {
+      "name": "vs-intelligems",
+      "path": "/vs-intelligems",
+      "lighthouse": true
+    },
+    {
+      "name": "black-friday",
+      "path": "/black-friday",
+      "lighthouse": true
+    }
   ]
 }

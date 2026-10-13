@@ -1,0 +1,18 @@
+/* ---------- closing CTA band (h2, body, small) ----------
+   Layout family: a centered band. One raised navy panel, the heading centered over a single form column,
+   the primary button full width at the end of that column. Field styles come from site.css (.pf-form, .pf-field). */
+.pf-closing{padding:var(--pf-section-y) var(--pf-gutter);max-width:var(--pf-max);margin:0 auto;}
+.pf-closing-band{display:grid;justify-items:center;gap:var(--pf-space-9);padding:clamp(40px,7vw,96px) clamp(20px,5vw,64px);
+  border-radius:var(--pf-radius-card);background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-line);}
+.pf-closing-band > *{min-width:0;width:100%;}
+.pf-closing-head{max-width:30em;text-align:center;}
+.pf-closing-title{font-size:var(--pf-text-h2);line-height:var(--pf-lh-heading);letter-spacing:var(--pf-track-heading);}
+.pf-closing-lede{margin:var(--pf-space-4) auto 0;max-width:var(--pf-measure);color:var(--pf-cream-muted);text-wrap:pretty;}
+
+/* The form sits directly on the band: no second panel inside the panel. */
+.pf-closing .pf-form{max-width:680px;padding:0;background:none;box-shadow:none;}
+.pf-closing-gap{margin-top:var(--pf-space-5);}
+.pf-closing-submit{margin-top:var(--pf-space-7);display:grid;justify-items:center;gap:var(--pf-space-3);text-align:center;}
+.pf-closing-submit .pf-btn{width:100%;}
+.pf-closing .pf-form-status{text-align:left;}
+.pf-closing .pf-form-again{justify-self:center;}

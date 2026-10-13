@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M6 sandbox: results, founders, FAQ, closing</title>
+<meta name="description" content="Priceflag forecasts a Shopify price change as a range with a breakeven, rolls it out by product, and pauses and alerts you if it stops paying.">
+<link rel="canonical" href="https://priceflag.org/">
+<meta name="theme-color" content="#030818">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:url" content="https://priceflag.org/">
+<meta property="og:title" content="Priceflag: forecast a Shopify price change before it goes live">
+<meta property="og:description" content="See the likely impact of a new price, then roll it out by product while every shopper sees the same price. Free price review for Shopify brands.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Priceflag: forecast a Shopify price change before it goes live">
+<meta name="twitter:description" content="See the likely impact of a new price, then roll it out by product while every shopper sees the same price. Free price review for Shopify brands.">
+<meta name="twitter:image" content="https://priceflag.org/og-v7.jpg">
+<meta name="twitter:image:alt" content="Priceflag for Shopify: forecast a price change and roll it out safely.">
+<link rel="icon" href="../../favicon.ico" sizes="48x48">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=optional">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../site.css">
+<noscript><style>.pf-form-fields{display:none;}</style></noscript>
+<script src="../../sections/pf-review.js" defer></script>
+<link rel="stylesheet" href="../../sections/pf-results.css">
+<link rel="stylesheet" href="../../sections/pf-founders.css">
+<link rel="stylesheet" href="../../sections/pf-faq.css">
+<link rel="stylesheet" href="../../sections/pf-closing.css">
+
+<meta name="robots" content="noindex">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://priceflag.org/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will shoppers see different prices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you change prices automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data do you read?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our privacy policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the forecast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See how we measure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does setup take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I undo everything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about subscriptions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: kabir@priceflag.org."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="pf-skip" href="#main">Skip to content</a>
+
+<nav class="pf-nav" aria-label="Main">
+  <div class="pf-nav-group">
+    <a class="pf-nav-logo" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a class="pf-nav-wide" href="/about">About</a>
+  </div>
+  <div class="pf-nav-group">
+    <a class="pf-nav-narrow-hide" href="/contact">Contact</a>
+    <a class="pf-btn pf-btn--light pf-btn--sm" href="https://signin.priceflag.org" rel="noopener">Sign in</a>
+  </div>
+</nav>
+
+<main id="main">
+<!-- Section: results (M6). Simulation numbers only, each labeled "In simulation" with what it was measured across.
+     Numbers come from docs/OVERHAUL_PROMPT.md "Honesty guardrails"; add no others. Type: h2, figure, body. -->
+<section class="pf-results" id="results" aria-labelledby="results-title">
+  <h2 class="pf-results-title" id="results-title">How Priceflag performed in simulation</h2>
+  <p class="pf-results-lede">These numbers come from our simulation of test rollouts, not from a live store.</p>
+
+  <!-- PENDING: one quantified pilot result, store name, written permission -->
+  <figure class="pf-results-pilot" data-pending="true">
+    <p class="pf-results-pilot-text">Pilot result goes here: one number, what it was measured against, and the store's name.</p>
+    <figcaption class="pf-results-pilot-who">Store name, with written permission</figcaption>
+  </figure>
+
+  <div class="pf-results-feature">
+    <p class="pf-results-claim"><span class="pf-results-fig">93%</span> of forecast ranges contained the real outcome.</p>
+    <p class="pf-results-base"><strong class="pf-results-tag">In simulation.</strong> Measured across our simulated test rollouts. A forecast is a range with a breakeven, and this is how often the outcome landed inside it.</p>
+  </div>
+
+  <ul class="pf-results-list">
+    <li class="pf-results-item">
+      <p class="pf-results-claim"><span class="pf-results-fig">4.7</span> point median miss between the forecast and the outcome.</p>
+      <p class="pf-results-base"><strong class="pf-results-tag">In simulation.</strong> Measured across our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-claim"><span class="pf-results-fig">82%</span> of demand shocks caught, at a median of day 6.</p>
+      <p class="pf-results-base"><strong class="pf-results-tag">In simulation.</strong> Measured across the demand shocks in our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-claim"><span class="pf-results-fig">7%</span> false pauses, where a guardrail paused a rollout that did not need it.</p>
+      <p class="pf-results-base"><strong class="pf-results-tag">In simulation.</strong> Measured across our simulated test rollouts.</p>
+    </li>
+    <li class="pf-results-item">
+      <p class="pf-results-claim"><span class="pf-results-fig">100%</span> of prices restored after rollback.</p>
+      <p class="pf-results-base"><strong class="pf-results-tag">In simulation.</strong> Measured across the rollbacks in our simulated test rollouts.</p>
+    </li>
+  </ul>
+
+  <p class="pf-results-links"><a href="/how-we-measure">How we measure</a> <a href="https://github.com/nithinaru/priceflag/blob/main/docs/SIMULATION_RESULTS.md" rel="noopener">Simulation write-up</a></p>
+</section>
+<!-- Section: founders (M6). Names and one line each from docs/OVERHAUL_PLAN.md item 9; no other bio facts.
+     Layout family: two-person text row. Type: h2, h3, body. Photos stay hidden until real ones exist. -->
+<section class="pf-founders" id="founders" aria-labelledby="founders-title">
+  <div class="pf-founders-head">
+    <h2 class="pf-founders-title" id="founders-title">Talk to the people building it</h2>
+    <p class="pf-founders-lede">Priceflag is two cofounders. We read every reply.</p>
+  </div>
+  <ul class="pf-founders-people">
+    <li class="pf-founders-person">
+      <!-- PENDING: founder photos (square, ≥ 480px, WebP) -->
+      <div class="pf-founders-photo" data-pending="true">
+        <!-- <img src="uploads/founder-nithin-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="Nithin Aruswamy"> -->
+      </div>
+      <h3 class="pf-founders-name">Nithin Aruswamy</h3>
+      <p class="pf-founders-role">Cofounder. Works on the AI engineering and the forecasting models.</p>
+      <p class="pf-founders-mail"><a href="mailto:nithin@priceflag.org">nithin@priceflag.org</a></p>
+    </li>
+    <li class="pf-founders-person">
+      <!-- PENDING: founder photos (square, ≥ 480px, WebP) -->
+      <div class="pf-founders-photo" data-pending="true">
+        <!-- <img src="uploads/founder-kabir-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="Kabir Koratkar"> -->
+      </div>
+      <h3 class="pf-founders-name">Kabir Koratkar</h3>
+      <p class="pf-founders-role">Cofounder. Works with Shopify merchants and on our pricing research.</p>
+      <p class="pf-founders-mail"><a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a></p>
+    </li>
+  </ul>
+</section>
+<!-- Section: FAQ (M6). Replaces the old #faq section. Native <details>, no JS. Type: h2, lead (questions), body.
+     The FAQPage JSON-LD in sections/pf-faq.jsonld carries the same question and answer text; change both together. -->
+<section class="pf-faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="pf-faq-grid">
+    <div class="pf-faq-head">
+      <h2 class="pf-faq-title" id="faq-title">Questions worth asking</h2>
+      <p class="pf-faq-lede">Short answers about prices, data, cost and undo.</p>
+    </div>
+    <div class="pf-faq-items">
+      <details class="pf-faq-item">
+        <summary>Will shoppers see different prices?</summary>
+        <p>No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>Do you change prices automatically?</summary>
+        <p>Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>What data do you read?</summary>
+        <p>Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our <a href="/legal">privacy policy</a>.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>How accurate is the forecast?</summary>
+        <p>It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See <a href="/how-we-measure">how we measure</a>.</p>
+      </details>
+      <!-- OWNER: pricing answer pending -->
+      <details class="pf-faq-item">
+        <summary>What does it cost?</summary>
+        <p>The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe.</p>
+      </details>
+      <!-- OWNER: confirm -->
+      <details class="pf-faq-item">
+        <summary>How long does setup take?</summary>
+        <p>Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing.</p>
+      </details>
+      <details class="pf-faq-item">
+        <summary>Can I undo everything?</summary>
+        <p>Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first.</p>
+      </details>
+      <!-- OWNER: confirm subscription behaviour (Shopify selling plans) -->
+      <details class="pf-faq-item">
+        <summary>What about subscriptions?</summary>
+        <p>Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: <a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- Section: closing CTA band (M6). Replaces the old #review section and keeps id="review".
+     The form's ids, names, attributes, data-attributes, hidden inputs, honeypot, noscript and status/live/again elements
+     are unchanged from index.html because sections/pf-review.js and qa/tests/review-form.test.mjs depend on them.
+     Only wrappers changed: the two inline-style wrappers became .pf-closing-gap and .pf-closing-submit. Type: h2, body, small. -->
+<section class="pf-closing" id="review" aria-labelledby="review-title">
+  <div class="pf-closing-band">
+    <div class="pf-closing-head">
+      <!-- PIVOT: CTA text (self-serve vs founder-led): heading, button label and micro-copy. Listed in OVERHAUL_LOG.md. -->
+      <h2 class="pf-closing-title" id="review-title">See what your next price change will do.</h2>
+      <p class="pf-closing-lede">Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.</p>
+    </div>
+    <!-- The script sends this form. With JavaScript off the fields are hidden and an email link takes their place.
+         method="post" with no action keeps typed details out of the URL even if the script fails to load. -->
+    <form class="pf-form" data-pf-review aria-describedby="review-note" method="post">
+      <div class="pf-form-fields">
+        <div class="pf-form-row">
+          <div class="pf-field">
+            <label for="rv-email">Email</label>
+            <input id="rv-email" name="email" type="email" autocomplete="email" required aria-describedby="rv-email-err">
+            <p class="pf-field-error" id="rv-email-err" data-pf-error="email"></p>
+          </div>
+          <div class="pf-field">
+            <label for="rv-store">Store address</label>
+            <input id="rv-store" name="store" type="text" inputmode="url" autocomplete="url" required placeholder="yourstore.com" aria-describedby="rv-store-err">
+            <p class="pf-field-error" id="rv-store-err" data-pf-error="store"></p>
+          </div>
+        </div>
+        <div class="pf-field pf-closing-gap">
+          <label for="rv-name">Name <span class="pf-opt">(optional)</span></label>
+          <input id="rv-name" name="name" type="text" autocomplete="name" maxlength="120">
+        </div>
+        <div class="pf-field pf-closing-gap">
+          <label for="rv-message">Which price are you thinking about changing? <span class="pf-opt">(optional)</span></label>
+          <textarea id="rv-message" name="message"></textarea>
+        </div>
+        <input type="hidden" name="price" disabled>
+        <input type="hidden" name="newPrice" disabled>
+        <input type="hidden" name="cost" disabled>
+        <div class="pf-hp" aria-hidden="true">
+          <label for="rv-hp">Leave this empty</label>
+          <input id="rv-hp" name="pf_hp_field" type="text" tabindex="-1" autocomplete="new-password" disabled>
+        </div>
+        <div class="pf-closing-submit">
+          <button class="pf-btn" type="submit">Get my free price review</button>
+          <p class="pf-form-note" id="review-note">Free. We send your report within 48 hours. No app install needed.</p>
+        </div>
+      </div>
+      <p class="pf-form-status" data-pf-status tabindex="-1"></p>
+      <p class="pf-visually-hidden" data-pf-live role="status" aria-live="polite"></p>
+      <button class="pf-btn pf-btn--ghost pf-form-again" type="button" data-pf-again hidden>Send another request</button>
+      <noscript>
+        <p class="pf-form-note">Email your store address and the price you are thinking about changing to <a href="mailto:hello@priceflag.org?subject=Free%20price%20review&amp;body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20">hello@priceflag.org</a>. We send your report within 48 hours.</p>
+      </noscript>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="pf-foot">
+  <img class="pf-foot-art" src="../../uploads/summit-lime.webp" alt="A painted summit in lime light with a single climber near the top." width="1855" height="848" loading="lazy" decoding="async">
+  <div class="pf-foot-inner">
+    <div class="pf-foot-top">
+      <div class="pf-foot-lead">
+        <a class="pf-foot-mark" href="/"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
+        <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span> stores</h2>
+        <a class="pf-btn pf-btn--dark" href="#review">
+          Get a free price review
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+      <nav class="pf-foot-nav" aria-label="Footer">
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="/">Home</a></li>
+          <li><a class="pf-foot-link" href="#how-it-works">How it works</a></li>
+          <li><a class="pf-foot-link" href="#faq">FAQ</a></li>
+          <li><a class="pf-foot-link" href="/about">About</a></li>
+          <li><a class="pf-foot-link" href="https://youtu.be/vfZ26mCQ79A" target="_blank" rel="noopener noreferrer">Meet the team (video)</a></li>
+        </ul>
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="https://x.com/Priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
+          <li><a class="pf-foot-link" href="https://www.linkedin.com/company/priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+      <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
+    </svg>
+    <div class="pf-foot-bar">
+      <p>Built by humans in San Francisco, CA</p>
+      <div class="pf-foot-legal">
+        <a href="/contact">Contact</a>
+        <a href="/legal">Legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

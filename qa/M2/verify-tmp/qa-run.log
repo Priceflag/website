@@ -1,0 +1,56 @@
+
+> priceflag-website-qa@0.0.0 qa
+> node qa/run.mjs
+
+[qa 0.0s] label=M2-verify base=http://127.0.0.1:63603 strict=true fast=false checks=console,screens,axe,html,links,keyboard,nojs,unit,lighthouse pages=index,about,contact,legal,signin
+[qa 0.0s] ▶ console
+[qa 0.0s] ▶ screens
+[qa 0.0s] ▶ axe
+[qa 1.0s] console: firefox failed to launch — browserType.launch: Failed to launch the browser process. | Browser logs: | <launching> /Users/NithinAwasome/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-re
+[qa 7.7s] ■ console: WARN (7.6s)
+[qa 7.7s] ▶ html
+[qa 8.0s] ■ html: PASS (0.3s)
+[qa 8.0s] ▶ links
+[qa 10.7s] ■ axe: PASS (10.7s)
+[qa 10.7s] ▶ keyboard
+[qa 14.0s] ■ links: PASS (6.0s)
+[qa 14.0s] ▶ nojs
+[qa 17.7s] ■ nojs: WARN (3.7s)
+[qa 17.7s] ▶ unit
+[qa 20.3s] ■ keyboard: PASS (9.6s)
+[qa 26.1s] ■ screens: PASS (26.1s)
+[qa 27.1s] ■ unit: PASS (9.4s)
+[qa 27.1s] ▶ lighthouse
+[qa 94.7s] ■ lighthouse: PASS (67.6s)
+
+# QA summary — M2-verify
+
+- Overall: **WARN**
+- Base: local (qa/serve.mjs) @ working tree
+- Started: 2026-10-13T22:36:33.292Z, took 95s
+- Mode: full, strict
+
+| check | overall | index | about | contact | legal | signin | time | details |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| console | WARN | WARN | WARN | WARN | WARN | WARN | 8s | console.md |
+| screens | PASS | PASS | PASS | PASS | PASS | PASS | 26s | screens.md |
+| axe | PASS | PASS | PASS | PASS | PASS | PASS | 11s | axe.md |
+| html | PASS | PASS | PASS | PASS | PASS | PASS | 0s | html.md |
+| links | PASS | PASS | PASS | PASS | PASS | PASS | 6s | links.md |
+| keyboard | PASS | PASS | PASS | PASS | PASS | PASS | 10s | keyboard.md |
+| nojs | WARN | PASS | WARN | WARN | WARN | WARN | 4s | nojs.md |
+| unit | PASS |  |  |  |  |  | 9s | unit.md |
+| lighthouse | PASS | PASS | PASS | PASS | PASS | - | 68s | lighthouse.md |
+
+## Lighthouse (mobile)
+
+| page | performance | accessibility | best-practices | seo |
+| --- | --- | --- | --- | --- |
+| index | 99 | 100 | 100 | 100 |
+| about | 99 | 100 | 100 | 100 |
+| contact | 99 | 100 | 100 | 100 |
+| legal | 99 | 100 | 100 | 100 |
+
+Lighthouse vs M1: **PASS**
+
+EXIT=0

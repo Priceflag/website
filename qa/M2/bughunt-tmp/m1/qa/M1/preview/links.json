@@ -1,0 +1,934 @@
+{
+  "check": "links",
+  "title": "Link crawl (static + rendered DOM), #-links, anchors",
+  "status": "PASS",
+  "durationMs": 8014,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 21,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 39,
+        "rendered": 38
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 13,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 22,
+        "rendered": 22
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 14,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 24,
+        "rendered": 24
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 13,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 28,
+        "rendered": 28
+      }
+    }
+  },
+  "data": {
+    "pages": {
+      "index": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 21,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 39,
+          "rendered": 38
+        }
+      },
+      "about": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 13,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 22,
+          "rendered": 22
+        }
+      },
+      "contact": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 14,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 24,
+          "rendered": 24
+        }
+      },
+      "legal": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 13,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 28,
+          "rendered": 28
+        }
+      }
+    },
+    "urls": [
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/about",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/about",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "about"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/contact",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/contact",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "contact"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://signin.priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://youtu.be/vfZ26mCQ79A",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://x.com/Priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://www.linkedin.com/company/priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/legal",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/legal",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.ico",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.ico",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.svg",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.svg",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/apple-touch-icon.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/apple-touch-icon.png",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
+        "internal": true,
+        "kinds": [
+          "link",
+          "img",
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=optional",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/site.css",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/site.css",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/sections/pf-review.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/sections/pf-review.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
+        "internal": true,
+        "kinds": [
+          "img"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/og-v7.jpg",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "meta-image"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/about",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "about"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
+        "internal": true,
+        "kinds": [
+          "link",
+          "img",
+          "img-srcset"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.png",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=optional",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
+        "internal": true,
+        "kinds": [
+          "img-srcset"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/mark.svg",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/mark.svg",
+        "internal": true,
+        "kinds": [
+          "css-block"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/contact",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "contact"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/legal",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      }
+    ],
+    "anchorIssues": [],
+    "skipped": [
+      {
+        "page": "index",
+        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review&body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20",
+        "reason": "scheme"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:nithin@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:kabir@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:nithin@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:kabir@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      }
+    ],
+    "jsLinks": []
+  }
+}

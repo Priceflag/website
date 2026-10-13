@@ -1,0 +1,174 @@
+=== chromium
+msgEmoji/ok            r=1 ok    pl=129 ul=128 dec=true hp=undefined e=0 ml= | 
+msgEmoji/abort         r=1 error pl=129 ul=128 dec=true hp=undefined e=1 ml=180 | ry again, or email them to hello@priceflag.org instead.
+msgEmojiLong/ok        r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1798 |  Your note was longer than our form can store, so please email us the full note.
+msgEmojiLong/abort     r=1 error pl=299 ul=300 dec=true hp=undefined e=1 ml=1798 | ry again, or email them to hello@priceflag.org instead.
+msgAllEmoji/ok         r=1 ok    pl=293 ul=300 dec=true hp=undefined e=0 ml=1792 |  Your note was longer than our form can store, so please email us the full note.
+msgAllEmoji/abort      r=1 error pl=293 ul=300 dec=true hp=undefined e=1 ml=1792 | ry again, or email them to hello@priceflag.org instead.
+msgFlagsZWJ/ok         r=1 ok    pl=290 ul=299 dec=true hp=undefined e=0 ml=1795 |  Your note was longer than our form can store, so please email us the full note.
+msgFlagsZWJ/abort      r=1 error pl=290 ul=299 dec=true hp=undefined e=1 ml=1795 | ry again, or email them to hello@priceflag.org instead.
+nameEmojiAt50/ok       r=1 ok    pl=126 ul=128 dec=true hp=undefined e=0 ml=203 |  Your store address or name was longer than our form keeps, so please email us the details.
+nameEmojiAt50/abort    r=1 error pl=126 ul=128 dec=true hp=undefined e=1 ml=203 | ry again, or email them to hello@priceflag.org instead.
+nameAllEmoji/ok        r=1 ok    pl=125 ul=128 dec=true hp=undefined e=0 ml=855 |  Your store address or name was longer than our form keeps, so please email us the details.
+nameAllEmoji/abort     r=1 error pl=125 ul=128 dec=true hp=undefined e=1 ml=855 | ry again, or email them to hello@priceflag.org instead.
+storeEmojiAt110/ok     r=1 ok    pl=179 ul=128 dec=true hp=undefined e=0 ml=312 |  Your store address or name was longer than our form keeps, so please email us the details.
+storeEmojiAt110/abort  r=1 error pl=179 ul=128 dec=true hp=undefined e=1 ml=312 | ry again, or email them to hello@priceflag.org instead.
+storeEmojiDomain/ok    r=1 ok    pl=97 ul=128 dec=true hp=undefined e=0 ml= | 
+storeEmojiDomain/abort r=1 error pl=97 ul=128 dec=true hp=undefined e=1 ml=162 | ry again, or email them to hello@priceflag.org instead.
+loneSurrogate/ok       r=1 ok    pl=99 ul=128 dec=true hp=undefined e=0 ml= | 
+loneSurrogate/abort    r=1 error pl=99 ul=128 dec=true hp=undefined e=1 ml=163 | ry again, or email them to hello@priceflag.org instead.
+rtl/ok                 r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 |  Your note was longer than our form can store, so please email us the full note.
+rtl/abort              r=1 error pl=299 ul=300 dec=true hp=undefined e=1 ml=1799 | ry again, or email them to hello@priceflag.org instead.
+cjk/ok                 r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 |  Your note was longer than our form can store, so please email us the full note.
+cjk/abort              r=1 error pl=299 ul=300 dec=true hp=undefined e=1 ml=1799 | ry again, or email them to hello@priceflag.org instead.
+combining/ok           r=1 ok    pl=295 ul=300 dec=true hp=undefined e=0 ml=1800 |  Your note was longer than our form can store, so please email us the full note.
+combining/abort        r=1 error pl=295 ul=300 dec=true hp=undefined e=1 ml=1800 | ry again, or email them to hello@priceflag.org instead.
+hpFilled1000           r=1 ok    pl=300 ul=300 dec=true hp=1 e=0 ml=1128 |  Your note was longer than our form can store, so please email us the full note.
+maxStoreName           r=1 ok    pl=240 ul=128 dec=true hp=undefined e=0 ml=1281 |  Your store address or name was longer than our form keeps, so please email us the details.
+storeE110              r=1 ok    pl=176 ul=128 dec=true hp=undefined e=0 ml=1754 |  Your store address or name was longer than our form keeps, so please email us the details.
+longNameNoNote         r=1 ok    pl=127 ul=128 dec=true hp=undefined e=0 ml=235 |  Your store address or name was longer than our form keeps, so please email us the details.
+noteLen150             r=1 ok    pl=227 ul=128 dec=true hp=undefined e=0 ml= | 
+noteLen180             r=1 ok    pl=257 ul=128 dec=true hp=undefined e=0 ml= | 
+noteLen200             r=1 ok    pl=277 ul=128 dec=true hp=undefined e=0 ml= | 
+noteLen220             r=1 ok    pl=297 ul=128 dec=true hp=undefined e=0 ml= | 
+noteLen450             r=1 ok    pl=300 ul=233 dec=true hp=undefined e=0 ml= | 
+noteLen470             r=1 ok    pl=300 ul=253 dec=true hp=undefined e=0 ml= | 
+noteLen480             r=1 ok    pl=300 ul=263 dec=true hp=undefined e=0 ml= | 
+noteLen500             r=1 ok    pl=300 ul=283 dec=true hp=undefined e=0 ml= | 
+noteMaxlength5000      r=1 ok    pl=300 ul=300 dec=true hp=undefined e=0 ml=1800 |  Your note was longer than our form can store, so please email us the full note.
+noteNewlines           r=1 ok    pl=298 ul=246 dec=true hp=undefined e=0 ml= | 
+mailto/ascii           r=1 error pl=298 ul=300 dec=true hp=undefined e=1 ml=1800 | ry again, or email them to hello@priceflag.org instead.
+mailto/nonascii        r=1 error pl=299 ul=300 dec=true hp=undefined e=1 ml=1798 | ry again, or email them to hello@priceflag.org instead.
+mailto/emoji           r=1 error pl=293 ul=300 dec=true hp=undefined e=1 ml=1792 | ry again, or email them to hello@priceflag.org instead.
+mailto/longEmailStore  r=1 error pl=296 ul=300 dec=true hp=undefined e=1 ml=1790 | ry again, or email them to hello@priceflag.org instead.
+mailto/quotesHtml      r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+resp/ok                r=1 ok    pl=84 ul=128 dec=true hp=undefined e=0 ml= | 
+resp/dup               r=1 ok    pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | different store, email us the details.
+resp/rejected          r=1 error pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | e still here. Try again, or email them to hello@priceflag.org instead.
+resp/null              r=1 error pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/empty             r=1 error pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/okstr             r=1 error pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | e still here. Try again, or email them to hello@priceflag.org instead.
+resp/html              r=1 error pl=84 ul=128 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/noacao            r=1 ok    pl=84 ul=128 dec=true hp=undefined e=0 ml= | 
+resp/abort             r=1 error pl=84 ul=128 dec=true hp=undefined e=1 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/reset             r=1 error pl=84 ul=128 dec=true hp=undefined e=1 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/500               r=1 error pl=84 ul=128 dec=true hp=undefined e=1 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/302               r=1 error pl=84 ul=128 dec=true hp=undefined e=1 ml=148 | ry again, or email them to hello@priceflag.org instead.
+valid/empty            r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/spaces           r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/rlmEmail         r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | .
+valid/lrmStore         r=1 ok    pl=86 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/nbspEmail        r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/softHyphen       r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/zwspEmail        r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/punycode         r=1 ok    pl=82 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/storeHtml        r=1 ok    pl=83 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/storeComma       r=1 ok    pl=80 ul=128 dec=true hp=undefined e=0 ml= | 
+valid/storeSpaceInside r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/storeEmail       r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/storeLong400     r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/email255         r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/emailIDN         r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | thin 48 hours.
+valid/emailUnicodeLocal r=1 ok    pl=77 ul=128 dec=true hp=undefined e=0 ml= | .
+valid/emailFullwidthAt r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+doubleSubmit {"reqs":1,"mid":{"btn":"Sending…","aria":"true","active":"rv-email","live":"Sending your request."},"end":{"kind":"ok","status":"Thanks. We have your request and will email me@shop.com within 48 hours.","active":"P.pf-form-status","ss":"me@shop.com"}}
+focusWhileSending {"a1":"Sending…","nextTab":"A","end":"P.pf-form-status"}
+timeout {"reqs":1,"kind":"error","status":"The request timed out, so we can’t be sure it arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.","btn":"Get a free price review","aria":null,"values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"active":"P.pf-form-status"}
+offline {"off":{"status":"You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.","kind":"error","values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"links":1},"on":"Thanks. We have your request and will email me@shop.com within 48 hours.","reqs":1}
+retry {"f1":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.","f2":"Thanks. We have your request and will email me@shop.com within 48 hours.","reqs":2}
+sentFlow {"reqs":2,"after":["sent","Thanks. We have your request and will email me@shop.com within 48 hours.","P.pf-form-status",true],"reload":["sent","We already have your request from me@shop.com. We will email you within 48 hours.",true],"back":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"navType":"back_forward","back2":"sent","viaLogo":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"again1":["rv-email",{"email":"","store":"","name":"","message":0},null,null],"emptyAfterAgain":["rv-email","Check the highlighted fields."],"second":["Thanks. We have your request and will email me@shop.com within 48 hours.","me@shop.com"]}
+bfcache {"s":"sent"}
+awayMidSend {"reqs":1,"formState":null,"kind":null,"status":"","btn":"Get a free price review","aria":null,"values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"ss":null}
+pageshowWhileSending {"mid":[null,"Sending…"],"end":["sent","Thanks. We have your request and will email me@shop.com within 48 hours."]}
+dup {"d":["Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",1,true,"me@shop.com"],"reload":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"againActive":"rv-email"}
+ssBlocked {"s":["sent","Thanks. We have your request and will email me@shop.com within 48 hours."],"errs":[],"again":"rv-store"}
+ssQuota {"s":"Thanks. We have your request and will email me@shop.com within 48 hours.","errs":[]}
+initState {"nv":true,"attr":true,"hp":false,"hidden":[true,true,true],"hpTab":-1,"order":["rv-store","rv-name","rv-message","Get a free price review","Priceflag","Get a free price review"]}
+scriptBlocked {"valid":false,"msg":"Please fill out this field.","url":"http://localhost:8933/"}
+=== webkit
+msgEmoji/ok            r=1 ok    pl=129 ul=117 dec=true hp=undefined e=0 ml= | 
+msgEmoji/abort         r=1 error pl=129 ul=117 dec=true hp=undefined e=0 ml=180 | ry again, or email them to hello@priceflag.org instead.
+msgEmojiLong/ok        r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1798 |  Your note was longer than our form can store, so please email us the full note.
+msgEmojiLong/abort     r=1 error pl=299 ul=300 dec=true hp=undefined e=0 ml=1798 | ry again, or email them to hello@priceflag.org instead.
+msgAllEmoji/ok         r=1 ok    pl=293 ul=300 dec=true hp=undefined e=0 ml=1792 |  Your note was longer than our form can store, so please email us the full note.
+msgAllEmoji/abort      r=1 error pl=293 ul=300 dec=true hp=undefined e=0 ml=1792 | ry again, or email them to hello@priceflag.org instead.
+msgFlagsZWJ/ok         r=1 ok    pl=290 ul=299 dec=true hp=undefined e=0 ml=1795 |  Your note was longer than our form can store, so please email us the full note.
+msgFlagsZWJ/abort      r=1 error pl=290 ul=299 dec=true hp=undefined e=0 ml=1795 | ry again, or email them to hello@priceflag.org instead.
+nameEmojiAt50/ok       r=1 ok    pl=126 ul=117 dec=true hp=undefined e=0 ml=203 |  Your store address or name was longer than our form keeps, so please email us the details.
+nameEmojiAt50/abort    r=1 error pl=126 ul=117 dec=true hp=undefined e=0 ml=203 | ry again, or email them to hello@priceflag.org instead.
+nameAllEmoji/ok        r=1 ok    pl=125 ul=117 dec=true hp=undefined e=0 ml=855 |  Your store address or name was longer than our form keeps, so please email us the details.
+nameAllEmoji/abort     r=1 error pl=125 ul=117 dec=true hp=undefined e=0 ml=855 | ry again, or email them to hello@priceflag.org instead.
+storeEmojiAt110/ok     r=1 ok    pl=179 ul=117 dec=true hp=undefined e=0 ml=312 |  Your store address or name was longer than our form keeps, so please email us the details.
+storeEmojiAt110/abort  r=1 error pl=179 ul=117 dec=true hp=undefined e=0 ml=312 | ry again, or email them to hello@priceflag.org instead.
+storeEmojiDomain/ok    r=1 ok    pl=97 ul=117 dec=true hp=undefined e=0 ml= | 
+storeEmojiDomain/abort r=1 error pl=97 ul=117 dec=true hp=undefined e=0 ml=162 | ry again, or email them to hello@priceflag.org instead.
+loneSurrogate/ok       r=1 ok    pl=99 ul=117 dec=true hp=undefined e=0 ml= | 
+loneSurrogate/abort    r=1 error pl=99 ul=117 dec=true hp=undefined e=0 ml=163 | ry again, or email them to hello@priceflag.org instead.
+rtl/ok                 r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 |  Your note was longer than our form can store, so please email us the full note.
+rtl/abort              r=1 error pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 | ry again, or email them to hello@priceflag.org instead.
+cjk/ok                 r=1 ok    pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 |  Your note was longer than our form can store, so please email us the full note.
+cjk/abort              r=1 error pl=299 ul=300 dec=true hp=undefined e=0 ml=1799 | ry again, or email them to hello@priceflag.org instead.
+combining/ok           r=1 ok    pl=295 ul=300 dec=true hp=undefined e=0 ml=1800 |  Your note was longer than our form can store, so please email us the full note.
+combining/abort        r=1 error pl=295 ul=300 dec=true hp=undefined e=0 ml=1800 | ry again, or email them to hello@priceflag.org instead.
+hpFilled1000           r=1 ok    pl=300 ul=300 dec=true hp=1 e=0 ml=1128 |  Your note was longer than our form can store, so please email us the full note.
+maxStoreName           r=1 ok    pl=240 ul=117 dec=true hp=undefined e=0 ml=1281 |  Your store address or name was longer than our form keeps, so please email us the details.
+storeE110              r=1 ok    pl=176 ul=117 dec=true hp=undefined e=0 ml=1754 |  Your store address or name was longer than our form keeps, so please email us the details.
+longNameNoNote         r=1 ok    pl=127 ul=117 dec=true hp=undefined e=0 ml=235 |  Your store address or name was longer than our form keeps, so please email us the details.
+noteLen150             r=1 ok    pl=227 ul=117 dec=true hp=undefined e=0 ml= | 
+noteLen180             r=1 ok    pl=257 ul=117 dec=true hp=undefined e=0 ml= | 
+noteLen200             r=1 ok    pl=277 ul=117 dec=true hp=undefined e=0 ml= | 
+noteLen220             r=1 ok    pl=297 ul=117 dec=true hp=undefined e=0 ml= | 
+noteLen450             r=1 ok    pl=300 ul=233 dec=true hp=undefined e=0 ml= | 
+noteLen470             r=1 ok    pl=300 ul=253 dec=true hp=undefined e=0 ml= | 
+noteLen480             r=1 ok    pl=300 ul=263 dec=true hp=undefined e=0 ml= | 
+noteLen500             r=1 ok    pl=300 ul=283 dec=true hp=undefined e=0 ml= | 
+noteMaxlength5000      r=1 ok    pl=300 ul=300 dec=true hp=undefined e=0 ml=1800 |  Your note was longer than our form can store, so please email us the full note.
+noteNewlines           r=1 ok    pl=298 ul=246 dec=true hp=undefined e=0 ml= | 
+mailto/ascii           r=1 error pl=298 ul=300 dec=true hp=undefined e=0 ml=1800 | ry again, or email them to hello@priceflag.org instead.
+mailto/nonascii        r=1 error pl=299 ul=300 dec=true hp=undefined e=0 ml=1798 | ry again, or email them to hello@priceflag.org instead.
+mailto/emoji           r=1 error pl=293 ul=300 dec=true hp=undefined e=0 ml=1792 | ry again, or email them to hello@priceflag.org instead.
+mailto/longEmailStore  r=1 error pl=296 ul=300 dec=true hp=undefined e=0 ml=1790 | ry again, or email them to hello@priceflag.org instead.
+mailto/quotesHtml      r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+resp/ok                r=1 ok    pl=84 ul=117 dec=true hp=undefined e=0 ml= | 
+resp/dup               r=1 ok    pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | different store, email us the details.
+resp/rejected          r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | e still here. Try again, or email them to hello@priceflag.org instead.
+resp/null              r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/empty             r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/okstr             r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | e still here. Try again, or email them to hello@priceflag.org instead.
+resp/html              r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/noacao            r=1 ok    pl=84 ul=117 dec=true hp=undefined e=0 ml= | 
+resp/abort             r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/reset             r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/500               r=1 error pl=84 ul=117 dec=true hp=undefined e=1 ml=148 | ry again, or email them to hello@priceflag.org instead.
+resp/302               r=1 error pl=84 ul=117 dec=true hp=undefined e=0 ml=148 | ry again, or email them to hello@priceflag.org instead.
+valid/empty            r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/spaces           r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/rlmEmail         r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | .
+valid/lrmStore         r=1 ok    pl=86 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/nbspEmail        r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/softHyphen       r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | .
+valid/zwspEmail        r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/punycode         r=1 ok    pl=82 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/storeHtml        r=1 ok    pl=83 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/storeComma       r=1 ok    pl=80 ul=117 dec=true hp=undefined e=0 ml= | 
+valid/storeSpaceInside r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/storeEmail       r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/storeLong400     r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/email255         r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+valid/emailIDN         r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | s.
+valid/emailUnicodeLocal r=1 ok    pl=77 ul=117 dec=true hp=undefined e=0 ml= | .
+valid/emailFullwidthAt r=0 error pl=null ul=null dec=null hp=null e=0 ml= | 
+doubleSubmit {"reqs":1,"mid":{"btn":"Sending…","aria":"true","active":"rv-email","live":"Sending your request."},"end":{"kind":"ok","status":"Thanks. We have your request and will email me@shop.com within 48 hours.","active":"P.pf-form-status","ss":"me@shop.com"}}
+focusWhileSending {"a1":"Sending…","nextTab":"BODY","end":"P.pf-form-status"}
+timeout {"reqs":1,"kind":"error","status":"The request timed out, so we can’t be sure it arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.","btn":"Get a free price review","aria":null,"values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"active":"P.pf-form-status"}
+offline {"off":{"status":"You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.","kind":"error","values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"links":1},"on":"Thanks. We have your request and will email me@shop.com within 48 hours.","reqs":1}
+retry {"f1":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.","f2":"Thanks. We have your request and will email me@shop.com within 48 hours.","reqs":2}
+sentFlow {"reqs":2,"after":["sent","Thanks. We have your request and will email me@shop.com within 48 hours.","P.pf-form-status",true],"reload":["sent","We already have your request from me@shop.com. We will email you within 48 hours.",true],"back":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"navType":"back_forward","back2":"sent","viaLogo":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"again1":["rv-email",{"email":"","store":"","name":"","message":0},null,null],"emptyAfterAgain":["rv-email","Check the highlighted fields."],"second":["Thanks. We have your request and will email me@shop.com within 48 hours.","me@shop.com"]}
+bfcache {"s":"sent"}
+awayMidSend {"reqs":1,"formState":null,"kind":null,"status":"","btn":"Get a free price review","aria":null,"values":{"email":"me@shop.com","store":"shop.com","name":"","message":0},"ss":null}
+pageshowWhileSending {"mid":[null,"Sending…"],"end":["sent","Thanks. We have your request and will email me@shop.com within 48 hours."]}
+dup {"d":["Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",1,true,"me@shop.com"],"reload":["sent","We already have your request from me@shop.com. We will email you within 48 hours."],"againActive":"rv-email"}
+ssBlocked {"s":["sent","Thanks. We have your request and will email me@shop.com within 48 hours."],"errs":[],"again":"rv-store"}
+ssQuota {"s":"Thanks. We have your request and will email me@shop.com within 48 hours.","errs":[]}
+initState {"nv":true,"attr":true,"hp":false,"hidden":[true,true,true],"hpTab":-1,"order":["rv-store","rv-name","rv-message","Get a free price review","Skip to content\n\n\n  \n    \n    ","How does the forecast work, an"]}
+scriptBlocked {"valid":false,"msg":"Fill out this field","url":"http://localhost:8933/"}

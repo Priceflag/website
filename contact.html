@@ -4,72 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Priceflag</title>
-<meta name="description" content="Reach Priceflag Syndicate with questions, feedback or issues — the on duty engineers and how to write to each of them.">
+<meta name="description" content="Reach Priceflag Syndicate with questions, feedback or issues: the on duty engineers and how to write to each of them.">
 <link rel="canonical" href="https://priceflag.org/contact">
 <link rel="preload" as="image" href="uploads/summit-painting-3.webp" imagesrcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="tokens.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional">
 <style>
+  /* Paper "ticket" pages (about, contact, legal). Every value comes from tokens.css
+     (contract: DESIGN_TOKENS.md). Type: header = h3; body = body + small; foot = body.
+     The hiker mark and the back-arrow glyph are artwork and sit outside the type scale. */
   :root{
-    --ink:#030818;           /* site background / dark button          */
-    --sheet:#f7f3ea;         /* the panel itself                       */
-    --text:#333c52;          /* body copy on the panel                 */
-    --head:#0f1830;          /* headings and lead-ins                  */
-    --rule:rgba(15,24,48,0.16);
-    --neon:#d8f24b;
-    --serif:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
-    --sans:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    /* Page-local roles, mapped onto the tokens. */
+    --ink:var(--pf-navy-950);         /* site background / dark button */
+    --sheet:var(--pf-paper);          /* the panel itself              */
+    --text:var(--pf-paper-text);      /* body copy on the panel, 9.93:1 */
+    --head:var(--pf-paper-ink);       /* headings and lead-ins, 15.89:1 */
+    --muted:var(--pf-paper-muted);    /* markers and meta, 6.04:1       */
+    --link:var(--pf-link-on-paper);   /* 6.41:1                         */
+    --rule:var(--pf-line-paper);
+    --gut:clamp(var(--pf-space-5),4vw,28px);   /* the panel's side inset */
   }
 
   *,*::before,*::after{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   body{
     margin:0;
     background:var(--ink);
     color:var(--text);
-    font-family:var(--sans);
-    font-size:16.5px;font-weight:400;line-height:1.7;
-    letter-spacing:-0.005em;
+    font-family:var(--pf-sans);
+    font-size:var(--pf-text-body);font-weight:400;line-height:var(--pf-lh-body);
+    letter-spacing:var(--pf-track-body);
     overflow-wrap:break-word;
-    /* The panel is bound to the screen: the page does not scroll, the panel
-       does not move, and only the copy inside it travels. svh rather than vh
-       so a phone's collapsing toolbar cannot crop the panel. */
+    /* On a tall enough screen the panel is bound to it: the page does not
+       scroll, the panel does not move, and only the copy inside it travels.
+       svh rather than vh so a phone's collapsing toolbar cannot crop it.
+       Short screens (landscape phones, 200-400% zoom) let the page scroll
+       instead; see the max-height block below. */
     min-height:100vh;min-height:100svh;
     height:100vh;height:100svh;
     display:flex;align-items:center;justify-content:center;
-    padding:clamp(14px,3.5vh,34px) 14px;
+    padding:clamp(var(--pf-space-3),3.5vh,var(--pf-space-7)) var(--pf-space-3);
     overflow:hidden;
   }
-  ::selection{background:var(--neon);color:#071238;}
+  ::selection{background:var(--pf-lime);color:var(--pf-navy-900);}
 
   /* ---------- the painting ----------
      A fixed layer rather than background-attachment:fixed, which iOS has
-     never scrolled smoothly. The panel scrolls over a picture that stays
-     put, which is the whole effect. */
+     never scrolled smoothly. The panel scrolls over a picture that stays put. */
   .pf-bg{position:fixed;inset:0;z-index:-2;}
   .pf-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
-  /* Just enough wash to sit the panel on something, and to stop the brightest
-     part of the sky competing with it. The picture is meant to stay readable. */
+  /* Just enough wash to sit the panel on something. */
   .pf-bg::after{
     content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,
-      rgba(3,8,24,0.34) 0%, rgba(3,8,24,0.16) 30%,
-      rgba(3,8,24,0.20) 70%, rgba(3,8,24,0.44) 100%);
+      color-mix(in srgb,var(--ink) 34%,transparent) 0%, color-mix(in srgb,var(--ink) 16%,transparent) 30%,
+      color-mix(in srgb,var(--ink) 20%,transparent) 70%, color-mix(in srgb,var(--ink) 44%,transparent) 100%);
   }
 
+  /* ---------- links and focus: one ring ---------- */
+  a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  a:hover{color:var(--head);}
+  :focus-visible{outline:var(--pf-focus-width) solid var(--pf-focus-on-paper);outline-offset:var(--pf-focus-offset);border-radius:var(--pf-radius-sm);}
+  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
+  main:focus-visible{outline-offset:-4px;border-radius:0;}
+
+  /* The skip link lands over the dark painting, so its ring is drawn inside the lime. */
   .skip{
-    position:fixed;left:-9999px;top:0;z-index:50;
-    background:var(--neon);color:#13200a;
-    padding:10px 16px;border-radius:0 0 8px 0;
-    font-size:14px;font-weight:600;text-decoration:none;
+    position:fixed;left:-9999px;top:0;z-index:var(--pf-z-skip);
+    background:var(--pf-lime);color:var(--pf-lime-ink);
+    padding:10px var(--pf-space-4);border-radius:0 0 var(--pf-radius-field) 0;
+    font-size:var(--pf-text-small);font-weight:600;text-decoration:none;
   }
-  .skip:focus{left:0;}
+  .skip:focus{left:0;color:var(--pf-lime-ink);}
+  .skip:focus-visible{outline-color:var(--pf-focus-on-lime);outline-offset:-5px;}
 
   /* ---------- the panel ---------- */
   .pf-sheet{
@@ -78,50 +92,52 @@
     width:min(500px, 100%);
     max-height:min(620px, 100%);
     background:var(--sheet);
-    box-shadow:0 40px 90px -34px rgba(3,8,24,0.92),
-               0 2px 10px rgba(3,8,24,0.25);
+    box-shadow:0 40px 90px -34px color-mix(in srgb,var(--ink) 92%,transparent),
+               0 2px 10px color-mix(in srgb,var(--ink) 25%,transparent);
   }
-  /* ---------- panel header ---------- */
+
+  /* ---------- panel header ----------
+     The side columns never shrink below their marks and the title column can,
+     so a long title wraps instead of pushing the hiker off-screen. While the
+     title fits, the two 1fr sides stay equal and it reads as centred. */
   .pf-sheet-top{
     flex:none;
-    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-    gap:12px;
-    /* Top inset matches the side inset, so the row sits in an even margin
-       rather than crowding the panel's edge. */
-    padding:clamp(18px,4vw,28px) clamp(18px,4vw,28px) 0;
-    /* The two flanking marks are different sizes, and the title only reads
-       as centred when their optical centres are the same distance in from
-       each edge. Declared here so the arrow can offset itself against the
-       hiker's width instead of guessing at it. */
+    display:grid;grid-template-columns:minmax(max-content,1fr) minmax(0,auto) minmax(max-content,1fr);
+    align-items:center;
+    gap:var(--pf-space-3);
+    padding:var(--gut) var(--gut) 0;
+    /* The two flanking marks are different sizes; the arrow offsets itself
+       against the hiker's width so their optical centres sit the same distance in. */
     --mark-w:2.7em;
     --arrow-d:34px;
   }
   .pf-sheet-title{
-    grid-column:2;
+    grid-column:2;min-width:0;
     margin:0;
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(21px,3.4vw,25px);line-height:1.2;letter-spacing:-0.01em;
+    font-family:var(--pf-serif);font-weight:400;
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
     color:var(--head);text-align:center;
+    overflow-wrap:anywhere;text-wrap:balance;
   }
   .pf-arrow{
+    position:relative;
     justify-self:start;
     display:inline-flex;align-items:center;justify-content:center;
     width:var(--arrow-d);height:var(--arrow-d);border-radius:50%;
-    /* Centres the 34px circle on the same inset the hiker centres on, so the
-       margin is half the difference between the two marks rather than a
-       number that happened to look right. */
     margin-left:calc((var(--mark-w) - var(--arrow-d)) / 2);
     color:var(--head);text-decoration:none;
-    transition:background-color .2s ease;
+    transition:background-color var(--pf-dur-fast) var(--pf-ease);
   }
-  /* The glyph is sized on the span, not the link: --mark-w is set in em, and
-     an em on the link itself would resolve against the arrow's own type size
-     rather than the panel's, throwing the offset above out by 3px. */
+  /* A 44px hit area around the 34px circle. */
+  .pf-arrow::before{content:"";position:absolute;inset:-5px;border-radius:50%;}
+  .pf-arrow:focus-visible{border-radius:50%;}
+  /* Glyph size is artwork; set on the span so --mark-w (em) resolves against the panel. */
   .pf-arrow span{font-size:19px;line-height:1;}
-  .pf-arrow:hover{background:rgba(15,24,48,0.07);}
+  .pf-arrow:hover{background:color-mix(in srgb,var(--head) 7%,transparent);}
   .pf-mark{
     justify-self:end;
     display:inline-flex;align-items:center;
+    min-height:44px;
     color:var(--head);text-decoration:none;
   }
   .pf-hiker{
@@ -139,143 +155,94 @@
      growing the panel past its bound. */
   main{
     flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
-    padding:clamp(18px,3.4vw,24px) clamp(18px,4vw,28px) clamp(20px,3.4vw,26px);
+    padding:clamp(var(--pf-space-5),3.4vw,var(--pf-space-6)) var(--gut) clamp(var(--pf-space-5),3.4vw,26px);
   }
   main::-webkit-scrollbar{width:9px;}
   main::-webkit-scrollbar-thumb{
-    background:rgba(15,24,48,0.20);border-radius:99px;
+    background:color-mix(in srgb,var(--head) 20%,transparent);border-radius:var(--pf-radius-pill);
     border:3px solid var(--sheet);}
-  main::-webkit-scrollbar-thumb:hover{background:rgba(15,24,48,0.32);}
-  main{scrollbar-width:thin;scrollbar-color:rgba(15,24,48,0.24) transparent;}
+  main::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--head) 32%,transparent);}
+  main{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--head) 24%,transparent) transparent;}
 
-  .pf-lede{margin:0;font-size:17px;line-height:1.65;color:var(--head);}
-  p{margin:15px 0 0;}
-  a{color:#3f4fb0;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
-  a:hover{color:var(--head);}
-  :focus-visible{outline:2px solid #3f4fb0;outline-offset:3px;border-radius:2px;}
+  .pf-lede{margin:0;color:var(--head);}
+  p{margin:var(--pf-space-4) 0 0;}
   strong{color:var(--head);font-weight:600;}
 
-  .pf-strong{
-    font-family:var(--sans);font-weight:700;
-    font-size:17px;line-height:1.3;letter-spacing:-0.01em;
-    color:var(--head);
-    margin:30px 0 0;
-  }
-
   h2{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(20px,3vw,23px);line-height:1.25;letter-spacing:-0.01em;
+    font-family:var(--pf-serif);font-weight:400;
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
     color:var(--head);
-    margin:34px 0 0;
+    margin:var(--pf-space-7) 0 0;
+    overflow-wrap:anywhere;
   }
 
-  /* title + sentence pairs */
-  .pf-pairs{margin:14px 0 0;padding:0;list-style:none;}
-  .pf-pairs li{margin:16px 0 0;}
-  .pf-pairs b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
-  .pf-pairs span{display:block;margin-top:2px;font-size:15.5px;line-height:1.6;}
-
-  ul.pf-list{margin:14px 0 0;padding-left:1.15em;}
-  ul.pf-list li{margin:9px 0 0;font-size:15.5px;line-height:1.6;}
-  ul.pf-list li::marker{color:#8b93a8;}
-
-  /* routed cards — one column, this panel is too narrow for two */
-  .pf-cards{margin:16px 0 0;padding:0;list-style:none;}
+  /* ---------- contact: the people ---------- */
+  .pf-strong{
+    font-family:var(--pf-sans);font-weight:700;
+    font-size:var(--pf-text-body);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-button);
+    color:var(--head);
+    margin:var(--pf-space-7) 0 0;
+  }
+  /* routed cards: one column, this panel is too narrow for two */
+  .pf-cards{margin:var(--pf-space-4) 0 0;padding:0;list-style:none;}
   .pf-card{
-    margin:12px 0 0;padding:16px 18px;
-    border:1px solid var(--rule);border-radius:10px;
-    background:rgba(15,24,48,0.025);
+    margin:var(--pf-space-3) 0 0;padding:var(--pf-space-4) 18px;
+    border:1px solid var(--rule);border-radius:var(--pf-radius-field);
+    background:color-mix(in srgb,var(--head) 2.5%,transparent);
   }
   .pf-card h3{
-    margin:0;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--head);
+    margin:0;font-family:var(--pf-sans);font-size:var(--pf-text-body);font-weight:600;line-height:var(--pf-lh-sub);color:var(--head);
+    overflow-wrap:anywhere;
   }
-  .pf-card p{margin:6px 0 0;font-size:15px;line-height:1.6;}
-  .pf-card .pf-act{display:inline-block;margin-top:10px;font-weight:600;font-size:15px;}
+  .pf-card p{margin:6px 0 0;font-size:var(--pf-text-small);line-height:var(--pf-lh-body);}
+  /* Square, like the ticket's own button; 44px tall for touch. */
   .pf-say{
-    display:inline-block;margin-top:12px;
-    padding:9px 20px;
+    display:inline-flex;align-items:center;margin-top:var(--pf-space-3);
+    min-height:44px;padding:var(--pf-space-2) var(--pf-space-5);
     background:var(--ink);color:var(--sheet);
-    font-family:var(--serif);font-weight:400;font-size:15.5px;line-height:1.2;
+    font-family:var(--pf-serif);font-weight:400;font-size:var(--pf-text-body);line-height:1.2;
     text-decoration:none;
-    transition:background-color .22s ease,transform .22s cubic-bezier(.22,1,.36,1);
+    transition:background-color var(--pf-dur-fast) var(--pf-ease),transform var(--pf-dur-fast) var(--pf-ease);
   }
-  .pf-say:hover{background:#101a38;color:var(--sheet);transform:translateY(-1px);}
-  .pf-say:active{transform:translateY(0);}
-
-  /* placeholders still to be filled in */
-  .pf-fill{
-    font-family:var(--sans);font-weight:600;font-size:0.94em;
-    color:#3d4413;background:rgba(216,242,75,0.55);
-    border-bottom:1px dashed rgba(61,68,19,0.5);
-    padding:1px 5px;border-radius:3px;
-  }
-
-  .pf-note{
-    margin:20px 0 0;padding:14px 16px;
-    border:1px solid rgba(61,68,19,0.28);border-left-width:3px;
-    border-radius:8px;background:rgba(216,242,75,0.18);
-    font-size:14.5px;line-height:1.6;color:#3d4413;
-  }
-  .pf-note b{display:block;font-size:11.5px;font-weight:700;letter-spacing:0.14em;
-    text-transform:uppercase;margin-bottom:5px;}
+  .pf-say:hover{background:var(--pf-navy-900);color:var(--sheet);transform:translateY(-1px);}
+  .pf-say:active{transform:translateY(0);transition-duration:var(--pf-dur-press);}
 
   @media (max-width:520px){
-    body{font-size:16px;padding:0;}
+    body{padding:0;}
     .pf-sheet{width:100%;height:100%;max-height:100%;}
-    .pf-lede{font-size:16.5px;}
   }
 
+  /* ---------- short screens (B4) ----------
+     A landscape phone (844x390) or 400% zoom (320x256 CSS px) left the
+     fixed panel only 109-205px of copy between its header and foot. Below
+     560px of height the page scrolls instead: the panel grows to its content
+     and the header and foot travel with it, so the copy gets the screen. */
+  @media (max-height:560px){
+    body{height:auto;overflow:visible;align-items:flex-start;}
+    .pf-sheet{height:auto;max-height:none;}
+    main{flex:none;overflow:visible;}
+  }
+  @media (max-height:560px) and (max-width:520px){
+    .pf-sheet{min-height:100vh;min-height:100svh;}
+  }
+
+  /* Motion: hover and focus transitions only, and none when reduced. */
   @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
+    *,*::before,*::after{animation:none !important;transition:none !important;}
+    .pf-cta:hover,.pf-say:hover{transform:none;}
   }
 
   @media print{
-    .pf-bg,.skip{display:none !important;}
+    .pf-bg,.skip,.pf-cta{display:none !important;}
     body{background:#fff;color:#1a1a1a;font-size:11pt;line-height:1.5;}
     body{height:auto;display:block;overflow:visible;padding:0;}
-    .pf-sheet{width:auto;height:auto;display:block;box-shadow:none;
+    .pf-sheet{width:auto;height:auto;max-height:none;display:block;box-shadow:none;
       -webkit-mask-image:none;mask-image:none;}
     main{overflow:visible;}
     a{color:#000;}
     .pf-fill{background:#fff;color:#000;border-bottom:1px dashed #000;}
     h2{page-break-after:avoid;}
   }
-  /* ---------- reveal ----------
-     The card used to paint on the bare ink background and the painting
-     arrived after it, which read as the ticket flashing up on black. So the
-     card is held back until the image is decoded, then the two land in
-     order: picture first, ticket a beat later.
-
-     `pf-boot` is set by an inline script in the head, so the hidden state
-     only ever exists when the script that clears it is running. With no JS
-     nothing is hidden and the page just renders. */
-  .pf-boot .pf-bg,
-  .pf-boot .pf-sheet{opacity:0;}
-  .pf-go .pf-bg  {animation:pfBgIn   760ms cubic-bezier(.22,1,.36,1) both;}
-  .pf-go .pf-sheet{animation:pfCardIn 620ms cubic-bezier(.22,1,.36,1) 220ms both;}
-  /* The resting state, forced on a timer whatever happened to the animation.
-     A starved environment never runs the keyframes, so without this the card
-     would sit at opacity 0 forever. */
-  .pf-done .pf-bg,
-  .pf-done .pf-sheet{animation:none;opacity:1;transform:none;}
-
-  @keyframes pfBgIn{
-    from{opacity:0;transform:scale(1.035);}
-    to  {opacity:1;transform:scale(1);}
-  }
-  @keyframes pfCardIn{
-    from{opacity:0;transform:translateY(16px) scale(.972);}
-    to  {opacity:1;transform:translateY(0) scale(1);}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .pf-boot .pf-bg,.pf-boot .pf-sheet,
-    .pf-go .pf-bg,.pf-go .pf-sheet{
-      opacity:1 !important;animation:none !important;transform:none !important;
-    }
-  }
-  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
-  main:focus-visible{outline:2px solid #3f4fb0;outline-offset:-4px;}
 </style>
 </head>
 <body>
@@ -297,15 +264,15 @@
   <main id="main" tabindex="0">
     <p class="pf-lede">Priceflag Syndicate provides needed support for Priceflag. Contact us with questions, feedback, issues or anything else you need help with.</p>
 
-    <h2 class="pf-strong">On Duty Engineers</h2>
+    <h2 class="pf-strong">On duty engineers</h2>
     <ul class="pf-cards">
       <li class="pf-card">
-        <h3>Nithin &mdash; Cofounder</h3>
+        <h3>Nithin, cofounder</h3>
         <p>Works on the product. Any issues with our product, let me know.</p>
         <a class="pf-say" href="mailto:nithin@priceflag.org">Say hi</a>
       </li>
       <li class="pf-card">
-        <h3>Kabir &mdash; Cofounder</h3>
+        <h3>Kabir, cofounder</h3>
         <p>Works on sales, marketing and pricing. Any issues with our pricing or support.</p>
         <a class="pf-say" href="mailto:kabir@priceflag.org">Say hi</a>
       </li>
@@ -318,40 +285,6 @@
 
 </div>
 
-<script>
-/* Reveal, ordered: the painting is on screen before the ticket arrives.
-   Three independent paths fire the same once-only go(): decode() when the
-   browser can tell us the image is actually paintable, load/error as the
-   plain fallback, and a timer so a slow or dead image can never hold the
-   page hostage. go() then hands over to the resting class on another timer,
-   because CSS animations do not run in every environment this ships to but
-   setTimeout does. */
-(function () {
-  var root = document.documentElement;
-  var img  = document.querySelector('.pf-bg img');
-  var fired = false, landed = false;
-
-  function land() {
-    if (landed) return; landed = true;
-    root.className = (root.className.replace(/\bpf-go\b/, '') + ' pf-done').trim();
-  }
-  function go() {
-    if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-done').trim();
-    setTimeout(land, 1200);
-  }
-
-  if (!img) { go(); }
-  else {
-    if (img.complete && img.naturalWidth) { go(); }
-    img.addEventListener('load', go, { once: true });
-    img.addEventListener('error', go, { once: true });
-    if (img.decode) { img.decode().then(go)['catch'](go); }
-  }
-  setTimeout(go, 1600);        // never block on a slow image
-  setTimeout(land, 3200);      // and never leave the card hidden
-})();
-</script>
 
 </body>
 </html>

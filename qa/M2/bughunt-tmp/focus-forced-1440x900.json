@@ -1,0 +1,1905 @@
+{
+ "chromium index.html": [
+  {
+   "el": "A.pf-skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    12,
+    10,
+    151,
+    46
+   ]
+  },
+  {
+   "el": "A.pf-nav-logo",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    80,
+    6,
+    19,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "How it works",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    6,
+    86,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "FAQ",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    245,
+    6,
+    28,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-nav-wide",
+   "text": "About",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    304,
+    6,
+    40,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-nav-narrow-hide",
+   "text": "Contact",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    1192,
+    6,
+    53,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--light pf-btn--sm",
+   "text": "Sign in",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    1276,
+    8,
+    83,
+    40
+   ]
+  },
+  {
+   "el": "A.pf-btn",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    80,
+    425,
+    234,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--ghost",
+   "text": "See how it works",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0.62)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    328,
+    425,
+    191,
+    48
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2103,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2163,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2223,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2283,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2344,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2404,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "INPUT#rv-email.",
+   "text": "",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 1px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 1px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2790,
+    285,
+    49
+   ]
+  },
+  {
+   "el": "INPUT#rv-store.",
+   "text": "",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 1px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 1px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    998,
+    2790,
+    285,
+    49
+   ]
+  },
+  {
+   "el": "INPUT#rv-name.",
+   "text": "",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 1px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 1px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2895,
+    590,
+    49
+   ]
+  },
+  {
+   "el": "TEXTAREA#rv-message.",
+   "text": "",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 1px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 1px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2999,
+    590,
+    104
+   ]
+  },
+  {
+   "el": "BUTTON.pf-btn",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    3127,
+    234,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-foot-mark",
+   "text": "Priceflag",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    57,
+    3434,
+    116,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--dark",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    57,
+    3584,
+    261,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Home",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1068,
+    3434,
+    40,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "How it works",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1068,
+    3482,
+    86,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "FAQ",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1068,
+    3530,
+    28,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "About",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1068,
+    3578,
+    40,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Meet the team (video)",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1068,
+    3626,
+    149,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Twitter / X",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1289,
+    3434,
+    92,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "LinkedIn",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1289,
+    3482,
+    80,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "Contact",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1258,
+    4140,
+    53,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "Legal",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1346,
+    4140,
+    36,
+    44
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "chromium about.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    173,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    168,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "Priceflag forecasts what a pri",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 0) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    212,
+    500,
+    453
+   ]
+  },
+  {
+   "el": "A.pf-cta",
+   "text": "Talk to us",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    498,
+    686,
+    444,
+    50
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "chromium contact.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    173,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    168,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "Priceflag Syndicate provides n",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 0) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    212,
+    500,
+    548
+   ]
+  },
+  {
+   "el": "A.pf-say",
+   "text": "Say hi",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    487,
+    85,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-say",
+   "text": "Say hi",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    662,
+    85,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "legal page",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    549,
+    711,
+    77,
+    20
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "chromium legal.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    143,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    138,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "The two documents that govern ",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 0) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    182,
+    500,
+    608
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    698,
+    476,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    711,
+    476,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    498,
+    476,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    475,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    723,
+    476,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    758,
+    476,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    597,
+    714,
+    145,
+    20
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "chromium signin.html": [
+  {
+   "el": "A.pf-skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    12,
+    10,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-wordmark",
+   "text": "Priceflag",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    56,
+    38,
+    105,
+    44
+   ]
+  },
+  {
+   "el": "INPUT#pf-email.",
+   "text": "",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 2px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 1px",
+   "bg": "rgba(255, 255, 255, 0.55)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    456,
+    390,
+    48
+   ]
+  },
+  {
+   "el": "BUTTON#pf-submit.pf-btn",
+   "text": "Email me a sign-in link",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 4px",
+   "boxShadow": "none",
+   "border": "rgba(5, 0, 73, 0.8) 0px",
+   "bg": "rgb(255, 255, 255)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    518,
+    390,
+    48
+   ]
+  },
+  {
+   "el": "A#pf-terms.",
+   "text": "terms",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    731,
+    835,
+    45,
+    38
+   ]
+  },
+  {
+   "el": "A#pf-privacy.",
+   "text": "privacy policy",
+   "outline": "solid 2px rgba(5, 0, 73, 0.8) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(0, 0, 159) 0px",
+   "bg": "rgba(255, 255, 255, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    809,
+    835,
+    99,
+    38
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "webkit index.html": [
+  {
+   "el": "A.pf-skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    12,
+    10,
+    154,
+    46
+   ]
+  },
+  {
+   "el": "A.pf-nav-logo",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    80,
+    6,
+    19,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "How it works",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    6,
+    91,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "FAQ",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    250,
+    6,
+    28,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-nav-wide",
+   "text": "About",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    308,
+    6,
+    41,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-nav-narrow-hide",
+   "text": "Contact",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    1190,
+    6,
+    55,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--light pf-btn--sm",
+   "text": "Sign in",
+   "outline": "solid 2px rgb(243, 236, 222) off 4px",
+   "boxShadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px",
+   "border": "rgb(7, 18, 56) 0px",
+   "bg": "rgb(243, 236, 222)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    1275,
+    8,
+    84,
+    40
+   ]
+  },
+  {
+   "el": "A.pf-btn",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222) off 4px",
+   "boxShadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px",
+   "border": "rgb(19, 32, 10) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    80,
+    425,
+    241,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--ghost",
+   "text": "See how it works",
+   "outline": "solid 2px rgb(243, 236, 222) off 4px",
+   "boxShadow": "rgba(243, 236, 222, 0.5) 0px 0px 0px 1px",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(3, 8, 24, 0.62)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    335,
+    425,
+    196,
+    48
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2103,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2163,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2223,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2283,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2344,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "SUMMARY.",
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    657,
+    2404,
+    662,
+    59
+   ]
+  },
+  {
+   "el": "INPUT#rv-email.",
+   "text": "",
+   "outline": "solid 2px rgb(243, 236, 222) off 1px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 1px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2790,
+    285,
+    49
+   ]
+  },
+  {
+   "el": "INPUT#rv-store.",
+   "text": "",
+   "outline": "solid 2px rgb(243, 236, 222) off 1px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 1px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    998,
+    2790,
+    285,
+    49
+   ]
+  },
+  {
+   "el": "INPUT#rv-name.",
+   "text": "",
+   "outline": "solid 2px rgb(243, 236, 222) off 1px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 1px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2895,
+    590,
+    49
+   ]
+  },
+  {
+   "el": "TEXTAREA#rv-message.",
+   "text": "",
+   "outline": "solid 2px rgb(243, 236, 222) off 1px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 1px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    2999,
+    590,
+    104
+   ]
+  },
+  {
+   "el": "BUTTON.pf-btn",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222) off 4px",
+   "boxShadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px",
+   "border": "rgb(19, 32, 10) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    693,
+    3127,
+    241,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-foot-mark",
+   "text": "Priceflag",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    57,
+    3434,
+    116,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-btn pf-btn--dark",
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "rgba(13, 31, 0, 0.55) 0px 10px 26px -10p",
+   "border": "rgb(244, 247, 234) 0px",
+   "bg": "rgb(13, 31, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    57,
+    3584,
+    268,
+    48
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Home",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1060,
+    3434,
+    41,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "How it works",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1060,
+    3482,
+    91,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "FAQ",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1060,
+    3530,
+    28,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "About",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1060,
+    3578,
+    41,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Meet the team (video)",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1060,
+    3626,
+    154,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "Twitter / X",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1286,
+    3434,
+    95,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-foot-link",
+   "text": "LinkedIn",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1286,
+    3482,
+    83,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "Contact",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1255,
+    4140,
+    55,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "Legal",
+   "outline": "solid 2px rgb(13, 31, 0) off 4px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": true,
+   "rect": [
+    1344,
+    4140,
+    38,
+    44
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "webkit about.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(13, 31, 0) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    173,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    168,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "Priceflag forecasts what a pri",
+   "outline": "solid 2px rgb(63, 79, 176) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(51, 60, 82) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    212,
+    500,
+    453
+   ]
+  },
+  {
+   "el": "A.pf-cta",
+   "text": "Talk to us",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(247, 243, 234) 0px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    498,
+    686,
+    444,
+    50
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "webkit contact.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(13, 31, 0) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    173,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    168,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "Priceflag Syndicate provides n",
+   "outline": "solid 2px rgb(63, 79, 176) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(51, 60, 82) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    212,
+    500,
+    548
+   ]
+  },
+  {
+   "el": "A.pf-say",
+   "text": "Say hi",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(247, 243, 234) 0px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    487,
+    85,
+    44
+   ]
+  },
+  {
+   "el": "A.pf-say",
+   "text": "Say hi",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(247, 243, 234) 0px",
+   "bg": "rgb(3, 8, 24)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    662,
+    85,
+    44
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "legal page",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(63, 79, 176) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    621,
+    711,
+    82,
+    20
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ],
+ "webkit legal.html": [
+  {
+   "el": "A.skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(13, 31, 0) off -5px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    0,
+    0,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-arrow",
+   "text": "←",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    503,
+    143,
+    34,
+    34
+   ]
+  },
+  {
+   "el": "A.pf-mark",
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(15, 24, 48) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    896,
+    138,
+    45,
+    44
+   ]
+  },
+  {
+   "el": "MAIN#main.",
+   "text": "The two documents that govern ",
+   "outline": "solid 2px rgb(63, 79, 176) off -4px",
+   "boxShadow": "none",
+   "border": "rgb(51, 60, 82) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    470,
+    182,
+    500,
+    608
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(63, 79, 176) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    710,
+    475,
+    155,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(63, 79, 176) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    667,
+    475,
+    155,
+    20
+   ]
+  },
+  {
+   "el": "A.",
+   "text": "hello@priceflag.org",
+   "outline": "solid 2px rgb(63, 79, 176) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(63, 79, 176) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    517,
+    475,
+    155,
+    20
+   ]
+  }
+ ],
+ "webkit signin.html": [
+  {
+   "el": "A.pf-skip",
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    12,
+    10,
+    139,
+    43
+   ]
+  },
+  {
+   "el": "A.pf-wordmark",
+   "text": "Priceflag",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgb(243, 236, 222) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    56,
+    38,
+    105,
+    44
+   ]
+  },
+  {
+   "el": "INPUT#pf-email.",
+   "text": "",
+   "outline": "solid 2px rgb(243, 236, 222) off 2px",
+   "boxShadow": "none",
+   "border": "rgba(243, 236, 222, 0.5) 1px",
+   "bg": "oklab(0.138605 -0.004018 -0.037043 / 0.55)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    444,
+    390,
+    48
+   ]
+  },
+  {
+   "el": "BUTTON#pf-submit.pf-btn",
+   "text": "Email me a sign-in link",
+   "outline": "solid 2px rgb(243, 236, 222) off 4px",
+   "boxShadow": "rgba(255, 255, 255, 0.8) 0px 1px 0px 0px",
+   "border": "rgb(13, 31, 0) 0px",
+   "bg": "rgb(216, 242, 75)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    129,
+    506,
+    390,
+    48
+   ]
+  },
+  {
+   "el": "A#pf-terms.",
+   "text": "terms",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgba(243, 236, 222, 0.84) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    732,
+    835,
+    46,
+    38
+   ]
+  },
+  {
+   "el": "A#pf-privacy.",
+   "text": "privacy policy",
+   "outline": "solid 2px rgb(243, 236, 222) off 3px",
+   "boxShadow": "none",
+   "border": "rgba(243, 236, 222, 0.84) 0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "clips": [],
+   "offscreen": false,
+   "rect": [
+    812,
+    835,
+    103,
+    38
+   ]
+  },
+  {
+   "el": "BODY/none"
+  }
+ ]
+}

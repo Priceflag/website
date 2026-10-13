@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>priceflag — test a price (waitlist)</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#030818;
+    --cream:#f3ecde;
+    --peri:#93aaff;
+    --neon:#d8f24b;
+    --rule:rgba(147,170,255,0.13);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg)}
+  body{
+    color:var(--cream);
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- harness chrome (not part of the deliverable) ---------- */
+  .hx{max-width:1180px;margin:0 auto;padding:44px clamp(20px,5vw,72px) 0}
+  .hx h1{
+    margin:0 0 10px;
+    font-family:'Hedvig Letters Serif',Georgia,serif;
+    font-weight:400;font-size:22px;letter-spacing:-.01em;
+  }
+  .hx p{
+    margin:0 0 8px;max-width:76ch;
+    font-size:13px;font-weight:300;line-height:1.62;
+    color:rgba(243,236,222,.55);
+  }
+  .hx code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;color:var(--peri);
+  }
+  .hx-bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+    margin-top:22px;padding:14px 0 0;border-top:1px solid var(--rule);
+  }
+  .hx-btn{
+    appearance:none;border:1px solid rgba(147,170,255,.28);
+    background:rgba(147,170,255,.06);color:var(--peri);
+    border-radius:999px;padding:7px 16px;cursor:pointer;
+    font:500 11px/1 'Inter',system-ui,sans-serif;
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  .hx-btn:hover{background:rgba(147,170,255,.14);color:var(--cream)}
+  .hx-btn:focus-visible{outline:1px solid var(--peri);outline-offset:3px}
+  .hx-btn[aria-pressed="true"]{background:rgba(216,242,75,.16);border-color:rgba(216,242,75,.5);color:var(--neon)}
+  .hx-read{
+    margin-left:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;line-height:1.55;color:rgba(147,170,255,.72);
+    text-align:right;white-space:pre;
+  }
+  .hx-read b{color:var(--neon);font-weight:500}
+  .hx-read i{color:#ff8f6b;font-style:normal}
+  .runway{
+    height:70vh;display:flex;align-items:flex-end;justify-content:center;
+    padding-bottom:26px;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(147,170,255,.34);
+  }
+  @media (max-width:760px){
+    .hx-read{margin-left:0;width:100%;text-align:left}
+  }
+</style>
+</head>
+<body>
+
+<div class="hx">
+  <h1>Test a price — waitlist</h1>
+  <p>Standalone prototype for <code>sections/pf-waitlist.js</code>. The module builds every node
+  it needs inside the mount, injects its own <code>&lt;style&gt;</code> once (refcounted) and returns
+  a cleanup function. Exactly one global: <code>window.initPfWaitlist</code>.</p>
+
+  <p><b>The interaction.</b> Two real inputs — the merchant's price and unit cost, defaulting to
+  $48.00 / $19.00. Every keystroke re-runs the model and the forecast eases to its new value over
+  400ms. It shows the price Priceflag would test, the 90-day profit uplift, and always a low–high
+  range: a point estimate on its own would be a lie about how much we know.</p>
+
+  <p><b>The model</b> is the one the simulation section runs, so the two cannot disagree:
+  <code>orders(P,e) = 25.2·(P/P0)^e</code> over 90 days, with elasticity as a band
+  <code>[-1.9, -0.9]</code>. The band's <em>centre</em> picks the price to test — the profit curve
+  peaks at <code>P* = C·e/(1+e)</code>, capped at a ±12% move — and the band's <em>ends</em>, scored
+  at that same price, give the two bounds. At the defaults that is $53.76, +$1,497, and a range from
+  −$2.2k to +$5.4k: the low end is a real loss, and the section says so.</p>
+
+  <p><b>The email.</b> There is no backend and the module does not pretend there is. A valid submit
+  opens a <code>mailto:</code> to <code>hello@priceflag.org</code> prefilled with the address
+  <em>and</em> the numbers on screen, says so in the confirmation, and leaves the same mailto on
+  screen as a real link. Swap <code>window.initPfWaitlist.T.SUBMIT</code> for a real endpoint and the
+  copy switches to the "you're on the list" wording on its own — the button below does exactly that.</p>
+
+  <p><b>Why the readout is measured, not eyeballed.</b> This page can run with
+  <code>document.hidden === true</code>, which starves <code>requestAnimationFrame</code>,
+  <code>ResizeObserver</code> and <code>IntersectionObserver</code> alike. A screenshot proves
+  nothing. The panel below reads the text the module actually wrote and the live SVG coordinates of
+  the range bar, so "distinct frames" only climbs if something is really being redrawn. When rAF is
+  dead the module detects it and sets values instantly instead of tweening — so the numbers are
+  right on every keystroke even when the count never moves.</p>
+
+  <div class="hx-bar">
+    <button class="hx-btn" id="hx-remount">Remount</button>
+    <button class="hx-btn" id="hx-destroy">Destroy</button>
+    <button class="hx-btn" id="hx-reduce" aria-pressed="false">Reduced motion</button>
+    <button class="hx-btn" id="hx-api" aria-pressed="false">Fake API SUBMIT</button>
+    <button class="hx-btn" id="hx-320">320</button>
+    <button class="hx-btn" id="hx-390">390</button>
+    <button class="hx-btn" id="hx-768">768</button>
+    <button class="hx-btn" id="hx-wide">Full</button>
+  </div>
+
+  <div class="hx-bar" style="border-top:0;padding-top:0;margin-top:10px">
+    <button class="hx-btn" data-set="48|19">48 / 19</button>
+    <button class="hx-btn" data-set="20|19">20 / 19 thin</button>
+    <button class="hx-btn" data-set="48|2">48 / 2 cut</button>
+    <button class="hx-btn" data-set="48|13.714286">flat</button>
+    <button class="hx-btn" data-set="9.99|3.50">9.99 / 3.50</button>
+    <button class="hx-btn" data-set="1299|540">1299 / 540</button>
+    <button class="hx-btn" data-set="48|60">cost &gt; price</button>
+    <button class="hx-btn" data-set="abc|19">abc</button>
+    <button class="hx-btn" data-set="|19">empty</button>
+    <button class="hx-btn" data-set="9999999|19">huge</button>
+    <div class="hx-read" id="hx-read">measuring…</div>
+  </div>
+</div>
+
+<div class="runway">scroll</div>
+
+<!-- the module owns everything inside this element -->
+<div id="mount"></div>
+
+<div class="runway" style="height:60vh;align-items:flex-start;padding-top:26px">end</div>
+
+<script src="../sections/pf-waitlist.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var mount   = document.getElementById('mount');
+  var read    = document.getElementById('hx-read');
+  var cleanup = null;
+  var API = window.initPfWaitlist.T;
+  var REAL_SUBMIT = API.SUBMIT;
+
+  function mountIt() {
+    if (cleanup) { cleanup(); cleanup = null; }
+    cleanup = window.initPfWaitlist(mount);
+  }
+
+  document.getElementById('hx-remount').addEventListener('click', mountIt);
+  document.getElementById('hx-destroy').addEventListener('click', function () {
+    if (cleanup) { cleanup(); cleanup = null; }
+  });
+
+  /* Reduced motion cannot be forced from CSS, so the module exposes an
+     override on the same tunables object the seam lives on. */
+  var rBtn = document.getElementById('hx-reduce');
+  rBtn.addEventListener('click', function () {
+    var on = rBtn.getAttribute('aria-pressed') !== 'true';
+    rBtn.setAttribute('aria-pressed', String(on));
+    API.FORCE_REDUCE = on ? true : null;
+    mountIt();
+  });
+
+  /* Proves the seam: one function swap and the module stops talking about
+     mail clients entirely. */
+  var aBtn = document.getElementById('hx-api');
+  aBtn.addEventListener('click', function () {
+    var on = aBtn.getAttribute('aria-pressed') !== 'true';
+    aBtn.setAttribute('aria-pressed', String(on));
+    API.SUBMIT = on
+      ? function (p) {
+          return new Promise(function (res) {
+            setTimeout(function () {
+              console.log('[fake endpoint] would POST', p);
+              res({ ok: true, via: 'api' });
+            }, 700);
+          });
+        }
+      : REAL_SUBMIT;
+  });
+
+  /* Drive the real inputs the way a person would, so the tween, the
+     validation and the live region all take their normal paths. */
+  function fire(node, type) {
+    var ev;
+    try { ev = new Event(type, { bubbles: true }); }
+    catch (e) { ev = document.createEvent('Event'); ev.initEvent(type, true, true); }
+    node.dispatchEvent(ev);
+  }
+  var setBtns = document.querySelectorAll('[data-set]');
+  for (var i = 0; i < setBtns.length; i++) {
+    setBtns[i].addEventListener('click', function () {
+      var v = this.getAttribute('data-set').split('|');
+      var ins = mount.querySelectorAll('.pfl-num');
+      if (ins.length < 2) return;
+      ins[0].value = v[0];
+      ins[1].value = v[1];
+      fire(ins[0], 'input');
+    });
+  }
+
+  function widthBtn(id, px) {
+    document.getElementById(id).addEventListener('click', function () {
+      mount.style.maxWidth = px;
+      mount.style.margin = '0 auto';
+      mount.style.outline = '1px solid rgba(147,170,255,.18)';
+      window.dispatchEvent(new Event('resize'));
+    });
+  }
+  widthBtn('hx-320', '320px');
+  widthBtn('hx-390', '390px');
+  widthBtn('hx-768', '768px');
+  document.getElementById('hx-wide').addEventListener('click', function () {
+    mount.style.maxWidth = ''; mount.style.margin = ''; mount.style.outline = '';
+    window.dispatchEvent(new Event('resize'));
+  });
+
+  /* ---------- measured readout ----------
+     Reads the text the module wrote and the resolved SVG coordinates of the
+     range bar — not a screenshot. Everything here is zero on a module that
+     mounted but never painted. */
+  function txt(sel) {
+    var n = mount.querySelector(sel);
+    return n ? n.textContent : '';
+  }
+  function num(sel, attr) {
+    var n = mount.querySelector(sel);
+    return n ? Math.round(parseFloat(n.getAttribute(attr)) * 10) / 10 : 0;
+  }
+  function sample() {
+    var root = mount.querySelector('.pfl-root');
+    var svg  = mount.querySelector('.pfl-svg');
+    if (!root || !svg) return null;
+    var box = svg.getBoundingClientRect();
+    return {
+      w: Math.round(box.width), h: Math.round(box.height),
+      vb: svg.getAttribute('viewBox'),
+      cap: txt('.pfl-cap-t'),
+      hero: txt('.pfl-hero'),
+      pct: txt('.pfl-pct'),
+      range: txt('.pfl-rangeVal'),
+      note: txt('.pfl-note'),
+      oops: txt('.pfl-oops'),
+      live: txt('.pfl-sr'),
+      lo: num('.pfl-band', 'x1'), hi: num('.pfl-band', 'x2'),
+      dot: num('.pfl-dot', 'cx'), zero: num('.pfl-zero', 'x1'),
+      ok: /pfl-ok/.test(root.className),
+      bad: /pfl-bad/.test(root.className),
+      flat: /pfl-flat/.test(root.className),
+      sealed: /pfl-sealed/.test(root.className)
+    };
+  }
+
+  var samples = 0, lastKey = '', changed = 0;
+  function tick() {
+    var s = sample();
+    if (!s) { read.innerHTML = '<i>no section — destroyed</i>'; return; }
+    samples++;
+    var key = s.hero + '/' + s.lo + '/' + s.hi + '/' + s.dot;
+    if (key !== lastKey) { changed++; lastKey = key; }
+    var nan = /NaN|undefined/.test(JSON.stringify(s));
+    read.innerHTML =
+      'chart box       <b>' + s.w + '×' + s.h + '</b>   viewBox ' + s.vb + '\n' +
+      'caption         ' + (s.cap || '—') + '\n' +
+      'uplift          <b>' + (s.hero || '—') + '</b>  ' + s.pct +
+        '   range ' + (s.range || '—') + '\n' +
+      'note            ' + (s.oops ? '<i>' + s.oops + '</i>' : s.note || '—') + '\n' +
+      'band px         lo ' + s.lo + '  hi ' + s.hi + '  est <b>' + s.dot +
+        '</b>  zero ' + s.zero + '\n' +
+      'state           ' + (s.sealed ? 'sealed' : s.bad ? 'invalid input' :
+        (s.flat ? 'valid, nothing worth testing' : 'valid')) +
+        (s.ok ? ' · email step shown' : '') + '\n' +
+      'announced       ' + (s.live || '—') + '\n' +
+      'distinct frames <b>' + changed + '</b> of ' + samples + ' samples' +
+      (nan ? '   <i>NaN ON SCREEN</i>' : '');
+  }
+
+  mountIt();
+  tick();
+  setInterval(tick, 300);
+})();
+</script>
+</body>
+</html>

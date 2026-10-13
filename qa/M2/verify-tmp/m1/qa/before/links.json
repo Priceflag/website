@@ -1,0 +1,1234 @@
+{
+  "check": "links",
+  "title": "Link crawl (static + rendered DOM), #-links, anchors",
+  "status": "FAIL",
+  "durationMs": 5663,
+  "pages": {
+    "index": {
+      "status": "FAIL",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 10,
+        "rendered": 10,
+        "examples": [
+          {
+            "href": "#",
+            "text": "Priceflag — back to top"
+          },
+          {
+            "href": "#",
+            "text": "FAQ"
+          },
+          {
+            "href": "#",
+            "text": "AI PricingBuilt for Shopify stores. See it work→"
+          },
+          {
+            "href": "#",
+            "text": "Get a free price review"
+          },
+          {
+            "href": "#",
+            "text": "See how it works"
+          },
+          {
+            "href": "#",
+            "text": "Priceflag"
+          },
+          {
+            "href": "#",
+            "text": "Get a free price review"
+          },
+          {
+            "href": "#",
+            "text": "Home"
+          },
+          {
+            "href": "#",
+            "text": "Partners"
+          },
+          {
+            "href": "#",
+            "text": "Demo"
+          },
+          {
+            "href": "#",
+            "text": "Priceflag — back to top"
+          },
+          {
+            "href": "#",
+            "text": "FAQ"
+          },
+          {
+            "href": "#",
+            "text": "AI PricingBuilt for Shopify stores. See it work→"
+          },
+          {
+            "href": "#",
+            "text": "Get a free price review"
+          },
+          {
+            "href": "#",
+            "text": "See how it works"
+          }
+        ]
+      },
+      "urlsChecked": 26,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 50,
+        "rendered": 54
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 10,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 18,
+        "rendered": 18
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 11,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 20,
+        "rendered": 20
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 10,
+      "broken": [],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 24,
+        "rendered": 24
+      }
+    },
+    "signin": {
+      "status": "FAIL",
+      "error": null,
+      "emptyHashLinks": {
+        "static": 0,
+        "rendered": 0,
+        "examples": []
+      },
+      "urlsChecked": 10,
+      "broken": [
+        {
+          "url": "https://priceflag.org/uploads/signin-hero.webp",
+          "code": 404,
+          "error": null
+        }
+      ],
+      "warnings": [],
+      "brokenAnchors": [],
+      "javascriptLinks": 0,
+      "refsFound": {
+        "static": 17,
+        "rendered": 17
+      }
+    }
+  },
+  "data": {
+    "pages": {
+      "index": {
+        "status": "FAIL",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 10,
+          "rendered": 10,
+          "examples": [
+            {
+              "href": "#",
+              "text": "Priceflag — back to top"
+            },
+            {
+              "href": "#",
+              "text": "FAQ"
+            },
+            {
+              "href": "#",
+              "text": "AI PricingBuilt for Shopify stores. See it work→"
+            },
+            {
+              "href": "#",
+              "text": "Get a free price review"
+            },
+            {
+              "href": "#",
+              "text": "See how it works"
+            },
+            {
+              "href": "#",
+              "text": "Priceflag"
+            },
+            {
+              "href": "#",
+              "text": "Get a free price review"
+            },
+            {
+              "href": "#",
+              "text": "Home"
+            },
+            {
+              "href": "#",
+              "text": "Partners"
+            },
+            {
+              "href": "#",
+              "text": "Demo"
+            },
+            {
+              "href": "#",
+              "text": "Priceflag — back to top"
+            },
+            {
+              "href": "#",
+              "text": "FAQ"
+            },
+            {
+              "href": "#",
+              "text": "AI PricingBuilt for Shopify stores. See it work→"
+            },
+            {
+              "href": "#",
+              "text": "Get a free price review"
+            },
+            {
+              "href": "#",
+              "text": "See how it works"
+            }
+          ]
+        },
+        "urlsChecked": 26,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 50,
+          "rendered": 54
+        }
+      },
+      "about": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 10,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 18,
+          "rendered": 18
+        }
+      },
+      "contact": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 11,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 20,
+          "rendered": 20
+        }
+      },
+      "legal": {
+        "status": "PASS",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 10,
+        "broken": [],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 24,
+          "rendered": 24
+        }
+      },
+      "signin": {
+        "status": "FAIL",
+        "error": null,
+        "emptyHashLinks": {
+          "static": 0,
+          "rendered": 0,
+          "examples": []
+        },
+        "urlsChecked": 10,
+        "broken": [
+          {
+            "url": "https://priceflag.org/uploads/signin-hero.webp",
+            "code": 404,
+            "error": null
+          }
+        ],
+        "warnings": [],
+        "brokenAnchors": [],
+        "javascriptLinks": 0,
+        "refsFound": {
+          "static": 17,
+          "rendered": 17
+        }
+      }
+    },
+    "urls": [
+      {
+        "url": "http://127.0.0.1:50948/about",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/about",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "about"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://youtu.be/vfZ26mCQ79A",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/legal",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/legal",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/contact",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/contact",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index",
+          "contact"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://signin.priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a",
+          "link"
+        ],
+        "pages": [
+          "index",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://x.com/Priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://www.linkedin.com/company/priceflag/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link",
+          "a"
+        ],
+        "pages": [
+          "index",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/favicon.ico",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/favicon.ico",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/favicon.svg",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/favicon.svg",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/favicon.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/favicon.png",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/apple-touch-icon.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/apple-touch-icon.png",
+        "internal": true,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/hero-new.png",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/hero-new.png",
+        "internal": true,
+        "kinds": [
+          "link",
+          "img"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Inter:wght@300..700&display=swap",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/support.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/support.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-compare.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-compare.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-demo.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-demo.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-workflow.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-workflow.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-faq.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-faq.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-hero-logos.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-hero-logos.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/sections/pf-waitlist.js",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/sections/pf-waitlist.js",
+        "internal": true,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/uploads/summit-lime.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/uploads/summit-lime.webp",
+        "internal": true,
+        "kinds": [
+          "img"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/mark.svg",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/mark.svg",
+        "internal": true,
+        "kinds": [
+          "css-block"
+        ],
+        "pages": [
+          "index",
+          "about",
+          "contact",
+          "legal",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/og-v7.jpg",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "meta-image"
+        ],
+        "pages": [
+          "index",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://unpkg.com/react@18.3.1/umd/react.production.min.js",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "script"
+        ],
+        "pages": [
+          "index"
+        ],
+        "foundIn": [
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/index.html",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/index.html",
+        "internal": true,
+        "kinds": [
+          "a"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/about",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "about"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "http://127.0.0.1:50948/uploads/summit-painting-3.webp",
+        "status": "PASS",
+        "code": 200,
+        "chain": [
+          200
+        ],
+        "final": "http://127.0.0.1:50948/uploads/summit-painting-3.webp",
+        "internal": true,
+        "kinds": [
+          "link",
+          "img"
+        ],
+        "pages": [
+          "about",
+          "contact",
+          "legal"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/contact",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "contact"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/legal",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link",
+          "a"
+        ],
+        "pages": [
+          "legal",
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/favicon.svg",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/favicon.png",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/apple-touch-icon.png",
+        "status": "PASS",
+        "code": 200,
+        "internal": false,
+        "kinds": [
+          "link"
+        ],
+        "pages": [
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      },
+      {
+        "url": "https://priceflag.org/uploads/signin-hero.webp",
+        "status": "FAIL",
+        "code": 404,
+        "error": null,
+        "internal": false,
+        "kinds": [
+          "img"
+        ],
+        "pages": [
+          "signin"
+        ],
+        "foundIn": [
+          "static",
+          "rendered"
+        ]
+      }
+    ],
+    "anchorIssues": [],
+    "skipped": [
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://unpkg.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://unpkg.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "index",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "about",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:nithin@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:kabir@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:nithin@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "mailto:kabir@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "contact",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "mailto:hello@priceflag.org",
+        "reason": "scheme"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "legal",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "signin",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "signin",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "signin",
+        "raw": "https://fonts.googleapis.com",
+        "reason": "preconnect"
+      },
+      {
+        "page": "signin",
+        "raw": "https://fonts.gstatic.com",
+        "reason": "preconnect"
+      }
+    ],
+    "jsLinks": []
+  }
+}

@@ -1,0 +1,2411 @@
+{
+ "msgEmoji/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 129,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=Raise%20the%20hoodie%20%F0%9F%98%80%20price%20please",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 32
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "msgEmoji/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 129,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=Raise%20the%20hoodie%20%F0%9F%98%80%20price%20please",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 180,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nRaise the hoodie 😀 price please",
+    "tail": "\nStore: shop.com\n\nRaise the hoodie 😀 price please",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 32
+  },
+  "ss": null,
+  "formState": null
+ },
+ "msgEmojiLong/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea",
+  "ua": "note:  💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea \ud83d",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1798,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nPrice idea 💡 Price idea 💡 Price idea 💡 Pr",
+    "tail": "idea\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1680
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "msgEmojiLong/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea%20%F0%9F%92%A1%20Price%20idea",
+  "ua": "note:  💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea 💡 Price idea \ud83d",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1798,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nPrice idea 💡 Price idea 💡 Price idea 💡 Pr",
+    "tail": "idea\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1680
+  },
+  "ss": null,
+  "formState": null
+ },
+ "msgAllEmoji/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 293,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80",
+  "ua": "note: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1792,
+    "body": "Email: me@shop.com\nStore: shop.com\n\n😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+    "tail": "😀😀\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1200
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "msgAllEmoji/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 293,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80",
+  "ua": "note: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1792,
+    "body": "Email: me@shop.com\nStore: shop.com\n\n😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+    "tail": "😀😀\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1200
+  },
+  "ss": null,
+  "formState": null
+ },
+ "msgFlagsZWJ/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 290,
+  "uaLen": 299,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3",
+  "ua": "note: 👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1795,
+    "body": "Email: me@shop.com\nStore: shop.com\n\n🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 ",
+    "tail": "🇮🇳\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1040
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "msgFlagsZWJ/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 290,
+  "uaLen": 299,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3%F0%9F%91%A8%F0%9F%91%A9%F0%9F%91%A7%20%F0%9F%87%AE%F0%9F%87%B3",
+  "ua": "note: 👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1795,
+    "body": "Email: me@shop.com\nStore: shop.com\n\n🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 🇮🇳👨👩👧 ",
+    "tail": "🇮🇳\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1040
+  },
+  "ss": null,
+  "formState": null
+ },
+ "nameEmojiAt50/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 126,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 203,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "nameEmojiAt50/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 126,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 203,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "nameAllEmoji/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 125,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 855,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀\ud83d",
+    "tail": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "nameAllEmoji/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 125,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 855,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀\ud83d",
+    "tail": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "storeEmojiAt110/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 179,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com%2Faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 312,
+    "body": "Email: me@shop.com\nStore: shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "storeEmojiAt110/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 179,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com%2Faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 312,
+    "body": "Email: me@shop.com\nStore: shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "storeEmojiDomain/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 97,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=%F0%9F%98%80%F0%9F%98%80.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "😀😀.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "storeEmojiDomain/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 97,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=%F0%9F%98%80%F0%9F%98%80.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 162,
+    "body": "Email: me@shop.com\nStore: 😀😀.com",
+    "tail": "Email: me@shop.com\nStore: 😀😀.com",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "😀😀.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "loneSurrogate/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 99,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo%EF%BF%BD&msg=x%EF%BF%BDy",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo\ud83d",
+   "message": 3
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "loneSurrogate/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 99,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo%EF%BF%BD&msg=x%EF%BF%BDy",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 163,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo�\n\nx�y",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo�\n\nx�y",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo\ud83d",
+   "message": 3
+  },
+  "ss": null,
+  "formState": null
+ },
+ "rtl/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%B9&msg=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B3%D8%B9%D8%B1%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%20%E2%80%8F%D9%87%D8%B0%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20",
+  "ua": "note: تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير ",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1799,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: محمد العربي\n\nأريد تغيير سعر المنتج ‏هذا",
+    "tail": "ريد \n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "محمد العربي",
+   "message": 540
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "rtl/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%D9%85%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%B9&msg=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B3%D8%B9%D8%B1%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%20%E2%80%8F%D9%87%D8%B0%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20",
+  "ua": "note: تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير سعر المنتج ‏هذا أريد تغيير ",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1799,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: محمد العربي\n\nأريد تغيير سعر المنتج ‏هذا",
+    "tail": "ريد \n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "محمد العربي",
+   "message": 540
+  },
+  "ss": null,
+  "formState": null
+ },
+ "cjk/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%E5%B1%B1%E7%94%B0%E5%A4%AA%E9%83%8E&msg=%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89",
+  "ua": "note: 更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1799,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: 山田太郎\n\n価格を変更したい 価格を変更したい 価格を変更したい 価格を変更し",
+    "tail": "を変更し\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "山田太郎",
+   "message": 1080
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "cjk/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=%E5%B1%B1%E7%94%B0%E5%A4%AA%E9%83%8E&msg=%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89",
+  "ua": "note: 更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価格を変更したい 価",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1799,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: 山田太郎\n\n価格を変更したい 価格を変更したい 価格を変更したい 価格を変更し",
+    "tail": "を変更し\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "山田太郎",
+   "message": 1080
+  },
+  "ss": null,
+  "formState": null
+ },
+ "combining/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 295,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e",
+  "ua": "note: ́éééééééééééééééééééééééééééééééééééééééééééééééééééééééée",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1800,
+    "body": "Email: me@shop.com\nStore: shop.com\n\néééééééééééééééééééééé",
+    "tail": "́ée\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 800
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "combining/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 295,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e%CC%81e",
+  "ua": "note: ́éééééééééééééééééééééééééééééééééééééééééééééééééééééééée",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1800,
+    "body": "Email: me@shop.com\nStore: shop.com\n\néééééééééééééééééééééé",
+    "tail": "́ée\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 800
+  },
+  "ss": null,
+  "formState": null
+ },
+ "hpFilled1000": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?hp=1&host=localhost%3A8933&store=shop.com&name=&msg=zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+  "ua": "note: zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+  "pageDecodes": true,
+  "hp": 1,
+  "mailto": [
+   {
+    "len": 1128,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    "tail": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1000
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "maxStoreName": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 240,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=https%3A%2F%2Fshop.myshopify.com%2Fproducts%2Fx%3Fa%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520&name=Zo%C3%AB%20%C3%85ngstr%C3%B6m-%C3%91%C3%BA%C3%B1ez&msg=short%20note",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1281,
+    "body": "Email: me@shop.com\nStore: https://shop.myshopify.com/products/x?a=%20&b=ü&a=%20&",
+    "tail": " Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez\n\nshort note",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "https://shop.myshopify.com/products/x?a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&",
+   "name": "Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez ",
+   "message": 10
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "storeE110": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 176,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com%2F%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1754,
+    "body": "Email: me@shop.com\nStore: shop.com/ééééééééééééééééééééééééééééééééééééééééééééé",
+    "tail": "éééééééééééééééééééééééééééééééééééééééééééééééééé",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com/éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "longNameNoNote": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your store address or name was longer than our form keeps, so please email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 127,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 235,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+    "tail": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen150": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 227,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 150
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen180": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 257,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 180
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen200": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 277,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 200
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen220": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 297,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 220
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen450": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 233,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "note: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 450
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen470": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 253,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "note: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 470
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen480": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 263,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "note: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 480
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteLen500": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 283,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "ua": "note: qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 500
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteMaxlength5000": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 300,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+  "ua": "note: wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1800,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+    "tail": "wwww\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 5000
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "noteNewlines": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 298,
+  "uaLen": 246,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=line%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline%0Aline",
+  "ua": "note: \nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nline\nlin",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 400
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "mailto/ascii": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 298,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word%20word",
+  "ua": "note:  word word word word word word word word word word word word word word word word word word word word word word wor",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1800,
+    "body": "Email: me@shop.com\nStore: shop.com\n\nword word word word word word word word word",
+    "tail": "rd w\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 3000
+  },
+  "ss": null,
+  "formState": null
+ },
+ "mailto/nonascii": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 299,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9%C3%A9",
+  "ua": "note: éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1798,
+    "body": "Email: me@shop.com\nStore: shop.com\n\néééééééééééééééééééééééééééééééééééééééééééé",
+    "tail": "éééé\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 2000
+  },
+  "ss": null,
+  "formState": null
+ },
+ "mailto/emoji": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 293,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80",
+  "ua": "note: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1792,
+    "body": "Email: me@shop.com\nStore: shop.com\n\n😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+    "tail": "😀😀\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 1800
+  },
+  "ss": null,
+  "formState": null
+ },
+ "mailto/longEmailStore": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 296,
+  "uaLen": 300,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com%2F%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80&name=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80&msg=%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80%F0%9F%98%80",
+  "ua": "note: 😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 1790,
+    "body": "Email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "tail": "😀😀\n\n[Note shortened. Paste the rest of it here.]",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@shop.com",
+   "store": "shop.com/😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+   "name": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+   "message": 1800
+  },
+  "ss": null,
+  "formState": null
+ },
+ "mailto/quotesHtml": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-store",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   "Enter your store address, like yourstore.com."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com/\"><img src=x onerror=alert(1)>",
+   "name": "",
+   "message": 28
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/ok": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "resp/dup": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "resp/rejected": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "Our server turned the request down, so it was not saved. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/null": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/empty": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/okstr": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "Our server turned the request down, so it was not saved. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/html": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/noacao": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "resp/abort": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/reset": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/500": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [
+   "console:Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "resp/302": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 84,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=Jo&msg=hello",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [
+   {
+    "len": 148,
+    "body": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "tail": "Email: me@shop.com\nStore: shop.com\nName: Jo\n\nhello",
+    "decodes": true
+   }
+  ],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "Jo",
+   "message": 5
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/empty": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-email",
+  "errs": [],
+  "fieldErrs": [
+   "Enter your email so we can send the review.",
+   "Enter your store address."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "",
+   "store": "",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/spaces": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-email",
+  "errs": [],
+  "fieldErrs": [
+   "Enter your email so we can send the review.",
+   "Enter your store address."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "",
+   "store": "   ",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/rlmEmail": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com‏ within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com‏",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com‏",
+  "formState": "sent"
+ },
+ "valid/lrmStore": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 86,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=%E2%80%8Eshop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "‎shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/nbspEmail": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com ",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/softHyphen": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@sh­op.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@sh­op.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@sh­op.com",
+  "formState": "sent"
+ },
+ "valid/zwspEmail": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com​",
+   "store": "shop.com​",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/punycode": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 82,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.xn--p1ai&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.xn--p1ai",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/storeHtml": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 83,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=x.%3Cscript%3E&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "x.<script>",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/storeComma": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 80,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com%2C&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com,",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@shop.com",
+  "formState": "sent"
+ },
+ "valid/storeSpaceInside": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-store",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   "Enter your store address, like yourstore.com."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "my shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/storeEmail": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-store",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   "Enter your store address, like yourstore.com."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "me@shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/storeLong400": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-store",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   "That address is too long. Enter just the store domain, like yourstore.com."
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "me@shop.com",
+   "store": "https://shop.com/products/x?utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&utm_source=aaaaaa&",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/email255": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-email",
+  "errs": [],
+  "fieldErrs": [
+   "Enter a full email address, like you@yourstore.com.",
+   ""
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "valid/emailIDN": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@магазин.рф within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "me@магазин.рф",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "me@магазин.рф",
+  "formState": "sent"
+ },
+ "valid/emailUnicodeLocal": {
+  "reqs": 1,
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email zoë@shop.com within 48 hours.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "P.pf-form-status",
+  "errs": [],
+  "fieldErrs": [
+   "",
+   ""
+  ],
+  "pageLen": 77,
+  "uaLen": 117,
+  "page": "https://priceflag.org/#review?host=localhost%3A8933&store=shop.com&name=&msg=",
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+  "pageDecodes": true,
+  "mailto": [],
+  "values": {
+   "email": "zoë@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": "zoë@shop.com",
+  "formState": "sent"
+ },
+ "valid/emailFullwidthAt": {
+  "reqs": 0,
+  "kind": "error",
+  "status": "Check the highlighted fields.",
+  "btn": "Get a free price review",
+  "btnAria": null,
+  "active": "rv-email",
+  "errs": [],
+  "fieldErrs": [
+   "Enter a full email address, like you@yourstore.com.",
+   ""
+  ],
+  "pageLen": null,
+  "uaLen": null,
+  "page": null,
+  "ua": null,
+  "pageDecodes": null,
+  "hp": null,
+  "mailto": [],
+  "values": {
+   "email": "me＠shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null,
+  "formState": null
+ },
+ "doubleSubmit": {
+  "reqs": 1,
+  "mid": {
+   "btn": "Sending…",
+   "aria": "true",
+   "active": "rv-email",
+   "live": "Sending your request."
+  },
+  "end": {
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "active": "P.pf-form-status",
+   "ss": "me@shop.com"
+  }
+ },
+ "focusWhileSending": {
+  "a1": "Sending…",
+  "nextTab": "BODY",
+  "end": "P.pf-form-status"
+ },
+ "timeout": {
+  "reqs": 1,
+  "kind": "error",
+  "status": "The request timed out, so we can’t be sure it arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "btn": "Get a free price review",
+  "aria": null,
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "active": "P.pf-form-status"
+ },
+ "offline": {
+  "off": {
+   "status": "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "kind": "error",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "links": 1
+  },
+  "on": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "reqs": 1
+ },
+ "retry": {
+  "f1": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+  "f2": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "reqs": 2
+ },
+ "sentFlow": {
+  "reqs": 2,
+  "after": [
+   "sent",
+   "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "P.pf-form-status",
+   true
+  ],
+  "reload": [
+   "sent",
+   "We already have your request from me@shop.com. We will email you within 48 hours.",
+   true
+  ],
+  "back": [
+   "sent",
+   "We already have your request from me@shop.com. We will email you within 48 hours."
+  ],
+  "navType": "back_forward",
+  "back2": "sent",
+  "viaLogo": [
+   "sent",
+   "We already have your request from me@shop.com. We will email you within 48 hours."
+  ],
+  "again1": [
+   "rv-email",
+   {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   null,
+   null
+  ],
+  "emptyAfterAgain": [
+   "rv-email",
+   "Check the highlighted fields."
+  ],
+  "second": [
+   "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "me@shop.com"
+  ]
+ },
+ "bfcache": {
+  "s": "sent"
+ },
+ "awayMidSend": {
+  "reqs": 1,
+  "formState": null,
+  "kind": null,
+  "status": "",
+  "btn": "Get a free price review",
+  "aria": null,
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "ss": null
+ },
+ "pageshowWhileSending": {
+  "mid": [
+   null,
+   "Sending…"
+  ],
+  "end": [
+   "sent",
+   "Thanks. We have your request and will email me@shop.com within 48 hours."
+  ]
+ },
+ "dup": {
+  "d": [
+   "Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",
+   1,
+   true,
+   "me@shop.com"
+  ],
+  "reload": [
+   "sent",
+   "We already have your request from me@shop.com. We will email you within 48 hours."
+  ],
+  "againActive": "rv-email"
+ },
+ "ssBlocked": {
+  "s": [
+   "sent",
+   "Thanks. We have your request and will email me@shop.com within 48 hours."
+  ],
+  "errs": [],
+  "again": "rv-store"
+ },
+ "ssQuota": {
+  "s": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+  "errs": []
+ },
+ "initState": {
+  "nv": true,
+  "attr": true,
+  "hp": false,
+  "hidden": [
+   true,
+   true,
+   true
+  ],
+  "hpTab": -1,
+  "order": [
+   "rv-store",
+   "rv-name",
+   "rv-message",
+   "Get a free price review",
+   "Skip to content\n\n\n  \n    \n    ",
+   "How does the forecast work, an"
+  ]
+ },
+ "scriptBlocked": {
+  "valid": false,
+  "msg": "Fill out this field",
+  "url": "http://localhost:8933/"
+ }
+}

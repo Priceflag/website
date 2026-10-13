@@ -1,0 +1,166 @@
+{
+  "check": "lighthouse",
+  "title": "Lighthouse mobile (perf, a11y, best-practices, SEO)",
+  "status": "FAIL",
+  "durationMs": 78255,
+  "pages": {
+    "index": {
+      "status": "FAIL",
+      "performance": 0.74,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1,
+      "below": [
+        "performance"
+      ]
+    },
+    "about": {
+      "status": "FAIL",
+      "performance": 0.88,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": [
+        "performance"
+      ]
+    },
+    "contact": {
+      "status": "FAIL",
+      "performance": 0.88,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": [
+        "performance"
+      ]
+    },
+    "legal": {
+      "status": "FAIL",
+      "performance": 0.87,
+      "accessibility": 0.95,
+      "best-practices": 1,
+      "seo": 1,
+      "below": [
+        "performance"
+      ]
+    }
+  },
+  "data": {
+    "scores": {
+      "index": {
+        "performance": 0.74,
+        "accessibility": 0.96,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "about": {
+        "performance": 0.88,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "contact": {
+        "performance": 0.88,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "legal": {
+        "performance": 0.87,
+        "accessibility": 0.95,
+        "best-practices": 1,
+        "seo": 1
+      }
+    },
+    "metrics": {
+      "index": {
+        "first-contentful-paint": 1558.911,
+        "largest-contentful-paint": 16206.348,
+        "total-blocking-time": 78,
+        "cumulative-layout-shift": 0,
+        "speed-index": 2426.811,
+        "runs": 3,
+        "allPerformance": [
+          0.73,
+          0.74,
+          0.74
+        ],
+        "failedAudits": [
+          "largest-contentful-paint",
+          "interactive",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "total-byte-weight",
+          "unminified-css",
+          "unminified-javascript",
+          "forced-reflow-insight",
+          "image-delivery-insight",
+          "network-dependency-tree-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "about": {
+        "first-contentful-paint": 2673.158,
+        "largest-contentful-paint": 3302.825,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 2673.158,
+        "runs": 3,
+        "allPerformance": [
+          0.88,
+          0.88,
+          0.89
+        ],
+        "failedAudits": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "image-delivery-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "contact": {
+        "first-contentful-paint": 2662.468,
+        "largest-contentful-paint": 3302.189,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 2662.468,
+        "runs": 3,
+        "allPerformance": [
+          0.88,
+          0.88,
+          0.9
+        ],
+        "failedAudits": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "image-delivery-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "legal": {
+        "first-contentful-paint": 2772.754,
+        "largest-contentful-paint": 3453.31,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 2772.754,
+        "runs": 3,
+        "allPerformance": [
+          0.87,
+          0.87,
+          0.87
+        ],
+        "failedAudits": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "image-delivery-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      }
+    }
+  }
+}

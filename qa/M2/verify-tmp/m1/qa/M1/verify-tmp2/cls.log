@@ -1,0 +1,20 @@
+fast /@375 [0,0,0] []
+fast /@1440 [0,0,0] []
+fast /about@375 [0,0,0] []
+fast /about@1440 [0,0,0] [[416,0,"#text.,H1.pf-sheet-title"],[413,0,"#text.,H1.pf-sheet-title"],[380,0,"#text.,H1.pf-sheet-title"]]
+fast /contact@375 [0,0,0] [[407,0,"#text."],[404,0,"#text."],[423,0,"#text."]]
+fast /contact@1440 [0,0,0] [[398,0,"#text.,H1.pf-sheet-title"],[393,0,"#text.,H1.pf-sheet-title"],[406,0,"#text.,H1.pf-sheet-title"]]
+fast /legal@375 [0,0,0] []
+fast /legal@1440 [0,0,0] [[368,0,"#text."],[413,0,"#text."],[387,0,"#text."]]
+slow3g /@375 [0,0,0] []
+slow3g /@1440 [0,0,0] []
+slow3g /about@375 [0,0,0] []
+slow3g /about@1440 [0,0,0] [[3966,0,"#text.,H1.pf-sheet-title"],[3967,0,"#text.,H1.pf-sheet-title"],[4013,0,"#text.,H1.pf-sheet-title"]]
+slow3g /contact@375 [0,0,0] [[3368,0,"#text."],[3396,0,"#text."],[3397,0,"#text."]]
+slow3g /contact@1440 [0,0,0] [[3997,0,"#text.,H1.pf-sheet-title"],[3965,0,"#text.,H1.pf-sheet-title"],[4060,0,"#text.,H1.pf-sheet-title"]]
+slow3g /legal@375 [0,0,0] []
+slow3g /legal@1440 [0,0,0] [[4066,0,"#text."],[3974,0,"#text."],[3972,0,"#text."]]
+webkit / unsupported
+webkit /about unsupported
+webkit /contact unsupported
+webkit /legal unsupported

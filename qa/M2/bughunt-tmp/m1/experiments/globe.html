@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>priceflag — globe + counter</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#030818;
+    --cream:#f3ecde;
+    --peri:#93aaff;
+    --neon:#d8f24b;
+    --rule:rgba(147,170,255,0.13);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg)}
+  body{
+    color:var(--cream);
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- harness chrome (not part of the deliverable) ---------- */
+  .hx{
+    max-width:1180px;margin:0 auto;
+    padding:44px clamp(20px,5vw,72px) 0;
+  }
+  .hx h1{
+    margin:0 0 10px;
+    font-family:'Hedvig Letters Serif',Georgia,serif;
+    font-weight:400;font-size:22px;letter-spacing:-.01em;
+  }
+  .hx p{
+    margin:0 0 8px;max-width:70ch;
+    font-size:13px;font-weight:300;line-height:1.62;
+    color:rgba(243,236,222,.55);
+  }
+  .hx code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;color:var(--peri);
+  }
+  .hx-bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+    margin-top:22px;padding:14px 0 0;border-top:1px solid var(--rule);
+  }
+  .hx-btn{
+    appearance:none;border:1px solid rgba(147,170,255,.28);
+    background:rgba(147,170,255,.06);color:var(--peri);
+    border-radius:999px;padding:7px 16px;cursor:pointer;
+    font:500 11px/1 'Inter',system-ui,sans-serif;
+    letter-spacing:.12em;text-transform:uppercase;
+    transition:background .25s ease,color .25s ease,border-color .25s ease;
+  }
+  .hx-btn:hover{background:rgba(147,170,255,.14);color:var(--cream)}
+  .hx-btn:focus-visible{outline:1px solid var(--peri);outline-offset:3px}
+  .hx-read{
+    margin-left:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;line-height:1.5;color:rgba(147,170,255,.72);
+    text-align:right;white-space:pre;
+  }
+  .hx-read b{color:var(--neon);font-weight:500}
+  .hx-read i{color:#ff8f6b;font-style:normal}
+
+  /* scroll runway, so the IntersectionObserver start is real */
+  .runway{
+    height:88vh;display:flex;align-items:flex-end;justify-content:center;
+    padding-bottom:26px;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(147,170,255,.34);
+  }
+  @media (max-width:620px){
+    .hx-read{margin-left:0;width:100%;text-align:left}
+  }
+</style>
+</head>
+<body>
+
+<div class="hx">
+  <h1>Globe + revenue counter</h1>
+  <p>Standalone prototype for <code>sections/pf-globe.js</code>. The module builds every node
+  it needs inside the mount, injects its own <code>&lt;style&gt;</code> once and returns a
+  cleanup function. Scroll down: the counter starts on intersection and eases from
+  <code>$0</code> to exactly <code>$1,342</code> over two seconds. After it lands it creeps by a
+  single dollar every ten to twenty seconds — and every one of those ticks lights a neon
+  point on the globe.</p>
+  <p>Layout is decided in JS from the section's own width over the viewport height, not from
+  a media query: wide-and-short puts the globe beside the number, tall-and-narrow stacks them.
+  Resize the window or rotate the device and it re-lays-out live, with no reload. The width
+  buttons below narrow the mount; rotate the window itself to exercise the short-viewport path.</p>
+  <p>The readout below is measured, not eyeballed: it samples the real backing store with
+  <code>getImageData</code> and counts pixels that are not the page background. This page can
+  run with <code>document.hidden === true</code>, which starves <code>requestAnimationFrame</code>
+  and <code>IntersectionObserver</code> alike, so a screenshot proves nothing and a lit-pixel
+  count proves everything.</p>
+
+  <div class="hx-bar">
+    <button class="hx-btn" id="hx-remount">Remount</button>
+    <button class="hx-btn" id="hx-destroy">Destroy</button>
+    <button class="hx-btn" id="hx-320">320px</button>
+    <button class="hx-btn" id="hx-375">375px</button>
+    <button class="hx-btn" id="hx-768">768px</button>
+    <button class="hx-btn" id="hx-wide">Full width</button>
+    <div class="hx-read" id="hx-read">measuring…</div>
+  </div>
+</div>
+
+<div class="runway">scroll</div>
+
+<!-- the module owns everything inside this element -->
+<div id="mount"></div>
+
+<div class="runway" style="height:60vh;align-items:flex-start;padding-top:26px">end</div>
+
+<script src="../sections/pf-globe.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var mount   = document.getElementById('mount');
+  var read    = document.getElementById('hx-read');
+  var cleanup = null;
+
+  function mountIt() {
+    if (cleanup) { cleanup(); cleanup = null; }
+    cleanup = window.initPfGlobe(mount);
+  }
+
+  document.getElementById('hx-remount').addEventListener('click', mountIt);
+  document.getElementById('hx-destroy').addEventListener('click', function () {
+    if (cleanup) { cleanup(); cleanup = null; }
+  });
+  /* Narrowing the mount is a real test: the module measures the SECTION box,
+     not the window, so a 320px mount inside a 1440px window must still stack. */
+  function widthBtn(id, px) {
+    document.getElementById(id).addEventListener('click', function () {
+      mount.style.maxWidth = px;
+      mount.style.margin = '0 auto';
+      mount.style.outline = '1px solid rgba(147,170,255,.18)';
+    });
+  }
+  widthBtn('hx-320', '320px');
+  widthBtn('hx-375', '375px');
+  widthBtn('hx-768', '768px');
+  document.getElementById('hx-wide').addEventListener('click', function () {
+    mount.style.maxWidth = '';
+    mount.style.margin = '';
+    mount.style.outline = '';
+  });
+
+  /* ---------- numeric proof that the canvas is actually painted ----------
+     Counts pixels that differ from #030818. A module that shipped as a black
+     canvas would read 0 lit here no matter how good the screenshot looked. */
+  var probe = document.createElement('canvas');
+  var pctx  = probe.getContext('2d', { willReadFrequently: true });
+
+  function sample() {
+    var cvs = mount.querySelector('.pfg-canvas');
+    if (!cvs) return { alive: false };
+    var SW = 120;
+    probe.width = SW; probe.height = SW;
+    try {
+      pctx.clearRect(0, 0, SW, SW);
+      pctx.drawImage(cvs, 0, 0, SW, SW);
+      var d = pctx.getImageData(0, 0, SW, SW).data;
+      var lit = 0, neon = 0, i;
+      for (i = 0; i < d.length; i += 4) {
+        var r = d[i], g = d[i + 1], b = d[i + 2];
+        if (Math.abs(r - 3) + Math.abs(g - 8) + Math.abs(b - 24) > 10) lit++;
+        if (g > 90 && g > b + 26 && r > 60) neon++;     // neon is green-dominant
+      }
+      var sec = mount.querySelector('.pfg-root');
+      var amt = mount.querySelector('.pfg-amount');
+      return {
+        alive: true, lit: lit, neon: neon, total: SW * SW,
+        w: cvs.width, h: cvs.height,
+        css: Math.round(cvs.getBoundingClientRect().width),
+        mode: sec ? sec.className.replace('pfg-root ', '') : '?',
+        figure: amt ? amt.textContent : '?'
+      };
+    } catch (e) { return { alive: true, err: e.message }; }
+  }
+
+  var frames = 0, lastLit = -1, changed = 0;
+  function tick() {
+    var s = sample();
+    if (!s.alive) {
+      read.innerHTML = '<i>no canvas — destroyed</i>';
+      return;
+    }
+    if (s.err) { read.innerHTML = '<i>' + s.err + '</i>'; return; }
+    frames++;
+    if (s.lit !== lastLit) { changed++; lastLit = s.lit; }
+    var pct = (100 * s.lit / s.total).toFixed(1);
+    read.innerHTML =
+      'figure         <b>' + s.figure + '</b>\n' +
+      'layout         ' + s.mode + '  (' + window.innerWidth + '×' + window.innerHeight + ' viewport)\n' +
+      'backing store  ' + s.w + '×' + s.h + '  (' + s.css + ' css px, dpr≤ 2)\n' +
+      'lit pixels     <b>' + s.lit + '</b> / ' + s.total + '  (' + pct + '%)\n' +
+      'neon pixels    ' + s.neon + '\n' +
+      'distinct frames <b>' + changed + '</b> of ' + frames + ' samples';
+  }
+
+  mountIt();
+  tick();
+  setInterval(tick, 400);
+})();
+</script>
+</body>
+</html>

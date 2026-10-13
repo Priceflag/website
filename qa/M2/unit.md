@@ -1,0 +1,77 @@
+# unit
+
+`node --test qa/tests/**/*.test.mjs` → exit 0; tests 63, pass 63, fail 0.
+
+```
+✔ default answer shows on load, and matches the math (216.926459ms)
+✔ with JavaScript off the example answer and a plain #review link are in the HTML (68.097833ms)
+✔ typing updates the answer live (debounced, no Enter); Enter updates at once (279.892209ms)
+✔ edge-case messages: same price, below cost, at-or-below cost today, zero cost (101.547542ms)
+✔ pasted "$1,234.50" works (95.210625ms)
+✔ non-numeric input shows a specific error under the field, and errors clear when fixed (1590.258125ms)
+✔ empty fields prompt without error styling until left or Enter (354.275875ms)
+✔ an empty field gets its error when focus leaves it (331.223041ms)
+✔ the output region is a polite live region (83.954084ms)
+✔ analytics: one pf:calc-used per new result, with direction only (402.845167ms)
+✔ CTA prefills the review form, scrolls, and focuses email (274.484167ms)
+✔ CTA with an invalid field leaves that hidden input disabled and the note alone (154.835792ms)
+✔ prefilled numbers reach the review submission (208.214209ms)
+✔ the answer number fades in (200ms) only when motion is allowed (210.846958ms)
+✔ no horizontal scroll at 320, 375, 768 and 1440 (265.81775ms)
+✔ plain, decimal and padded amounts parse to integer cents (0.773833ms)
+✔ pasted values with "$" and "," parse (0.167583ms)
+✔ a single comma followed by exactly two digits and no dot is a decimal comma (0.060834ms)
+✔ badly grouped commas are rejected (0.139042ms)
+✔ non-numeric input is rejected (0.106166ms)
+✔ empty input is "empty", not an error kind of its own (0.043166ms)
+✔ negative values are rejected; "-0" is zero (0.09575ms)
+✔ more than two decimals is rejected unless the extra digits are zeros (0.14625ms)
+✔ very large values are capped at $1,000,000.00 (0.29225ms)
+✔ zero is parsed, but a zero price is rejected by evaluate while a zero cost is allowed (0.608625ms)
+✔ default example: $24.00 to $27.00 at $9.60 cost, 1440/1740 -> lose up to 17.2% (0.146708ms)
+✔ decrease: $27 to $24 at $9.60 -> need 20.9% more (20.83...% rounded up) (0.447709ms)
+✔ cost of zero works and is the same-revenue case: $24 to $27 -> 11.1% (0.068209ms)
+✔ a whole percentage drops the trailing ".0" (0.058708ms)
+✔ rounding is conservative: "lose up to" rounds down, "need more" rounds up (0.097541ms)
+✔ a tiny increase under 0.1% says "less than 0.1%" instead of "up to 0%" (0.035625ms)
+✔ new price equal to the old price: "Same price, so nothing changes." (0.035041ms)
+✔ new price below cost explains the loss per order (0.037291ms)
+✔ new price exactly at cost (0.053209ms)
+✔ current price at or below cost explains that the breakeven needs a positive margin today (0.092708ms)
+✔ very large values stay exact (0.05575ms)
+✔ money formatting (0.036542ms)
+✔ no visible sentence contains an em-dash or en-dash (0.111084ms)
+✔ 500 random increases: losing exactly the shown % never leaves profit below today by more than a cent (1.437125ms)
+✔ 500 random decreases: gaining exactly the shown % always restores today's profit (0.482709ms)
+✔ 500 random typed strings round-trip through cents exactly (1.988625ms)
+✔ qa harness unit runner works (0.358084ms)
+✔ empty submit shows inline errors and sends nothing (298.098292ms)
+✔ invalid email and store are rejected (150.042458ms)
+✔ success sends text/plain JSON once and shows the success state (233.015209ms)
+✔ double-click submits only once (947.503709ms)
+✔ endpoint failure keeps the input and offers a prefilled email (252.865167ms)
+✔ ok:false from the script is treated as a failure (247.506792ms)
+✔ offline shows an error without sending (146.193ms)
+✔ duplicate email is acknowledged honestly (252.738334ms)
+✔ very long input is capped and still submits (240.206ms)
+✔ a note that fits is stored whole; a longer one is flagged with a mailto (476.008959ms)
+✔ a filled honeypot still sends, flagged, instead of a fake thanks (239.538791ms)
+✔ mailto fallback stays under 1,800 characters and carries the email (194.98575ms)
+✔ coming back after a successful request shows it was sent, with a way to send another (309.632083ms)
+✔ a 5xx or non-JSON reply says we could not confirm, and keeps the input (251.554416ms)
+✔ email and store validation edge cases (693.525125ms)
+✔ without JavaScript the form is replaced by an email link and never puts data in a URL (253.112875ms)
+✔ emoji and other astral characters never hang the form (940.997333ms)
+✔ honeypot flag survives a long note (241.718708ms)
+✔ focus stays on the button while sending, and "too long" names the right field (1010.632292ms)
+✔ joiners survive in name and note; marks are stripped from email (235.656916ms)
+✔ leaving mid-send and coming back says the request may have arrived (343.732875ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 63
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8235.307042
+```

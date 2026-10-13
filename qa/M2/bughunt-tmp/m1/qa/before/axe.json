@@ -1,0 +1,1048 @@
+{
+  "check": "axe",
+  "title": "axe-core accessibility (375 + 1440)",
+  "status": "FAIL",
+  "durationMs": 10032,
+  "pages": {
+    "index": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": "button[data-go=\"1\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": "button[data-go=\"2\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 25,
+                "targets": [
+                  {
+                    "target": ".pf-tag",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-eyebrow-link",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "h1",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-sub",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-cta",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-hero-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "section[data-dc-tpl=\"44\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "div[data-dc-tpl=\"48\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-bar",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-side",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": "button[data-go=\"1\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": "button[data-go=\"2\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 30,
+                "targets": [
+                  {
+                    "target": ".pf-tag",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-eyebrow-link",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "h1",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-sub",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-cta",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-hero-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "section[data-dc-tpl=\"44\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "div[data-dc-tpl=\"48\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-eyebrow",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-head",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "about": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "scrollable-region-focusable",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": "#main",
+                    "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "scrollable-region-focusable",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": "#main",
+                    "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "WARN",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-meta:nth-child(4)",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": ".pf-meta:nth-child(4) > time",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-meta:nth-child(4)",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": ".pf-meta:nth-child(4) > time",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "WARN",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-legal",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-legal",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    }
+  },
+  "data": {
+    "index": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": "button[data-go=\"1\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": "button[data-go=\"2\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 25,
+                "targets": [
+                  {
+                    "target": ".pf-tag",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-eyebrow-link",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "h1",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-sub",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-cta",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-hero-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "section[data-dc-tpl=\"44\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "div[data-dc-tpl=\"48\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-bar",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-side",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": "button[data-go=\"1\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": "button[data-go=\"2\"] > .pfd-num",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.76 (foreground color: #5f6a92, background color: #030818, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 30,
+                "targets": [
+                  {
+                    "target": ".pf-tag",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-eyebrow-link",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "h1",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-sub",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-cta",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-hero-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "section[data-dc-tpl=\"44\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": "div[data-dc-tpl=\"48\"]",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-eyebrow",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pfd-head",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "about": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "scrollable-region-focusable",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": "#main",
+                    "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "scrollable-region-focusable",
+                "help": "Scrollable region must have keyboard access",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/scrollable-region-focusable?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": "#main",
+                    "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  },
+                  {
+                    "target": ".pf-foot",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "WARN",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "FAIL",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-meta:nth-child(4)",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": ".pf-meta:nth-child(4) > time",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "FAIL",
+          "counts": {
+            "critical": 0,
+            "serious": 1,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [
+              {
+                "id": "color-contrast",
+                "help": "Elements must meet minimum color contrast ratio thresholds",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+                "nodes": 2,
+                "targets": [
+                  {
+                    "target": ".pf-meta:nth-child(4)",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  },
+                  {
+                    "target": ".pf-meta:nth-child(4) > time",
+                    "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #6b7387, background color: #f7f3ea, font size: 10.1pt (13.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+                  }
+                ]
+              }
+            ],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-sheet-top",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "WARN",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-legal",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "WARN",
+          "counts": {
+            "critical": 0,
+            "serious": 0,
+            "moderate": 1,
+            "minor": 0
+          },
+          "byImpact": {
+            "critical": [],
+            "serious": [],
+            "moderate": [
+              {
+                "id": "region",
+                "help": "All page content should be contained by landmarks",
+                "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+                "nodes": 1,
+                "targets": [
+                  {
+                    "target": ".pf-legal",
+                    "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+                  }
+                ]
+              }
+            ],
+            "minor": []
+          },
+          "incomplete": [
+            "color-contrast"
+          ]
+        }
+      }
+    }
+  }
+}

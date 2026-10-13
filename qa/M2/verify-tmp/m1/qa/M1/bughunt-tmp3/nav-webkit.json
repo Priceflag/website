@@ -1,0 +1,1022 @@
+{
+ "links/index": [
+  "Skip to content -> #main [anchor-ok]",
+  "Priceflag home -> / [200]",
+  "How it works -> #how-it-works [anchor-ok]",
+  "FAQ -> #faq [anchor-ok]",
+  "About -> /about [200]",
+  "Contact -> /contact [200]",
+  "Sign in -> https://signin.priceflag.org [ext]",
+  "Get a free price review -> #review [anchor-ok]",
+  "See how it works -> #how-it-works [anchor-ok]",
+  "Priceflag -> / [200]",
+  "Get a free price review -> #review [anchor-ok]",
+  "Home -> / [200]",
+  "How it works -> #how-it-works [anchor-ok]",
+  "FAQ -> #faq [anchor-ok]",
+  "About -> /about [200]",
+  "Meet the team (video) -> https://youtu.be/vfZ26mCQ79A [ext]",
+  "Twitter / X -> https://x.com/Priceflag/ [ext]",
+  "LinkedIn -> https://www.linkedin.com/company/priceflag/ [ext]",
+  "Contact -> /contact [200]",
+  "Legal -> /legal [200]"
+ ],
+ "links/about": [
+  "Skip to content -> #main [anchor-ok]",
+  "← -> / [200]",
+  "Priceflag home -> / [200]",
+  "Talk to us -> mailto:hello@priceflag.org [mailto]"
+ ],
+ "links/contact": [
+  "Skip to content -> #main [anchor-ok]",
+  "← -> / [200]",
+  "Priceflag home -> / [200]",
+  "Say hi -> mailto:nithin@priceflag.org [mailto]",
+  "Say hi -> mailto:kabir@priceflag.org [mailto]",
+  "legal page -> /legal [200]"
+ ],
+ "links/legal": [
+  "Skip to content -> #main [anchor-ok]",
+  "← -> / [200]",
+  "Priceflag home -> / [200]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]",
+  "hello@priceflag.org -> mailto:hello@priceflag.org [mailto]"
+ ],
+ "links/signin": [
+  "Priceflag -> https://priceflag.org/ [ext]",
+  "terms -> https://priceflag.org/legal#terms [ext]",
+  "privacy policy -> https://priceflag.org/legal#privacy [ext]"
+ ],
+ "anchors/375x812": {
+  ".pf-nav a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-nav a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  "tabAfterReview": "rv-email"
+ },
+ "anchors/1440x900": {
+  ".pf-nav a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-nav a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 196,
+   "obscured": false,
+   "active": "BODY"
+  },
+  "tabAfterReview": "rv-email"
+ },
+ "anchors/187x406": {
+  ".pf-nav a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  ".pf-nav a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 140,
+   "headTop": 132,
+   "obscured": true,
+   "active": "BODY"
+  },
+  "tabAfterReview": "rv-email"
+ },
+ "anchors/320x640/x2": {
+  ".pf-nav a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-nav a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 96,
+   "headTop": 132,
+   "obscured": false,
+   "active": "BODY"
+  },
+  "tabAfterReview": "rv-email"
+ },
+ "anchors/768x1024": {
+  ".pf-nav a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 145,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-nav a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 145,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 144,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-cta a[href=\"#how-it-works\"]": {
+   "hash": "how-it-works",
+   "navBottom": 56,
+   "headTop": 145,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#review\"]": {
+   "hash": "review",
+   "navBottom": 56,
+   "headTop": 144,
+   "obscured": false,
+   "active": "BODY"
+  },
+  ".pf-foot a[href=\"#faq\"]": {
+   "hash": "faq",
+   "navBottom": 56,
+   "headTop": 145,
+   "obscured": false,
+   "active": "BODY"
+  },
+  "tabAfterReview": "rv-email"
+ },
+ "focus/375/index": {
+  "seq": [
+   "Skip to content",
+   "Priceflag home",
+   "How it works",
+   "FAQ",
+   "Sign in",
+   "Get a free price review",
+   "See how it works",
+   "How does the forecast wo",
+   "How is the rollout stage",
+   "How is this different fr",
+   "What happens if a price ",
+   "Does it change prices wi",
+   "What happens to my price",
+   "rv-email",
+   "rv-store",
+   "rv-name",
+   "rv-message",
+   "Get a free price review",
+   "Priceflag",
+   "Get a free price review",
+   "Home",
+   "How it works",
+   "FAQ",
+   "About",
+   "Meet the team (video)",
+   "Twitter / X",
+   "LinkedIn",
+   "Contact",
+   "Legal",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": [
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    10,
+    56
+   ],
+   [
+    "offscreen",
+    "How does the forecast wo",
+    2379
+   ],
+   [
+    "offscreen",
+    "How is the rollout stage",
+    2463
+   ],
+   [
+    "offscreen",
+    "How is this different fr",
+    2546
+   ],
+   [
+    "offscreen",
+    "What happens if a price ",
+    2629
+   ],
+   [
+    "offscreen",
+    "Does it change prices wi",
+    2713
+   ],
+   [
+    "offscreen",
+    "What happens to my price",
+    2796
+   ],
+   [
+    "offscreen",
+    "rv-email",
+    3257
+   ],
+   [
+    "offscreen",
+    "rv-store",
+    3357
+   ],
+   [
+    "offscreen",
+    "rv-name",
+    3456
+   ],
+   [
+    "offscreen",
+    "rv-message",
+    3579
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    3707
+   ],
+   [
+    "offscreen",
+    "Priceflag",
+    3936
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    4044
+   ],
+   [
+    "offscreen",
+    "Home",
+    4122
+   ],
+   [
+    "offscreen",
+    "How it works",
+    4170
+   ],
+   [
+    "offscreen",
+    "FAQ",
+    4218
+   ],
+   [
+    "offscreen",
+    "About",
+    4266
+   ],
+   [
+    "offscreen",
+    "Meet the team (video)",
+    4316
+   ],
+   [
+    "offscreen",
+    "Twitter / X",
+    4122
+   ],
+   [
+    "offscreen",
+    "LinkedIn",
+    4170
+   ],
+   [
+    "offscreen",
+    "Contact",
+    4556
+   ],
+   [
+    "offscreen",
+    "Legal",
+    4556
+   ],
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    10,
+    56
+   ]
+  ]
+ },
+ "focus/375/about": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Talk to us",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/375/contact": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Say hi",
+   "Say hi",
+   "legal page",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/375/legal": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/375/signin": {
+  "seq": [
+   "Priceflag",
+   "pf-email",
+   "pf-submit",
+   "pf-terms",
+   "pf-privacy",
+   "BODY",
+   "Priceflag"
+  ],
+  "issues": []
+ },
+ "focus/1440/index": {
+  "seq": [
+   "Skip to content",
+   "Priceflag home",
+   "How it works",
+   "FAQ",
+   "About",
+   "Contact",
+   "Sign in",
+   "Get a free price review",
+   "See how it works",
+   "How does the forecast wo",
+   "How is the rollout stage",
+   "How is this different fr",
+   "What happens if a price ",
+   "Does it change prices wi",
+   "What happens to my price",
+   "rv-email",
+   "rv-store",
+   "rv-name",
+   "rv-message",
+   "Get a free price review",
+   "Priceflag",
+   "Get a free price review",
+   "Home",
+   "How it works",
+   "FAQ",
+   "About",
+   "Meet the team (video)",
+   "Twitter / X",
+   "LinkedIn",
+   "Contact",
+   "Legal",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": [
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    10,
+    56
+   ],
+   [
+    "offscreen",
+    "How does the forecast wo",
+    2097
+   ],
+   [
+    "offscreen",
+    "How is the rollout stage",
+    2155
+   ],
+   [
+    "offscreen",
+    "How is this different fr",
+    2213
+   ],
+   [
+    "offscreen",
+    "What happens if a price ",
+    2271
+   ],
+   [
+    "offscreen",
+    "Does it change prices wi",
+    2329
+   ],
+   [
+    "offscreen",
+    "What happens to my price",
+    2388
+   ],
+   [
+    "offscreen",
+    "rv-email",
+    2769
+   ],
+   [
+    "offscreen",
+    "Priceflag",
+    1095
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    1240
+   ],
+   [
+    "offscreen",
+    "Home",
+    1095
+   ],
+   [
+    "offscreen",
+    "How it works",
+    1143
+   ],
+   [
+    "offscreen",
+    "FAQ",
+    1191
+   ],
+   [
+    "offscreen",
+    "About",
+    1239
+   ],
+   [
+    "offscreen",
+    "Meet the team (video)",
+    1287
+   ],
+   [
+    "offscreen",
+    "Twitter / X",
+    1095
+   ],
+   [
+    "offscreen",
+    "LinkedIn",
+    1143
+   ],
+   [
+    "offscreen",
+    "Contact",
+    1800
+   ],
+   [
+    "offscreen",
+    "Legal",
+    1800
+   ],
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    -2299,
+    56
+   ],
+   [
+    "offscreen",
+    "Skip to content",
+    -2299
+   ]
+  ]
+ },
+ "focus/1440/about": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Talk to us",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/1440/contact": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Say hi",
+   "Say hi",
+   "legal page",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/1440/legal": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/1440/signin": {
+  "seq": [
+   "Priceflag",
+   "pf-email",
+   "pf-submit",
+   "pf-terms",
+   "pf-privacy",
+   "BODY",
+   "Priceflag"
+  ],
+  "issues": []
+ },
+ "focus/187/index": {
+  "seq": [
+   "Skip to content",
+   "Priceflag home",
+   "How it works",
+   "FAQ",
+   "Sign in",
+   "Get a free price review",
+   "See how it works",
+   "How does the forecast wo",
+   "How is the rollout stage",
+   "How is this different fr",
+   "What happens if a price ",
+   "Does it change prices wi",
+   "What happens to my price",
+   "rv-email",
+   "rv-store",
+   "rv-name",
+   "rv-message",
+   "Get a free price review",
+   "Priceflag",
+   "Get a free price review",
+   "Home",
+   "How it works",
+   "FAQ",
+   "About",
+   "Meet the team (video)",
+   "Twitter / X",
+   "LinkedIn",
+   "Contact",
+   "Legal",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": [
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    10,
+    140
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    806
+   ],
+   [
+    "offscreen",
+    "See how it works",
+    908
+   ],
+   [
+    "offscreen",
+    "How does the forecast wo",
+    3719
+   ],
+   [
+    "offscreen",
+    "How is the rollout stage",
+    3903
+   ],
+   [
+    "offscreen",
+    "How is this different fr",
+    4087
+   ],
+   [
+    "offscreen",
+    "What happens if a price ",
+    4221
+   ],
+   [
+    "offscreen",
+    "Does it change prices wi",
+    4354
+   ],
+   [
+    "offscreen",
+    "What happens to my price",
+    4513
+   ],
+   [
+    "offscreen",
+    "rv-email",
+    5201
+   ],
+   [
+    "offscreen",
+    "rv-store",
+    5300
+   ],
+   [
+    "offscreen",
+    "rv-name",
+    5423
+   ],
+   [
+    "offscreen",
+    "rv-message",
+    5616
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    5744
+   ],
+   [
+    "offscreen",
+    "Priceflag",
+    6099
+   ],
+   [
+    "offscreen",
+    "Get a free price review",
+    6270
+   ],
+   [
+    "offscreen",
+    "Home",
+    6408
+   ],
+   [
+    "offscreen",
+    "How it works",
+    6456
+   ],
+   [
+    "offscreen",
+    "FAQ",
+    6504
+   ],
+   [
+    "offscreen",
+    "About",
+    6552
+   ],
+   [
+    "offscreen",
+    "Meet the team (video)",
+    6603
+   ],
+   [
+    "offscreen",
+    "Twitter / X",
+    6661
+   ],
+   [
+    "offscreen",
+    "LinkedIn",
+    6709
+   ],
+   [
+    "offscreen",
+    "Contact",
+    6918
+   ],
+   [
+    "offscreen",
+    "Legal",
+    6918
+   ],
+   [
+    "under-sticky-nav",
+    "Skip to content",
+    10,
+    140
+   ]
+  ]
+ },
+ "focus/187/about": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Talk to us",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/187/contact": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "Say hi",
+   "Say hi",
+   "legal page",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/187/legal": {
+  "seq": [
+   "Skip to content",
+   "Back to priceflag.org",
+   "Priceflag home",
+   "main",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "hello@priceflag.org",
+   "BODY",
+   "Skip to content"
+  ],
+  "issues": []
+ },
+ "focus/187/signin": {
+  "seq": [
+   "Priceflag",
+   "pf-email",
+   "pf-submit",
+   "pf-terms",
+   "pf-privacy",
+   "BODY",
+   "Priceflag"
+  ],
+  "issues": []
+ },
+ "skip/index": {
+  "first": {
+   "t": "How does the forecas",
+   "vis": true
+  },
+  "afterEnter": {
+   "active": "SUMMARY#",
+   "fv": true,
+   "hash": ""
+  },
+  "next": "How is the rollout staged, and"
+ },
+ "skip/about": {
+  "first": {
+   "t": "Priceflag forecasts ",
+   "vis": true
+  },
+  "afterEnter": {
+   "active": "MAIN#main",
+   "fv": true,
+   "hash": ""
+  },
+  "next": "Talk to us"
+ },
+ "mainring/about": {
+  "fv": true,
+  "outline": "solid 2px rgb(63, 79, 176) -4px",
+  "rect": [
+   0,
+   52,
+   375,
+   717
+  ],
+  "bg": "rgb(247, 243, 234)",
+  "click": "MAIN fv=true"
+ },
+ "skip/contact": {
+  "first": {
+   "t": "Priceflag Syndicate ",
+   "vis": true
+  },
+  "afterEnter": {
+   "active": "MAIN#main",
+   "fv": true,
+   "hash": ""
+  },
+  "next": "Say hi"
+ },
+ "mainring/contact": {
+  "fv": true,
+  "outline": "solid 2px rgb(63, 79, 176) -4px",
+  "rect": [
+   0,
+   52,
+   375,
+   812
+  ],
+  "bg": "rgb(247, 243, 234)",
+  "click": "MAIN fv=true"
+ },
+ "skip/legal": {
+  "first": {
+   "t": "The two documents th",
+   "vis": true
+  },
+  "afterEnter": {
+   "active": "MAIN#main",
+   "fv": true,
+   "hash": ""
+  },
+  "next": "hello@priceflag.org"
+ },
+ "mainring/legal": {
+  "fv": true,
+  "outline": "solid 2px rgb(63, 79, 176) -4px",
+  "rect": [
+   0,
+   52,
+   375,
+   812
+  ],
+  "bg": "rgb(247, 243, 234)",
+  "click": "MAIN fv=true"
+ },
+ "skip/signin": {
+  "first": {
+   "t": "",
+   "vis": true
+  },
+  "afterEnter": {
+   "active": "INPUT#pf-email",
+   "fv": true,
+   "hash": ""
+  },
+  "next": "Email me a sign-in link"
+ },
+ "faqKeys": {
+  "enterOpens": true,
+  "spaceCloses": true
+ }
+}

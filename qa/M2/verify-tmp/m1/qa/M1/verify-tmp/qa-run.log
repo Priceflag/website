@@ -1,0 +1,57 @@
+
+> priceflag-website-qa@0.0.0 qa
+> node qa/run.mjs
+
+[qa 0.0s] label=M1-verify base=http://127.0.0.1:53413 strict=true fast=false checks=console,screens,axe,html,links,keyboard,nojs,unit,lighthouse pages=index,about,contact,legal,signin
+[qa 0.0s] ▶ console
+[qa 0.0s] ▶ screens
+[qa 0.0s] ▶ axe
+[qa 0.2s] console: firefox failed to launch — browserType.launch: Failed to launch the browser process. | Browser logs: | <launching> /Users/NithinAwasome/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-re
+[qa 6.6s] ■ console: WARN (6.6s)
+[qa 6.6s] ▶ html
+[qa 6.8s] ■ html: PASS (0.2s)
+[qa 6.8s] ▶ links
+[qa 9.9s] ■ axe: WARN (9.9s)
+[qa 9.9s] ▶ keyboard
+[qa 12.7s] ■ links: PASS (5.9s)
+[qa 12.7s] ▶ nojs
+[qa 16.5s] ■ nojs: WARN (3.8s)
+[qa 16.5s] ▶ unit
+[qa 19.0s] ■ keyboard: PASS (9.1s)
+[qa 19.5s] ■ unit: PASS (2.9s)
+[qa 25.6s] ■ screens: WARN (25.6s)
+[qa 25.7s] ▶ lighthouse
+[qa 39.1s] lighthouse index: attempt 2 failed — NO_NAVSTART: Something went wrong with recording the trace over your page load. Please run Lighthouse again. (NO_NAVSTAR
+[qa 99.9s] ■ lighthouse: PASS (74.3s)
+
+# QA summary — M1-verify
+
+- Overall: **WARN**
+- Base: local (qa/serve.mjs) @ working tree
+- Started: 2026-10-13T20:49:56.522Z, took 100s
+- Mode: full, strict
+
+| check | overall | index | about | contact | legal | signin | time | details |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| console | WARN | WARN | WARN | WARN | WARN | WARN | 7s | console.md |
+| screens | WARN | PASS | PASS | PASS | WARN | PASS | 26s | screens.md |
+| axe | WARN | PASS | WARN | PASS | PASS | WARN | 10s | axe.md |
+| html | PASS | PASS | PASS | PASS | PASS | PASS | 0s | html.md |
+| links | PASS | PASS | PASS | PASS | PASS | PASS | 6s | links.md |
+| keyboard | PASS | PASS | PASS | PASS | PASS | PASS | 9s | keyboard.md |
+| nojs | WARN | PASS | WARN | WARN | WARN | WARN | 4s | nojs.md |
+| unit | PASS |  |  |  |  |  | 3s | unit.md |
+| lighthouse | PASS | PASS | PASS | PASS | PASS | - | 74s | lighthouse.md |
+
+## Lighthouse (mobile)
+
+| page | performance | accessibility | best-practices | seo |
+| --- | --- | --- | --- | --- |
+| index | 99 | 100 | 100 | 100 |
+| about | 100 | 100 | 100 | 100 |
+| contact | 100 | 100 | 100 | 100 |
+| legal | 99 | 100 | 100 | 100 |
+
+Lighthouse vs before: **PASS**
+
+EXIT=0

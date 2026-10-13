@@ -1,0 +1,839 @@
+{
+ "navFocus-320": [
+  {
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 5,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "How it works",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "FAQ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 5,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "Sign in",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": null
+  },
+  {
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  },
+  {
+   "text": "See how it works",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  },
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "navFocus-375": [
+  {
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 5,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "How it works",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "FAQ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 5,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "Sign in",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": null
+  },
+  {
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  },
+  {
+   "text": "See how it works",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  },
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "navFocus-768": [
+  {
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 5,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "How it works",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "FAQ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "About",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 5,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "Contact",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Sign in",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": null
+  },
+  {
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  }
+ ],
+ "navFocus-1440": [
+  {
+   "text": "Skip to content",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Priceflag home",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 5,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "How it works",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "FAQ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 0,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "About",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": {
+    "top": 5,
+    "bottom": 5,
+    "left": 0,
+    "right": 5,
+    "by": "pf-nav-group"
+   }
+  },
+  {
+   "text": "Contact",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Sign in",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": null
+  },
+  {
+   "text": "Get a free price review",
+   "outline": "solid 2px rgb(243, 236, 222)",
+   "clipped": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "by": "pf-hero"
+   }
+  }
+ ],
+ "longtext-320": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.671875,
+   "sw": 320
+  },
+  "sw": 464,
+  "vw": 320,
+  "over": [
+   {
+    "el": "DIV.pf-nav-group",
+    "right": 300,
+    "sw": 89,
+    "cw": 84
+   },
+   {
+    "el": "A.pf-btn pf-btn--light pf-btn--sm",
+    "right": 300,
+    "sw": 89,
+    "cw": 84
+   },
+   {
+    "el": "MAIN.",
+    "right": 320,
+    "sw": 464,
+    "cw": 320
+   },
+   {
+    "el": "SECTION.pf-section",
+    "right": 320,
+    "sw": 464,
+    "cw": 320
+   },
+   {
+    "el": "DIV.pf-faq",
+    "right": 300,
+    "sw": 444,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-faq-list",
+    "right": 300,
+    "sw": 444,
+    "cw": 280
+   },
+   {
+    "el": "DETAILS.",
+    "right": 300,
+    "sw": 444,
+    "cw": 280
+   },
+   {
+    "el": "SUMMARY.",
+    "right": 300,
+    "sw": 444,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-foot-inner",
+    "right": 320,
+    "sw": 678,
+    "cw": 320
+   },
+   {
+    "el": "DIV.pf-foot-top",
+    "right": 300,
+    "sw": 658,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "H2.pf-foot-head",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 0.8656812933025404
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 0
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 0
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 84.453125
+  }
+ },
+ "longtext-375": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.671875,
+   "sw": 375
+  },
+  "sw": 465,
+  "vw": 375,
+  "over": [
+   {
+    "el": "MAIN.",
+    "right": 375,
+    "sw": 465,
+    "cw": 375
+   },
+   {
+    "el": "SECTION.pf-section",
+    "right": 375,
+    "sw": 465,
+    "cw": 375
+   },
+   {
+    "el": "DIV.pf-faq",
+    "right": 354,
+    "sw": 444,
+    "cw": 333
+   },
+   {
+    "el": "DIV.pf-faq-list",
+    "right": 354,
+    "sw": 444,
+    "cw": 333
+   },
+   {
+    "el": "DETAILS.",
+    "right": 354,
+    "sw": 444,
+    "cw": 333
+   },
+   {
+    "el": "SUMMARY.",
+    "right": 354,
+    "sw": 444,
+    "cw": 333
+   },
+   {
+    "el": "DIV.pf-foot-inner",
+    "right": 375,
+    "sw": 678,
+    "cw": 375
+   },
+   {
+    "el": "DIV.pf-foot-top",
+    "right": 355,
+    "sw": 658,
+    "cw": 335
+   },
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "H2.pf-foot-head",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "SPAN.pf-foot-shop",
+    "right": 502,
+    "sw": 0,
+    "cw": 0
+   },
+   {
+    "el": "A.pf-btn pf-btn--dark",
+    "right": 444,
+    "sw": 424,
+    "cw": 424
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 0
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 0
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 101.40625
+  }
+ },
+ "longtext-1920": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.671875,
+   "sw": 1920
+  },
+  "sw": 1920,
+  "vw": 1920,
+  "over": [
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 1018,
+    "sw": 1135,
+    "cw": 754
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 1
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 128.75
+  }
+ },
+ "sizes-w320": {
+  "index": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-w1920": {
+  "index": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-w2560": {
+  "index": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-zoom200": {
+  "index": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-zoom200m": {
+  "index": {
+   "sw": 280,
+   "cw": 187,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 202,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-dark": {
+  "index": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "subfocus-about": {
+  "order": [
+   "A:Skip to content",
+   "A:←",
+   "A:Priceflag home",
+   "MAIN#main:Priceflag forecast",
+   "A:Talk to us",
+   "BODY:Skip to content\n\n\n"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 423,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 615,
+   "sheetB": 710
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "A:Talk to us"
+ },
+ "subfocus-contact": {
+  "order": [
+   "A:Skip to content",
+   "A:←",
+   "A:Priceflag home",
+   "MAIN#main:Priceflag Syndicat",
+   "A:Say hi",
+   "A:Say hi"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 52,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 710,
+   "sheetB": 710
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "A:Say hi"
+ },
+ "subfocus-legal": {
+  "order": [
+   "A:Skip to content",
+   "A:←",
+   "A:Priceflag home",
+   "MAIN#main:The two documents ",
+   "A:hello@priceflag.or",
+   "A:hello@priceflag.or"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 578,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 740,
+   "sheetB": 740
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "A:hello@priceflag.org"
+ }
+}

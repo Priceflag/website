@@ -1,0 +1,6 @@
+chromium / {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter","Hedvig Fallback"]} warm: ["Hedvig Letters Serif","Inter"]
+chromium /about {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter"]} warm: ["Hedvig Letters Serif","Inter"]
+chromium /legal {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter"]} warm: ["Hedvig Letters Serif","Inter"]
+webkit / {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter","Hedvig Fallback"]} warm: ["Hedvig Letters Serif","Inter"]
+webkit /about {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter"]} warm: ["Hedvig Letters Serif","Inter"]
+webkit /legal {"inter":true,"hedvig":true,"loaded":["Hedvig Letters Serif","Inter"]} warm: ["Hedvig Letters Serif","Inter"]

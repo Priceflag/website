@@ -1,0 +1,370 @@
+[
+ [
+  "chromium cta .pf-hero .pf-btn[href=\"#review\"]",
+  {
+   "hash": "#review",
+   "formInView": true
+  }
+ ],
+ [
+  "chromium cta .pf-foot .pf-btn[href=\"#review\"]",
+  {
+   "hash": "#review",
+   "formInView": true
+  }
+ ],
+ [
+  "chromium success",
+  {
+   "n": 1,
+   "pageStarts": "https://priceflag.org/#review?store=shop",
+   "prefixOK": true,
+   "noteRecovered": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours.",
+   "focused": true,
+   "state": "sent",
+   "again": true
+  }
+ ],
+ [
+  "chromium reload after success",
+  {
+   "state": "sent",
+   "status": "We already have your request from qa-verify2@example.com. We will email you within 48 hours."
+  }
+ ],
+ [
+  "chromium send another",
+  {
+   "state": null,
+   "focus": "rv-store",
+   "emailKept": ""
+  }
+ ],
+ [
+  "chromium long note",
+  {
+   "kept": 458,
+   "of": 2000,
+   "prefixOK": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+   "mailtoLen": 1800,
+   "mailtoHasEmail": true
+  }
+ ],
+ [
+  "chromium 400-char note",
+  {
+   "whole": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours."
+  }
+ ],
+ [
+  "chromium long store+name",
+  {
+   "sent": 1,
+   "rec": "important message",
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note."
+  }
+ ],
+ [
+  "chromium IDN store",
+  {
+   "sent": 1,
+   "pageLen": 300,
+   "rec": 294,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note."
+  }
+ ],
+ [
+  "chromium fail-500",
+  {
+   "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "chromium fail-abort",
+  {
+   "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "chromium fail-rate",
+  {
+   "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "chromium fail-dup",
+  {
+   "status": "Thanks. We already had a request from qa-verify2@example.com. If this one is for a different store, email us the details.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "chromium honeypot+full page",
+  {
+   "sent": 1,
+   "rawHp": 1,
+   "hpInStoredPage": false,
+   "hpInStoredUa": false
+  }
+ ],
+ [
+  "chromium invalid |",
+  {
+   "sent": 0,
+   "emailInvalid": "true",
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "chromium invalid a@b..com|shop.com",
+  {
+   "sent": 0,
+   "emailInvalid": "true",
+   "storeInvalid": null,
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "chromium invalid a@b.co|shop",
+  {
+   "sent": 0,
+   "emailInvalid": null,
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "chromium invalid a@b.co|javascript:alert(1)",
+  {
+   "sent": 0,
+   "emailInvalid": null,
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "chromium nojs submit",
+  {
+   "urlBefore": "http://127.0.0.1:57750/",
+   "urlAfter": "http://127.0.0.1:57750/",
+   "leakedInUrl": false,
+   "anyReqWithData": 0,
+   "endpointCalls": 0,
+   "noscriptVisible": true
+  }
+ ],
+ [
+  "chromium blocked submit",
+  {
+   "urlBefore": "http://127.0.0.1:57750/",
+   "urlAfter": "http://127.0.0.1:57750/",
+   "leakedInUrl": false,
+   "anyReqWithData": 0,
+   "endpointCalls": 0,
+   "noscriptVisible": "n/a"
+  }
+ ],
+ [
+  "webkit cta .pf-hero .pf-btn[href=\"#review\"]",
+  {
+   "hash": "#review",
+   "formInView": true
+  }
+ ],
+ [
+  "webkit cta .pf-foot .pf-btn[href=\"#review\"]",
+  {
+   "hash": "#review",
+   "formInView": true
+  }
+ ],
+ [
+  "webkit success",
+  {
+   "n": 1,
+   "pageStarts": "https://priceflag.org/#review?store=shop",
+   "prefixOK": true,
+   "noteRecovered": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours.",
+   "focused": true,
+   "state": "sent",
+   "again": true
+  }
+ ],
+ [
+  "webkit reload after success",
+  {
+   "state": "sent",
+   "status": "We already have your request from qa-verify2@example.com. We will email you within 48 hours."
+  }
+ ],
+ [
+  "webkit send another",
+  {
+   "state": null,
+   "focus": "rv-store",
+   "emailKept": ""
+  }
+ ],
+ [
+  "webkit long note",
+  {
+   "kept": 458,
+   "of": 2000,
+   "prefixOK": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+   "mailtoLen": 1800,
+   "mailtoHasEmail": true
+  }
+ ],
+ [
+  "webkit 400-char note",
+  {
+   "whole": true,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours."
+  }
+ ],
+ [
+  "webkit long store+name",
+  {
+   "sent": 1,
+   "rec": "important message",
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note."
+  }
+ ],
+ [
+  "webkit IDN store",
+  {
+   "sent": 1,
+   "pageLen": 300,
+   "rec": 294,
+   "status": "Thanks. We have your request and will email qa-verify2@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note."
+  }
+ ],
+ [
+  "webkit fail-500",
+  {
+   "status": "We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "webkit fail-abort",
+  {
+   "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "webkit fail-rate",
+  {
+   "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "webkit fail-dup",
+  {
+   "status": "Thanks. We already had a request from qa-verify2@example.com. If this one is for a different store, email us the details.",
+   "mailto": "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%",
+   "inputKept": "hello",
+   "btnEnabled": true,
+   "focusedStatus": true
+  }
+ ],
+ [
+  "webkit honeypot+full page",
+  {
+   "sent": 1,
+   "rawHp": 1,
+   "hpInStoredPage": false,
+   "hpInStoredUa": false
+  }
+ ],
+ [
+  "webkit invalid |",
+  {
+   "sent": 0,
+   "emailInvalid": "true",
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "webkit invalid a@b..com|shop.com",
+  {
+   "sent": 0,
+   "emailInvalid": "true",
+   "storeInvalid": null,
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "webkit invalid a@b.co|shop",
+  {
+   "sent": 0,
+   "emailInvalid": null,
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "webkit invalid a@b.co|javascript:alert(1)",
+  {
+   "sent": 0,
+   "emailInvalid": null,
+   "storeInvalid": "true",
+   "status": "Check the highlighted fields."
+  }
+ ],
+ [
+  "webkit nojs submit",
+  {
+   "urlBefore": "http://127.0.0.1:57750/",
+   "urlAfter": "http://127.0.0.1:57750/",
+   "leakedInUrl": false,
+   "anyReqWithData": 0,
+   "endpointCalls": 0,
+   "noscriptVisible": true
+  }
+ ],
+ [
+  "webkit blocked submit",
+  {
+   "urlBefore": "http://127.0.0.1:57750/",
+   "urlAfter": "http://127.0.0.1:57750/",
+   "leakedInUrl": false,
+   "anyReqWithData": 0,
+   "endpointCalls": 0,
+   "noscriptVisible": "n/a"
+  }
+ ]
+]

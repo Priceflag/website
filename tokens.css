@@ -1,0 +1,98 @@
+/* Priceflag design tokens. The contract is DESIGN_TOKENS.md; every page links this file first.
+   Change a value here, not in a page. */
+
+/* Georgia (or a close local serif) with Hedvig's vertical metrics, so the display face swapping in does not move text. */
+@font-face{font-family:'Hedvig Fallback';src:local('Georgia'),local('Times New Roman'),local('Noto Serif'),local('DejaVu Serif');size-adjust:103%;ascent-override:104%;descent-override:28%;}
+
+:root{
+  /* ---------- color: surfaces ---------- */
+  --pf-navy-950:#030818;          /* page ground, nav, sections */
+  --pf-navy-900:#071238;          /* raised panels on navy; ink on lime/cream */
+  --pf-navy-800:#0d2168;          /* raised navy, field gradient end */
+  --pf-paper:#f7f3ea;             /* about / contact / legal sheet */
+  --pf-lime:#d8f24b;              /* the one accent; footer slab */
+
+  /* ---------- color: text ---------- */
+  --pf-cream:#f3ecde;                       /* 16.98:1 on navy-950 */
+  --pf-cream-strong:rgba(243,236,222,.84);  /* lead text, 11.98:1 */
+  --pf-cream-muted:rgba(243,236,222,.72);   /* secondary, 8.85:1 */
+  --pf-cream-subtle:rgba(243,236,222,.62);  /* tertiary and placeholders, 6.5:1 */
+  --pf-lime-ink:#0d1f00;                    /* text on lime, 13.78:1 */
+  --pf-lime-ink-soft:rgba(13,31,0,.78);     /* secondary on lime, 7.43:1 flat, 5.16:1 on the art */
+  --pf-paper-ink:#0f1830;                   /* headings on paper, 15.89:1 */
+  --pf-paper-text:#333c52;                  /* body on paper, 9.93:1 */
+  --pf-paper-muted:#545c70;                 /* meta on paper, 5.9:1 */
+  --pf-link-on-paper:#3f4fb0;               /* 6.41:1 */
+
+  /* ---------- color: data and signal ---------- */
+  --pf-peri:#93aaff;              /* data lines and links on dark, 8.97:1 */
+  --pf-ok:#b9ef6b;
+  --pf-warn:#fbbf24;
+  --pf-bad:#ff9d7a;
+
+  /* ---------- lines ---------- */
+  --pf-line-faint:rgba(243,236,222,.08);
+  --pf-line:rgba(243,236,222,.22);           /* dividers on navy */
+  --pf-line-control:rgba(243,236,222,.5);    /* inputs and ghost buttons, 3:1+ */
+  --pf-line-paper:rgba(15,24,48,.16);
+  --pf-line-lime:rgba(13,31,0,.2);
+
+  /* ---------- type ---------- */
+  --pf-serif:'Hedvig Letters Serif','Hedvig Fallback',Georgia,Cambria,'Times New Roman',serif;
+  --pf-sans:'Inter',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --pf-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; /* product UI numbers only */
+
+  /* At most three of these per section (YC rule in docs/OVERHAUL_PLAN.md). */
+  --pf-text-display:clamp(40px,5.1vw,88px);  /* hero H1; Hedvig; lh 1.04 */
+  --pf-text-h2:clamp(32px,3.6vw,52px);       /* section headings and the statement; Hedvig; lh 1.12 */
+  --pf-text-h3:clamp(20px,1.8vw,24px);       /* sub-heads, FAQ questions; Hedvig or Inter 500; lh 1.25 */
+  --pf-text-lead:clamp(17px,1.35vw,20px);    /* hero sub, ledes; lh 1.55 */
+  --pf-text-body:17px;                       /* body, buttons, inputs; lh 1.55 */
+  --pf-text-small:15px;                      /* notes, captions, footer bar; lh 1.5 */
+  --pf-text-figure:clamp(36px,4.4vw,56px);   /* one big number; Inter 600 tabular; counts as the section's display size */
+
+  --pf-lh-display:1.04; --pf-lh-heading:1.12; --pf-lh-sub:1.25; --pf-lh-body:1.55;
+  --pf-track-display:-.022em; --pf-track-heading:-.02em; --pf-track-body:-.005em; --pf-track-button:-.01em;
+
+  /* ---------- space and layout ---------- */
+  --pf-space-1:4px;  --pf-space-2:8px;  --pf-space-3:12px; --pf-space-4:16px;
+  --pf-space-5:20px; --pf-space-6:24px; --pf-space-7:32px; --pf-space-8:40px;
+  --pf-space-9:48px; --pf-space-10:64px; --pf-space-11:80px; --pf-space-12:96px;
+  --pf-section-y:clamp(64px,9vw,128px);      /* vertical padding of every homepage section */
+  --pf-gutter:clamp(20px,5.6vw,80px);        /* horizontal padding of nav and sections */
+  --pf-max:1360px;                           /* content width */
+  --pf-measure:46ch; --pf-measure-long:62ch;
+  --pf-nav-h:56px;
+
+  /* ---------- radii: one rule ----------
+     Buttons and chips are pills. Cards, panels and the product mock are 24px. Fields are 12px.
+     The paper sheet and the footer slab keep their 26px top corners. */
+  --pf-radius-pill:999px;
+  --pf-radius-card:24px;
+  --pf-radius-field:12px;
+  --pf-radius-sm:6px;
+  --pf-radius-slab:26px;
+
+  /* ---------- shadows ---------- */
+  --pf-shadow-contact:0 1px 2px rgba(3,8,24,.45);
+  --pf-shadow-raised:0 18px 40px -18px rgba(3,8,24,.85);
+  --pf-halo-lime:0 8px 22px -10px rgba(216,242,75,.42);   /* the primary CTA only */
+  --pf-text-shadow-art:0 1px 16px rgba(3,8,24,.85);       /* copy over the painting */
+
+  /* ---------- motion ---------- */
+  --pf-ease:cubic-bezier(.22,1,.36,1);
+  --pf-dur-press:90ms;
+  --pf-dur-fast:200ms;
+  --pf-dur-base:300ms;
+  --pf-dur-slow:700ms;    /* explanatory only: rollout stages, calculator answer */
+
+  /* ---------- focus: one ring, three grounds ---------- */
+  --pf-focus-width:2px;
+  --pf-focus-offset:3px;
+  --pf-focus-on-dark:#f3ecde;
+  --pf-focus-on-lime:#0d1f00;
+  --pf-focus-on-paper:#3f4fb0;
+
+  /* ---------- layers ---------- */
+  --pf-z-raised:2; --pf-z-nav:20; --pf-z-skip:50;
+}

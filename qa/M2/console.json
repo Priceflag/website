@@ -1,0 +1,260 @@
+{
+  "check": "console",
+  "title": "Console errors/warnings, page errors, failed requests (3 browsers)",
+  "status": "WARN",
+  "durationMs": 6680,
+  "pages": {
+    "index": {
+      "status": "WARN",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      },
+      "firefox": {
+        "errors": null,
+        "warnings": null,
+        "pageErrors": null,
+        "failedRequests": null,
+        "launchError": true
+      },
+      "webkit": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    },
+    "about": {
+      "status": "WARN",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      },
+      "firefox": {
+        "errors": null,
+        "warnings": null,
+        "pageErrors": null,
+        "failedRequests": null,
+        "launchError": true
+      },
+      "webkit": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    },
+    "contact": {
+      "status": "WARN",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      },
+      "firefox": {
+        "errors": null,
+        "warnings": null,
+        "pageErrors": null,
+        "failedRequests": null,
+        "launchError": true
+      },
+      "webkit": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    },
+    "legal": {
+      "status": "WARN",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      },
+      "firefox": {
+        "errors": null,
+        "warnings": null,
+        "pageErrors": null,
+        "failedRequests": null,
+        "launchError": true
+      },
+      "webkit": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    },
+    "signin": {
+      "status": "WARN",
+      "chromium": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      },
+      "firefox": {
+        "errors": null,
+        "warnings": null,
+        "pageErrors": null,
+        "failedRequests": null,
+        "launchError": true
+      },
+      "webkit": {
+        "errors": 0,
+        "warnings": 0,
+        "pageErrors": 0,
+        "failedRequests": 0,
+        "launchError": false
+      }
+    }
+  },
+  "data": {
+    "launchErrors": {
+      "firefox": "browserType.launch: Failed to launch the browser process. | Browser logs: | <launching> /Users/NithinAwasome/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/4s/vdv4x3r57mld7kh6gr3s0l640000gp/T/playwright_firefoxdev_profile-nyp0ly -juggler-pipe -silent | <launched> pid=72867 | [pid=72867][err] *** You are running in headless mode. | [pid=72867][err] Could not find profile folder."
+    },
+    "results": {
+      "index": {
+        "firefox": {
+          "status": "WARN",
+          "navError": "firefox failed to launch (BLOCKED, see OVERHAUL_LOG.md)",
+          "launchError": true
+        },
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        },
+        "webkit": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      },
+      "about": {
+        "firefox": {
+          "status": "WARN",
+          "navError": "firefox failed to launch (BLOCKED, see OVERHAUL_LOG.md)",
+          "launchError": true
+        },
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        },
+        "webkit": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      },
+      "contact": {
+        "firefox": {
+          "status": "WARN",
+          "navError": "firefox failed to launch (BLOCKED, see OVERHAUL_LOG.md)",
+          "launchError": true
+        },
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        },
+        "webkit": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      },
+      "legal": {
+        "firefox": {
+          "status": "WARN",
+          "navError": "firefox failed to launch (BLOCKED, see OVERHAUL_LOG.md)",
+          "launchError": true
+        },
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        },
+        "webkit": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      },
+      "signin": {
+        "firefox": {
+          "status": "WARN",
+          "navError": "firefox failed to launch (BLOCKED, see OVERHAUL_LOG.md)",
+          "launchError": true
+        },
+        "chromium": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        },
+        "webkit": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "pageErrors": [],
+          "failedRequests": [],
+          "navError": null,
+          "idleTimedOut": false
+        }
+      }
+    }
+  }
+}

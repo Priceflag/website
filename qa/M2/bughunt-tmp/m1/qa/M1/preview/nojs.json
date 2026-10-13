@@ -1,0 +1,74 @@
+{
+  "check": "nojs",
+  "title": "No-JS rendering (H1, primary CTA, text)",
+  "status": "WARN",
+  "durationMs": 3409,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "textLength": 2005,
+      "h1Visible": true,
+      "h1Text": "Change your store's prices\nwithout losing sales.",
+      "ctaVisible": true,
+      "ctaCount": 2
+    },
+    "about": {
+      "status": "WARN",
+      "textLength": 1220,
+      "h1Visible": true,
+      "h1Text": "About",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "contact": {
+      "status": "WARN",
+      "textLength": 460,
+      "h1Visible": true,
+      "h1Text": "Contact",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "legal": {
+      "status": "WARN",
+      "textLength": 28929,
+      "h1Visible": true,
+      "h1Text": "Legal",
+      "ctaVisible": false,
+      "ctaCount": 0
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "textLength": 2005,
+      "h1Visible": true,
+      "h1Text": "Change your store's prices\nwithout losing sales.",
+      "ctaVisible": true,
+      "ctaCount": 2
+    },
+    "about": {
+      "status": "WARN",
+      "textLength": 1220,
+      "h1Visible": true,
+      "h1Text": "About",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "contact": {
+      "status": "WARN",
+      "textLength": 460,
+      "h1Visible": true,
+      "h1Text": "Contact",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "legal": {
+      "status": "WARN",
+      "textLength": 28929,
+      "h1Visible": true,
+      "h1Text": "Legal",
+      "ctaVisible": false,
+      "ctaCount": 0
+    }
+  }
+}

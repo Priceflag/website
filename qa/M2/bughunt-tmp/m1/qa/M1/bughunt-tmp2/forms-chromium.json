@@ -1,0 +1,322 @@
+{
+ "sentFlow": {
+  "after": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "Jo",
+    "message": 2
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reload": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "back": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "navType": "back_forward",
+  "again1": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "rv-store",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "emptyAfterAgain": {
+   "formState": null,
+   "kind": "error",
+   "status": "Check the highlighted fields.",
+   "links": [],
+   "live": "",
+   "active": "rv-email",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "second": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "second.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reloadAfterAgain": {
+   "formState": null,
+   "kind": null,
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "newTab": {
+   "formState": null,
+   "kind": null,
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "reqs": 2
+ },
+ "bfcache": {
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  }
+ },
+ "ssBlocked": {
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "ERR"
+  },
+  "errs": []
+ },
+ "dup": {
+  "formState": "sent",
+  "kind": "ok",
+  "status": "Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",
+  "links": [
+   "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A"
+  ],
+  "live": "",
+  "active": "P.pf-form-status",
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "fieldsVisible": false,
+  "againVisible": true,
+  "ss": "me@shop.com"
+ },
+ "slow": {
+  "mid": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "end": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reqs": 1
+ },
+ "offline": {
+  "off": {
+   "formState": null,
+   "kind": "error",
+   "status": "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "on": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reqs": 1
+ },
+ "liveFocus": {
+  "mid": {
+   "live": "Sending your request.",
+   "active": "BODY."
+  },
+  "end": {
+   "live": "",
+   "active": "P.pf-form-status",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours."
+  },
+  "statusRole": {
+   "role": null,
+   "live": null,
+   "outline": "solid rgb(216, 242, 75)"
+  }
+ }
+}

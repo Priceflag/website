@@ -1,0 +1,719 @@
+{
+ "navFocus-320": [
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "navFocus-375": [
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "navFocus-768": [
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "navFocus-1440": [
+  {
+   "text": "How does the forecast work, an",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is the rollout staged, and",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "How is this different from an ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens if a price change",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "Does it change prices without ",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "What happens to my prices if I",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  },
+  {
+   "text": "",
+   "outline": "solid 2px rgb(216, 242, 75)",
+   "clipped": null
+  }
+ ],
+ "longtext-320": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.65625,
+   "sw": 320
+  },
+  "sw": 491,
+  "vw": 320,
+  "over": [
+   {
+    "el": "DIV.pf-nav-group",
+    "right": 300,
+    "sw": 88,
+    "cw": 83
+   },
+   {
+    "el": "A.pf-btn pf-btn--light pf-btn--sm",
+    "right": 300,
+    "sw": 88,
+    "cw": 83
+   },
+   {
+    "el": "MAIN.",
+    "right": 320,
+    "sw": 491,
+    "cw": 320
+   },
+   {
+    "el": "SECTION.pf-section",
+    "right": 320,
+    "sw": 491,
+    "cw": 320
+   },
+   {
+    "el": "DIV.pf-faq",
+    "right": 300,
+    "sw": 471,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-faq-list",
+    "right": 300,
+    "sw": 471,
+    "cw": 280
+   },
+   {
+    "el": "DETAILS.",
+    "right": 300,
+    "sw": 471,
+    "cw": 280
+   },
+   {
+    "el": "SUMMARY.",
+    "right": 300,
+    "sw": 471,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-foot-inner",
+    "right": 320,
+    "sw": 678,
+    "cw": 320
+   },
+   {
+    "el": "DIV.pf-foot-top",
+    "right": 300,
+    "sw": 658,
+    "cw": 280
+   },
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "H2.pf-foot-head",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 0.8394601314153791
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 0
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 0
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 83.15625
+  }
+ },
+ "longtext-375": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.65625,
+   "sw": 375
+  },
+  "sw": 492,
+  "vw": 375,
+  "over": [
+   {
+    "el": "MAIN.",
+    "right": 375,
+    "sw": 492,
+    "cw": 375
+   },
+   {
+    "el": "SECTION.pf-section",
+    "right": 375,
+    "sw": 492,
+    "cw": 375
+   },
+   {
+    "el": "DIV.pf-faq",
+    "right": 354,
+    "sw": 471,
+    "cw": 333
+   },
+   {
+    "el": "DIV.pf-faq-list",
+    "right": 354,
+    "sw": 471,
+    "cw": 333
+   },
+   {
+    "el": "DETAILS.",
+    "right": 354,
+    "sw": 471,
+    "cw": 333
+   },
+   {
+    "el": "SUMMARY.",
+    "right": 354,
+    "sw": 471,
+    "cw": 333
+   },
+   {
+    "el": "DIV.pf-foot-inner",
+    "right": 375,
+    "sw": 678,
+    "cw": 375
+   },
+   {
+    "el": "DIV.pf-foot-top",
+    "right": 355,
+    "sw": 658,
+    "cw": 335
+   },
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "H2.pf-foot-head",
+    "right": 678,
+    "sw": 658,
+    "cw": 658
+   },
+   {
+    "el": "SPAN.pf-foot-shop",
+    "right": 504,
+    "sw": 0,
+    "cw": 0
+   },
+   {
+    "el": "A.pf-btn pf-btn--dark",
+    "right": 452,
+    "sw": 432,
+    "cw": 432
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 0
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 0
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 99.859375
+  }
+ },
+ "longtext-1920": {
+  "before": {
+   "signinH": 40,
+   "signinW": 80.65625,
+   "sw": 1920
+  },
+  "sw": 1920,
+  "vw": 1920,
+  "over": [
+   {
+    "el": "DIV.pf-foot-lead",
+    "right": 1002,
+    "sw": 1135,
+    "cw": 738
+   }
+  ],
+  "navLinks": [
+   {
+    "t": "",
+    "visibleFrac": 1
+   },
+   {
+    "t": "How it works How it ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "FAQ FAQ",
+    "visibleFrac": 1
+   },
+   {
+    "t": "About About",
+    "visibleFrac": 1
+   }
+  ],
+  "signin": {
+   "h": 40,
+   "w": 129.125
+  }
+ },
+ "sizes-w320": {
+  "index": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 320,
+   "cw": 320,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-w1920": {
+  "index": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 1920,
+   "cw": 1920,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-w2560": {
+  "index": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 2560,
+   "cw": 2560,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-zoom200": {
+  "index": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 720,
+   "cw": 720,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-zoom200m": {
+  "index": {
+   "sw": 280,
+   "cw": 187,
+   "smooth": "smooth",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 202,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 187,
+   "cw": 187,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "sizes-dark": {
+  "index": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "about": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "contact": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "legal": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  },
+  "signin.html": {
+   "sw": 375,
+   "cw": 375,
+   "smooth": "auto",
+   "bodyBg": "rgb(3, 8, 24)",
+   "errs": []
+  }
+ },
+ "subfocus-about": {
+  "order": [
+   "MAIN#main:Priceflag forecast",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:Priceflag forecast",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:Priceflag forecast",
+   "BODY:Skip to content\n\n\n"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 423,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 615,
+   "sheetB": 710
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "MAIN:Priceflag forecasts "
+ },
+ "subfocus-contact": {
+  "order": [
+   "MAIN#main:Priceflag Syndicat",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:Priceflag Syndicat",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:Priceflag Syndicat",
+   "BODY:Skip to content\n\n\n"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 52,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 710,
+   "sheetB": 710
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "MAIN:Priceflag Syndicate "
+ },
+ "subfocus-legal": {
+  "order": [
+   "MAIN#main:The two documents ",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:The two documents ",
+   "BODY:Skip to content\n\n\n",
+   "MAIN#main:The two documents ",
+   "BODY:Skip to content\n\n\n"
+  ],
+  "skip": {
+   "active": "MAIN#main",
+   "focusVisible": true,
+   "outline": "solid 2px rgb(63, 79, 176) off 3px"
+  },
+  "pageDownScroll": 578,
+  "clip": {
+   "mainL": 390,
+   "sheetL": 390,
+   "mainR": 890,
+   "sheetR": 890,
+   "mainB": 740,
+   "sheetB": 740
+  },
+  "afterClick": "MAIN fv=false",
+  "tabAfterClick": "MAIN:The two documents th"
+ }
+}

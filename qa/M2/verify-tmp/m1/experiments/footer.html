@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag — footer prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<style>
+/* ===================================================================== */
+/*  A. PAGE BASELINE — mirrors index.html's globals so the prototype      */
+/*     inherits exactly the same starting conditions (incl. the global    */
+/*     `a:hover{color:#d8f24b}` that the footer has to defend against).   */
+/* ===================================================================== */
+html,body{margin:0;padding:0;background:#030818;}
+a{color:#f3ecde;text-decoration:none;}
+a:hover{color:#d8f24b;}
+::selection{background:#d8f24b;color:#071238;}
+
+/* ===================================================================== */
+/*  B. GLASS PILL BUTTON — copied verbatim from index.html so the         */
+/*     prototype renders the real thing. Already present in the page;     */
+/*     do NOT re-paste. Only the `--dark` block in section C is new.      */
+/* ===================================================================== */
+.pf-btn{
+  --pf-bg:#d8f24b; --pf-fg:#13200a; --pf-glow:216,242,75;
+  position:relative;isolation:isolate;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 32px;border:0;border-radius:999px;
+  font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+  font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1;
+  color:var(--pf-fg);cursor:pointer;text-decoration:none;white-space:nowrap;
+  background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,0) 48%),var(--pf-bg);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.62),
+    inset 0 -1px 0 rgba(0,0,0,.20),
+    0 1px 2px rgba(3,8,24,.55),
+    0 8px 22px -8px rgba(var(--pf-glow),.45);
+  transition:transform .34s cubic-bezier(.22,1,.36,1),
+             box-shadow .34s cubic-bezier(.22,1,.36,1),
+             filter .34s ease;
+}
+.pf-btn::before{
+  content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
+  border:1px solid rgba(255,255,255,.18);opacity:.55;
+  transition:inset .34s cubic-bezier(.22,1,.36,1),opacity .34s ease,border-color .34s ease;
+}
+.pf-btn::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.55) 50%,transparent 64%);
+  background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+  opacity:0;
+  transition:background-position .8s cubic-bezier(.22,1,.36,1),opacity .22s ease;
+}
+.pf-btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.05);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.75),
+    inset 0 -1px 0 rgba(0,0,0,.22),
+    0 2px 4px rgba(3,8,24,.5),
+    0 16px 38px -10px rgba(var(--pf-glow),.62);
+}
+.pf-btn:hover::before{inset:-7px;opacity:.9;border-color:rgba(255,255,255,.30);}
+.pf-btn:hover::after{background-position:175% 0;opacity:1;}
+.pf-btn:active{
+  transform:translateY(0) scale(.985);
+  transition-duration:.09s;
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.35),
+    0 1px 2px rgba(3,8,24,.5);
+}
+.pf-btn:focus-visible{outline:2px solid rgba(255,255,255,.85);outline-offset:5px;}
+.pf-btn,.pf-btn:hover,.pf-btn:focus,.pf-btn:active,.pf-btn:visited{color:var(--pf-fg);}
+.pf-btn-dot{
+  display:inline-block;width:9px;height:9px;border-radius:50%;
+  background:currentColor;opacity:.75;flex:none;
+}
+.pf-btn--light{--pf-bg:#f3ecde;--pf-fg:#071238;--pf-glow:243,236,222;}
+.pf-btn--sm{padding:8px 18px;font-size:13px;gap:7px;}
+.pf-btn--sm::before{inset:-3px;}
+.pf-btn--sm:hover::before{inset:-5px;}
+@media (prefers-reduced-motion: reduce){
+  .pf-btn,.pf-btn::before,.pf-btn::after{transition:none;}
+  .pf-btn:hover{transform:none;}
+  .pf-btn::after{display:none;}
+}
+
+/* ===================================================================== */
+/*  C. FOOTER  — NEW. This whole section is what gets pasted into the     */
+/*     <helmet><style> block of index.html.                               */
+/*                                                                       */
+/*     Every declaration containing a comma lives here on purpose: the dc */
+/*     runtime truncates inline style attribute values at the first       */
+/*     comma, so multi-stop shadows, rgba(), clamp(), font stacks and     */
+/*     transitions must never appear in a style="" attribute.            */
+/* ===================================================================== */
+
+/* --- the slab ------------------------------------------------------- */
+.pf-foot{
+  /* dark ink on neon. #0d1f00 on #d8f24b = 13.78:1 (WCAG AAA). */
+  --pf-ink:#0d1f00;
+  --pf-ink-soft:rgba(13,31,0,.68);   /* 5.36:1 on neon — AA for body text */
+  --pf-rule:rgba(13,31,0,.20);
+  position:relative;z-index:2;
+  background:#d8f24b;
+  color:var(--pf-ink);
+  border-radius:26px 26px 0 0;
+  /* belt-and-braces: nothing inside may ever paint outside the slab */
+  overflow:hidden;
+  font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.pf-foot-inner{
+  box-sizing:border-box;
+  max-width:1520px;margin:0 auto;
+  padding:clamp(40px,5.2vw,76px) clamp(20px,4vw,64px) clamp(18px,2.2vw,30px);
+}
+
+/* neutralise index.html's global `a{color:#f3ecde}` / `a:hover{color:#d8f24b}`.
+   Without this every footer link turns neon-on-neon on hover. */
+.pf-foot a{color:var(--pf-ink);text-decoration:none;}
+.pf-foot a:visited{color:var(--pf-ink);}
+.pf-foot a:hover,.pf-foot a:focus{color:#030818;}
+.pf-foot a:focus-visible{outline:2px solid #0d1f00;outline-offset:4px;border-radius:3px;}
+
+/* --- top row -------------------------------------------------------- */
+.pf-foot-top{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:clamp(30px,4vw,72px);flex-wrap:wrap;
+}
+.pf-foot-lead{
+  display:flex;flex-direction:column;align-items:flex-start;
+  gap:clamp(16px,1.8vw,24px);
+  flex:1 1 380px;min-width:0;
+}
+.pf-foot-mark{
+  font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+  font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-0.01em;line-height:1;
+}
+.pf-foot-head{
+  margin:0;
+  font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+  font-weight:400;
+  font-size:clamp(29px,3.4vw,50px);
+  line-height:1.1;letter-spacing:-0.02em;
+  text-wrap:balance;
+}
+/* the Shopify lockup never breaks between mark and word */
+.pf-foot-shop{white-space:nowrap;}
+.pf-foot-shop svg{
+  width:.665em;height:.76em;vertical-align:-.035em;margin:0 .17em 0 .07em;
+  /* Official Shopify green #95BF47 sits at 1.70:1 on #d8f24b — it vanishes.
+     The mark therefore takes the footer ink colour (13.78:1) and reads as
+     part of the typographic lockup. */
+  fill:currentColor;
+}
+.pf-foot-cta{margin-top:clamp(2px,0.6vw,8px);}
+.pf-foot-cta svg{width:17px;height:17px;flex:none;margin-right:-3px;}
+
+/* dark pill on neon: a neon pill on neon is invisible, so the fill inverts
+   while the physical language (radius, inset highlight, lift, sheen) stays. */
+.pf-btn--dark{
+  --pf-fg:#f4f7ea;
+  background:linear-gradient(180deg,rgba(255,255,255,.17),rgba(255,255,255,0) 52%),#0d1f00;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.24),
+    inset 0 -1px 0 rgba(0,0,0,.35),
+    0 1px 2px rgba(13,31,0,.32),
+    0 10px 26px -10px rgba(13,31,0,.55);
+}
+.pf-btn--dark::before{border-color:rgba(13,31,0,.30);opacity:.75;}
+.pf-btn--dark::after{
+  background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.34) 50%,transparent 66%);
+  background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+}
+.pf-btn--dark:hover{
+  filter:brightness(1.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.30),
+    inset 0 -1px 0 rgba(0,0,0,.38),
+    0 2px 4px rgba(13,31,0,.30),
+    0 18px 40px -12px rgba(13,31,0,.62);
+}
+.pf-btn--dark:hover::before{border-color:rgba(13,31,0,.46);opacity:1;}
+.pf-btn--dark:active{
+  box-shadow:
+    inset 0 2px 5px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 1px 2px rgba(13,31,0,.34);
+}
+.pf-btn--dark:focus-visible{outline:2px solid #0d1f00;outline-offset:5px;}
+/* `.pf-foot a` scores 0-1-1 and would otherwise beat `.pf-btn`'s 0-1-0 and
+   repaint the pill's label in the dark ink colour. Re-assert it at 0-2-0. */
+.pf-foot .pf-btn,
+.pf-foot .pf-btn:hover,
+.pf-foot .pf-btn:focus,
+.pf-foot .pf-btn:active,
+.pf-foot .pf-btn:visited{color:var(--pf-fg);}
+
+/* --- link columns --------------------------------------------------- */
+.pf-foot-nav{
+  display:flex;gap:clamp(34px,5vw,92px);
+  flex:0 1 auto;padding-top:clamp(4px,1vw,10px);
+}
+.pf-foot-col{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:clamp(10px,1vw,13px);
+  min-width:max-content;
+}
+.pf-foot-link{
+  position:relative;display:inline-flex;align-items:center;gap:9px;
+  font-size:15px;line-height:1.25;letter-spacing:-0.005em;
+  width:max-content;
+}
+.pf-foot-link::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+  background:currentColor;transform:scaleX(0);transform-origin:left center;
+  transition:transform .34s cubic-bezier(.22,1,.36,1);
+}
+.pf-foot-link:hover::after,.pf-foot-link:focus-visible::after{transform:scaleX(1);}
+.pf-foot-link svg{width:15px;height:15px;flex:none;fill:currentColor;}
+
+/* --- the giant wordmark ---------------------------------------------
+   Real Hedvig type, set as SVG <text>. The viewBox is the measured INK
+   box of "Priceflag" at font-size 1000 (left 30, right 3926, ascender
+   -804, descender +257), so `width:100%` makes the glyph ink itself sit
+   optically flush with the content box — not the advance width, which
+   would leave a side bearing gap at each end.
+
+   textLength pins the advance to Hedvig's own 3931.02 units with
+   lengthAdjust="spacingAndGlyphs", so a fallback serif is squeezed onto
+   the identical measure instead of overflowing or falling short while the
+   webfont loads. The root <svg> keeps its default overflow:hidden, so no
+   font on earth can push a pixel past the edge and create a scrollbar. */
+.pf-foot-word{
+  display:block;width:100%;height:auto;
+  margin-top:clamp(44px,6vw,86px);
+}
+.pf-foot-word text{
+  font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+  font-size:1000px;font-weight:400;
+  fill:#0d1f00;
+}
+
+/* --- bottom bar ----------------------------------------------------- */
+.pf-foot-bar{
+  margin-top:clamp(26px,2.4vw,34px);
+  border-top:1px solid var(--pf-rule);
+  padding-top:clamp(16px,1.6vw,22px);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px clamp(20px,3vw,40px);flex-wrap:wrap;
+  font-size:13.5px;line-height:1.4;letter-spacing:-0.005em;
+  color:var(--pf-ink-soft);
+}
+.pf-foot-legal{display:flex;gap:clamp(18px,2.4vw,34px);flex-wrap:wrap;}
+.pf-foot-legal a{color:var(--pf-ink-soft);}
+.pf-foot-legal a:hover,.pf-foot-legal a:focus{color:#0d1f00;}
+
+/* --- responsive ------------------------------------------------------ */
+@media (max-width:900px){
+  .pf-foot-top{flex-direction:column;align-items:stretch;}
+  /* flex-basis is the MAIN axis: once the row turns into a column, the lead's
+     `flex:1 1 380px` becomes a 380px minimum *height* and tears a hole between
+     the CTA and the links. Reset it. */
+  .pf-foot-lead{flex:0 0 auto;}
+  .pf-foot-nav{
+    padding-top:0;
+    /* stack rather than squash: real columns that grow, never crush */
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:clamp(14px,3vw,26px) clamp(24px,6vw,60px);
+    max-width:440px;
+  }
+}
+@media (max-width:359px){
+  .pf-foot-nav{grid-template-columns:1fr;gap:clamp(10px,3vw,13px);}
+  .pf-foot-col + .pf-foot-col{
+    padding-top:clamp(10px,3vw,13px);
+    border-top:1px solid var(--pf-rule);
+  }
+  .pf-foot-bar{justify-content:flex-start;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .pf-foot-link::after{transition:none;}
+}
+
+/* ===================================================================== */
+/*  D. PROTOTYPE HARNESS ONLY — nothing below here ships.                 */
+/* ===================================================================== */
+body.demo{
+  font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+  color:#b9c6f5;padding:32px 24px 96px;
+}
+.demo h1{
+  font-family:'Hedvig Letters Serif',Georgia,serif;font-weight:400;
+  color:#f3ecde;font-size:30px;margin:0 0 6px;letter-spacing:-0.015em;
+}
+.demo .sub{font-size:14px;color:#7b93e8;margin:0 0 28px;max-width:70ch;line-height:1.6;}
+.demo .sub code{color:#d8f24b;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;}
+.vp{margin:0 0 46px;}
+.vp-h{
+  display:flex;align-items:baseline;gap:12px;margin:0 0 10px;
+  font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:#7b93e8;
+}
+.vp-h b{color:#d8f24b;font-size:13px;letter-spacing:.06em;}
+.vp-h .ok{
+  margin-left:auto;text-transform:none;letter-spacing:0;font-size:12px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#7b93e8;
+}
+.vp-stage{
+  border:1px solid rgba(147,170,255,.22);border-radius:10px;overflow:hidden;
+  background:#030818;position:relative;
+}
+.vp-stage iframe{border:0;display:block;transform-origin:top left;background:#030818;}
+pre.handoff{
+  background:#070d22;border:1px solid rgba(147,170,255,.2);border-radius:12px;
+  padding:22px;overflow:auto;color:#c8d5ff;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;line-height:1.55;white-space:pre;tab-size:2;max-height:70vh;
+}
+h2.demo-h2{
+  font-family:'Hedvig Letters Serif',Georgia,serif;font-weight:400;color:#f3ecde;
+  font-size:22px;margin:52px 0 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================================================================
+     The footer itself lives in ONE template below and is injected either
+     as the whole page (?embed=1, used by the viewport iframes so real
+     media queries and real viewport widths apply) or into the harness.
+     =================================================================== -->
+<template id="footer-tpl">
+  <section data-screen-label="Footer" class="pf-foot" role="contentinfo">
+    <div class="pf-foot-inner">
+
+      <div class="pf-foot-top">
+        <div class="pf-foot-lead">
+          <a class="pf-foot-mark" href="#">Priceflag</a>
+
+          <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span></h2>
+
+          <a class="pf-btn pf-btn--dark pf-foot-cta" href="#">
+            Join the Waitlist
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a>
+        </div>
+
+        <nav class="pf-foot-nav" aria-label="Footer">
+          <ul class="pf-foot-col">
+            <li><a class="pf-foot-link" href="#">Home</a></li>
+            <li><a class="pf-foot-link" href="#">About</a></li>
+            <li><a class="pf-foot-link" href="#">Partners</a></li>
+            <li><a class="pf-foot-link" href="#">Research</a></li>
+            <li><a class="pf-foot-link" href="#">Blog</a></li>
+          </ul>
+          <ul class="pf-foot-col">
+            <li><a class="pf-foot-link" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
+            <li><a class="pf-foot-link" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+        <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
+      </svg>
+
+      <div class="pf-foot-bar">
+        <span>Built by Humans in San Francisco&#44; CA</span>
+        <div class="pf-foot-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="agreements.html">Agreements</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</template>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var tpl = document.getElementById('footer-tpl');
+  var embed = /(?:\?|&)embed=1/.test(location.search);
+
+  /* ---------- embedded mode: just the footer, pinned to the bottom ---- */
+  if (embed) {
+    var wrap = document.getElementById('handoff-wrap');
+    if (wrap) wrap.remove();
+    var spacer = document.createElement('div');
+    spacer.style.cssText = 'height:170px;background:#030818';
+    document.body.appendChild(spacer);
+    document.body.appendChild(tpl.content.cloneNode(true));
+    return;
+  }
+
+  /* ---------- harness ------------------------------------------------ */
+  document.body.classList.add('demo');
+  var WIDTHS = [1920, 1440, 1024, 768, 420, 375];
+  /* tall enough that every stage shows the whole slab plus a strip of the
+     near-black page above it, so the inversion reads. */
+  var HEIGHTS = {1920: 1010, 1440: 990, 1024: 790, 768: 840, 420: 775, 375: 765};
+
+  var head =
+    '<h1>Priceflag footer</h1>' +
+    '<p class="sub">Standalone prototype. Each stage below is a real iframe at the stated ' +
+    'viewport width, so media queries, <code>clamp()</code> and the giant wordmark all resolve ' +
+    'exactly as they will in the page. Stages are visually scaled down to fit; the ' +
+    '<code>scrollWidth &le; clientWidth</code> readout is measured on the un-scaled document ' +
+    'inside each frame. The paste-ready CSS and markup are at the bottom of this file.</p>';
+
+  var frames = WIDTHS.map(function (w) {
+    return '<div class="vp" data-w="' + w + '">' +
+      '<div class="vp-h"><b>' + w + '&thinsp;px</b><span>viewport</span>' +
+      '<span class="ok" id="ok-' + w + '">measuring&hellip;</span></div>' +
+      '<div class="vp-stage" id="stage-' + w + '">' +
+      '<iframe id="f-' + w + '" src="' + location.pathname + '?embed=1" ' +
+      'width="' + w + '" height="' + HEIGHTS[w] + '" title="Footer at ' + w + 'px" ' +
+      'scrolling="no" loading="eager"></iframe>' +
+      '</div></div>';
+  }).join('');
+
+  document.body.insertAdjacentHTML('afterbegin', head + frames);
+
+  /* Scale each stage down so a 1920px frame fits the page, without
+     touching the frame's own layout width. */
+  function fit() {
+    WIDTHS.forEach(function (w) {
+      var stage = document.getElementById('stage-' + w);
+      var f = document.getElementById('f-' + w);
+      if (!stage || !f) return;
+      var avail = stage.parentNode.clientWidth;
+      var s = Math.min(1, avail / w);
+      f.style.transform = 'scale(' + s + ')';
+      stage.style.height = Math.round(HEIGHTS[w] * s) + 'px';
+    });
+  }
+  window.addEventListener('resize', fit);
+  fit();
+
+  /* Numeric overflow proof — the environment reports document.hidden,
+     so never trust a screenshot alone. */
+  window.OVERFLOW = {};
+  function probe() {
+    WIDTHS.forEach(function (w) {
+      var f = document.getElementById('f-' + w);
+      var el = document.getElementById('ok-' + w);
+      try {
+        var d = f.contentDocument;
+        var de = d.documentElement;
+        var word = d.querySelector('.pf-foot-word');
+        var wr = word ? word.getBoundingClientRect() : null;
+        var sec = d.querySelector('.pf-foot');
+        var pad = sec ? parseFloat(getComputedStyle(d.querySelector('.pf-foot-inner')).paddingLeft) : 0;
+        var r = {
+          scrollWidth: de.scrollWidth,
+          clientWidth: de.clientWidth,
+          bodyScrollWidth: d.body.scrollWidth,
+          overflow: de.scrollWidth - de.clientWidth,
+          wordW: wr ? +wr.width.toFixed(2) : null,
+          wordH: wr ? +wr.height.toFixed(2) : null,
+          wordLeft: wr ? +wr.left.toFixed(2) : null,
+          innerPadLeft: pad
+        };
+        window.OVERFLOW[w] = r;
+        var clean = r.overflow <= 0 && r.bodyScrollWidth <= r.clientWidth;
+        el.textContent = (clean ? '✓ ' : '✗ ') +
+          'scrollWidth ' + r.scrollWidth + ' / clientWidth ' + r.clientWidth +
+          '  ·  wordmark ' + r.wordW + '×' + r.wordH;
+        el.style.color = clean ? '#d8f24b' : '#ff6b6b';
+      } catch (e) {
+        el.textContent = 'probe blocked (' + e.name + ') — serve over http to measure';
+      }
+    });
+  }
+  var tries = 0;
+  (function poll() {
+    probe();
+    if (++tries < 12) setTimeout(poll, 500);
+  })();
+
+  /* Mirror the paste-ready block (which lives in the trailing HTML comment,
+     the canonical copy) into a <pre> so it is readable and selectable here. */
+  var wrap = document.getElementById('handoff-wrap');
+  var pre = document.getElementById('handoff');
+  for (var n = document.body.firstChild; n; n = n.nextSibling) {
+    if (n.nodeType === 8 && n.nodeValue.indexOf('(a) CSS FOR') !== -1) {
+      pre.textContent = n.nodeValue.replace(/^\n+|\n+$/g, '');
+      break;
+    }
+  }
+  wrap.hidden = false;
+});
+</script>
+
+<div id="handoff-wrap" hidden>
+<h2 class="demo-h2">Paste into index.html</h2>
+<p class="sub">Two blocks. <b>(a)</b> goes at the end of the <code>&lt;helmet&gt;&lt;style&gt;</code> block.
+<b>(b)</b> replaces the whole existing <code>&lt;section data-screen-label="Footer"&gt;…&lt;/section&gt;</code>.
+Nothing in (b) carries a comma inside a <code>style=""</code> attribute — the literal comma in
+&ldquo;San Francisco, CA&rdquo; is written as <code>&amp;#44;</code> purely as belt-and-braces.</p>
+<pre class="handoff" id="handoff"></pre>
+</div>
+
+<!-- ===================================================================
+     ===============  (a) CSS FOR <helmet><style>  =====================
+     ===================================================================
+
+  /* ---------- footer: the neon slab ----------
+     Everything here is in the stylesheet rather than inline because the dc
+     runtime truncates inline style attribute values at the first comma, and
+     these rules are almost entirely commas: multi-stop box-shadows, rgba(),
+     clamp(), font stacks, transitions and gradients. */
+  .pf-foot{
+    --pf-ink:#0d1f00;                  /* 13.78:1 on #d8f24b — AAA */
+    --pf-ink-soft:rgba(13,31,0,.68);   /* 5.36:1 on #d8f24b — AA   */
+    --pf-rule:rgba(13,31,0,.20);
+    position:relative;z-index:2;
+    background:#d8f24b;
+    color:var(--pf-ink);
+    border-radius:26px 26px 0 0;
+    overflow:hidden;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .pf-foot-inner{
+    box-sizing:border-box;
+    max-width:1520px;margin:0 auto;
+    padding:clamp(40px,5.2vw,76px) clamp(20px,4vw,64px) clamp(18px,2.2vw,30px);
+  }
+  /* the page sets a{color:#f3ecde} and a:hover{color:#d8f24b} globally;
+     without these three rules every footer link goes neon-on-neon on hover. */
+  .pf-foot a{color:var(--pf-ink);text-decoration:none;}
+  .pf-foot a:visited{color:var(--pf-ink);}
+  .pf-foot a:hover,.pf-foot a:focus{color:#030818;}
+  .pf-foot a:focus-visible{outline:2px solid #0d1f00;outline-offset:4px;border-radius:3px;}
+
+  .pf-foot-top{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:clamp(30px,4vw,72px);flex-wrap:wrap;
+  }
+  .pf-foot-lead{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:clamp(16px,1.8vw,24px);flex:1 1 380px;min-width:0;
+  }
+  .pf-foot-mark{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-0.01em;line-height:1;
+  }
+  .pf-foot-head{
+    margin:0;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-weight:400;font-size:clamp(29px,3.4vw,50px);
+    line-height:1.1;letter-spacing:-0.02em;text-wrap:balance;
+  }
+  .pf-foot-shop{white-space:nowrap;}
+  /* Shopify green #95BF47 measures 1.70:1 against #d8f24b, so the mark takes
+     the footer ink colour instead and reads as part of the lockup. */
+  .pf-foot-shop svg{
+    width:.665em;height:.76em;vertical-align:-.035em;margin:0 .17em 0 .07em;fill:currentColor;
+  }
+  .pf-foot-cta{margin-top:clamp(2px,0.6vw,8px);}
+  .pf-foot-cta svg{width:17px;height:17px;flex:none;margin-right:-3px;}
+
+  /* dark pill: a neon pill on neon is invisible, so the fill inverts while the
+     physical language of .pf-btn (radius, inset highlight, lift, sheen) stays. */
+  .pf-btn--dark{
+    --pf-fg:#f4f7ea;
+    background:linear-gradient(180deg,rgba(255,255,255,.17),rgba(255,255,255,0) 52%),#0d1f00;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.24),
+      inset 0 -1px 0 rgba(0,0,0,.35),
+      0 1px 2px rgba(13,31,0,.32),
+      0 10px 26px -10px rgba(13,31,0,.55);
+  }
+  .pf-btn--dark::before{border-color:rgba(13,31,0,.30);opacity:.75;}
+  .pf-btn--dark::after{
+    background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.34) 50%,transparent 66%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+  }
+  .pf-btn--dark:hover{
+    filter:brightness(1.12);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.30),
+      inset 0 -1px 0 rgba(0,0,0,.38),
+      0 2px 4px rgba(13,31,0,.30),
+      0 18px 40px -12px rgba(13,31,0,.62);
+  }
+  .pf-btn--dark:hover::before{border-color:rgba(13,31,0,.46);opacity:1;}
+  .pf-btn--dark:active{
+    box-shadow:
+      inset 0 2px 5px rgba(0,0,0,.45),
+      inset 0 1px 0 rgba(255,255,255,.12),
+      0 1px 2px rgba(13,31,0,.34);
+  }
+  .pf-btn--dark:focus-visible{outline:2px solid #0d1f00;outline-offset:5px;}
+  /* `.pf-foot a` scores 0-1-1 and would otherwise beat `.pf-btn`'s 0-1-0 and
+     repaint the pill's label in the dark ink colour. Re-assert it at 0-2-0. */
+  .pf-foot .pf-btn,
+  .pf-foot .pf-btn:hover,
+  .pf-foot .pf-btn:focus,
+  .pf-foot .pf-btn:active,
+  .pf-foot .pf-btn:visited{color:var(--pf-fg);}
+
+  .pf-foot-nav{
+    display:flex;gap:clamp(34px,5vw,92px);flex:0 1 auto;padding-top:clamp(4px,1vw,10px);
+  }
+  .pf-foot-col{
+    list-style:none;margin:0;padding:0;
+    display:flex;flex-direction:column;gap:clamp(10px,1vw,13px);min-width:max-content;
+  }
+  .pf-foot-link{
+    position:relative;display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;line-height:1.25;letter-spacing:-0.005em;width:max-content;
+  }
+  .pf-foot-link::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+    background:currentColor;transform:scaleX(0);transform-origin:left center;
+    transition:transform .34s cubic-bezier(.22,1,.36,1);
+  }
+  .pf-foot-link:hover::after,.pf-foot-link:focus-visible::after{transform:scaleX(1);}
+  .pf-foot-link svg{width:15px;height:15px;flex:none;fill:currentColor;}
+
+  /* The giant wordmark is real Hedvig set as SVG <text>. The viewBox is the
+     measured INK box of "Priceflag" at font-size 1000 (x 30 -> 3926, ascender
+     -804, descender +257), so width:100% puts the glyph ink itself flush with
+     the content box rather than leaving the side bearings as a gap.
+     textLength pins the advance to Hedvig's own 3931.02 units, so a fallback
+     serif is squeezed onto the identical measure while the webfont loads. The
+     root <svg> keeps its default overflow:hidden, so no font can push a pixel
+     past the edge and raise a scrollbar. */
+  .pf-foot-word{display:block;width:100%;height:auto;margin-top:clamp(44px,6vw,86px);}
+  .pf-foot-word text{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:1000px;font-weight:400;fill:#0d1f00;
+  }
+
+  .pf-foot-bar{
+    margin-top:clamp(26px,2.4vw,34px);
+    border-top:1px solid var(--pf-rule);
+    padding-top:clamp(16px,1.6vw,22px);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px clamp(20px,3vw,40px);flex-wrap:wrap;
+    font-size:13.5px;line-height:1.4;letter-spacing:-0.005em;color:var(--pf-ink-soft);
+  }
+  .pf-foot-legal{display:flex;gap:clamp(18px,2.4vw,34px);flex-wrap:wrap;}
+  .pf-foot-legal a{color:var(--pf-ink-soft);}
+  .pf-foot-legal a:hover,.pf-foot-legal a:focus{color:#0d1f00;}
+
+  @media (max-width:900px){
+    .pf-foot-top{flex-direction:column;align-items:stretch;}
+    /* flex-basis is the MAIN axis: once the row turns into a column, the lead's
+       `flex:1 1 380px` becomes a 380px minimum *height* and tears a hole
+       between the CTA and the links. Reset it. */
+    .pf-foot-lead{flex:0 0 auto;}
+    .pf-foot-nav{
+      padding-top:0;
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(14px,3vw,26px) clamp(24px,6vw,60px);
+      max-width:440px;
+    }
+  }
+  @media (max-width:359px){
+    .pf-foot-nav{grid-template-columns:1fr;gap:clamp(10px,3vw,13px);}
+    .pf-foot-col + .pf-foot-col{
+      padding-top:clamp(10px,3vw,13px);
+      border-top:1px solid var(--pf-rule);
+    }
+    .pf-foot-bar{justify-content:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pf-foot-link::after{transition:none;}
+  }
+
+     ===================================================================
+     ===============  (b) MARKUP: replace the footer <section>  =========
+     ===================================================================
+
+  NOTES BEFORE PASTING
+  1. The old footer's <canvas ref="{{ treeRef }}"> is gone. buildTree()/drawTree()
+     both start with `if (!cv) return;`, so leaving the JS untouched is safe —
+     it simply becomes dead code. Remove treeRef from renderVals() if you want.
+  2. footerInnerRef / data-enter moved onto .pf-foot-inner, so the neon slab
+     itself stays put while the content rises into it on scroll.
+  3. The CTA reuses goJoin the way the hero button does. If you prefer the link
+     form, swap the <a href="#"> for <button class="pf-btn pf-btn--dark pf-foot-cta"
+     onClick="{{ goJoin }}"> — the styling is identical.
+  4. No style="" attribute below contains a comma.
+
+<section data-screen-label="Footer" class="pf-foot" role="contentinfo">
+  <div class="pf-foot-inner" ref="{{ footerInnerRef }}" data-enter="1">
+
+    <div class="pf-foot-top">
+      <div class="pf-foot-lead">
+        <a class="pf-foot-mark" href="#">Priceflag</a>
+
+        <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span></h2>
+
+        <a class="pf-btn pf-btn--dark pf-foot-cta" href="#">
+          Join the Waitlist
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <nav class="pf-foot-nav" aria-label="Footer">
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="#">Home</a></li>
+          <li><a class="pf-foot-link" href="#">About</a></li>
+          <li><a class="pf-foot-link" href="#">Partners</a></li>
+          <li><a class="pf-foot-link" href="#">Research</a></li>
+          <li><a class="pf-foot-link" href="#">Blog</a></li>
+        </ul>
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
+          <li><a class="pf-foot-link" href="#" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+      <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
+    </svg>
+
+    <div class="pf-foot-bar">
+      <span>Built by Humans in San Francisco&#44; CA</span>
+      <div class="pf-foot-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="agreements.html">Agreements</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+     =================================================================== -->
+</body>
+</html>

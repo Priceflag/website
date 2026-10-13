@@ -1,0 +1,26 @@
+{
+  "index": {
+    "performance": 0.74,
+    "accessibility": 0.96,
+    "best-practices": 1,
+    "seo": 1
+  },
+  "about": {
+    "performance": 0.88,
+    "accessibility": 1,
+    "best-practices": 1,
+    "seo": 1
+  },
+  "contact": {
+    "performance": 0.88,
+    "accessibility": 1,
+    "best-practices": 1,
+    "seo": 1
+  },
+  "legal": {
+    "performance": 0.87,
+    "accessibility": 0.95,
+    "best-practices": 1,
+    "seo": 1
+  }
+}

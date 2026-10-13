@@ -1,0 +1,16 @@
+TITLE: Sign in – Priceflag
+Priceflag
+Your pricing control room
+Sign in to Priceflag
+Your work email
+Email me a sign-in link
+Already installed Priceflag on Shopify? You can also open it straight from your Shopify admin — no sign-in needed.
+By signing in you agree to our terms and privacy policy.
+--ATTRS--
+meta[content]=Sign in to Priceflag. We email you a link — no password to remember.
+meta[content]=website
+meta[content]=Priceflag
+meta[content]=Sign in – Priceflag
+meta[content]=Sign in to Priceflag. We email you a link — no password to remember.
+meta[content]=https://priceflag.org/og-v7.jpg
+input[placeholder]=you@yourstore.com

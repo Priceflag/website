@@ -1,0 +1,2 @@
+chromium PASS {"n":1,"mid":{"tag":"BUTTON","label":"Sending…","aria":"true","live":"Sending your request.","cursor":"progress","opacity":"1"},"end":{"tag":"P","live":"","state":"sent"}}
+webkit PASS {"n":1,"mid":{"tag":"BUTTON","label":"Sending…","aria":"true","live":"Sending your request.","cursor":"progress","opacity":"1"},"end":{"tag":"P","live":"","state":"sent"}}

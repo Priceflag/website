@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag — scroll choreography prototype</title>
+<style>
+  /* ---------------------------------------------------------------
+     PROTOTYPE ONLY. Self-contained: no dc runtime, no React, no CDN.
+     Fonts fall back to system serif/mono so the file works offline.
+     --------------------------------------------------------------- */
+  html,body{margin:0;padding:0;background:#030818;}
+  a{color:#f3ecde;text-decoration:none;}
+  a:hover{color:#d8f24b;}
+  ::selection{background:#d8f24b;color:#071238;}
+
+  [data-scroller]{scrollbar-width:none;overscroll-behavior-y:none;}
+  [data-scroller]::-webkit-scrollbar{display:none;}
+
+  [data-grain]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");}
+
+  /* Fallback so the prototype still reads if the hero image is missing. */
+  [data-hero-card]{background:radial-gradient(120% 90% at 50% 18%, #2b3f8c 0%, #14204f 42%, #060d26 78%, #030818 100%);}
+
+  /* ---- Debug HUD (press "d") ------------------------------------ */
+  #hud{position:fixed;left:12px;bottom:12px;z-index:99;display:none;padding:10px 12px;
+       font:11px/1.55 ui-monospace,Menlo,monospace;color:#d8f24b;background:rgba(3,8,24,.82);
+       border:1px solid rgba(147,170,255,.3);border-radius:10px;white-space:pre;pointer-events:none;}
+  #hud.on{display:block;}
+</style>
+</head>
+<body>
+
+<div data-ref="scroller" data-scroller="1"
+     style="height:100vh;overflow-y:auto;font-family:'Geist Mono',ui-monospace,'Courier New',monospace;">
+
+  <nav style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:#030818;">
+    <div style="display:flex;align-items:center;gap:22px;justify-self:start;">
+      <span style="display:flex;align-items:center;gap:10px;">
+        <span style="width:26px;height:26px;border-radius:50%;background:#f3ecde;display:inline-block;"></span>
+        <span style="color:#f3ecde;font-weight:700;">priceflag</span>
+      </span>
+      <a href="#">about</a>
+      <a href="#">faq</a>
+    </div>
+    <a href="#" style="justify-self:center;color:#d8f24b;font-size:14px;">New: staged price rollouts for Shopify ↗</a>
+    <div style="display:flex;align-items:center;gap:22px;justify-self:end;">
+      <a href="#" style="background:#f3ecde;color:#071238;padding:6px 14px;border-radius:999px;font-weight:600;">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- ============================ HERO ============================
+       Sticky, so everything below rises over it. Layer order inside
+       the card matters: darkRef and topScrimRef sit ABOVE the content
+       so the WHOLE field (image + copy + grain) dims uniformly.
+       ============================================================== -->
+  <section data-screen-label="Hero" style="height:calc(100vh - 41px);position:sticky;top:41px;z-index:0;background:#030818;display:flex;flex-direction:column;">
+    <div data-ref="heroCard" data-hero-card="1"
+         style="flex:1;position:relative;overflow:hidden;margin:0 24px;border-radius:24px 24px 0 0;transform-origin:50% 20%;will-change:transform;mask-image:linear-gradient(180deg, #000 0%, #000 78%, transparent 99%);-webkit-mask-image:linear-gradient(180deg, #000 0%, #000 78%, transparent 99%);">
+
+      <!-- z0 : the photograph -->
+      <img data-ref="heroImg" src="../uploads/IMG_6461.webp" alt=""
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform-origin:50% 45%;will-change:filter,transform;">
+
+      <!-- z1 : the static reading gradient (unchanged) -->
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(3,8,24,0.45) 0%, rgba(3,8,24,0) 18%, rgba(3,8,24,0) 38%, rgba(3,8,24,0.5) 65%, rgba(3,8,24,0.85) 100%);"></div>
+
+      <!-- z2 : grain -->
+      <div data-grain="1" style="position:absolute;inset:0;opacity:0.5;pointer-events:none;"></div>
+
+      <!-- z3 : the copy -->
+      <div data-ref="heroContent" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;transform-origin:50% 40%;will-change:filter,opacity,transform;">
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#f3ecde;text-shadow:0 1px 12px rgba(3,8,24,0.8);">
+          <span style="width:26px;height:26px;border-radius:50%;background:#f3ecde;display:inline-block;"></span>
+          <span>Watching $2.1M of merchants&rsquo; prices</span>
+        </div>
+        <h1 style="font-family:'Marcellus',Georgia,Cambria,'Times New Roman',serif;font-weight:400;font-size:clamp(48px, 7.2vw, 88px);line-height:1.05;letter-spacing:-0.015em;margin:20px 0 0 0;color:#fff;text-shadow:0 4px 50px rgba(3,8,24,0.7);text-wrap:balance;">Your Price Manager,<br>on Autopilot</h1>
+        <button style="margin-top:38px;font-family:inherit;font-size:16px;font-weight:600;color:#d8f24b;background:#0d2168;border:1px solid rgba(147,170,255,0.35);padding:16px 34px;border-radius:999px;cursor:pointer;box-shadow:0 10px 40px rgba(3,8,24,0.6);display:flex;align-items:center;gap:10px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#d8f24b;box-shadow:0 0 12px rgba(216,242,75,0.8);"></span>
+          Join the Waitlist
+        </button>
+      </div>
+
+      <!-- z4 : UNIFORM DIM. Above the copy on purpose: the entire hero,
+                top edge included, recedes together. 0 -> 1. -->
+      <div data-ref="dark" style="position:absolute;inset:0;background:#030818;opacity:0;pointer-events:none;will-change:opacity;"></div>
+
+      <!-- z5 : TOP SCRIM. Darkness also closes in from the top, early,
+                so the hero never has a crisp bright top edge mid-scroll. -->
+      <div data-ref="topScrim" style="position:absolute;left:0;right:0;top:0;height:64%;background:linear-gradient(180deg, #030818 0%, rgba(3,8,24,0.86) 22%, rgba(3,8,24,0.45) 48%, rgba(3,8,24,0) 100%);opacity:0;pointer-events:none;will-change:opacity;"></div>
+    </div>
+  </section>
+
+  <!-- ========================== STATEMENT =========================
+       No background on the section itself. A tall (64vh) absolutely
+       positioned veil does the darkening, so the ramp is far too
+       gradual to read as an edge, and a solid filler covers whatever
+       is left below it regardless of the section's height.
+       ============================================================== -->
+  <section data-screen-label="Statement" style="position:relative;z-index:2;display:flex;align-items:flex-start;padding:11vh 0 16vh;background:transparent;">
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:64vh;pointer-events:none;background:linear-gradient(180deg, rgba(3,8,24,0) 0%, rgba(3,8,24,0.10) 14%, rgba(3,8,24,0.30) 30%, rgba(3,8,24,0.58) 48%, rgba(3,8,24,0.82) 66%, rgba(3,8,24,0.96) 84%, #030818 100%);"></div>
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:64vh;bottom:0;pointer-events:none;background:#030818;"></div>
+
+    <div data-ref="statementText" style="position:relative;z-index:1;max-width:1180px;padding:0 64px;opacity:0;will-change:opacity,transform,filter;">
+      <div style="font-family:'Marcellus',Georgia,Cambria,'Times New Roman',serif;font-weight:400;font-size:clamp(34px, 3.8vw, 56px);line-height:1.22;letter-spacing:-0.015em;color:#f3ecde;text-wrap:pretty;text-shadow:0 2px 30px rgba(3,8,24,0.9);">Priceflag is your control room to test, roll out and roll back every price in your store.</div>
+    </div>
+  </section>
+
+  <!-- =========================== FOOTER =========================== -->
+  <section data-screen-label="Footer" style="position:relative;z-index:2;display:flex;flex-direction:column;background:#030818;overflow:hidden;">
+    <div data-ref="footerInner" style="opacity:0;will-change:opacity,transform;">
+      <!-- Stand-in for the beam canvas (beam.js is not loaded in the prototype). -->
+      <div style="position:relative;width:100%;height:clamp(300px, 34vw, 440px);flex:none;line-height:0;background:radial-gradient(120% 140% at 50% 122%, rgba(216,242,75,0.22) 0%, rgba(123,147,232,0.16) 26%, rgba(3,8,24,0) 62%);display:flex;align-items:flex-end;justify-content:center;">
+        <div style="font-family:'Marcellus',Georgia,serif;font-size:clamp(48px,11vw,150px);line-height:1;color:#0f1d47;letter-spacing:-0.02em;padding-bottom:8px;">priceflag</div>
+      </div>
+      <div style="flex:none;padding:36px 64px 40px;font-family:system-ui,'Helvetica Neue',Arial,sans-serif;">
+        <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:16px;font-size:15px;color:#7b93e8;"><span>© 2026 Priceflag</span></div>
+            <div style="display:flex;gap:40px;font-size:15px;">
+              <a href="#" style="color:#b9c6f5;">Trust</a>
+              <a href="#" style="color:#b9c6f5;">Privacy</a>
+              <a href="#" style="color:#b9c6f5;">Terms</a>
+              <a href="#" style="color:#b9c6f5;">Contact</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:15px;color:#7b93e8;">
+            <span>Made for merchants who sleep</span><span style="color:#b9c6f5;">A tool for Shopify</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div id="hud"></div>
+
+<script>
+/* ==================================================================
+   SCROLL CHOREOGRAPHY
+   ------------------------------------------------------------------
+   Written so the body of `applyScrollFx` drops straight into the dc
+   Component: the only difference is how refs are resolved.
+
+   The idea, in one line: the hero DIMS UNIFORMLY to solid #030818
+   (a layer above everything, including the copy) while darkness also
+   closes in from the top, and the Statement's own darkening is spread
+   over 64vh so it can never register as an edge.
+   ================================================================== */
+
+/* -------- refs (dc: React.createRef()) -------- */
+const R = {};
+document.querySelectorAll('[data-ref]').forEach(function (el) { R[el.getAttribute('data-ref')] = { current: el }; });
+const scrollerRef      = R.scroller;
+const heroCardRef      = R.heroCard;
+const heroImgRef       = R.heroImg;
+const heroContentRef   = R.heroContent;
+const darkRef          = R.dark;
+const topScrimRef      = R.topScrim;
+const statementTextRef = R.statementText;
+const footerInnerRef   = R.footerInner;
+
+/* -------- tunables: every number in one place -------- */
+const FX = {
+  DIM_SPAN:  0.95,  // × viewport height — hero reaches solid black here
+  TOP_SPAN:  0.62,  // × vh — top scrim leads the uniform dim, but gently
+  COPY_SPAN: 0.60,  // × vh — hero copy is gone here
+  IMG_BLUR:  10,    // px  — keep <= (card height × IMG_SCALE / 2) / 2 so the
+  COPY_BLUR: 18,    // px    blur never samples past the card edge (no halo)
+  IMG_SCALE: 0.09,  // push-in, also supplies the blur's bleed room
+  CARD_SCALE:0.04,  // card recedes
+  CARD_RISE: 0.02,  // × vh
+  COPY_RISE: 0.05,  // × vh
+  TOP_MAX:   0.95,  // top scrim peak opacity
+  ENTER_SPAN:0.55,  // × vh — travel over which an entering block reveals
+  ENTER_RISE:34,    // px
+  ENTER_BLUR:7      // px
+};
+
+/* -------- helpers -------- */
+const clamp01  = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
+// Immediate response, soft landing. Used for anything that must start
+// reacting on the very first pixel of scroll.
+const easeOut  = function (t) { return 1 - Math.pow(1 - t, 2.2); };
+// Soft at both ends, but still alive near 0. Used for motion, so nothing
+// pops in or out yet the first pixels of scroll are never a dead zone.
+const easeSmooth = function (t) { return t * t * (3 - 2 * t); };
+
+// Write only when the value actually changed. Once a value saturates
+// (hero fully dark) the writes stop entirely.
+const _last = new WeakMap();
+function set(el, prop, val) {
+  if (!el) return;
+  let m = _last.get(el);
+  if (!m) { m = {}; _last.set(el, m); }
+  if (m[prop] === val) return;
+  m[prop] = val;
+  el.style[prop] = val;
+}
+
+let tick = false;
+let reduceMotion = false;
+try { reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+/* ================= the handler ================= */
+function applyScrollFx() {
+  const s = scrollerRef.current; if (!s) return;
+  const vh = s.clientHeight || 1;
+  const y  = s.scrollTop;
+
+  const card = heroCardRef && heroCardRef.current;
+  const img  = heroImgRef && heroImgRef.current;
+  const copy = heroContentRef && heroContentRef.current;
+  const dark = darkRef && darkRef.current;
+  const scrim= topScrimRef && topScrimRef.current;
+  const stmt = statementTextRef && statementTextRef.current;
+  const foot = footerInnerRef && footerInnerRef.current;
+
+  /* ---- READS FIRST (no layout thrash) ---- */
+  const originY = s.getBoundingClientRect().top;
+  const stmtY = stmt ? stmt.getBoundingClientRect().top - originY : null;
+  const footY = foot ? foot.getBoundingClientRect().top - originY : null;
+
+  /* ---- progress ----
+     The span is capped by how much scroll the page actually has, so the
+     hero is guaranteed to finish resolving before the user hits the
+     bottom — on any viewport, at any content length. The three spans keep
+     their ratios, so the choreography never changes shape. */
+  const room = Math.max(1, s.scrollHeight - vh);
+  const span = Math.min(vh * FX.DIM_SPAN, room * 0.90);
+
+  const pDim  = clamp01(y / span);
+  const pTop  = clamp01(y / (span * (FX.TOP_SPAN  / FX.DIM_SPAN)));
+  const pCopy = clamp01(y / (span * (FX.COPY_SPAN / FX.DIM_SPAN)));
+
+  // eDim also drives the image blur+scale, on purpose: blur and scale must
+  // share one curve so the scale overhang always outruns the blur radius
+  // (otherwise the blur samples past the card edge and haloes).
+  const eDim  = easeOut(pDim);       // uniform darkening + image blur — instant
+  const eTop  = easeOut(pTop);       // darkness closing in from the top
+  const eMove = easeSmooth(pDim);    // the card's physical recede
+  const eCopy = easeSmooth(pCopy);   // headline retreat
+
+  /* ---- WRITES ---- */
+  set(dark,  'opacity', eDim.toFixed(4));
+  set(scrim, 'opacity', (eTop * FX.TOP_MAX).toFixed(4));
+
+  if (reduceMotion) {
+    set(img,  'filter', 'none');
+    set(img,  'transform', 'none');
+    set(card, 'transform', 'none');
+    set(copy, 'filter', 'none');
+    set(copy, 'transform', 'none');
+    set(copy, 'opacity', (1 - eCopy).toFixed(4));
+    revealStatic(stmt);
+    revealStatic(foot);
+  } else {
+    set(img, 'filter',
+      'blur(' + (eDim * FX.IMG_BLUR).toFixed(2) + 'px) saturate(' + (1 - eDim * 0.40).toFixed(3) + ') brightness(' + (1 - eDim * 0.15).toFixed(3) + ')');
+    set(img, 'transform', 'scale(' + (1 + eDim * FX.IMG_SCALE).toFixed(4) + ')');
+
+    set(card, 'transform',
+      'translate3d(0,' + (-vh * FX.CARD_RISE * eMove).toFixed(2) + 'px,0) scale(' + (1 - eMove * FX.CARD_SCALE).toFixed(4) + ')');
+
+    set(copy, 'opacity', (1 - eCopy).toFixed(4));
+    set(copy, 'filter', eCopy < 0.002 ? 'none' : 'blur(' + (eCopy * FX.COPY_BLUR).toFixed(2) + 'px)');
+    set(copy, 'transform',
+      'translate3d(0,' + (-vh * FX.COPY_RISE * eCopy).toFixed(2) + 'px,0) scale(' + (1 - eCopy * 0.05).toFixed(4) + ')');
+
+    reveal(stmt, stmtY, vh);
+    reveal(foot, footY, vh);
+  }
+
+  if (hud.classList.contains('on')) {
+    hud.textContent =
+      'y/vh   ' + (y / vh).toFixed(3) +
+      '\ndim    ' + eDim.toFixed(3) +
+      '\ntop    ' + (eTop * FX.TOP_MAX).toFixed(3) +
+      '\nmove   ' + eMove.toFixed(3) +
+      '\ncopy   ' + eCopy.toFixed(3) +
+      '\nstmtY  ' + (stmtY === null ? '-' : (stmtY / vh).toFixed(3)) +
+      '\nreduce ' + reduceMotion;
+  }
+}
+
+/* Soft entrance for anything rising into view. `top` is the element's
+   distance from the top of the scroll viewport. */
+function reveal(el, top, vh) {
+  if (!el || top === null) return;
+  const e = easeOut(clamp01((vh - top) / (vh * FX.ENTER_SPAN)));
+  set(el, 'opacity', e.toFixed(4));
+  set(el, 'transform', 'translate3d(0,' + ((1 - e) * FX.ENTER_RISE).toFixed(2) + 'px,0)');
+  set(el, 'filter', e > 0.995 ? 'none' : 'blur(' + ((1 - e) * FX.ENTER_BLUR).toFixed(2) + 'px)');
+}
+function revealStatic(el) {
+  if (!el) return;
+  set(el, 'opacity', '1');
+  set(el, 'transform', 'none');
+  set(el, 'filter', 'none');
+}
+
+const onScroll = function () {
+  if (tick) return;
+  tick = true;
+  requestAnimationFrame(function () { tick = false; applyScrollFx(); });
+};
+
+/* -------- wiring (dc: onScroll={{ onScroll }} + componentDidMount) -------- */
+const hud = document.getElementById('hud');
+scrollerRef.current.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
+try {
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const onMq = function () { reduceMotion = mq.matches; applyScrollFx(); };
+  if (mq.addEventListener) mq.addEventListener('change', onMq); else mq.addListener(onMq);
+} catch (e) {}
+window.addEventListener('keydown', function (ev) {
+  if (ev.key === 'd') { hud.classList.toggle('on'); applyScrollFx(); }
+  if (ev.key === 'r') { reduceMotion = !reduceMotion; applyScrollFx(); }
+});
+applyScrollFx();          // paint the correct first frame (and after reload mid-page)
+window.addEventListener('load', applyScrollFx);
+</script>
+</body>
+</html>

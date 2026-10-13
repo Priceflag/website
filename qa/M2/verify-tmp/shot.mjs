@@ -1,0 +1,10 @@
+import { chromium, webkit } from 'playwright';
+const [,, url, w, h, out, full, eng] = process.argv;
+const b = await (eng === 'webkit' ? webkit : chromium).launch();
+const pg = await b.newPage({ viewport: { width: +w, height: +h } });
+await pg.route(/script\.google\.com/, r => r.abort());
+await pg.goto(url, { waitUntil: 'networkidle' }); await pg.waitForTimeout(400);
+await pg.screenshot({ path: out, fullPage: full === 'full' });
+const info = await pg.evaluate(() => { const h = document.querySelector('h1').getBoundingClientRect(); const l = document.querySelector('.pf-legal')?.getBoundingClientRect(); return { h1: [h.left, h.right, h.top, h.bottom].map(Math.round), legal: l && [l.left, l.right, l.top, l.bottom].map(Math.round), docH: document.documentElement.scrollHeight }; });
+console.log(JSON.stringify(info));
+await b.close();

@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-10-03T01:33:09.473Z",
+        "reason": "User confirmed inter is intentional"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-03T01:33:39.925Z",
+        "reason": "False positive: CSS comment mentions img, mark.svg is a real asset"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-03T01:33:39.997Z",
+        "reason": "Existing lime button halo is the brand; user asked to keep the same color"
+      }
+    ]
+  }
+}

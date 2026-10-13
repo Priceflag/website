@@ -1,0 +1,30 @@
+/ @1440 .pf-title-lead     color rgb(243, 236, 222)           min 3.58 p5 12.97 median 14.73
+/ @1440 .pf-title-accent   color rgb(216, 242, 75)            min 1.02 p5 11.00 median 13.68
+/ @1440 .pf-sub            color rgba(243, 236, 222, 0.84)    min 6.57 p5 9.22 median 10.47
+/ @1440 .pf-hero-foot      color rgb(243, 236, 222)           min 1.34 p5 2.72 median 10.23
+/ @1440 .pf-foot-head      color rgb(13, 31, 0)               min 13.81 p5 13.81 median 13.84
+/ @1440 .pf-foot-bar       color rgb(13, 31, 0)               min 4.01 p5 5.77 median 13.31
+/ @1440 .pf-foot-link      color rgb(13, 31, 0)               min 13.81 p5 13.81 median 13.81
+/signin.html @1440 .pf-eyebrow        color rgba(243, 236, 222, 0.84)    min 10.77 p5 11.27 median 11.57
+/signin.html @1440 h1                 color rgb(243, 236, 222)           min 15.04 p5 15.53 median 16.01
+/signin.html @1440 label              color rgba(243, 236, 222, 0.84)    min 11.23 p5 11.23 median 11.23
+/signin.html @1440 .pf-note           color rgba(243, 236, 222, 0.72)    min 8.36 p5 8.43 median 8.46
+/signin.html @1440 .pf-legal          color rgba(243, 236, 222, 0.72)    min 3.99 p5 8.40 median 8.58
+/signin.html @1440 .pf-wordmark       color rgb(243, 236, 222)           min 15.08 p5 15.48 median 16.00
+/about @1440 .pf-sheet-title    color rgb(15, 24, 48)              min 15.89 p5 15.89 median 15.89
+/about @1440 .pf-lede           color rgb(15, 24, 48)              min 15.89 p5 15.89 median 15.89
+/ @375 .pf-title-lead     color rgb(243, 236, 222)           min 8.58 p5 10.95 median 14.73
+/ @375 .pf-title-accent   color rgb(216, 242, 75)            min 1.07 p5 9.08 median 13.04
+/ @375 .pf-sub            color rgba(243, 236, 222, 0.84)    min 5.79 p5 6.88 median 9.07
+/ @375 .pf-hero-foot      color rgb(243, 236, 222)           min 7.05 p5 8.23 median 10.45
+/ @375 .pf-foot-head      color rgb(13, 31, 0)               min 13.78 p5 13.78 median 13.78
+/ @375 .pf-foot-bar       color rgb(13, 31, 0)               min 3.97 p5 5.70 median 13.73
+/ @375 .pf-foot-link      color rgb(13, 31, 0)               min 13.71 p5 13.83 median 13.84
+/signin.html @375 .pf-eyebrow        color rgba(243, 236, 222, 0.84)    min 11.00 p5 11.28 median 11.63
+/signin.html @375 h1                 color rgb(243, 236, 222)           min 15.01 p5 15.54 median 16.01
+/signin.html @375 label              color rgba(243, 236, 222, 0.84)    min 11.23 p5 11.23 median 11.23
+/signin.html @375 .pf-note           color rgba(243, 236, 222, 0.72)    min 8.36 p5 8.46 median 8.46
+/signin.html @375 .pf-legal          color rgba(243, 236, 222, 0.72)    min 6.39 p5 8.40 median 8.58
+/signin.html @375 .pf-wordmark       color rgb(243, 236, 222)           min 15.15 p5 15.52 median 16.01
+/about @375 .pf-sheet-title    color rgb(15, 24, 48)              min 15.89 p5 15.89 median 15.89
+/about @375 .pf-lede           color rgb(15, 24, 48)              min 15.89 p5 15.89 median 15.89

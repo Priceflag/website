@@ -1,0 +1,14 @@
+{
+  "check": "unit",
+  "title": "Unit tests (node --test qa/tests/)",
+  "status": "PASS",
+  "durationMs": 83,
+  "pages": {},
+  "data": {
+    "exitCode": 0,
+    "tests": 1,
+    "pass": 1,
+    "fail": 0,
+    "output": "✔ qa harness unit runner works (0.32875ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 45.387916\n"
+  }
+}

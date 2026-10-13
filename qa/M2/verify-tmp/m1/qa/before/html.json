@@ -1,0 +1,156 @@
+{
+  "check": "html",
+  "title": "html-validate (served HTML)",
+  "status": "FAIL",
+  "durationMs": 231,
+  "pages": {
+    "index": {
+      "status": "FAIL",
+      "errors": 4,
+      "warnings": 0,
+      "byRule": {
+        "element-name (error)": 1,
+        "valid-id (error)": 1,
+        "unique-landmark (error)": 1,
+        "prefer-native-element (error)": 1
+      },
+      "messages": [
+        {
+          "rule": "element-name",
+          "severity": "error",
+          "message": "<helmet> is not a valid element name",
+          "line": 116,
+          "column": 2,
+          "selector": "html > body > x-dc > helmet"
+        },
+        {
+          "rule": "valid-id",
+          "severity": "error",
+          "message": "element id \"__bundler_thumbnail\" must begin with a letter",
+          "line": 120,
+          "column": 15,
+          "selector": "#__bundler_thumbnail"
+        },
+        {
+          "rule": "unique-landmark",
+          "severity": "error",
+          "message": "Landmarks must have a non-empty and unique accessible name (aria-label or aria-labelledby)",
+          "line": 754,
+          "column": 4,
+          "selector": "html > body > x-dc > div > nav"
+        },
+        {
+          "rule": "prefer-native-element",
+          "severity": "error",
+          "message": "Prefer to use the native <footer> element",
+          "line": 812,
+          "column": 55,
+          "selector": "html > body > x-dc > div > section:nth-child(5)"
+        }
+      ]
+    },
+    "about": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "contact": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "legal": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "signin": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    }
+  },
+  "data": {
+    "index": {
+      "status": "FAIL",
+      "errors": 4,
+      "warnings": 0,
+      "byRule": {
+        "element-name (error)": 1,
+        "valid-id (error)": 1,
+        "unique-landmark (error)": 1,
+        "prefer-native-element (error)": 1
+      },
+      "messages": [
+        {
+          "rule": "element-name",
+          "severity": "error",
+          "message": "<helmet> is not a valid element name",
+          "line": 116,
+          "column": 2,
+          "selector": "html > body > x-dc > helmet"
+        },
+        {
+          "rule": "valid-id",
+          "severity": "error",
+          "message": "element id \"__bundler_thumbnail\" must begin with a letter",
+          "line": 120,
+          "column": 15,
+          "selector": "#__bundler_thumbnail"
+        },
+        {
+          "rule": "unique-landmark",
+          "severity": "error",
+          "message": "Landmarks must have a non-empty and unique accessible name (aria-label or aria-labelledby)",
+          "line": 754,
+          "column": 4,
+          "selector": "html > body > x-dc > div > nav"
+        },
+        {
+          "rule": "prefer-native-element",
+          "severity": "error",
+          "message": "Prefer to use the native <footer> element",
+          "line": 812,
+          "column": 55,
+          "selector": "html > body > x-dc > div > section:nth-child(5)"
+        }
+      ]
+    },
+    "about": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "contact": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "legal": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "signin": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    }
+  }
+}

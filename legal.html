@@ -11,117 +11,133 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="tokens.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional" rel="stylesheet">
 <style>
+  /* Paper "ticket" pages (about, contact, legal). Every value comes from tokens.css
+     (contract: DESIGN_TOKENS.md). Type: header = h3; body = body + small; foot = body.
+     The hiker mark and the back-arrow glyph are artwork and sit outside the type scale. */
   :root{
-    --ink:#030818;           /* site background / dark button          */
-    --sheet:#f7f3ea;         /* the panel itself                       */
-    --text:#333c52;          /* body copy on the panel                 */
-    --head:#0f1830;          /* headings and lead-ins                  */
-    --rule:rgba(15,24,48,0.16);
-    --neon:#d8f24b;
-    --serif:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
-    --sans:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    /* Page-local roles, mapped onto the tokens. */
+    --ink:var(--pf-navy-950);         /* site background / dark button */
+    --sheet:var(--pf-paper);          /* the panel itself              */
+    --text:var(--pf-paper-text);      /* body copy on the panel, 9.93:1 */
+    --head:var(--pf-paper-ink);       /* headings and lead-ins, 15.89:1 */
+    --muted:var(--pf-paper-muted);    /* markers and meta, 6.04:1       */
+    --link:var(--pf-link-on-paper);   /* 6.41:1                         */
+    --rule:var(--pf-line-paper);
+    --gut:clamp(var(--pf-space-5),4vw,28px);   /* the panel's side inset */
   }
 
   *,*::before,*::after{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   body{
     margin:0;
     background:var(--ink);
     color:var(--text);
-    font-family:var(--sans);
-    font-size:16.5px;font-weight:400;line-height:1.7;
-    letter-spacing:-0.005em;
+    font-family:var(--pf-sans);
+    font-size:var(--pf-text-body);font-weight:400;line-height:var(--pf-lh-body);
+    letter-spacing:var(--pf-track-body);
     overflow-wrap:break-word;
-    /* The panel is bound to the screen: the page does not scroll, the panel
-       does not move, and only the copy inside it travels. svh rather than vh
-       so a phone's collapsing toolbar cannot crop the panel. */
+    /* On a tall enough screen the panel is bound to it: the page does not
+       scroll, the panel does not move, and only the copy inside it travels.
+       svh rather than vh so a phone's collapsing toolbar cannot crop it.
+       Short screens (landscape phones, 200-400% zoom) let the page scroll
+       instead; see the max-height block below. */
     min-height:100vh;min-height:100svh;
     height:100vh;height:100svh;
     display:flex;align-items:center;justify-content:center;
-    padding:clamp(14px,3.5vh,34px) 14px;
+    padding:clamp(var(--pf-space-3),3.5vh,var(--pf-space-7)) var(--pf-space-3);
     overflow:hidden;
   }
-  ::selection{background:var(--neon);color:#071238;}
+  ::selection{background:var(--pf-lime);color:var(--pf-navy-900);}
 
   /* ---------- the painting ----------
      A fixed layer rather than background-attachment:fixed, which iOS has
-     never scrolled smoothly. The panel scrolls over a picture that stays
-     put, which is the whole effect. */
+     never scrolled smoothly. The panel scrolls over a picture that stays put. */
   .pf-bg{position:fixed;inset:0;z-index:-2;}
   .pf-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
-  /* Just enough wash to sit the panel on something, and to stop the brightest
-     part of the sky competing with it. The picture is meant to stay readable. */
+  /* Just enough wash to sit the panel on something. */
   .pf-bg::after{
     content:"";position:absolute;inset:0;
     background:linear-gradient(180deg,
-      rgba(3,8,24,0.34) 0%, rgba(3,8,24,0.16) 30%,
-      rgba(3,8,24,0.20) 70%, rgba(3,8,24,0.44) 100%);
+      color-mix(in srgb,var(--ink) 34%,transparent) 0%, color-mix(in srgb,var(--ink) 16%,transparent) 30%,
+      color-mix(in srgb,var(--ink) 20%,transparent) 70%, color-mix(in srgb,var(--ink) 44%,transparent) 100%);
   }
 
+  /* ---------- links and focus: one ring ---------- */
+  a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  a:hover{color:var(--head);}
+  :focus-visible{outline:var(--pf-focus-width) solid var(--pf-focus-on-paper);outline-offset:var(--pf-focus-offset);border-radius:var(--pf-radius-sm);}
+  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
+  main:focus-visible{outline-offset:-4px;border-radius:0;}
+
+  /* The skip link lands over the dark painting, so its ring is drawn inside the lime. */
   .skip{
-    position:fixed;left:-9999px;top:0;z-index:50;
-    background:var(--neon);color:#13200a;
-    padding:10px 16px;border-radius:0 0 8px 0;
-    font-size:14px;font-weight:600;text-decoration:none;
+    position:fixed;left:-9999px;top:0;z-index:var(--pf-z-skip);
+    background:var(--pf-lime);color:var(--pf-lime-ink);
+    padding:10px var(--pf-space-4);border-radius:0 0 var(--pf-radius-field) 0;
+    font-size:var(--pf-text-small);font-weight:600;text-decoration:none;
   }
-  .skip:focus{left:0;}
+  .skip:focus{left:0;color:var(--pf-lime-ink);}
+  .skip:focus-visible{outline-color:var(--pf-focus-on-lime);outline-offset:-5px;}
 
   /* ---------- the panel ---------- */
   .pf-sheet{
     position:relative;
     display:flex;flex-direction:column;
     width:min(500px, 100%);
-    height:min(680px, 100%);
+    max-height:min(620px, 100%);
     background:var(--sheet);
-    box-shadow:0 40px 90px -34px rgba(3,8,24,0.92),
-               0 2px 10px rgba(3,8,24,0.25);
+    box-shadow:0 40px 90px -34px color-mix(in srgb,var(--ink) 92%,transparent),
+               0 2px 10px color-mix(in srgb,var(--ink) 25%,transparent);
   }
-  /* ---------- panel header ---------- */
+
+  /* ---------- panel header ----------
+     The side columns never shrink below their marks and the title column can,
+     so a long title wraps instead of pushing the hiker off-screen. While the
+     title fits, the two 1fr sides stay equal and it reads as centred. */
   .pf-sheet-top{
     flex:none;
-    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-    gap:12px;
-    /* Top inset matches the side inset, so the row sits in an even margin
-       rather than crowding the panel's edge. */
-    padding:clamp(18px,4vw,28px) clamp(18px,4vw,28px) 0;
-    /* The two flanking marks are different sizes, and the title only reads
-       as centred when their optical centres are the same distance in from
-       each edge. Declared here so the arrow can offset itself against the
-       hiker's width instead of guessing at it. */
+    display:grid;grid-template-columns:minmax(max-content,1fr) minmax(0,auto) minmax(max-content,1fr);
+    align-items:center;
+    gap:var(--pf-space-3);
+    padding:var(--gut) var(--gut) 0;
+    /* The two flanking marks are different sizes; the arrow offsets itself
+       against the hiker's width so their optical centres sit the same distance in. */
     --mark-w:2.7em;
     --arrow-d:34px;
   }
   .pf-sheet-title{
-    grid-column:2;
+    grid-column:2;min-width:0;
     margin:0;
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(21px,3.4vw,25px);line-height:1.2;letter-spacing:-0.01em;
+    font-family:var(--pf-serif);font-weight:400;
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
     color:var(--head);text-align:center;
+    overflow-wrap:anywhere;text-wrap:balance;
   }
   .pf-arrow{
+    position:relative;
     justify-self:start;
     display:inline-flex;align-items:center;justify-content:center;
     width:var(--arrow-d);height:var(--arrow-d);border-radius:50%;
-    /* Centres the 34px circle on the same inset the hiker centres on, so the
-       margin is half the difference between the two marks rather than a
-       number that happened to look right. */
     margin-left:calc((var(--mark-w) - var(--arrow-d)) / 2);
     color:var(--head);text-decoration:none;
-    transition:background-color .2s ease;
+    transition:background-color var(--pf-dur-fast) var(--pf-ease);
   }
-  /* The glyph is sized on the span, not the link: --mark-w is set in em, and
-     an em on the link itself would resolve against the arrow's own type size
-     rather than the panel's, throwing the offset above out by 3px. */
+  /* A 44px hit area around the 34px circle. */
+  .pf-arrow::before{content:"";position:absolute;inset:-5px;border-radius:50%;}
+  .pf-arrow:focus-visible{border-radius:50%;}
+  /* Glyph size is artwork; set on the span so --mark-w (em) resolves against the panel. */
   .pf-arrow span{font-size:19px;line-height:1;}
-  .pf-arrow:hover{background:rgba(15,24,48,0.07);}
+  .pf-arrow:hover{background:color-mix(in srgb,var(--head) 7%,transparent);}
   .pf-mark{
     justify-self:end;
     display:inline-flex;align-items:center;
+    min-height:44px;
     color:var(--head);text-decoration:none;
   }
   .pf-hiker{
@@ -139,121 +155,96 @@
      growing the panel past its bound. */
   main{
     flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
-    padding:clamp(18px,3.4vw,24px) clamp(18px,4vw,28px) clamp(20px,3.4vw,26px);
+    padding:clamp(var(--pf-space-5),3.4vw,var(--pf-space-6)) var(--gut) clamp(var(--pf-space-5),3.4vw,26px);
   }
   main::-webkit-scrollbar{width:9px;}
   main::-webkit-scrollbar-thumb{
-    background:rgba(15,24,48,0.20);border-radius:99px;
+    background:color-mix(in srgb,var(--head) 20%,transparent);border-radius:var(--pf-radius-pill);
     border:3px solid var(--sheet);}
-  main::-webkit-scrollbar-thumb:hover{background:rgba(15,24,48,0.32);}
-  main{scrollbar-width:thin;scrollbar-color:rgba(15,24,48,0.24) transparent;}
+  main::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--head) 32%,transparent);}
+  main{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--head) 24%,transparent) transparent;}
 
-  .pf-lede{margin:0;font-size:17px;line-height:1.65;color:var(--head);}
-  p{margin:15px 0 0;}
-  a{color:#3f4fb0;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
-  a:hover{color:var(--head);}
-  :focus-visible{outline:2px solid #3f4fb0;outline-offset:3px;border-radius:2px;}
+  .pf-lede{margin:0;color:var(--head);}
+  p{margin:var(--pf-space-4) 0 0;}
   strong{color:var(--head);font-weight:600;}
 
   h2{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(20px,3vw,23px);line-height:1.25;letter-spacing:-0.01em;
+    font-family:var(--pf-serif);font-weight:400;
+    font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);letter-spacing:var(--pf-track-heading);
     color:var(--head);
-    margin:34px 0 0;
+    margin:var(--pf-space-7) 0 0;
+    overflow-wrap:anywhere;
   }
 
+  /* ---------- legal: the long sheet ---------- */
+  .pf-sheet{height:min(680px, 100%);max-height:none;}
   main h3{
-    font-family:var(--sans);font-weight:600;
-    font-size:15.5px;line-height:1.4;color:var(--head);
-    margin:24px 0 0;
+    font-family:var(--pf-sans);font-weight:600;
+    font-size:var(--pf-text-body);line-height:var(--pf-lh-sub);color:var(--head);
+    margin:var(--pf-space-6) 0 0;
+    overflow-wrap:anywhere;
   }
-  .pf-meta{margin:7px 0 0;font-size:13.5px;line-height:1.5;color:#545c70;}
+  /* Meta was 13.5px; now the small step, in paper-muted (6.04:1). */
+  .pf-meta{margin:var(--pf-space-2) 0 0;font-size:var(--pf-text-small);line-height:1.5;color:var(--muted);}
   .pf-rule{margin:36px 0 0;border:0;border-top:1px solid var(--rule);}
 
-  /* title + sentence pairs */
-  .pf-pairs{margin:14px 0 0;padding:0;list-style:none;}
-  .pf-pairs li{margin:16px 0 0;}
-  .pf-pairs b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
-  .pf-pairs span{display:block;margin-top:2px;font-size:15.5px;line-height:1.6;}
-
-  ul.pf-list{margin:14px 0 0;padding-left:1.15em;}
-  ul.pf-list li{margin:9px 0 0;font-size:15.5px;line-height:1.6;}
-  ul.pf-list li::marker{color:#8b93a8;}
+  ul.pf-list{margin:var(--pf-space-3) 0 0;padding-left:1.15em;}
+  ul.pf-list li{margin:var(--pf-space-2) 0 0;}
+  ul.pf-list li::marker{color:var(--muted);}
 
   /* placeholders still to be filled in */
   .pf-fill{
-    font-family:var(--sans);font-weight:600;font-size:0.94em;
-    color:#3d4413;background:rgba(216,242,75,0.55);
-    border-bottom:1px dashed rgba(61,68,19,0.5);
-    padding:1px 5px;border-radius:3px;
+    font-family:var(--pf-sans);font-weight:600;font-size:inherit;
+    color:var(--pf-lime-ink);background:color-mix(in srgb,var(--pf-lime) 55%,transparent);
+    border-bottom:1px dashed color-mix(in srgb,var(--pf-lime-ink) 50%,transparent);
+    padding:1px 5px;border-radius:var(--pf-radius-sm);
   }
 
   .pf-note{
-    margin:20px 0 0;padding:14px 16px;
-    border:1px solid rgba(61,68,19,0.28);border-left-width:3px;
-    border-radius:8px;background:rgba(216,242,75,0.18);
-    font-size:14.5px;line-height:1.6;color:#3d4413;
+    margin:var(--pf-space-5) 0 0;padding:14px var(--pf-space-4);
+    border:1px solid var(--pf-line-lime);border-left-width:3px;
+    border-radius:var(--pf-radius-field);background:color-mix(in srgb,var(--pf-lime) 18%,transparent);
+    font-size:var(--pf-text-small);line-height:var(--pf-lh-body);color:var(--pf-lime-ink);
   }
-  .pf-note b{display:block;font-size:11.5px;font-weight:700;letter-spacing:0.14em;
-    text-transform:uppercase;margin-bottom:5px;}
+  /* The label was 11.5px caps; now the small step in bold. */
+  .pf-note b{display:block;font-size:var(--pf-text-small);font-weight:700;margin-bottom:var(--pf-space-1);}
 
   @media (max-width:520px){
-    body{font-size:16px;padding:0;}
-    .pf-sheet{width:100%;height:100%;}
-    .pf-lede{font-size:16.5px;}
+    body{padding:0;}
+    .pf-sheet{width:100%;height:100%;max-height:100%;}
   }
 
+  /* ---------- short screens (B4) ----------
+     A landscape phone (844x390) or 400% zoom (320x256 CSS px) left the
+     fixed panel only 109-205px of copy between its header and foot. Below
+     560px of height the page scrolls instead: the panel grows to its content
+     and the header and foot travel with it, so the copy gets the screen. */
+  @media (max-height:560px){
+    body{height:auto;overflow:visible;align-items:flex-start;}
+    .pf-sheet{height:auto;max-height:none;}
+    main{flex:none;overflow:visible;}
+  }
+  @media (max-height:560px) and (max-width:520px){
+    .pf-sheet{min-height:100vh;min-height:100svh;}
+  }
+
+  /* Motion: hover and focus transitions only, and none when reduced. */
   @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
+    *,*::before,*::after{animation:none !important;transition:none !important;}
+    .pf-cta:hover,.pf-say:hover{transform:none;}
   }
 
   @media print{
-    .pf-bg,.skip{display:none !important;}
+    .pf-bg,.skip,.pf-cta{display:none !important;}
     body{background:#fff;color:#1a1a1a;font-size:11pt;line-height:1.5;}
     body{height:auto;display:block;overflow:visible;padding:0;}
-    .pf-sheet{width:auto;height:auto;display:block;box-shadow:none;
+    .pf-sheet{width:auto;height:auto;max-height:none;display:block;box-shadow:none;
       -webkit-mask-image:none;mask-image:none;}
     main{overflow:visible;}
     a{color:#000;}
     .pf-fill{background:#fff;color:#000;border-bottom:1px dashed #000;}
     h2{page-break-after:avoid;}
   }
-  /* ---------- reveal ----------
-     The card used to paint on the bare ink background and the painting
-     arrived after it, which read as the ticket flashing up on black. So the
-     card is held back until the image is decoded, then the two land in
-     order: picture first, ticket a beat later.
-
-     `pf-boot` is set by an inline script in the head, so the hidden state
-     only ever exists when the script that clears it is running. With no JS
-     nothing is hidden and the page just renders. */
-  .pf-boot .pf-bg,
-  .pf-boot .pf-sheet{opacity:0;}
-  .pf-go .pf-bg  {animation:pfBgIn   760ms cubic-bezier(.22,1,.36,1) both;}
-  .pf-go .pf-sheet{animation:pfCardIn 620ms cubic-bezier(.22,1,.36,1) 220ms both;}
-  /* The resting state, forced on a timer whatever happened to the animation.
-     A starved environment never runs the keyframes, so without this the card
-     would sit at opacity 0 forever. */
-  .pf-done .pf-bg,
-  .pf-done .pf-sheet{animation:none;opacity:1;transform:none;}
-
-  @keyframes pfBgIn{
-    from{opacity:0;transform:scale(1.035);}
-    to  {opacity:1;transform:scale(1);}
-  }
-  @keyframes pfCardIn{
-    from{opacity:0;transform:translateY(16px) scale(.972);}
-    to  {opacity:1;transform:translateY(0) scale(1);}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .pf-boot .pf-bg,.pf-boot .pf-sheet,
-    .pf-go .pf-bg,.pf-go .pf-sheet{
-      opacity:1 !important;animation:none !important;transform:none !important;
-    }
-  }
-  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
-  main:focus-visible{outline:2px solid #3f4fb0;outline-offset:-4px;}
 </style>
 </head>
 <body>
@@ -273,9 +264,9 @@
   </header>
 
   <main id="main" tabindex="0">
-    <p class="pf-lede">The two documents that govern using Priceflag: the Privacy Policy and the Terms of Service. Both are drafted and pending legal review, so neither is in force yet &mdash; they are here to be read before that changes.</p>
+    <p class="pf-lede">The two documents that govern using Priceflag: the Privacy Policy and the Terms of Service. Both are drafted and pending legal review, so neither is in force yet; they are here to be read before that changes.</p>
 
-    <div class="pf-note"><b>Draft &mdash; pending legal review</b>These were written against Shopify's published requirements for App Store apps, the EU and UK GDPR, and the CCPA as amended by the CPRA. A lawyer has not reviewed them, and one must before Priceflag accepts its first merchant. Facts still to be settled are marked <span class="pf-fill">like this</span>.</div>
+    <div class="pf-note"><b>Draft: pending legal review</b>These were written against Shopify's published requirements for App Store apps, the EU and UK GDPR, and the CCPA as amended by the CPRA. A lawyer has not reviewed them, and one must before Priceflag accepts its first merchant. Facts still to be settled are marked <span class="pf-fill">like this</span>.</div>
 
     <h2 id="privacy">Privacy Policy</h2>
     <p class="pf-meta">Last updated: <time datetime="2026-09-01">1 September 2026</time> &middot; Effective <span class="pf-fill">[EFFECTIVE DATE]</span> &middot; Not yet in force</p>
@@ -283,18 +274,18 @@
     <h3>Introduction</h3>
     <p>Priceflag is a pricing tool for Shopify merchants. It forecasts the likely effect of a price change, then releases that change across a growing share of the products you selected, in stages over time, so every visitor sees the same price. It watches profit against a guardrail you set, and pauses the rollout if the guardrail is breached so the price can be put back. It does not test prices on a share of traffic, and it does not show different visitors different prices. This policy covers the Priceflag Shopify app, the Priceflag web application, and the priceflag.org site. The company behind them is Priceflag Syndicate, Inc., established in Delaware, United States at <span class="pf-fill">[REGISTERED ADDRESS]</span>.</p>
     <p>In this policy, &ldquo;you&rdquo; means the merchant, or the person using Priceflag on a merchant's behalf. &ldquo;Your customers&rdquo; means the shoppers who buy from your store. Priceflag is a business tool: we do not build shopper profiles, we do not advertise to your customers, and we do not sell data to anyone.</p>
-    <p><strong>Two roles.</strong> For your own account data &mdash; your name, work email, the store you connect, billing details, and how you use the app &mdash; we are the controller under the GDPR and a business under the CCPA. For the data inside your store &mdash; products, prices, inventory, orders, and the limited personal data in order records &mdash; you are the controller and we are the processor, handling it on your documented instructions. Shopify is a separate party with its own agreements with you, and nothing here changes those.</p>
+    <p><strong>Two roles.</strong> For your own account data (your name, work email, the store you connect, billing details, and how you use the app), we are the controller under the GDPR and a business under the CCPA. For the data inside your store (products, prices, inventory, orders, and the limited personal data in order records), you are the controller and we are the processor, handling it on your documented instructions. Shopify is a separate party with its own agreements with you, and nothing here changes those.</p>
 
     <h3>Information We Collect</h3>
     <ul class="pf-list">
-      <li><strong>Account information</strong> &mdash; your name, work email address, the identifier used to sign you in, the Shopify store domains you connect, and the role each teammate holds in your workspace.</li>
-      <li><strong>Billing records</strong> &mdash; Shopify's App Store rules require app charges to run through Shopify's billing, so your payment card is handled by Shopify and never reaches us.</li>
-      <li><strong>Store data read from Shopify</strong> &mdash; products and variants, titles, SKUs, options, inventory levels, cost of goods where you have recorded it, current and historical prices, orders and line items, and store configuration.</li>
-      <li><strong>Usage data</strong> &mdash; the experiments you configure, and every rollout and rollback we execute, plus which screens you open and which features you use.</li>
-      <li><strong>Technical data</strong> &mdash; IP address, browser and device type, coarse location derived from IP, and error traces.</li>
-      <li><strong>Support correspondence</strong> &mdash; anything you send us by email or in-app chat.</li>
+      <li><strong>Account information</strong>: your name, work email address, the identifier used to sign you in, the Shopify store domains you connect, and the role each teammate holds in your workspace.</li>
+      <li><strong>Billing records</strong>: Shopify's App Store rules require app charges to run through Shopify's billing, so your payment card is handled by Shopify and never reaches us.</li>
+      <li><strong>Store data read from Shopify</strong>: products and variants, titles, SKUs, options, inventory levels, cost of goods where you have recorded it, current and historical prices, orders and line items, and store configuration.</li>
+      <li><strong>Usage data</strong>: the experiments you configure, and every rollout and rollback we execute, plus which screens you open and which features you use.</li>
+      <li><strong>Technical data</strong>: IP address, browser and device type, coarse location derived from IP, and error traces.</li>
+      <li><strong>Support correspondence</strong>: anything you send us by email or in-app chat.</li>
     </ul>
-    <p>Shopify classifies order data as <em>protected customer data</em>, and treats name, address, email and phone as a further tier &mdash; <em>protected customer fields</em> &mdash; that an app has to request individually and justify. Priceflag's arithmetic works on quantities, prices, margins and counts, so the app is designed to read order data without requesting those fields. The scopes it actually asks for appear on Shopify's install screen before you approve anything, and that screen is the authoritative record of what we can see.</p>
+    <p>Shopify classifies order data as <em>protected customer data</em>, and treats name, address, email and phone as a further tier (<em>protected customer fields</em>) that an app has to request individually and justify. Priceflag's arithmetic works on quantities, prices, margins and counts, so the app is designed to read order data without requesting those fields. The scopes it actually asks for appear on Shopify's install screen before you approve anything, and that screen is the authoritative record of what we can see.</p>
 
     <h3>How We Use Your Information</h3>
     <ul class="pf-list">
@@ -305,7 +296,7 @@
       <li>Debug problems, keep the service secure and available, and improve forecast quality for your store.</li>
       <li>Answer support requests and send service notices. Marketing email goes only to people who asked for it, and every marketing message carries an unsubscribe link.</li>
     </ul>
-    <p>We do not use one merchant's store data to produce forecasts for another, and we do not train shared models on your data unless you separately and explicitly opt in. Protected customer data is used to deliver the features you switched on and nothing else &mdash; Shopify's API terms forbid it, and so does this policy.</p>
+    <p>We do not use one merchant's store data to produce forecasts for another, and we do not train shared models on your data unless you separately and explicitly opt in. Protected customer data is used to deliver the features you switched on and nothing else: Shopify's API terms forbid it, and so does this policy.</p>
     <p>Where the GDPR or UK GDPR applies to data we control, we rely on performance of a contract for accounts, experiments, billing and support; legitimate interests for security, abuse prevention, debugging and aggregate usage; consent for marketing email and non-essential cookies; and legal obligation for tax, accounting and lawful requests. For data inside your store, the lawful basis is yours to determine as controller.</p>
 
     <h3>Shopify Access and Price Writes</h3>
@@ -320,33 +311,33 @@
     <h3>Shopify's Privacy Webhooks</h3>
     <p>Every app in the Shopify App Store has to answer three mandatory compliance webhooks. We verify the HMAC signature on each and reject anything that fails.</p>
     <ul class="pf-list">
-      <li><strong>customers/data_request</strong> &mdash; one of your customers has asked you for the data held about them. We return what we hold to you within the 30 days Shopify allows; you answer your customer.</li>
-      <li><strong>customers/redact</strong> &mdash; you have asked, on a customer's behalf, that their data be erased. We delete or irreversibly redact the identified customer and order records.</li>
-      <li><strong>shop/redact</strong> &mdash; sent 48 hours after you uninstall. We erase the data held for that shop.</li>
+      <li><strong>customers/data_request</strong>: one of your customers has asked you for the data held about them. We return what we hold to you within the 30 days Shopify allows; you answer your customer.</li>
+      <li><strong>customers/redact</strong>: you have asked, on a customer's behalf, that their data be erased. We delete or irreversibly redact the identified customer and order records.</li>
+      <li><strong>shop/redact</strong>: sent 48 hours after you uninstall. We erase the data held for that shop.</li>
     </ul>
     <p>Separately, Shopify's API License and Terms of Use require an app to delete every copy of a merchant's data within 30 days of uninstall or termination, except where the law requires us to keep something. We treat that as a hard obligation.</p>
 
     <h3>Data Security</h3>
     <p>We operate the controls Shopify requires of every app handling protected customer data: encryption in transit and at rest, encrypted backups, defined retention periods, separated test and production environments, staff access limited to those who need it, logging of access to protected customer data, strong authentication on staff accounts, and a written incident response process.</p>
     <p><strong>We hold no third-party security certification.</strong> We are not SOC 2 audited and not ISO 27001 certified, and we will not claim either until it is true. If a certification matters to your procurement process, ask us where we stand before you install.</p>
-    <p>No system is perfectly secure. If a breach affects personal data we hold, we will notify you without undue delay so you can meet your own obligations as controller, and we will notify regulators where the law requires it &mdash; under the GDPR, within 72 hours of becoming aware where the breach is notifiable.</p>
+    <p>No system is perfectly secure. If a breach affects personal data we hold, we will notify you without undue delay so you can meet your own obligations as controller, and we will notify regulators where the law requires it: under the GDPR, within 72 hours of becoming aware where the breach is notifiable.</p>
 
     <h3>Third-Party Services</h3>
     <p>We use a small number of vendors to run the service. Each is bound by contract to process data only on our instructions and only to provide their service to us, on terms meeting Article 28 of the GDPR.</p>
     <ul class="pf-list">
-      <li><strong>Shopify</strong> &mdash; the platform your store runs on, the source of the data we read, and the channel through which app subscriptions are billed.</li>
-      <li><strong>Cloud hosting and databases</strong> &mdash; <span class="pf-fill">[HOSTING PROVIDER AND REGION]</span>.</li>
-      <li><strong>Operational vendors</strong> &mdash; the providers we use for transactional email, error monitoring, product analytics and support. We will name every one of them, and the country each processes in, on request. We will not add a sub-processor that touches store data without updating that list.</li>
+      <li><strong>Shopify</strong>: the platform your store runs on, the source of the data we read, and the channel through which app subscriptions are billed.</li>
+      <li><strong>Cloud hosting and databases</strong>: <span class="pf-fill">[HOSTING PROVIDER AND REGION]</span>.</li>
+      <li><strong>Operational vendors</strong>: the providers we use for transactional email, error monitoring, product analytics and support. We will name every one of them, and the country each processes in, on request. We will not add a sub-processor that touches store data without updating that list.</li>
     </ul>
-    <p>Beyond those, we disclose data only where the law compels it, to establish or defend legal claims, to protect the rights and safety of our users or the public, or in a merger, acquisition or sale of assets &mdash; in which case we will tell you before your data becomes subject to a different policy. <strong>We do not sell personal information and we do not share it for cross-context behavioural advertising</strong>, as the CCPA defines those terms. We never have.</p>
+    <p>Beyond those, we disclose data only where the law compels it, to establish or defend legal claims, to protect the rights and safety of our users or the public, or in a merger, acquisition or sale of assets, in which case we will tell you before your data becomes subject to a different policy. <strong>We do not sell personal information and we do not share it for cross-context behavioural advertising</strong>, as the CCPA defines those terms. We never have.</p>
 
     <h3>How Long We Keep It</h3>
     <ul class="pf-list">
-      <li><strong>Store, product and order data</strong> &mdash; while the app is installed and the data is needed to run and evaluate your experiments. After uninstall, deleted within the 30 days Shopify's API terms require.</li>
-      <li><strong>Account records</strong> &mdash; while your account is open, then deleted after a short wind-down window that lets you reinstall.</li>
-      <li><strong>Experiment history and price-change logs</strong> &mdash; kept while you are a customer, exportable at any time, and removed with the rest of your data when you leave.</li>
-      <li><strong>Billing and tax records</strong> &mdash; for the period tax and company law requires, which overrides a deletion request.</li>
-      <li><strong>Technical logs and product analytics</strong> &mdash; for a limited operational period, then deleted or aggregated past the point of re-identification.</li>
+      <li><strong>Store, product and order data</strong>: while the app is installed and the data is needed to run and evaluate your experiments. After uninstall, deleted within the 30 days Shopify's API terms require.</li>
+      <li><strong>Account records</strong>: while your account is open, then deleted after a short wind-down window that lets you reinstall.</li>
+      <li><strong>Experiment history and price-change logs</strong>: kept while you are a customer, exportable at any time, and removed with the rest of your data when you leave.</li>
+      <li><strong>Billing and tax records</strong>: for the period tax and company law requires, which overrides a deletion request.</li>
+      <li><strong>Technical logs and product analytics</strong>: for a limited operational period, then deleted or aggregated past the point of re-identification.</li>
     </ul>
     <p>Backups expire on their own rotation, so data removed from live systems can persist in backups briefly before being overwritten.</p>
 
@@ -354,7 +345,7 @@
     <p>If the GDPR or UK GDPR applies to you, you have the right to access the personal data we hold about you, correct it, delete it, receive it in a portable machine-readable format, restrict or object to processing, object to direct marketing at any time, and withdraw consent you previously gave.</p>
     <ul class="pf-list">
       <li>Much of this is self-service: your data can be exported from the app, and uninstalling the Shopify app stops further collection immediately.</li>
-      <li>For anything else, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. We respond within one month, and may extend by two further months for genuinely complex requests &mdash; we will tell you inside the first month if that happens. We may need to verify who you are first.</li>
+      <li>For anything else, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. We respond within one month, and may extend by two further months for genuinely complex requests; we will tell you inside the first month if that happens. We may need to verify who you are first.</li>
       <li>If the request comes from one of <em>your</em> customers, it belongs to you as controller of that data. Forward it and we will give you what you need, or use Shopify's customers/data_request and customers/redact flows, which reach us automatically.</li>
       <li>You can complain to your data protection authority, whether that is the lead authority in <span class="pf-fill">[HOME JURISDICTION]</span> or the regulator where you live or work.</li>
     </ul>
@@ -393,7 +384,7 @@
 
     <h3>Account Registration</h3>
     <ul class="pf-list">
-      <li>You are responsible for the accuracy of what you tell us and for keeping it current &mdash; cost of goods in particular, since every margin calculation runs off it.</li>
+      <li>You are responsible for the accuracy of what you tell us and for keeping it current (cost of goods in particular, since every margin calculation runs off it).</li>
       <li>You are responsible for your credentials and for everything done under your account, including by teammates you invite. Tell us promptly at <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> if you suspect unauthorised access.</li>
       <li>We may refuse, suspend or close an account where we reasonably believe these terms have been broken or where continuing would expose us to legal risk.</li>
     </ul>
@@ -413,7 +404,7 @@
     <ul class="pf-list">
       <li><strong>Data has to arrive.</strong> Guardrails are evaluated from order data supplied by Shopify. If Shopify's API is slow, rate-limited, degraded or reporting late, a breach can go undetected until the data catches up.</li>
       <li><strong>Our systems have to be running.</strong> An outage, a deploy problem or a bug on our side can delay or prevent a rollback.</li>
-      <li><strong>We have to still hold write access.</strong> If the app is uninstalled, its permissions revoked, or its access token invalidated, we cannot write any price at all &mdash; including a rollback.</li>
+      <li><strong>We have to still hold write access.</strong> If the app is uninstalled, its permissions revoked, or its access token invalidated, we cannot write any price at all, including a rollback.</li>
       <li><strong>Small samples are noisy.</strong> On a small product selection a guardrail may fire on ordinary variance, or fail to fire on a real decline, simply because too few orders have come in. Confidence improves as more of the selection goes live; it is never absolute.</li>
       <li><strong>Other systems change prices too.</strong> Bulk edits, other apps, sales channels, discount rules and manual admin changes can move a price out from under an experiment. Priceflag records what it wrote, not what everything else wrote.</li>
     </ul>
@@ -450,7 +441,7 @@
     <p><strong>Deletion.</strong> Shopify's API terms require us to delete every copy of your data within 30 days of uninstall or termination, except where law requires retention. Export anything you want to keep before you go. If you send us suggestions we may use them freely, without obligation or payment to you.</p>
 
     <h3>Intellectual Property</h3>
-    <p>The service &mdash; the software, the forecasting models, the interface, the documentation, and the Priceflag name and marks &mdash; belongs to us and our licensors. We grant you a limited, non-exclusive, non-transferable, revocable right to use it while your account is in good standing and you comply with these terms. No rights are granted beyond that, and nothing here transfers ownership of anything.</p>
+    <p>The service (the software, the forecasting models, the interface, the documentation, and the Priceflag name and marks) belongs to us and our licensors. We grant you a limited, non-exclusive, non-transferable, revocable right to use it while your account is in good standing and you comply with these terms. No rights are granted beyond that, and nothing here transfers ownership of anything.</p>
 
     <h3>Shopify and Other Dependencies</h3>
     <p>Priceflag runs on Shopify and cannot work without it. Your use of Shopify is governed by your agreement with Shopify, not by us. We are not responsible for Shopify's availability, API behaviour, rate limits, data accuracy, deprecations or platform changes, and any of those can stop forecasts, rollouts, guardrail monitoring or rollbacks from working.</p>
@@ -479,7 +470,7 @@
     <ul class="pf-list">
       <li>These terms apply from your first use of the service until they are terminated.</li>
       <li>You may leave at any time by cancelling your plan and uninstalling the app from Shopify.</li>
-      <li>We may suspend or terminate access for breach, non-payment, legal risk or prolonged inactivity &mdash; with notice where practical, and immediately where the circumstances require it.</li>
+      <li>We may suspend or terminate access for breach, non-payment, legal risk or prolonged inactivity, with notice where practical, and immediately where the circumstances require it.</li>
       <li><strong>Settle your prices before you leave.</strong> Termination and uninstall both stop guardrail monitoring and rollback. Whatever price is live at that moment stays live on your storefront until you change it yourself in Shopify. There is no automatic restore on exit.</li>
       <li>On termination your right to use the service ends, and we handle your data as set out above. The sections on your prices, automation, your data, intellectual property, disclaimers, liability, indemnification and governing law survive termination, along with any other provision that by its nature should.</li>
     </ul>
@@ -488,7 +479,7 @@
     <p>We may update these terms as the service changes and as the law does. The date at the top reflects the current version. For material changes we will give at least 30 days' notice by email or in the app. Continuing to use the service after a change takes effect means you accept it; if you do not, cancel and uninstall before then.</p>
 
     <h3>Governing Law</h3>
-    <p>These terms are governed by the laws of <span class="pf-fill">[GOVERNING LAW AND VENUE]</span>, without regard to conflict-of-law rules, and the courts there have exclusive jurisdiction &mdash; subject to any mandatory rights you hold where you live or trade. Before filing anything, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> with a description of the dispute and what you want, and give us 30 days to work it out in good faith. That period does not limit either party from seeking urgent injunctive relief.</p>
+    <p>These terms are governed by the laws of <span class="pf-fill">[GOVERNING LAW AND VENUE]</span>, without regard to conflict-of-law rules, and the courts there have exclusive jurisdiction, subject to any mandatory rights you hold where you live or trade. Before filing anything, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> with a description of the dispute and what you want, and give us 30 days to work it out in good faith. That period does not limit either party from seeking urgent injunctive relief.</p>
 
     <h3>General</h3>
     <ul class="pf-list">
@@ -509,40 +500,6 @@
 
 </div>
 
-<script>
-/* Reveal, ordered: the painting is on screen before the ticket arrives.
-   Three independent paths fire the same once-only go(): decode() when the
-   browser can tell us the image is actually paintable, load/error as the
-   plain fallback, and a timer so a slow or dead image can never hold the
-   page hostage. go() then hands over to the resting class on another timer,
-   because CSS animations do not run in every environment this ships to but
-   setTimeout does. */
-(function () {
-  var root = document.documentElement;
-  var img  = document.querySelector('.pf-bg img');
-  var fired = false, landed = false;
-
-  function land() {
-    if (landed) return; landed = true;
-    root.className = (root.className.replace(/\bpf-go\b/, '') + ' pf-done').trim();
-  }
-  function go() {
-    if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-done').trim();
-    setTimeout(land, 1200);
-  }
-
-  if (!img) { go(); }
-  else {
-    if (img.complete && img.naturalWidth) { go(); }
-    img.addEventListener('load', go, { once: true });
-    img.addEventListener('error', go, { once: true });
-    if (img.decode) { img.decode().then(go)['catch'](go); }
-  }
-  setTimeout(go, 1600);        // never block on a slow image
-  setTimeout(land, 3200);      // and never leave the card hidden
-})();
-</script>
 
 </body>
 </html>

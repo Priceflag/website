@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag — intro animation prototype</title>
+<style>
+  /* ------------------------------------------------------------------
+     PROTOTYPE CHROME + a faithful copy of the production hero styles.
+     Everything between the BEGIN/END INTRO markers is the block that
+     gets pasted into index.html's <helmet><style>.
+     ------------------------------------------------------------------ */
+  html,body{margin:0;padding:0;background:#030818;}
+  a{color:#f3ecde;text-decoration:none;}
+  a:hover{color:#d8f24b;}
+  ::selection{background:#d8f24b;color:#071238;}
+  [data-scroller]{scrollbar-width:none;}
+  [data-scroller]::-webkit-scrollbar{display:none;}
+  [data-grain]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");}
+
+/* ==================================================================
+   BEGIN INTRO  — paste this whole block into the helmet <style>
+   ================================================================== */
+
+  /* Timing vocabulary. One long decelerating curve for things that
+     arrive, one slow ease-in-out for the image pull-back so it is still
+     visibly drifting when the nav lands on top of it. */
+  .pf-intro{
+    --pf-ease:      cubic-bezier(0.22, 1, 0.36, 1);
+    --pf-ease-zoom: cubic-bezier(0.58, 0.04, 0.16, 1);
+  }
+
+  /* The grain layer's opacity moves out of the inline style so the
+     intro can fade it in without !important. Final value unchanged. */
+  .pf-grain{opacity:0.5;}
+
+  /* 1. Pre-hide. `.pf-intro` is in the static markup, so the very first
+        paint is already hidden — no flash of a finished hero. */
+  .pf-intro .pf-hero-media,
+  .pf-intro .pf-grain,
+  .pf-intro .pf-title,
+  .pf-intro .pf-eyebrow,
+  .pf-intro .pf-cta,
+  .pf-intro .pf-nav,
+  .pf-intro .pf-nav-item{opacity:0;}
+  .pf-intro .pf-hero-media{will-change:transform,filter,opacity;}
+
+  /* 2. Run. `.pf-intro-go` is added once, on mount, after the hero
+        image is decodable. */
+  .pf-intro-go .pf-hero-media{
+    animation:pfMediaFade 1000ms var(--pf-ease) both,
+              pfMediaZoom 2200ms var(--pf-ease-zoom) both;
+  }
+  .pf-intro-go .pf-grain   {animation:pfGrainIn 1000ms var(--pf-ease)   80ms both;}
+  .pf-intro-go .pf-title   {animation:pfRiseLg  1050ms var(--pf-ease)  420ms both;}
+  .pf-intro-go .pf-nav     {animation:pfNavIn    950ms var(--pf-ease)  980ms both;}
+  .pf-intro-go .pf-eyebrow {animation:pfRise     800ms var(--pf-ease) 1240ms both;}
+  .pf-intro-go .pf-cta     {animation:pfRise     800ms var(--pf-ease) 1400ms both;}
+  .pf-intro-go .pf-nav-item{animation:pfRise     760ms var(--pf-ease) 1300ms both;}
+  .pf-intro-go .pf-nav-item[data-pf-i="2"]{animation-delay:1360ms;}
+  .pf-intro-go .pf-nav-item[data-pf-i="3"]{animation-delay:1420ms;}
+  .pf-intro-go .pf-nav-item[data-pf-i="4"]{animation-delay:1480ms;}
+
+  /* 3. Clean up. `.pf-intro-done` is added when the sequence ends; it
+        tears the animations down so nothing is left compositing and the
+        resting state is exactly the original design.
+        MUST stay after the rules above — it wins on source order. */
+  .pf-intro-done .pf-hero-media,
+  .pf-intro-done .pf-grain,
+  .pf-intro-done .pf-title,
+  .pf-intro-done .pf-eyebrow,
+  .pf-intro-done .pf-cta,
+  .pf-intro-done .pf-nav,
+  .pf-intro-done .pf-nav-item{
+    animation:none;
+    opacity:1;
+    transform:none;
+    filter:none;
+    will-change:auto;
+  }
+  .pf-intro-done .pf-grain{opacity:0.5;}
+
+  @keyframes pfMediaFade{
+    from{opacity:0;filter:blur(18px);}
+    to  {opacity:1;filter:blur(0px);}
+  }
+  @keyframes pfMediaZoom{
+    from{transform:scale3d(1.11,1.11,1);}
+    to  {transform:scale3d(1,1,1);}
+  }
+  @keyframes pfGrainIn{
+    from{opacity:0;}
+    to  {opacity:0.5;}
+  }
+  @keyframes pfRiseLg{
+    from{opacity:0;transform:translate3d(0,30px,0) scale3d(0.985,0.985,1);filter:blur(12px);}
+    to  {opacity:1;transform:translate3d(0,0,0) scale3d(1,1,1);filter:blur(0px);}
+  }
+  @keyframes pfNavIn{
+    from{opacity:0;transform:translate3d(0,-18px,0);}
+    to  {opacity:1;transform:translate3d(0,0,0);}
+  }
+  @keyframes pfRise{
+    from{opacity:0;transform:translate3d(0,12px,0);filter:blur(6px);}
+    to  {opacity:1;transform:translate3d(0,0,0);filter:blur(0px);}
+  }
+
+  /* 4. Reduced motion — straight to the final state, no animation. */
+  @media (prefers-reduced-motion: reduce){
+    .pf-intro .pf-hero-media,
+    .pf-intro .pf-title,
+    .pf-intro .pf-eyebrow,
+    .pf-intro .pf-cta,
+    .pf-intro .pf-nav,
+    .pf-intro .pf-nav-item{
+      animation:none !important;
+      opacity:1 !important;
+      transform:none !important;
+      filter:none !important;
+      will-change:auto !important;
+    }
+    .pf-intro .pf-grain{animation:none !important;opacity:0.5 !important;}
+  }
+
+/* ==================================================================
+   END INTRO
+   ================================================================== */
+
+  /* prototype-only: replay control */
+  .replay{
+    position:fixed;right:18px;bottom:18px;z-index:99;
+    font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:#071238;background:#d8f24b;border:0;
+    padding:11px 16px;border-radius:999px;cursor:pointer;
+    box-shadow:0 8px 30px rgba(3,8,24,.7);
+  }
+  .replay:active{transform:translateY(1px);}
+  .stamp{
+    position:fixed;left:18px;bottom:18px;z-index:99;
+    font:400 11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+    color:#5b6ea8;pointer-events:none;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= scroller (== the dc root div) ================= -->
+<div id="scroller" class="pf-intro" data-scroller="1"
+     style="height:100vh;overflow-y:auto;font-family:ui-monospace,SFMono-Regular,Menlo,'Courier New',monospace;">
+
+  <nav class="pf-nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:#030818;">
+    <div style="display:flex;align-items:center;gap:22px;justify-self:start;">
+      <span style="display:flex;align-items:center;gap:10px;">
+        <img src="../assets/pig-cream.png" alt="" style="width:26px;height:26px;">
+        <span style="color:#f3ecde;font-weight:700;">priceflag</span>
+      </span>
+      <a class="pf-nav-item" data-pf-i="1" href="#">about</a>
+      <a class="pf-nav-item" data-pf-i="2" href="#">faq</a>
+    </div>
+    <a class="pf-nav-item" data-pf-i="3" href="#" style="justify-self:center;color:#d8f24b;font-size:14px;">New: staged price rollouts for Shopify &#8599;</a>
+    <div style="display:flex;align-items:center;gap:22px;justify-self:end;">
+      <a class="pf-nav-item" data-pf-i="4" href="#" style="background:#f3ecde;color:#071238;padding:6px 14px;border-radius:999px;font-weight:600;">Sign In</a>
+    </div>
+  </nav>
+
+  <section style="height:calc(100vh - 41px);position:sticky;top:41px;z-index:0;background:#030818;display:flex;flex-direction:column;">
+    <div style="flex:1;position:relative;overflow:hidden;margin:0 24px;border-radius:24px 24px 0 0;mask-image:linear-gradient(180deg, #000 0%, #000 78%, transparent 99%);-webkit-mask-image:linear-gradient(180deg, #000 0%, #000 78%, transparent 99%);">
+
+      <!-- NEW WRAPPER: the intro drives transform/filter/opacity here,
+           so the <img>'s own inline style stays free for the scroll handler. -->
+      <div class="pf-hero-media" style="position:absolute;inset:0;">
+        <img id="heroImg" src="../uploads/IMG_6461.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;will-change:filter;">
+      </div>
+
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(3,8,24,0.45) 0%, rgba(3,8,24,0) 18%, rgba(3,8,24,0) 38%, rgba(3,8,24,0.5) 65%, rgba(3,8,24,0.85) 100%);"></div>
+      <div id="dark" style="position:absolute;inset:0;background:#030818;opacity:0;will-change:opacity;"></div>
+      <div class="pf-grain" data-grain="1" style="position:absolute;inset:0;pointer-events:none;"></div>
+
+      <div id="heroContent" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;will-change:filter,opacity;">
+        <div class="pf-eyebrow" style="display:flex;align-items:center;gap:10px;font-size:14px;color:#f3ecde;text-shadow:0 1px 12px rgba(3,8,24,0.8);">
+          <img src="../assets/pig-cream.png" alt="" style="width:26px;height:26px;">
+          <span>Watching $2.1M of merchants&rsquo; prices</span>
+        </div>
+        <h1 class="pf-title" style="font-family:Marcellus,Georgia,Cambria,'Times New Roman',serif;font-weight:400;font-size:clamp(48px, 7.2vw, 88px);line-height:1.05;letter-spacing:-0.015em;margin:20px 0 0 0;color:#fff;text-shadow:0 4px 50px rgba(3,8,24,0.7);text-wrap:balance;">Your Price Manager,<br>on Autopilot</h1>
+        <button class="pf-cta" style="margin-top:38px;font-family:inherit;font-size:16px;font-weight:600;color:#d8f24b;background:#0d2168;border:1px solid rgba(147,170,255,0.35);padding:16px 34px;border-radius:999px;cursor:pointer;box-shadow:0 10px 40px rgba(3,8,24,0.6);display:flex;align-items:center;gap:10px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#d8f24b;box-shadow:0 0 12px rgba(216,242,75,0.8);"></span>
+          Join the Waitlist
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- kept so the scroll effects can be exercised against the intro -->
+  <section style="position:relative;z-index:2;display:flex;align-items:flex-start;padding:9vh 0 14vh;background:linear-gradient(180deg, rgba(3,8,24,0) 0%, rgba(3,8,24,0.55) 4%, rgba(3,8,24,0.92) 9%, #030818 14%);">
+    <div style="max-width:1180px;padding:0 64px;">
+      <div style="font-family:Marcellus,Georgia,Cambria,'Times New Roman',serif;font-weight:400;font-size:clamp(34px, 3.8vw, 56px);line-height:1.22;letter-spacing:-0.015em;color:#f3ecde;text-wrap:pretty;text-shadow:0 2px 30px rgba(3,8,24,0.9);">Priceflag is your control room to test, roll out and roll back every price in your store.</div>
+    </div>
+  </section>
+  <section style="position:relative;z-index:2;background:#030818;height:60vh;"></section>
+
+</div>
+
+<button class="replay" id="replay">Replay intro</button>
+<div class="stamp">intro prototype &middot; ~2.24s &middot; scroll to check the scroll-fx handover</div>
+
+<script>
+(function () {
+  var root       = document.getElementById('scroller');
+  var heroImg    = document.getElementById('heroImg');
+  var heroContent= document.getElementById('heroContent');
+  var dark       = document.getElementById('dark');
+
+  /* ---------- the intro (this is the componentDidMount logic) ---------- */
+  var TOTAL = 2400;           // last animation ends at 2240ms
+  var started = false, tGo = 0, tDone = 0;
+
+  function startIntro() {
+    if (started) return;
+    started = true;
+    clearTimeout(tGo);
+    // two frames so the pre-hidden state is guaranteed to have painted
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        root.classList.add('pf-intro-go');
+        tDone = setTimeout(function () { root.classList.add('pf-intro-done'); }, TOTAL);
+      });
+    });
+  }
+
+  if (heroImg && !heroImg.complete) {
+    heroImg.addEventListener('load',  startIntro, { once: true });
+    heroImg.addEventListener('error', startIntro, { once: true });
+    tGo = setTimeout(startIntro, 1200);   // never wait on a slow image
+  } else {
+    startIntro();
+  }
+
+  /* ---------- the EXISTING scroll handler, verbatim ---------- */
+  var tick = false;
+  root.addEventListener('scroll', function () {
+    if (tick) return; tick = true;
+    requestAnimationFrame(function () {
+      tick = false;
+      var vh = root.clientHeight;
+      var p = Math.max(0, Math.min(1, root.scrollTop / (vh * 1.3)));
+      if (heroContent) { heroContent.style.filter = 'blur(' + (p * 16) + 'px)'; heroContent.style.opacity = String(1 - p * 0.8); }
+      if (dark) dark.style.opacity = String(p * 0.72);
+      if (heroImg) heroImg.style.filter = 'blur(' + (p * 7) + 'px)';
+    });
+  });
+
+  /* ---------- prototype-only replay ---------- */
+  document.getElementById('replay').addEventListener('click', function () {
+    clearTimeout(tGo); clearTimeout(tDone);
+    root.classList.remove('pf-intro-go', 'pf-intro-done');
+    void root.offsetWidth;              // force reflow so the animations restart
+    started = false;
+    root.scrollTop = 0;
+    startIntro();
+  });
+})();
+</script>
+</body>
+</html>

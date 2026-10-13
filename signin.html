@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sign in – Priceflag</title>
-<meta name="description" content="Sign in to Priceflag. We email you a link — no password to remember.">
+<meta name="description" content="Sign in to Priceflag. We email you a link, so there is no password to remember.">
 <link rel="canonical" href="https://signin.priceflag.org/">
 <!-- A sign-in screen has nothing to offer a search result, and indexing it only
      splits the ranking of the page that does. -->
@@ -12,55 +12,67 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Priceflag">
 <meta property="og:title" content="Sign in – Priceflag">
-<meta property="og:description" content="Sign in to Priceflag. We email you a link — no password to remember.">
+<meta property="og:description" content="Sign in to Priceflag. We email you a link, so there is no password to remember.">
 <meta property="og:image" content="https://priceflag.org/og-v7.jpg">
 <link rel="icon" href="https://priceflag.org/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="https://priceflag.org/favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="https://priceflag.org/apple-touch-icon.png">
+<link rel="stylesheet" href="tokens.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional">
 <style>
   /* ---------------------------------------------------------------------
-     Sign in — signin.priceflag.org
+     Sign in, signin.priceflag.org
 
      A deliberately plain static page: no framework, no build step, and no
      Supabase key in the markup. The form POSTs an email address to the app on
      dashboard.priceflag.org, which is the only thing that talks to Supabase.
      Everything here is presentation plus one fetch.
 
-     The palette, the type and the pill button are lifted from index.html on
-     purpose — this is the first authenticated screen a merchant sees, and it
-     should feel like the same product as the page they clicked from.
+     Every value comes from tokens.css (contract: DESIGN_TOKENS.md), the same
+     file index.html uses, so this screen reads as the same product. tokens.css
+     is same-origin, which the page's CSP (style-src 'self') allows.
+     Type: heading block = small + h2; form card = h3 + body + small; legal = small.
+     The wordmark is a logo lockup and sits outside the type scale.
      --------------------------------------------------------------------- */
   :root{
-    --pf-ink:#030818;        /* page ground */
-    --pf-cream:#f3ecde;      /* primary text on dark */
-    --pf-lime:#d8f24b;       /* accent */
-    --pf-navy:#071238;       /* text on cream fills */
-    --pf-ease:cubic-bezier(0.22, 1, 0.36, 1);
+    --n:var(--pf-navy-950);   /* scrim and shadow base */
   }
 
-  *{box-sizing:border-box;}
-  html{background:var(--pf-ink);overscroll-behavior-y:none;-webkit-text-size-adjust:100%;}
+  *,*::before,*::after{box-sizing:border-box;}
+  html{background:var(--pf-navy-950);overscroll-behavior-y:none;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   body{
-    margin:0;min-height:100svh;background:var(--pf-ink);color:var(--pf-cream);
-    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    margin:0;min-height:100svh;background:var(--pf-navy-950);color:var(--pf-cream);
+    font-family:var(--pf-sans);font-size:var(--pf-text-body);line-height:var(--pf-lh-body);letter-spacing:var(--pf-track-body);
     overscroll-behavior-y:none;
   }
   a{color:var(--pf-cream);text-decoration:none;}
   a:hover{color:var(--pf-lime);}
-  ::selection{background:var(--pf-lime);color:var(--pf-navy);}
+  ::selection{background:var(--pf-lime);color:var(--pf-navy-900);}
+
+  /* One focus ring: cream on navy. */
+  :focus-visible{outline:var(--pf-focus-width) solid var(--pf-focus-on-dark);outline-offset:var(--pf-focus-offset);border-radius:var(--pf-radius-sm);}
+  /* The skip target; its ring is drawn inside the card. */
+  .pf-main:focus-visible{outline-offset:-4px;}
+
+  .pf-skip{
+    position:absolute;left:var(--pf-space-3);top:-60px;z-index:var(--pf-z-skip);
+    padding:10px var(--pf-space-4);border-radius:var(--pf-radius-pill);
+    background:var(--pf-lime);color:var(--pf-lime-ink);
+    font-size:var(--pf-text-small);font-weight:600;text-decoration:none;
+  }
+  .pf-skip:focus{top:10px;color:var(--pf-lime-ink);}
+  .pf-skip:focus-visible{border-radius:var(--pf-radius-pill);}
 
   /* ---------- the hero card ----------
-     Same 24px-radius inset card as the marketing hero, so the two screens read
-     as one surface. On a phone it goes full-bleed: a 24px inset around a
-     viewport-height card wastes the only space there is. */
-  .pf-shell{position:relative;min-height:100svh;padding:16px 16px 0;}
+     An inset card with the card radius; on a phone it goes full-bleed, since
+     an inset around a viewport-height card wastes the only space there is. */
+  .pf-shell{position:relative;min-height:100svh;padding:var(--pf-space-4) var(--pf-space-4) 0;}
   .pf-card{
-    position:relative;overflow:hidden;border-radius:24px;
-    min-height:calc(100svh - 16px);
+    position:relative;overflow:hidden;border-radius:var(--pf-radius-card);
+    min-height:calc(100svh - var(--pf-space-4));
     display:flex;align-items:center;justify-content:center;
   }
   @media (max-width:600px){
@@ -72,52 +84,38 @@
   .pf-media img{
     position:absolute;inset:0;width:100%;height:100%;
     object-fit:cover;
-    /* Mobile crops hard: hold the centre-right so the rider survives the crop
-       rather than being cut off with the empty left of the frame kept. */
+    /* Mobile crops hard: hold the centre-right. */
     object-position:62% center;
   }
   @media (min-width:900px){
     .pf-media img{object-position:center;}
   }
-  /* Darkened top and bottom so the wordmark and the legal line stay legible
-     over whatever photograph is behind them, and the middle stays open. */
-  /* Two washes, because they do different jobs. The vertical one is light —
-     the photograph is already dark and a heavy wash would flatten the sunset
-     and lose the ridgeline. The horizontal one is the real work: it deepens the
-     empty left third the panel sits on, and fades out before the rider and the
-     snow plume on the right, which are the reason to use this image at all. */
-  /* Mobile default: a strong, fairly even wash. The phone crop lands on the
-     brightest part of the frame — the sunset break and the lit snow — with the
-     heading and the panel sitting directly on it, and there is no empty left
-     third to hide in. Cream on that sky is unreadable without this. */
+  /* Two washes, because they do different jobs. Mobile default: a strong,
+     fairly even wash, since the phone crop lands on the brightest part of the
+     frame with the heading and the panel directly on it. */
   .pf-scrim{
     position:absolute;inset:0;pointer-events:none;
     background:
-      linear-gradient(180deg, rgba(3,8,24,0.80) 0%, rgba(3,8,24,0.62) 30%,
-                              rgba(3,8,24,0.66) 70%, rgba(3,8,24,0.90) 100%);
+      linear-gradient(180deg, color-mix(in srgb,var(--n) 80%,transparent) 0%, color-mix(in srgb,var(--n) 62%,transparent) 30%,
+                              color-mix(in srgb,var(--n) 66%,transparent) 70%, color-mix(in srgb,var(--n) 90%,transparent) 100%);
   }
-  /* Desktop can afford to be light, because .pf-scrim--side is doing the
-     legibility work over the left column and the right side is meant to stay
-     open. Applying the mobile values here would flatten the whole picture. */
+  /* Desktop is lighter: .pf-scrim--side does the legibility work over the left column. */
   @media (min-width:900px){
     .pf-scrim{
       background:
-        linear-gradient(180deg, rgba(3,8,24,0.58) 0%, rgba(3,8,24,0.10) 22%,
-                                rgba(3,8,24,0.12) 68%, rgba(3,8,24,0.72) 100%);
+        linear-gradient(180deg, color-mix(in srgb,var(--n) 58%,transparent) 0%, color-mix(in srgb,var(--n) 10%,transparent) 22%,
+                                color-mix(in srgb,var(--n) 12%,transparent) 68%, color-mix(in srgb,var(--n) 72%,transparent) 100%);
     }
   }
-  /* Desktop only: on a phone the image is cropped to its centre and there is no
-     empty left third to darken, so this would just dim the whole frame. */
   .pf-scrim--side{display:none;}
   @media (min-width:900px){
     .pf-scrim--side{
       display:block;position:absolute;inset:0;pointer-events:none;
-      background:linear-gradient(90deg, rgba(3,8,24,0.90) 0%, rgba(3,8,24,0.72) 26%,
-                                        rgba(3,8,24,0.30) 48%, rgba(3,8,24,0) 66%);
+      background:linear-gradient(90deg, color-mix(in srgb,var(--n) 90%,transparent) 0%, color-mix(in srgb,var(--n) 72%,transparent) 26%,
+                                        color-mix(in srgb,var(--n) 30%,transparent) 48%, transparent 66%);
     }
   }
-  /* The same fractal-noise grain as the marketing hero, inlined as a data URL
-     so the page has no image dependency beyond the photograph itself. */
+  /* The same fractal-noise grain as the marketing hero, inlined as a data URL. */
   .pf-grain{
     position:absolute;inset:0;pointer-events:none;opacity:0.28;
     background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44JyBudW1PY3RhdmVzPSczJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzIwMCcgaGVpZ2h0PScyMDAnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC4zNScvPjwvc3ZnPg==");
@@ -127,24 +125,22 @@
   .pf-top{
     position:absolute;top:0;left:0;right:0;z-index:3;
     display:flex;align-items:center;justify-content:space-between;
-    gap:16px;padding:22px clamp(20px,4vw,40px);
+    gap:var(--pf-space-4);padding:22px clamp(var(--pf-space-5),4vw,var(--pf-space-8));
   }
   .pf-wordmark{
-    display:inline-flex;align-items:center;gap:.45em;
-    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    display:inline-flex;align-items:center;gap:.45em;min-height:44px;
+    font-family:var(--pf-serif);
     font-size:20px;font-weight:400;letter-spacing:-0.01em;color:var(--pf-cream);
-    text-shadow:0 1px 14px rgba(3,8,24,0.7);
+    text-shadow:var(--pf-text-shadow-art);
   }
   /* The hiker ahead of the wordmark. A CSS mask, so it takes currentColor.
-     The URL stays relative: this page is also served on
-     signin.priceflag.org, where a relative path is same-origin and so
-     clears its own img-src 'self' without a cross-origin mask fetch. */
+     The URL stays relative so it clears img-src 'self' on signin.priceflag.org. */
   .pf-hiker{
     display:none;width:0.87em;height:1.6em;margin-block:-0.3em;flex:none;
     background-color:currentColor;
     -webkit-mask:url(mark.svg) center/contain no-repeat;
             mask:url(mark.svg) center/contain no-repeat;
-    filter:drop-shadow(0 1px 14px rgba(3,8,24,0.7));
+    filter:drop-shadow(0 1px 14px color-mix(in srgb,var(--n) 70%,transparent));
   }
   @supports ((mask-image:url(mark.svg)) or (-webkit-mask-image:url(mark.svg))){
     .pf-hiker{display:inline-block;}
@@ -152,192 +148,149 @@
 
   .pf-main{
     position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;
-    padding:96px 20px 80px;display:flex;justify-content:center;
+    padding:var(--pf-space-12) var(--pf-space-5) var(--pf-space-11);display:flex;justify-content:center;
   }
   .pf-panel{width:100%;max-width:452px;}
 
   /* Left column on anything wide enough to have one. Centring the form here
-     would put it straight over the rider and the lit snow. */
+     would put it straight over the lit snow. */
   @media (min-width:900px){
-    .pf-main{justify-content:flex-start;padding-left:clamp(40px,6vw,96px);}
+    .pf-main{justify-content:flex-start;padding-left:clamp(var(--pf-space-8),6vw,var(--pf-space-12));}
     .pf-panel{max-width:436px;}
     .pf-panel h1{text-align:left;}
     .pf-note,.pf-sent{text-align:left;}
-    .pf-legal{text-align:left;padding-left:clamp(40px,6vw,96px);}
+    .pf-legal{text-align:left;padding-left:clamp(var(--pf-space-8),6vw,var(--pf-space-12));}
   }
 
   .pf-eyebrow{
-    display:flex;align-items:center;gap:9px;justify-content:flex-start;
-    font-size:13px;letter-spacing:0.01em;color:rgba(243,236,222,0.86);
-    text-shadow:0 1px 12px rgba(3,8,24,0.8);
+    display:flex;align-items:center;gap:9px;justify-content:flex-start;margin:0;
+    font-size:var(--pf-text-small);line-height:1.5;letter-spacing:0.01em;color:var(--pf-cream-strong);
+    text-shadow:var(--pf-text-shadow-art);
   }
   .pf-eyebrow svg{width:1em;height:1em;fill:currentColor;flex:none;opacity:0.9;}
 
   h1{
-    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
-    font-weight:400;font-size:clamp(38px,6vw,56px);line-height:1.06;
-    letter-spacing:-0.015em;margin:16px 0 0;color:#fff;text-align:center;
-    text-shadow:0 4px 50px rgba(3,8,24,0.7);text-wrap:balance;
+    font-family:var(--pf-serif);
+    font-weight:400;font-size:var(--pf-text-h2);line-height:var(--pf-lh-display);
+    letter-spacing:var(--pf-track-heading);margin:var(--pf-space-4) 0 0;color:var(--pf-cream);text-align:center;
+    text-shadow:0 4px 50px color-mix(in srgb,var(--n) 70%,transparent);text-wrap:balance;overflow-wrap:anywhere;
   }
 
   /* ---------- the form card ----------
-     A frosted panel rather than a plain box: it has to sit on an unpredictable
-     photograph and stay readable, and a backdrop blur does that without
-     flattening the image behind it to a solid colour. */
+     A frosted panel: it has to sit on an unpredictable picture and stay readable. */
   .pf-form{
-    margin-top:28px;padding:22px;border-radius:20px;
-    background:rgba(7,18,56,0.42);
-    border:1px solid rgba(243,236,222,0.14);
+    margin-top:28px;padding:22px;border-radius:var(--pf-radius-card);
+    background:color-mix(in srgb,var(--pf-navy-900) 42%,transparent);
+    border:1px solid var(--pf-line);
     backdrop-filter:blur(22px) saturate(140%);
     -webkit-backdrop-filter:blur(22px) saturate(140%);
-    box-shadow:0 24px 60px -22px rgba(3,8,24,0.9), inset 0 1px 0 rgba(255,255,255,0.10);
+    box-shadow:0 24px 60px -22px color-mix(in srgb,var(--n) 90%,transparent), inset 0 1px 0 rgba(255,255,255,0.10);
   }
   @supports not (backdrop-filter:blur(4px)){
-    .pf-form{background:rgba(7,18,56,0.88);}
+    .pf-form{background:color-mix(in srgb,var(--pf-navy-900) 88%,transparent);}
   }
 
-  label{display:block;font-size:13px;font-weight:500;color:rgba(243,236,222,0.78);margin-bottom:8px;}
+  label{display:block;font-size:var(--pf-text-small);font-weight:500;color:var(--pf-cream-strong);margin-bottom:var(--pf-space-2);}
 
   input[type="email"]{
-    width:100%;padding:14px 16px;border-radius:12px;
-    font-family:inherit;font-size:16px;/* 16px: anything smaller zooms on iOS */
-    color:var(--pf-cream);background:rgba(3,8,24,0.55);
-    border:1px solid rgba(243,236,222,0.20);
-    transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    width:100%;min-height:48px;padding:13px var(--pf-space-4);border-radius:var(--pf-radius-field);
+    font-family:inherit;font-size:var(--pf-text-body);/* 16px or more: smaller zooms on iOS */
+    color:var(--pf-cream);background:color-mix(in srgb,var(--n) 55%,transparent);
+    border:1px solid var(--pf-line-control);
+    transition:border-color var(--pf-dur-fast) var(--pf-ease), background-color var(--pf-dur-fast) var(--pf-ease);
   }
-  input[type="email"]::placeholder{color:rgba(243,236,222,0.38);}
-  input[type="email"]:hover{border-color:rgba(243,236,222,0.32);}
-  input[type="email"]:focus{
-    outline:none;background:rgba(3,8,24,0.72);
-    border-color:rgba(216,242,75,0.66);
-    box-shadow:0 0 0 4px rgba(216,242,75,0.14);
-  }
+  input[type="email"]::placeholder{color:var(--pf-cream-subtle);opacity:1;}
+  input[type="email"]:hover{border-color:var(--pf-cream-subtle);}
+  /* Focus keeps the house ring and also lights the border lime. */
+  input[type="email"]:focus{background:color-mix(in srgb,var(--n) 72%,transparent);border-color:var(--pf-lime);}
+  input[type="email"]:focus-visible{outline-offset:2px;border-radius:var(--pf-radius-field);}
   input[type="email"]:disabled{opacity:0.55;cursor:not-allowed;}
 
-  /* ---------- the pill button, matching index.html ---------- */
+  /* ---------- the pill button, the same as .pf-btn in site.css ---------- */
   .pf-btn{
-    --pf-bg:#d8f24b; --pf-fg:#13200a; --pf-glow:216,242,75;
-    position:relative;isolation:isolate;
-    display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    width:100%;margin-top:14px;padding:15px clamp(16px,5vw,32px);border:0;border-radius:999px;
-    font-family:inherit;font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1;
-    color:var(--pf-fg);cursor:pointer;text-decoration:none;white-space:nowrap;
-    background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.06) 55%,rgba(255,255,255,0)),var(--pf-bg);
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.80),
-      inset 0 -1px 0 rgba(0,0,0,.10),
-      0 1px 2px rgba(3,8,24,.45),
-      0 10px 30px -8px rgba(var(--pf-glow),.60),
-      0 0 0 6px rgba(var(--pf-glow),.10);
-    transition:transform .34s var(--pf-ease), box-shadow .34s var(--pf-ease), filter .34s ease;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;margin-top:14px;min-height:48px;padding:14px clamp(var(--pf-space-4),5vw,30px);border:0;border-radius:var(--pf-radius-pill);
+    font:600 var(--pf-text-body)/1.2 var(--pf-sans);letter-spacing:var(--pf-track-button);text-align:center;
+    color:var(--pf-lime-ink);cursor:pointer;text-decoration:none;
+    background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 55%),var(--pf-lime);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 -1px 0 rgba(0,0,0,.1),var(--pf-shadow-contact),var(--pf-halo-lime);
+    transition:transform var(--pf-dur-base) var(--pf-ease),filter var(--pf-dur-base) var(--pf-ease);
   }
-  .pf-btn::before{
-    content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
-    border:1px solid rgba(255,255,255,.18);opacity:.55;
-    transition:inset .34s var(--pf-ease),opacity .34s ease,border-color .34s ease;
-  }
-  .pf-btn:hover:not(:disabled){
-    transform:translateY(-2px);filter:brightness(1.05);
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.90),
-      inset 0 -1px 0 rgba(0,0,0,.10),
-      0 2px 4px rgba(3,8,24,.42),
-      0 18px 44px -10px rgba(var(--pf-glow),.78),
-      0 0 0 9px rgba(var(--pf-glow),.13);
-  }
-  .pf-btn:hover:not(:disabled)::before{inset:-7px;opacity:.9;border-color:rgba(255,255,255,.30);}
-  .pf-btn:active:not(:disabled){transform:translateY(0) scale(.985);transition-duration:.09s;}
-  .pf-btn:focus-visible{outline:2px solid rgba(255,255,255,.85);outline-offset:5px;}
-  .pf-btn:disabled{cursor:progress;filter:saturate(0.5) brightness(0.9);}
+  .pf-btn:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.04);}
+  .pf-btn:active:not(:disabled){transform:translateY(0) scale(.985);transition-duration:var(--pf-dur-press);}
+  .pf-btn:focus-visible{outline-offset:4px;border-radius:var(--pf-radius-pill);}
+  .pf-btn:disabled{cursor:progress;filter:saturate(0.6);}
 
   .pf-note{
-    margin:16px 0 0;font-size:12.5px;line-height:1.5;
-    color:rgba(243,236,222,0.58);text-align:center;text-wrap:pretty;
+    margin:var(--pf-space-4) 0 0;font-size:var(--pf-text-small);line-height:1.5;
+    color:var(--pf-cream-muted);text-align:center;text-wrap:pretty;
   }
-  .pf-note a{color:rgba(243,236,222,0.78);text-decoration:underline;text-underline-offset:2px;}
+  .pf-note a{color:var(--pf-cream-strong);text-decoration:underline;text-underline-offset:2px;}
 
   /* ---------- messages ----------
-     One region, three tones. It is an aria-live region so that a screen reader
-     announces "check your email" — which is otherwise a purely visual change
-     that leaves a non-sighted person waiting for something that already
-     happened. */
+     One aria-live region, two tones, so a screen reader announces "check your email". */
   .pf-msg{
-    margin:0 0 16px;padding:12px 14px;border-radius:12px;
-    font-size:13.5px;line-height:1.5;text-wrap:pretty;
+    margin:0 0 var(--pf-space-4);padding:var(--pf-space-3) 14px;border-radius:var(--pf-radius-field);
+    font-size:var(--pf-text-small);line-height:1.5;text-wrap:pretty;color:var(--pf-cream);
   }
   .pf-msg[hidden]{display:none;}
   .pf-msg--error{
-    background:rgba(255,138,120,0.12);border:1px solid rgba(255,138,120,0.34);color:#ffd8d0;
+    background:color-mix(in srgb,var(--pf-bad) 12%,transparent);border:1px solid color-mix(in srgb,var(--pf-bad) 50%,transparent);
   }
   .pf-msg--info{
-    background:rgba(243,236,222,0.10);border:1px solid rgba(243,236,222,0.22);color:rgba(243,236,222,0.9);
+    background:color-mix(in srgb,var(--pf-cream) 10%,transparent);border:1px solid var(--pf-line);
   }
 
   /* ---------- the sent state ----------
-     Replaces the form rather than sitting under it. Leaving a filled-in form on
-     screen after a successful send invites a second submit, which only burns
-     Supabase's per-address rate limit and invalidates the link just sent. */
+     Replaces the form rather than sitting under it, so it cannot be resubmitted. */
   .pf-sent{text-align:center;}
   .pf-sent h2{
-    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
-    font-weight:400;font-size:26px;line-height:1.2;margin:0 0 10px;color:#fff;
+    font-family:var(--pf-serif);
+    font-weight:400;font-size:var(--pf-text-h3);line-height:var(--pf-lh-sub);margin:0 0 10px;color:var(--pf-cream);
   }
-  .pf-sent p{margin:0;font-size:14.5px;line-height:1.6;color:rgba(243,236,222,0.8);text-wrap:pretty;}
+  .pf-sent p{margin:0;font-size:var(--pf-text-body);line-height:var(--pf-lh-body);color:var(--pf-cream-strong);text-wrap:pretty;overflow-wrap:anywhere;}
   .pf-sent strong{color:var(--pf-cream);font-weight:600;}
   .pf-linkbtn{
-    /* padding:0 made this a 16px-tall tap target, and it is the only way back
-       out of the sent state. The negative margin keeps the optical 18px gap. */
-    margin-top:6px;background:none;border:0;padding:12px 16px;cursor:pointer;
+    /* The only way back out of the sent state, so a 44px target. */
+    margin-top:6px;background:none;border:0;padding:var(--pf-space-3) var(--pf-space-4);cursor:pointer;
     min-height:44px;
-    font-family:inherit;font-size:13.5px;color:rgba(243,236,222,0.72);
+    font-family:inherit;font-size:var(--pf-text-small);color:var(--pf-cream-muted);
     text-decoration:underline;text-underline-offset:3px;
+    transition:color var(--pf-dur-fast) var(--pf-ease);
   }
   .pf-linkbtn:hover{color:var(--pf-lime);}
 
   .pf-legal{
-    position:absolute;left:0;right:0;bottom:0;z-index:3;
-    padding:0 clamp(20px,4vw,40px) 26px;text-align:center;
-    font-size:13px;color:rgba(243,236,222,0.58);
+    position:absolute;left:0;right:0;bottom:0;z-index:3;margin:0;
+    padding:0 clamp(var(--pf-space-5),4vw,var(--pf-space-8)) 26px;text-align:center;
+    font-size:var(--pf-text-small);line-height:1.5;color:var(--pf-cream-muted);
   }
-  /* 12px links with no padding sat ~14px tall and 22px off the bottom edge,
-     which on iOS is inside the home-indicator swipe zone. */
-  .pf-legal a{color:rgba(243,236,222,0.74);display:inline-block;padding:8px 3px;}
+  /* Padded links, clear of the iOS home-indicator swipe zone. */
+  .pf-legal a{color:var(--pf-cream-strong);display:inline-block;padding:var(--pf-space-2) 3px;text-decoration:underline;text-underline-offset:3px;}
 
   /* ---------- short viewports ----------
-     A landscape phone is ~393px tall. The desktop 96/80 padding plus a
-     headline sized on 6vw — a width function, in a viewport constrained by
-     height — pushed the submit button 16px below the fold on an 852x393
-     screen. Sizing the headline on min(vw,vh) and tightening the vertical
-     rhythm brings the whole card back inside one screen. Also catches the
-     keyboard-open case on a 375x667 phone, where the visual viewport
-     collapses to roughly the same height. */
+     A landscape phone is ~390px tall: size the headline on height and tighten
+     the vertical rhythm so the whole card fits; the legal line joins the flow.
+     Also catches the keyboard-open case on a 375x667 phone. */
   @media (max-height:560px){
-    .pf-main{padding:56px 20px 40px;}
-    h1{font-size:clamp(28px,min(6vw,7.4vh),56px);}
-    .pf-form{margin-top:18px;padding:16px;}
+    .pf-main{padding:56px var(--pf-space-5) var(--pf-space-8);}
+    h1{font-size:min(var(--pf-text-h2),max(var(--pf-text-h3),7.4vh));}
+    .pf-form{margin-top:18px;padding:var(--pf-space-4);}
     .pf-legal{position:static;padding-top:18px;}
   }
-  /* iOS scrolls only the focused field into view; without this the button
-     lands under the keyboard even though the page can be panned to it. */
+  /* iOS scrolls only the focused field into view; keep the button with it. */
   #pf-email{scroll-margin-bottom:120px;}
 
-  /* ---------- entrance ----------
-     One short rise, matching the marketing hero's vocabulary. Kept to the panel
-     so the photograph is painted immediately and never fades in under the text. */
-  @keyframes pfRise{
-    from{opacity:0;transform:translate3d(0,14px,0);filter:blur(6px);}
-    to  {opacity:1;transform:none;filter:blur(0);}
-  }
-  .pf-panel{animation:pfRise 800ms var(--pf-ease) 60ms both;}
-
+  /* Motion: hover and focus transitions only, and none when reduced. */
   @media (prefers-reduced-motion: reduce){
-    .pf-panel{animation:none;}
-    .pf-btn,.pf-btn::before{transition:none;}
-    .pf-btn:hover{transform:none;}
+    *,*::before,*::after{animation:none !important;transition:none !important;}
+    .pf-btn:hover:not(:disabled),.pf-btn:active:not(:disabled){transform:none;}
   }
 </style>
 </head>
 <body>
+
+<a class="pf-skip" href="#main">Skip to content</a>
 
 <div class="pf-shell">
   <div class="pf-card">
@@ -372,7 +325,7 @@
       <a class="pf-wordmark" href="https://priceflag.org/"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
     </header>
 
-    <main class="pf-main">
+    <main class="pf-main" id="main" tabindex="-1">
       <div class="pf-panel">
 
         <p class="pf-eyebrow">
@@ -405,17 +358,17 @@
 
           <p class="pf-note">
             Already installed Priceflag on Shopify? You can also open it straight from your
-            Shopify admin — no sign-in needed.
+            Shopify admin, no sign-in needed.
           </p>
         </div>
 
       </div>
     </main>
 
-    <p class="pf-legal">
+    <footer class="pf-legal">
       By signing in you agree to our <a id="pf-terms" href="https://priceflag.org/legal#terms">terms</a>
       and <a id="pf-privacy" href="https://priceflag.org/legal#privacy">privacy policy</a>.
-    </p>
+    </footer>
 
   </div>
 </div>
@@ -468,7 +421,7 @@
      ------------------------------------------------------------------ */
   var REASONS = {
     link_expired:        'That sign-in link has expired. Enter your email and we will send a fresh one.',
-    link_invalid:        'That sign-in link was not valid. It may have already been used — here is a new start.',
+    link_invalid:        'That sign-in link was not valid. It may have already been used. Here is a new start.',
     link_missing:        'That link was incomplete. Enter your email and we will send another.',
     link_unbound:        'That link was opened in a different browser to the one that asked for it, so we did not sign you in. Request a fresh link here and open it in this browser.',
     auth_not_configured: 'Sign-in is not switched on for this deployment yet. Please let us know.',

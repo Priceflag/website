@@ -1,0 +1,24 @@
+TITLE: About — Priceflag
+Skip to content
+←
+About
+Priceflag forecasts what a price change does to your profit, rolls it out gradually across your products, and pauses it and alerts you if it stops paying. We build it for ecommerce teams who want evidence behind a price before it goes live.
+What we are building
+A forecast.
+A proposed price is forecast from your own order history before it goes near your storefront, and what comes back is a range of outcomes and a breakeven.
+A staged rollout.
+A change earns its way across your catalogue a few products at a time, so a bad call reaches a slice of your revenue.
+A guardrail that pauses.
+When real orders land outside the forecast, the rollout pauses and we alert you. Every change is journaled, so you can put the old price back in one click.
+How we work
+One price for every shopper.
+Two people looking at the same product on the same day see the same number. We treat that as a constraint on the design.
+Ranges, with the odds attached.
+A single predicted number hides how wrong it could be. We show the spread, because the spread is what you have to plan around.
+Reversible by default.
+Anything Priceflag does to your catalogue, it can undo. That constraint decides what we build.
+Talk to us
+--ATTRS--
+meta[content]=What Priceflag is building: a forecast before each price change, a gradual rollout by product, and a guardrail that pauses and alerts you.
+a[aria-label]=Back to priceflag.org
+a[aria-label]=Priceflag home

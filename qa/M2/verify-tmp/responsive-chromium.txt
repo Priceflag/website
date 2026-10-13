@@ -1,0 +1,45 @@
+ok / 320: sw 320/320 mark 20-39 off 0  clipped  
+ok / 375: sw 375/375 mark 21-40 off 0  clipped  
+ok / 768: sw 768/768 mark 43-62 off 0  clipped  
+ok / 1440: sw 1440/1440 mark 80-99 off 0  clipped  
+ok / 1920: sw 1920/1920 mark 80-99 off 0  clipped  
+ok / 844x390 landscape: sw 844/844 mark 47-66 off 0  clipped  
+ok / 1440@200%: sw 720/720 mark 40-59 off 0  clipped  
+ok / 375@200%: sw 187/187 mark 20-39 off 0  clipped  
+ok / 1280@400%: sw 320/320 mark 20-39 off 0  clipped  
+ok /about 320: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":481,"mainScrolls":true,"bodyScrolls":false}
+ok /about 375: sw 375/375 mark 309-355 off 0  clipped  {"mainVisibleH":653,"mainScrolls":true,"bodyScrolls":false}
+ok /about 768: sw 768/768 mark 560-606 off 0  clipped  {"mainVisibleH":453,"mainScrolls":true,"bodyScrolls":false}
+ok /about 1440: sw 1440/1440 mark 896-942 off 0  clipped  {"mainVisibleH":453,"mainScrolls":true,"bodyScrolls":false}
+ok /about 1920: sw 1920/1920 mark 1136-1182 off 0  clipped  {"mainVisibleH":453,"mainScrolls":true,"bodyScrolls":false}
+ok /about 844x390 landscape: sw 844/844 mark 598-644 off 0  clipped  {"mainVisibleH":304,"mainScrolls":false,"bodyScrolls":true}
+ok /about 1440@200%: sw 720/720 mark 536-582 off 0  clipped  {"mainVisibleH":362,"mainScrolls":false,"bodyScrolls":true}
+ok /about 375@200%: sw 187/187 mark 121-167 off 0  clipped  {"mainVisibleH":336,"mainScrolls":false,"bodyScrolls":true}
+ok /about 1280@400%: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":192,"mainScrolls":false,"bodyScrolls":true}
+ok /contact 320: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":576,"mainScrolls":true,"bodyScrolls":false}
+ok /contact 375: sw 375/375 mark 309-355 off 0  clipped  {"mainVisibleH":748,"mainScrolls":false,"bodyScrolls":false}
+ok /contact 768: sw 768/768 mark 560-606 off 0  clipped  {"mainVisibleH":548,"mainScrolls":true,"bodyScrolls":false}
+ok /contact 1440: sw 1440/1440 mark 896-942 off 0  clipped  {"mainVisibleH":548,"mainScrolls":true,"bodyScrolls":false}
+ok /contact 1920: sw 1920/1920 mark 1136-1182 off 0  clipped  {"mainVisibleH":548,"mainScrolls":true,"bodyScrolls":false}
+ok /contact 844x390 landscape: sw 844/844 mark 598-644 off 0  clipped  {"mainVisibleH":304,"mainScrolls":false,"bodyScrolls":true}
+ok /contact 1440@200%: sw 720/720 mark 536-582 off 0  clipped  {"mainVisibleH":362,"mainScrolls":false,"bodyScrolls":true}
+ok /contact 375@200%: sw 187/187 mark 121-167 off 0  clipped  {"mainVisibleH":311,"mainScrolls":false,"bodyScrolls":true}
+ok /contact 1280@400%: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":192,"mainScrolls":false,"bodyScrolls":true}
+ok /legal 320: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":576,"mainScrolls":true,"bodyScrolls":false}
+ok /legal 375: sw 375/375 mark 309-355 off 0  clipped  {"mainVisibleH":748,"mainScrolls":true,"bodyScrolls":false}
+ok /legal 768: sw 768/768 mark 560-606 off 0  clipped  {"mainVisibleH":608,"mainScrolls":true,"bodyScrolls":false}
+ok /legal 1440: sw 1440/1440 mark 896-942 off 0  clipped  {"mainVisibleH":608,"mainScrolls":true,"bodyScrolls":false}
+ok /legal 1920: sw 1920/1920 mark 1136-1182 off 0  clipped  {"mainVisibleH":608,"mainScrolls":true,"bodyScrolls":false}
+ok /legal 844x390 landscape: sw 844/844 mark 598-644 off 0  clipped  {"mainVisibleH":304,"mainScrolls":false,"bodyScrolls":true}
+ok /legal 1440@200%: sw 720/720 mark 536-582 off 0  clipped  {"mainVisibleH":362,"mainScrolls":false,"bodyScrolls":true}
+ok /legal 375@200%: sw 187/187 mark 121-167 off 0  clipped  {"mainVisibleH":336,"mainScrolls":false,"bodyScrolls":true}
+ok /legal 1280@400%: sw 320/320 mark 254-300 off 0  clipped  {"mainVisibleH":192,"mainScrolls":false,"bodyScrolls":true}
+ok /signin.html 320: sw 320/320 mark 20-126 off 0  clipped  
+ok /signin.html 375: sw 375/375 mark 20-126 off 0  clipped  
+ok /signin.html 768: sw 768/768 mark 47-152 off 0  clipped  
+ok /signin.html 1440: sw 1440/1440 mark 56-162 off 0  clipped  
+ok /signin.html 1920: sw 1920/1920 mark 56-162 off 0  clipped  
+ok /signin.html 844x390 landscape: sw 844/844 mark 50-155 off 0  clipped  
+ok /signin.html 1440@200%: sw 720/720 mark 45-150 off 0  clipped  
+XX /signin.html 375@200%: sw 187/187 mark 20-126 off 4 H1. -8-100 ; FOOTER.pf-legal 120-215 ; A. 145-190 ; A. 140-195 clipped  
+ok /signin.html 1280@400%: sw 320/320 mark 20-126 off 0  clipped  

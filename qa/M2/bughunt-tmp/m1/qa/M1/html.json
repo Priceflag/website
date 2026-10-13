@@ -1,0 +1,80 @@
+{
+  "check": "html",
+  "title": "html-validate (served HTML)",
+  "status": "PASS",
+  "durationMs": 262,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "about": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "contact": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "legal": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "signin": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "about": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "contact": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "legal": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    },
+    "signin": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "byRule": {},
+      "messages": []
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "label": "M2",
+  "baseUrl": "local (qa/serve.mjs) @ working tree",
+  "strict": true,
+  "fast": false,
+  "startedAt": "2026-10-13T22:34:05.364Z",
+  "durationMs": 93527,
+  "overall": "WARN",
+  "pages": [
+    "index",
+    "about",
+    "contact",
+    "legal",
+    "signin"
+  ],
+  "checks": {
+    "console": {
+      "status": "WARN",
+      "durationMs": 6680,
+      "pages": {
+        "index": "WARN",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN",
+        "signin": "WARN"
+      }
+    },
+    "screens": {
+      "status": "PASS",
+      "durationMs": 25580,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "axe": {
+      "status": "PASS",
+      "durationMs": 9764,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "html": {
+      "status": "PASS",
+      "durationMs": 244,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "links": {
+      "status": "PASS",
+      "durationMs": 6014,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "keyboard": {
+      "status": "PASS",
+      "durationMs": 9317,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "nojs": {
+      "status": "WARN",
+      "durationMs": 3736,
+      "pages": {
+        "index": "PASS",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN",
+        "signin": "WARN"
+      }
+    },
+    "unit": {
+      "status": "PASS",
+      "durationMs": 8269,
+      "pages": {}
+    },
+    "lighthouse": {
+      "status": "PASS",
+      "durationMs": 67915,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS"
+      }
+    }
+  },
+  "lighthouse": {
+    "index": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "about": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "contact": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "legal": {
+      "performance": 0.98,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  "lighthouseRegression": {
+    "compareTo": "M1",
+    "tolerance": 0.02,
+    "drops": [],
+    "status": "PASS"
+  }
+}

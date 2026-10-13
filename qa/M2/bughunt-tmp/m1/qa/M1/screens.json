@@ -1,0 +1,600 @@
+{
+  "check": "screens",
+  "title": "Screenshots, horizontal overflow, CLS (Chromium 375/768/1440)",
+  "status": "PASS",
+  "durationMs": 25700,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000013253922325102879,
+          "shifts": [
+            {
+              "value": 0.000013253922325102879,
+              "t": 655,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000013253922325102879,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000004417974108367627,
+          "shifts": [
+            {
+              "value": 0.000004417974108367627,
+              "t": 433,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000004417974108367627,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0.000029546090534979427,
+          "shifts": [
+            {
+              "value": 0.000029546090534979427,
+              "t": 458,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000029546090534979427,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.00002195216049382716,
+          "shifts": [
+            {
+              "value": 0.00002195216049382716,
+              "t": 459,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00002195216049382716,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000007317386831275721,
+          "shifts": [
+            {
+              "value": 0.000007317386831275721,
+              "t": 477,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000007317386831275721,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000010513117283950619,
+          "shifts": [
+            {
+              "value": 0.000010513117283950619,
+              "t": 410,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000010513117283950619,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000003504372427983539,
+          "shifts": [
+            {
+              "value": 0.000003504372427983539,
+              "t": 478,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000003504372427983539,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0.00027160493827160494,
+          "shifts": [
+            {
+              "value": 0.00027160493827160494,
+              "t": 488,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00027160493827160494,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.00028293788580246917,
+          "shifts": [
+            {
+              "value": 0.00028293788580246917,
+              "t": 484,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00028293788580246917,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000013253922325102879,
+          "shifts": [
+            {
+              "value": 0.000013253922325102879,
+              "t": 655,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000013253922325102879,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000004417974108367627,
+          "shifts": [
+            {
+              "value": 0.000004417974108367627,
+              "t": 433,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000004417974108367627,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0.000029546090534979427,
+          "shifts": [
+            {
+              "value": 0.000029546090534979427,
+              "t": 458,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000029546090534979427,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.00002195216049382716,
+          "shifts": [
+            {
+              "value": 0.00002195216049382716,
+              "t": 459,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00002195216049382716,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000007317386831275721,
+          "shifts": [
+            {
+              "value": 0.000007317386831275721,
+              "t": 477,
+              "sources": [
+                "#text",
+                "h1.pf-sheet-title"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000007317386831275721,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000010513117283950619,
+          "shifts": [
+            {
+              "value": 0.000010513117283950619,
+              "t": 410,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000010513117283950619,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.000003504372427983539,
+          "shifts": [
+            {
+              "value": 0.000003504372427983539,
+              "t": 478,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000003504372427983539,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0.00027160493827160494,
+          "shifts": [
+            {
+              "value": 0.00027160493827160494,
+              "t": 488,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00027160493827160494,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.00028293788580246917,
+          "shifts": [
+            {
+              "value": 0.00028293788580246917,
+              "t": 484,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00028293788580246917,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

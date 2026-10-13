@@ -1,0 +1,93 @@
+PASS chromium CTA .pf-hero a[href="#review"] -> #review, form in view {"hash":"#review","inView":true}
+PASS chromium CTA .pf-foot a[href="#review"] -> #review, form in view {"hash":"#review","inView":true}
+PASS chromium success: 1 req, text/plain, page ok, note recoverable {"p":{"prefix":true,"len":189,"u16":189,"uaLen":128,"dec":true},"ct":"text/plain;charset=utf-8","rec":"Blue tee $24 → $27 & \"quotes\" é ✓ <b>x</b>"}
+PASS chromium success copy/focus/again {"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","foc":true}
+PASS chromium reload after success shows sent state "We already have your request from qa-verify3@example.com. We will email you within 48 hours."
+PASS chromium send another after reload focuses empty email {"id":"rv-email","email":"","state":null}
+PASS chromium success no console errors []
+PASS chromium emoji noteEmoji: sent, page ok, no hang {"p":{"prefix":true,"len":207,"u16":207,"uaLen":128,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","errors":[]}
+PASS chromium emoji noteEmoji: stored note is a clean prefix (and cut flagged if partial) {"recLen":42,"fullLen":42,"cutMsg":false}
+PASS chromium emoji noteEmojiLong: sent, page ok, no hang {"p":{"prefix":true,"len":294,"u16":294,"uaLen":300,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full no","errors":[]}
+PASS chromium emoji noteEmojiLong: stored note is a clean prefix (and cut flagged if partial) {"recLen":330,"fullLen":6000,"cutMsg":true}
+PASS chromium emoji noteEmojiLong: cut note -> notice + mailto {"ok":true,"len":1791,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\n\n😀😀😀😀😀😀\ud83d","hasEmail":true}
+PASS chromium emoji nameEmojiCut: sent, page ok, no hang {"p":{"prefix":true,"len":125,"u16":125,"uaLen":128,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your store address or name was longer than our form keeps, so please email u","errors":[]}
+PASS chromium emoji nameEmojiCut: stored note is a clean prefix (and cut flagged if partial) {"recLen":2,"fullLen":2,"cutMsg":true}
+PASS chromium emoji storeEmojiCut: sent, page ok, no hang {"p":{"prefix":true,"len":177,"u16":177,"uaLen":128,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your store address or name was longer than our form keeps, so please email u","errors":[]}
+PASS chromium emoji storeEmojiCut: stored note is a clean prefix (and cut flagged if partial) {"recLen":1,"fullLen":1,"cutMsg":true}
+PASS chromium emoji zwjMix: sent, page ok, no hang {"p":{"prefix":true,"len":296,"u16":296,"uaLen":299,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full no","errors":[]}
+PASS chromium emoji zwjMix: stored note is a clean prefix (and cut flagged if partial) {"recLen":312,"fullLen":2000,"cutMsg":true}
+PASS chromium emoji zwjMix: cut note -> notice + mailto {"ok":true,"len":1793,"bodyHead":"Email: qa-verify3@example.com\nStore: магазин.рф\nName: 👨👩👧","hasEmail":true}
+PASS chromium emoji loneSurrogate: sent, page ok, no hang {"p":{"prefix":true,"len":118,"u16":118,"uaLen":128,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","errors":[]}
+PASS chromium emoji loneSurrogate: stored note is a clean prefix (and cut flagged if partial) {"recLen":16,"fullLen":16,"cutMsg":false}
+PASS chromium emoji+500 -> error + mailto ≤1800 decodable with Email {"ok":true,"len":1792,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com/😀😀😀😀😀😀😀","hasEmail":true}
+PASS chromium long inputs: page ≤300, prefix, decodable; notice shown {"p":{"prefix":true,"len":299,"u16":299,"uaLen":300,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note.","m":{"ok":true,"len":1800,"bodyHead":"Email: qa-verify3@example.com\nStore: https://shop.myshopify.","hasEmail":true}}
+PASS chromium honeypot + 1000-char note: hp=1 survives server slice {"page":"https://priceflag.org/#review?hp=1&host=127.0.0.1%3A61390&store=shop.com&name=&m"}
+PASS chromium fail s500: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium fail html: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium fail abort: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium fail reset: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium fail nullb: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium fail rejected: copy, input kept, mailto, focus, button back {"s":"Our server turned the request down, so it was not saved. Your details are still here. Try again, or email them to hello@","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS chromium offline: nothing sent, says so, mailto "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead."
+PASS chromium back online retry succeeds 1
+FAIL chromium double-submit -> 1 request; focus stays on button; live 'Sending' {"n":1,"mid":{"tag":"P","label":"Get a free price review","live":""}}
+PASS chromium duplicate copy + mailto "Thanks. We already had a request from qa-verify3@example.com. If this one is for a different store, email us the details."
+PASS chromium validate empty rejected ["rv-email","rv-store"]
+PASS chromium validate dbldot rejected ["rv-email"]
+PASS chromium validate zwsp accepted and cleaned {"n":1,"e":"me@shop.com","s":"shop.com"}
+PASS chromium validate js rejected ["rv-store"]
+PASS chromium validate puny accepted and cleaned {"n":1,"e":"qa-verify3@example.com","s":"shop.xn--p1ai"}
+PASS chromium validate tooLongStore rejected ["rv-store"]
+PASS chromium validate spaces accepted and cleaned {"n":1,"e":"me@shop.com","s":"shop.com"}
+PASS chromium (edge) 200-char CJK email: mailto still carries Email line {"ok":true,"len":1793,"bodyHead":"Email: 中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中","hasEmail":true}
+PASS chromium /index.html path: page prefix ok "https://priceflag.org/index.html#review?host=127.0.0.1%3A61390&store=shop.com&name=&msg=n"
+PASS chromium nojs: mailto POST text/plain, native validation blocks empty, extras disabled, no endpoint call, URL unchanged {"info":{"action":"mailto:hello@priceflag.org?subject=Free%20price%20review","method":"post","enctype":"text/plain","novalidate":false,"emptyValid":false,"disabledExtras":true},"urlAfter":"http://127.0.0.1:61390/","noscript":2}
+PASS chromium blocked: mailto POST text/plain, native validation blocks empty, extras disabled, no endpoint call, URL unchanged {"info":{"action":"mailto:hello@priceflag.org?subject=Free%20price%20review","method":"post","enctype":"text/plain","novalidate":false,"emptyValid":false,"disabledExtras":true},"urlAfter":"http://127.0.0.1:61390/","noscript":null}
+PASS webkit CTA .pf-hero a[href="#review"] -> #review, form in view {"hash":"#review","inView":true}
+PASS webkit CTA .pf-foot a[href="#review"] -> #review, form in view {"hash":"#review","inView":true}
+PASS webkit success: 1 req, text/plain, page ok, note recoverable {"p":{"prefix":true,"len":189,"u16":189,"uaLen":117,"dec":true},"ct":"text/plain;charset=utf-8","rec":"Blue tee $24 → $27 & \"quotes\" é ✓ <b>x</b>"}
+PASS webkit success copy/focus/again {"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","foc":true}
+PASS webkit reload after success shows sent state "We already have your request from qa-verify3@example.com. We will email you within 48 hours."
+PASS webkit send another after reload focuses empty email {"id":"rv-email","email":"","state":null}
+PASS webkit success no console errors []
+PASS webkit emoji noteEmoji: sent, page ok, no hang {"p":{"prefix":true,"len":207,"u16":207,"uaLen":117,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","errors":[]}
+PASS webkit emoji noteEmoji: stored note is a clean prefix (and cut flagged if partial) {"recLen":42,"fullLen":42,"cutMsg":false}
+PASS webkit emoji noteEmojiLong: sent, page ok, no hang {"p":{"prefix":true,"len":294,"u16":294,"uaLen":300,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full no","errors":[]}
+PASS webkit emoji noteEmojiLong: stored note is a clean prefix (and cut flagged if partial) {"recLen":330,"fullLen":6000,"cutMsg":true}
+PASS webkit emoji noteEmojiLong: cut note -> notice + mailto {"ok":true,"len":1791,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\n\n😀😀😀😀😀😀\ud83d","hasEmail":true}
+PASS webkit emoji nameEmojiCut: sent, page ok, no hang {"p":{"prefix":true,"len":125,"u16":125,"uaLen":117,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your store address or name was longer than our form keeps, so please email u","errors":[]}
+PASS webkit emoji nameEmojiCut: stored note is a clean prefix (and cut flagged if partial) {"recLen":2,"fullLen":2,"cutMsg":true}
+PASS webkit emoji storeEmojiCut: sent, page ok, no hang {"p":{"prefix":true,"len":177,"u16":177,"uaLen":117,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your store address or name was longer than our form keeps, so please email u","errors":[]}
+PASS webkit emoji storeEmojiCut: stored note is a clean prefix (and cut flagged if partial) {"recLen":1,"fullLen":1,"cutMsg":true}
+PASS webkit emoji zwjMix: sent, page ok, no hang {"p":{"prefix":true,"len":296,"u16":296,"uaLen":299,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full no","errors":[]}
+PASS webkit emoji zwjMix: stored note is a clean prefix (and cut flagged if partial) {"recLen":312,"fullLen":2000,"cutMsg":true}
+PASS webkit emoji zwjMix: cut note -> notice + mailto {"ok":true,"len":1793,"bodyHead":"Email: qa-verify3@example.com\nStore: магазин.рф\nName: 👨👩👧","hasEmail":true}
+PASS webkit emoji loneSurrogate: sent, page ok, no hang {"p":{"prefix":true,"len":118,"u16":118,"uaLen":117,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours.","errors":[]}
+PASS webkit emoji loneSurrogate: stored note is a clean prefix (and cut flagged if partial) {"recLen":16,"fullLen":16,"cutMsg":false}
+PASS webkit emoji+500 -> error + mailto ≤1800 decodable with Email {"ok":true,"len":1792,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com/😀😀😀😀😀😀😀","hasEmail":true}
+PASS webkit long inputs: page ≤300, prefix, decodable; notice shown {"p":{"prefix":true,"len":299,"u16":299,"uaLen":300,"dec":true},"s":"Thanks. We have your request and will email qa-verify3@example.com within 48 hours. Your note was longer than our form can store, so please email us the full note.","m":{"ok":true,"len":1800,"bodyHead":"Email: qa-verify3@example.com\nStore: https://shop.myshopify.","hasEmail":true}}
+PASS webkit honeypot + 1000-char note: hp=1 survives server slice {"page":"https://priceflag.org/#review?hp=1&host=127.0.0.1%3A61390&store=shop.com&name=&m"}
+PASS webkit fail s500: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit fail html: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit fail abort: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit fail reset: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit fail nullb: copy, input kept, mailto, focus, button back {"s":"We couldn’t confirm your request arrived. Your details are still here. Try again, or email them to hello@priceflag.org i","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit fail rejected: copy, input kept, mailto, focus, button back {"s":"Our server turned the request down, so it was not saved. Your details are still here. Try again, or email them to hello@","m":{"ok":true,"len":162,"bodyHead":"Email: qa-verify3@example.com\nStore: shop.com\nName: N\n\nkeep ","hasEmail":true},"foc":true}
+PASS webkit offline: nothing sent, says so, mailto "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead."
+PASS webkit back online retry succeeds 1
+FAIL webkit double-submit -> 1 request; focus stays on button; live 'Sending' {"n":1,"mid":{"tag":"P","label":"Get a free price review","live":""}}
+PASS webkit duplicate copy + mailto "Thanks. We already had a request from qa-verify3@example.com. If this one is for a different store, email us the details."
+PASS webkit validate empty rejected ["rv-email","rv-store"]
+PASS webkit validate dbldot rejected ["rv-email"]
+PASS webkit validate zwsp accepted and cleaned {"n":1,"e":"me@shop.com","s":"shop.com"}
+PASS webkit validate js rejected ["rv-store"]
+PASS webkit validate puny accepted and cleaned {"n":1,"e":"qa-verify3@example.com","s":"shop.xn--p1ai"}
+PASS webkit validate tooLongStore rejected ["rv-store"]
+PASS webkit validate spaces accepted and cleaned {"n":1,"e":"me@shop.com","s":"shop.com"}
+PASS webkit (edge) 200-char CJK email: mailto still carries Email line {"ok":true,"len":1793,"bodyHead":"Email: 中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中","hasEmail":true}
+PASS webkit /index.html path: page prefix ok "https://priceflag.org/index.html#review?host=127.0.0.1%3A61390&store=shop.com&name=&msg=n"
+PASS webkit nojs: mailto POST text/plain, native validation blocks empty, extras disabled, no endpoint call, URL unchanged {"info":{"action":"mailto:hello@priceflag.org?subject=Free%20price%20review","method":"post","enctype":"text/plain","novalidate":false,"emptyValid":false,"disabledExtras":true},"urlAfter":"http://127.0.0.1:61390/","noscript":2}
+PASS webkit blocked: mailto POST text/plain, native validation blocks empty, extras disabled, no endpoint call, URL unchanged {"info":{"action":"mailto:hello@priceflag.org?subject=Free%20price%20review","method":"post","enctype":"text/plain","novalidate":false,"emptyValid":false,"disabledExtras":true},"urlAfter":"http://127.0.0.1:61390/","noscript":null}
+
+TOTAL 90 checks, 2 FAIL
+EXIT=0

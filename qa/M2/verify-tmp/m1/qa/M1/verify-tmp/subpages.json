@@ -1,0 +1,458 @@
+{
+ "chromium / rm=no-preference": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Change your store's prices without losing sales."
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "hero-720.webp",
+    "ok": true,
+    "alt": "A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit."
+   },
+   {
+    "src": "",
+    "ok": false,
+    "alt": "A painted summit in lime light with a single climber near the top."
+   }
+  ]
+ },
+ "chromium / rm=reduce": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Change your store's prices without losing sales."
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "hero-720.webp",
+    "ok": true,
+    "alt": "A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit."
+   },
+   {
+    "src": "",
+    "ok": false,
+    "alt": "A painted summit in lime light with a single climber near the top."
+   }
+  ]
+ },
+ "chromium /about rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "About"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /about rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "About"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /contact rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Contact"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /contact rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Contact"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /legal rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Legal"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /legal rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Legal"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /signin.html rm=no-preference": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Sign in to Priceflag"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "chromium /signin.html rm=reduce": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Sign in to Priceflag"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit / rm=no-preference": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Change your store's prices without losing sales."
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "hero-720.webp",
+    "ok": true,
+    "alt": "A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit."
+   },
+   {
+    "src": "summit-lime.webp",
+    "ok": false,
+    "alt": "A painted summit in lime light with a single climber near the top."
+   }
+  ]
+ },
+ "webkit / rm=reduce": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Change your store's prices without losing sales."
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "hero-720.webp",
+    "ok": true,
+    "alt": "A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit."
+   },
+   {
+    "src": "summit-lime.webp",
+    "ok": false,
+    "alt": "A painted summit in lime light with a single climber near the top."
+   }
+  ]
+ },
+ "webkit /about rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "About"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /about rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "About"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /contact rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Contact"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /contact rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Contact"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /legal rm=no-preference": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Legal"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /legal rm=reduce": {
+  "errs": [],
+  "cls": "pf-done pf-done",
+  "sheet": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "bg": {
+   "op": "1",
+   "tf": "none",
+   "vis": "visible"
+  },
+  "h1": [
+   "Legal"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3-720.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /signin.html rm=no-preference": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Sign in to Priceflag"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ },
+ "webkit /signin.html rm=reduce": {
+  "errs": [],
+  "cls": "",
+  "sheet": null,
+  "bg": null,
+  "h1": [
+   "Sign in to Priceflag"
+  ],
+  "overflow": false,
+  "imgs": [
+   {
+    "src": "summit-painting-3.webp",
+    "ok": true,
+    "alt": ""
+   }
+  ]
+ }
+}

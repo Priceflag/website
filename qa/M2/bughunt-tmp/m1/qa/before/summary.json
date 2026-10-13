@@ -1,0 +1,137 @@
+{
+  "label": "before",
+  "baseUrl": "local (qa/serve.mjs) @ git 0f93942 (0f93942)",
+  "strict": false,
+  "fast": false,
+  "startedAt": "2026-10-13T20:36:35.413Z",
+  "durationMs": 105431,
+  "overall": "FAIL",
+  "pages": [
+    "index",
+    "about",
+    "contact",
+    "legal",
+    "signin"
+  ],
+  "checks": {
+    "console": {
+      "status": "FAIL",
+      "durationMs": 7096,
+      "pages": {
+        "index": "WARN",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN",
+        "signin": "FAIL"
+      }
+    },
+    "screens": {
+      "status": "PASS",
+      "durationMs": 27099,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "axe": {
+      "status": "FAIL",
+      "durationMs": 10032,
+      "pages": {
+        "index": "FAIL",
+        "about": "FAIL",
+        "contact": "WARN",
+        "legal": "FAIL",
+        "signin": "WARN"
+      }
+    },
+    "html": {
+      "status": "FAIL",
+      "durationMs": 231,
+      "pages": {
+        "index": "FAIL",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "links": {
+      "status": "FAIL",
+      "durationMs": 5663,
+      "pages": {
+        "index": "FAIL",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "FAIL"
+      }
+    },
+    "keyboard": {
+      "status": "PASS",
+      "durationMs": 9186,
+      "pages": {
+        "index": "PASS",
+        "about": "PASS",
+        "contact": "PASS",
+        "legal": "PASS",
+        "signin": "PASS"
+      }
+    },
+    "nojs": {
+      "status": "WARN",
+      "durationMs": 3518,
+      "pages": {
+        "index": "WARN",
+        "about": "WARN",
+        "contact": "WARN",
+        "legal": "WARN",
+        "signin": "WARN"
+      }
+    },
+    "unit": {
+      "status": "PASS",
+      "durationMs": 83,
+      "pages": {}
+    },
+    "lighthouse": {
+      "status": "FAIL",
+      "durationMs": 78255,
+      "pages": {
+        "index": "FAIL",
+        "about": "FAIL",
+        "contact": "FAIL",
+        "legal": "FAIL"
+      }
+    }
+  },
+  "lighthouse": {
+    "index": {
+      "performance": 0.74,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "about": {
+      "performance": 0.88,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "contact": {
+      "performance": 0.88,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "legal": {
+      "performance": 0.87,
+      "accessibility": 0.95,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  "lighthouseRegression": null
+}

@@ -1,0 +1,130 @@
+{
+ "nojs/index": {
+  "novalidate": false,
+  "action": "mailto:hello@priceflag.org?subject=Free%20price%20review",
+  "method": "post",
+  "enctype": "text/plain",
+  "emptyValid": false,
+  "fieldsSubmitted": [
+   "email",
+   "store",
+   "name",
+   "message"
+  ],
+  "badEmailValid": false,
+  "emailMsg": "Enter an email address",
+  "storeAnything": true,
+  "noscript": [
+   "With JavaScript off, the button opens your email app with these details filled in. You can also write to hello@priceflag.org."
+  ],
+  "ctas": [
+   "Sign in",
+   "Get a free price review",
+   "See how it works",
+   "Get a free price review",
+   "Get a free price review"
+  ],
+  "h1op": "1",
+  "afterBadSubmit": {
+   "url": "http://localhost:8933/",
+   "navs": []
+  }
+ },
+ "nojs/about": {
+  "h1": "About",
+  "op": "1",
+  "vis": "visible",
+  "sw": 375
+ },
+ "nojs/contact": {
+  "h1": "Contact",
+  "op": "1",
+  "vis": "visible",
+  "sw": 375
+ },
+ "nojs/legal": {
+  "h1": "Legal",
+  "op": "1",
+  "vis": "visible",
+  "sw": 375
+ },
+ "nojs/signin": {
+  "h1": "Sign in to Priceflag",
+  "op": "1",
+  "vis": "visible",
+  "sw": 375
+ },
+ "zwnj": {
+  "sentName": "\"علیرضا\"",
+  "expected": "\"علی‌رضا\"",
+  "nameKept": false,
+  "msgKept": false,
+  "sentMsg": "\"میخواهم قیمت را تغییر دهم. क्ष 👨👩👧\""
+ },
+ "injection": {
+  "html": "We couldn’t confirm your request arrived. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com%2F%22%3E%3Cimg%2Fsrc%3Dx%2Fonerror%3Dalert(1)%3E&amp;body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%2F%22%3E%3Cimg%2Fsrc%3Dx%2Fone",
+  "imgs": 0,
+  "errs": []
+ },
+ "fontMetrics": {
+  "hedvigLoaded": true,
+  "hedvig": "1793x92",
+  "fallbackFace": "1788x92",
+  "georgiaRaw": "1733x92",
+  "faces": {
+   "FB-Georgia": "ok",
+   "FB-Times": "ok",
+   "FB-NotoSerif": "missing",
+   "FB-DejaVu": "missing"
+  },
+  "georgiaAdj": "1788x92",
+  "timesAdj": "1628x92"
+ },
+ "navRing": [
+  [
+   ".pf-nav-logo",
+   {
+    "fv": false,
+    "focused": false,
+    "outline": "none 3px 0px",
+    "clippers": []
+   }
+  ],
+  [
+   ".pf-nav a[href=\"#how-it-works\"]",
+   {
+    "fv": false,
+    "focused": false,
+    "outline": "none 3px 0px",
+    "clippers": []
+   }
+  ],
+  [
+   ".pf-nav a[href=\"#faq\"]",
+   {
+    "fv": false,
+    "focused": false,
+    "outline": "none 3px 0px",
+    "clippers": []
+   }
+  ],
+  [
+   ".pf-nav a[href=\"/contact\"]",
+   {
+    "fv": false,
+    "focused": false,
+    "outline": "none 3px 0px",
+    "clippers": []
+   }
+  ],
+  [
+   ".pf-nav .pf-btn",
+   {
+    "fv": false,
+    "focused": false,
+    "outline": "none 3px 0px",
+    "clippers": []
+   }
+  ]
+ ]
+}

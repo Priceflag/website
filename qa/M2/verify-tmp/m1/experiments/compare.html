@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priceflag — "Earn more with Priceflag" comparison prototype</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<style>
+  /* ------------------------------------------------------------------
+     PROTOTYPE CHROME ONLY. Everything the section needs — markup and
+     styles — is created by sections/pf-compare.js itself. Nothing in
+     this file is required in production; you only need:
+
+         <script src="./sections/pf-compare.js"></script>
+         const stop = window.initPfCompare(document.getElementById('...'));
+
+     ------------------------------------------------------------------ */
+  html{background:#030818;overscroll-behavior-y:none;}
+  body{margin:0;padding:0;background:#030818;color:#f3ecde;overscroll-behavior-y:none;
+       font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;}
+  a{color:#f3ecde;text-decoration:none;}
+  a:hover{color:#d8f24b;}
+  ::selection{background:#d8f24b;color:#071238;}
+
+  /* A short runway above the section so the IntersectionObserver has
+     something real to observe, plus a matching tail below. */
+  .lab-spacer{height:26vh;display:flex;align-items:flex-end;}
+  .lab-spacer-in{max-width:1180px;margin:0 auto;padding:0 64px;width:100%;}
+  .lab-kicker{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+              color:rgba(243,236,222,0.32);margin:0 0 8px;}
+  .lab-tail{height:40vh;}
+
+  /* Prototype control bar — NOT part of the shipped section. */
+  .lab-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:wrap;gap:10px;
+           align-items:center;justify-content:center;padding:10px 14px;
+           background:rgba(3,8,24,0.86);backdrop-filter:blur(8px);
+           border-top:1px solid rgba(243,236,222,0.10);}
+  .lab-bar button{-webkit-appearance:none;appearance:none;font:inherit;font-size:12px;
+           padding:7px 14px;border-radius:999px;cursor:pointer;
+           background:rgba(243,236,222,0.06);border:1px solid rgba(243,236,222,0.18);
+           color:#f3ecde;}
+  .lab-bar button:hover{background:rgba(243,236,222,0.12);}
+  .lab-bar button:focus-visible{outline:2px solid #d8f24b;outline-offset:2px;}
+  .lab-bar code{color:rgba(243,236,222,0.44);font-size:11px;}
+  .lab-pick{font-size:11px;color:rgba(243,236,222,0.55);display:flex;gap:6px;align-items:center;}
+  .lab-pick select{font:inherit;font-size:11px;padding:5px 8px;border-radius:8px;
+           background:rgba(243,236,222,0.06);border:1px solid rgba(243,236,222,0.18);color:#f3ecde;}
+  @media (max-width:560px){
+    .lab-spacer-in{padding:0 20px;}
+    .lab-bar{gap:8px;padding:8px 10px;}
+    .lab-bar button{padding:6px 11px;font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="lab-spacer">
+  <div class="lab-spacer-in">
+    <p class="lab-kicker">Prototype · sections/pf-compare.js</p>
+  </div>
+</div>
+
+<!-- The one and only integration point. Empty on purpose. -->
+<div id="pf-compare-mount"></div>
+
+<div class="lab-tail"></div>
+
+<div class="lab-bar" role="group" aria-label="Prototype controls">
+  <button type="button" id="lab-remount">Replay (remount)</button>
+  <button type="button" id="lab-destroy">Run cleanup()</button>
+  <button type="button" id="lab-narrow">Toggle 375px frame</button>
+  <label class="lab-pick">frame
+    <select id="lab-frame">
+      <option value="0">full width</option>
+      <option value="320">320 (iPhone SE)</option>
+      <option value="375">375</option>
+      <option value="390">390</option>
+      <option value="414">414</option>
+      <option value="768">768 (iPad portrait)</option>
+      <option value="1024">1024 (iPad landscape)</option>
+    </select>
+  </label>
+  <code id="lab-state">mounted</code>
+</div>
+
+<script src="../sections/pf-compare.js"></script>
+<script>
+(function () {
+  var mount = document.getElementById('pf-compare-mount');
+  var state = document.getElementById('lab-state');
+  var stop = null;
+
+  function mountIt() {
+    if (stop) { stop(); stop = null; }
+    stop = window.initPfCompare(mount);
+    state.textContent = 'mounted · document.hidden=' + document.hidden;
+    /* Test handle for the responsive harness. stop._layout() re-measures
+       and reports the plot box plus every label box in CSS pixels. */
+    window.__pfc = {
+      stop: stop,
+      layout: function () { return stop && stop._layout ? stop._layout() : null; },
+      remount: mountIt
+    };
+  }
+
+  document.getElementById('lab-remount').addEventListener('click', function () {
+    mountIt();
+    mount.scrollIntoView({ block: 'start' });
+  });
+
+  document.getElementById('lab-destroy').addEventListener('click', function () {
+    if (stop) { stop(); stop = null; state.textContent = 'cleaned up — DOM removed'; }
+    else { state.textContent = 'already cleaned up'; }
+  });
+
+  /* Framing the BODY (not the window) is the case that used to break:
+     a narrow container inside a wide viewport. The section must wrap on
+     container width alone, with no viewport media query involved. */
+  function frameAt(px) {
+    document.body.style.maxWidth = px ? px + 'px' : '';
+    document.body.style.margin = px ? '0 auto' : '';
+    document.body.style.outline = px ? '1px solid rgba(243,236,222,0.14)' : '';
+    state.textContent = px ? ('framed at ' + px + 'px') : 'full width';
+    window.dispatchEvent(new Event('resize'));
+  }
+
+  var narrow = false;
+  document.getElementById('lab-narrow').addEventListener('click', function () {
+    narrow = !narrow;
+    document.getElementById('lab-frame').value = narrow ? '375' : '0';
+    frameAt(narrow ? 375 : 0);
+  });
+
+  document.getElementById('lab-frame').addEventListener('change', function () {
+    var px = parseInt(this.value, 10) || 0;
+    narrow = px === 375;
+    frameAt(px);
+  });
+
+  mountIt();
+})();
+</script>
+</body>
+</html>

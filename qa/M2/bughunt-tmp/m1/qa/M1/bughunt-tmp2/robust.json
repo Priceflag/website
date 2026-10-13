@@ -1,0 +1,270 @@
+{
+ "nojs-form": {
+  "info": {
+   "action": "mailto:hello@priceflag.org?subject=Free%20price%20review",
+   "method": "post",
+   "enctype": "text/plain",
+   "noValidate": true,
+   "noscriptShown": true
+  },
+  "emptyRes": {
+   "url": "http://localhost:8932/",
+   "navs": [],
+   "reqs": [
+    "POST mailto:hello@priceflag.org?subject=Free%20price%20review&body=email%3D%0D%0Astore%3D%0D%0Aname%3D%0D%0Amessage%3D%0D%0Ap"
+   ]
+  },
+  "filledRes": {
+   "url": "http://localhost:8932/",
+   "navs": [],
+   "reqs": [
+    "POST mailto:hello@priceflag.org?subject=Free%20price%20review&body=email%3Dme%40shop.com%0D%0Astore%3Dshop.com%0D%0Aname%3D%0"
+   ],
+   "stillHasValues": "me@shop.com"
+  },
+  "noscriptText": "This form needs JavaScript. Email hello@priceflag.org with your store address instead."
+ },
+ "nojs-index": {
+  "h1": "Change your store's prices without losing sales.",
+  "op": "1",
+  "ctas": [
+   "Sign in",
+   "Get a free price review",
+   "See how it works",
+   "Get a free price review",
+   "Get a free price review"
+  ]
+ },
+ "nojs-about": {
+  "h1": "About",
+  "op": "1",
+  "ctas": [
+   "Talk to us"
+  ]
+ },
+ "nojs-contact": {
+  "h1": "Contact",
+  "op": "1",
+  "ctas": []
+ },
+ "nojs-legal": {
+  "h1": "Legal",
+  "op": "1",
+  "ctas": []
+ },
+ "nojs-pages": [
+  {
+   "h1": "Change your store's prices without losing sales.",
+   "op": "1",
+   "ctas": [
+    "Sign in",
+    "Get a free price review",
+    "See how it works",
+    "Get a free price review",
+    "Get a free price review"
+   ]
+  },
+  {
+   "h1": "About",
+   "op": "1",
+   "ctas": [
+    "Talk to us"
+   ]
+  },
+  {
+   "h1": "Contact",
+   "op": "1",
+   "ctas": []
+  },
+  {
+   "h1": "Legal",
+   "op": "1",
+   "ctas": []
+  }
+ ],
+ "scriptBlocked": {
+  "url": "http://localhost:8932/",
+  "navs": [],
+  "noscriptVisible": false
+ },
+ "slow3g-index": {
+  "cls": 0,
+  "shifts": [],
+  "lcp": 4292,
+  "lcpEl": "IMG.",
+  "fonts": [
+   "Hedvig Letters Serif 400",
+   "Inter 400 700",
+   "Hedvig Fallback normal"
+  ],
+  "loadMs": 13159
+ },
+ "slow3g-about": {
+  "cls": 0,
+  "shifts": [],
+  "lcp": 1016,
+  "lcpEl": "P.pf-lede",
+  "fonts": [
+   "Hedvig Letters Serif 400",
+   "Inter 300 700"
+  ],
+  "loadMs": 11944
+ },
+ "slow3g-contact": {
+  "cls": 0,
+  "shifts": [
+   {
+    "v": 0,
+    "t": 3875,
+    "src": [
+     "#text"
+    ]
+   }
+  ],
+  "lcp": 1088,
+  "lcpEl": "P.pf-lede",
+  "fonts": [
+   "Hedvig Letters Serif 400",
+   "Inter 300 700"
+  ],
+  "loadMs": 11921
+ },
+ "slow3g-legal": {
+  "cls": 0,
+  "shifts": [],
+  "lcp": 1164,
+  "lcpEl": "P.",
+  "fonts": [
+   "Hedvig Letters Serif 400",
+   "Inter 300 700"
+  ],
+  "loadMs": 11946
+ },
+ "fontswap-index": {
+  "titleBefore": {
+   "h": 171.5625,
+   "w": 333,
+   "ff": "\"Hedvig Letters Serif\", \"Hedvig Fallback"
+  },
+  "titleAfter": {
+   "h": 171.5625,
+   "w": 333
+  },
+  "nextTopBefore": 306.5,
+  "nextTopAfter": 306.5,
+  "cls": 0,
+  "shifts": [],
+  "fonts": "Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:loaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:loaded, Hedvig Fallback:loaded"
+ },
+ "fontswap-about": {
+  "titleBefore": {
+   "h": 25.1875,
+   "w": 61.125,
+   "ff": "\"Hedvig Letters Serif\", Georgia, Cambria"
+  },
+  "titleAfter": {
+   "h": 25.1875,
+   "w": 61.125
+  },
+  "nextTopBefore": 70,
+  "nextTopAfter": 70,
+  "cls": 0,
+  "shifts": [],
+  "fonts": "Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:loaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:loaded"
+ },
+ "fontswap-contact": {
+  "titleBefore": {
+   "h": 25.1875,
+   "w": 78,
+   "ff": "\"Hedvig Letters Serif\", Georgia, Cambria"
+  },
+  "titleAfter": {
+   "h": 25.1875,
+   "w": 78
+  },
+  "nextTopBefore": 70,
+  "nextTopAfter": 70,
+  "cls": 0,
+  "shifts": [
+   {
+    "v": 0,
+    "t": 4312,
+    "src": [
+     "#text"
+    ]
+   }
+  ],
+  "fonts": "Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:loaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:loaded"
+ },
+ "fontswap-legal": {
+  "titleBefore": {
+   "h": 25.1875,
+   "w": 49.71875,
+   "ff": "\"Hedvig Letters Serif\", Georgia, Cambria"
+  },
+  "titleAfter": {
+   "h": 25.1875,
+   "w": 49.71875
+  },
+  "nextTopBefore": 70,
+  "nextTopAfter": 70,
+  "cls": 0,
+  "shifts": [],
+  "fonts": "Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:unloaded, Hedvig Letters Serif:loaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:unloaded, Inter:loaded"
+ },
+ "links": {
+  "index": [
+   "#main [Skip to content] -> anchor-ok",
+   "/ [Priceflag home] -> 200",
+   "#how-it-works [How it works] -> anchor-ok",
+   "#faq [FAQ] -> anchor-ok",
+   "/about [About] -> 200",
+   "/contact [Contact] -> 200",
+   "https://signin.priceflag.org [Sign in] -> external/https",
+   "#review [Get a free price review] -> anchor-ok",
+   "#how-it-works [See how it works] -> anchor-ok",
+   "/ [Priceflag] -> 200",
+   "#review [Get a free price review] -> anchor-ok",
+   "/ [Home] -> 200",
+   "#how-it-works [How it works] -> anchor-ok",
+   "#faq [FAQ] -> anchor-ok",
+   "/about [About] -> 200",
+   "https://youtu.be/vfZ26mCQ79A [Meet the team (video)] -> external/https",
+   "https://x.com/Priceflag/ [Twitter / X] -> external/https",
+   "https://www.linkedin.com/company/priceflag/ [LinkedIn] -> external/https",
+   "/contact [Contact] -> 200",
+   "/legal [Legal] -> 200"
+  ],
+  "about": [
+   "#main [Skip to content] -> anchor-ok",
+   "/ [←] -> 200",
+   "/ [Priceflag home] -> 200",
+   "mailto:hello@priceflag.org [Talk to us] -> external/mailto"
+  ],
+  "contact": [
+   "#main [Skip to content] -> anchor-ok",
+   "/ [←] -> 200",
+   "/ [Priceflag home] -> 200",
+   "mailto:nithin@priceflag.org [Say hi] -> external/mailto",
+   "mailto:kabir@priceflag.org [Say hi] -> external/mailto",
+   "/legal [legal page] -> 200"
+  ],
+  "legal": [
+   "#main [Skip to content] -> anchor-ok",
+   "/ [←] -> 200",
+   "/ [Priceflag home] -> 200",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto",
+   "mailto:hello@priceflag.org [hello@priceflag.org] -> external/mailto"
+  ],
+  "signin.html": [
+   "https://priceflag.org/ [Priceflag] -> external/https",
+   "https://priceflag.org/legal#terms [terms] -> external/https",
+   "https://priceflag.org/legal#privacy [privacy policy] -> external/https"
+  ]
+ }
+}

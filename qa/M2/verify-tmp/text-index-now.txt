@@ -1,0 +1,75 @@
+TITLE: Priceflag — Change Shopify prices safely
+Skip to content
+How it works
+FAQ
+About
+Contact
+Sign in
+Change your store's prices
+without losing sales.
+Priceflag forecasts each price change, rolls it out gradually across your products, and pauses it and alerts you if it stops paying. Every shopper always sees the same price.
+Get a free price review
+See how it works
+Built for Shopify
+See the predicted impact on profit before anything goes live. Roll the change out gradually. We watch your real orders and pause the rollout and alert you if it stops paying.
+Forecast it. Roll it out. Undo it.
+See what it will do before it goes live.
+Pick the products and Priceflag never touches anything else. You get a range and the breakeven in plain words, never a single number.
+Try it on a few products first.
+The new price goes live on 25% of the products you picked, then 50%, then all of them. Every shopper sees the same price the whole time. Two bad days in a row pauses the rollout and emails you.
+Put every price back with one click.
+Every change sits in your price journal with the price it replaced. Undo restores all of them and reads Shopify back to confirm.
+Questions worth asking
+Short answers about how Priceflag forecasts, rolls out and undoes a price change.
+How does the forecast work, and how much data do I need?
+How is the rollout staged, and will shoppers see different prices?
+How is this different from an A/B testing app?
+What happens if a price change hurts sales?
+Does it change prices without asking me?
+What happens to my prices if I uninstall?
+Get a free price review
+Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.
+Email
+Store address
+Name (optional)
+Which price are you thinking about changing? (optional)
+Leave this empty
+Get a free price review
+Free. We reply within 48 hours. No app install needed.
+Priceflag
+A tool for Shopify stores
+Get a free price review
+Home
+How it works
+FAQ
+About
+Meet the team (video)
+Twitter / X
+LinkedIn
+Priceflag
+Built by humans in San Francisco, CA
+Contact
+Legal
+--ATTRS--
+meta[content]=Priceflag forecasts a Shopify price change as a range with a breakeven, rolls it out by product, and pauses and alerts you if it stops paying.
+meta[content]=website
+meta[content]=Priceflag
+meta[content]=https://priceflag.org/
+meta[content]=Priceflag: forecast a Shopify price change before it goes live
+meta[content]=See the likely impact of a new price, then roll it out by product while every shopper sees the same price. Free price review for Shopify brands.
+meta[content]=https://priceflag.org/og-v7.jpg
+meta[content]=1200
+meta[content]=630
+meta[content]=Priceflag for Shopify: forecast a price change and roll it out safely.
+meta[content]=summary_large_image
+meta[content]=Priceflag: forecast a Shopify price change before it goes live
+meta[content]=See the likely impact of a new price, then roll it out by product while every shopper sees the same price. Free price review for Shopify brands.
+meta[content]=https://priceflag.org/og-v7.jpg
+meta[content]=Priceflag for Shopify: forecast a price change and roll it out safely.
+nav[aria-label]=Main
+a[aria-label]=Priceflag home
+img[alt]=A painting of a night mountain at dusk: a crowd of climbers zigzags up the slope while one climber goes straight up the ridge toward a lit storefront at the summit.
+section[aria-label]=What Priceflag does
+input[placeholder]=yourstore.com
+img[alt]=A painted summit in lime light with a single climber near the top.
+nav[aria-label]=Footer

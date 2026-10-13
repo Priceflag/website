@@ -1,0 +1,17 @@
+TITLE: Contact — Priceflag
+Skip to content
+←
+Contact
+Priceflag Syndicate provides needed support for Priceflag. Contact us with questions, feedback, issues or anything else you need help with.
+On duty engineers
+Nithin, cofounder
+Works on the product. Any issues with our product, let me know.
+Say hi
+Kabir, cofounder
+Works on sales, marketing and pricing. Any issues with our pricing or support.
+Say hi
+Anything about your data, or about the terms, is covered on the legal page.
+--ATTRS--
+meta[content]=Reach Priceflag Syndicate with questions, feedback or issues: the on duty engineers and how to write to each of them.
+a[aria-label]=Back to priceflag.org
+a[aria-label]=Priceflag home

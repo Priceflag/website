@@ -4,7 +4,7 @@ JavaScript disabled, Chromium 1440. OK = visible H1 + visible "price review" CTA
 
 | page | status | visible text chars | H1 visible | CTA visible |
 | --- | --- | --- | --- | --- |
-| index | PASS | 2201 | yes | yes |
+| index | PASS | 2005 | yes | yes |
 | about | WARN | 1220 | yes | NO |
 | contact | WARN | 460 | yes | NO |
 | legal | WARN | 28929 | yes | NO |

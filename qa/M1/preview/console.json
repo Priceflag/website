@@ -2,13 +2,13 @@
   "check": "console",
   "title": "Console errors/warnings, page errors, failed requests (3 browsers)",
   "status": "WARN",
-  "durationMs": 5669,
+  "durationMs": 5540,
   "pages": {
     "index": {
       "status": "WARN",
       "chromium": {
         "errors": 0,
-        "warnings": 1,
+        "warnings": 0,
         "pageErrors": 0,
         "failedRequests": 0,
         "launchError": false
@@ -103,7 +103,7 @@
   },
   "data": {
     "launchErrors": {
-      "firefox": "browserType.launch: Failed to launch the browser process. | Browser logs: | <launching> /Users/NithinAwasome/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/4s/vdv4x3r57mld7kh6gr3s0l640000gp/T/playwright_firefoxdev_profile-RYq8eg -juggler-pipe -silent | <launched> pid=61018 | [pid=61018][err] *** You are running in headless mode. | [pid=61018][err] Could not find profile folder."
+      "firefox": "browserType.launch: Failed to launch the browser process. | Browser logs: | <launching> /Users/NithinAwasome/Library/Caches/ms-playwright/firefox-1555/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/4s/vdv4x3r57mld7kh6gr3s0l640000gp/T/playwright_firefoxdev_profile-2q7XZx -juggler-pipe -silent | <launched> pid=62326 | [pid=62326][err] *** You are running in headless mode. | [pid=62326][err] Could not find profile folder."
     },
     "results": {
       "index": {
@@ -113,15 +113,9 @@
           "launchError": true
         },
         "chromium": {
-          "status": "WARN",
+          "status": "PASS",
           "errors": [],
-          "warnings": [
-            {
-              "text": "Mixed Content: The page at 'https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/' was loaded over a secure connection, but contains a form that targets an insecure endpoint 'mailto:hello@priceflag.org?subject=Free%20price%20review'. This endpoint should be made available over a secure connection.",
-              "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/",
-              "line": 226
-            }
-          ],
+          "warnings": [],
           "pageErrors": [],
           "failedRequests": [],
           "navError": null,

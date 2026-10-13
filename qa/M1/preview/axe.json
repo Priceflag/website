@@ -2,7 +2,7 @@
   "check": "axe",
   "title": "axe-core accessibility (375 + 1440)",
   "status": "WARN",
-  "durationMs": 7430,
+  "durationMs": 8053,
   "pages": {
     "index": {
       "status": "PASS",

@@ -2,7 +2,7 @@
   "check": "links",
   "title": "Link crawl (static + rendered DOM), #-links, anchors",
   "status": "PASS",
-  "durationMs": 7061,
+  "durationMs": 8014,
   "pages": {
     "index": {
       "status": "PASS",
@@ -154,13 +154,13 @@
     },
     "urls": [
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/",
         "internal": true,
         "kinds": [
           "a"
@@ -177,13 +177,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/about",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/about",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/about",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/about",
         "internal": true,
         "kinds": [
           "a"
@@ -198,13 +198,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/contact",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/contact",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/contact",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/contact",
         "internal": true,
         "kinds": [
           "a"
@@ -283,13 +283,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/legal",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/legal",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/legal",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/legal",
         "internal": true,
         "kinds": [
           "a"
@@ -321,13 +321,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.ico",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.ico",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.ico",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.ico",
         "internal": true,
         "kinds": [
           "link"
@@ -344,13 +344,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.svg",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.svg",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.svg",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.svg",
         "internal": true,
         "kinds": [
           "link"
@@ -367,13 +367,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/apple-touch-icon.png",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/apple-touch-icon.png",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/apple-touch-icon.png",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/apple-touch-icon.png",
         "internal": true,
         "kinds": [
           "link"
@@ -390,13 +390,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1671.webp",
         "internal": true,
         "kinds": [
           "link",
@@ -447,13 +447,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/site.css",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/site.css",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/site.css",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/site.css",
         "internal": true,
         "kinds": [
           "link"
@@ -467,13 +467,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/sections/pf-review.js",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/sections/pf-review.js",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/sections/pf-review.js",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/sections/pf-review.js",
         "internal": true,
         "kinds": [
           "script"
@@ -487,13 +487,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-720.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -507,13 +507,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/hero-1080.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -527,13 +527,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-lime.webp",
         "internal": true,
         "kinds": [
           "img"
@@ -579,13 +579,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3.webp",
         "internal": true,
         "kinds": [
           "link",
@@ -603,13 +603,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.png",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.png",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/favicon.png",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/favicon.png",
         "internal": true,
         "kinds": [
           "link"
@@ -643,13 +643,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-720.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -665,13 +665,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/uploads/summit-painting-3-1080.webp",
         "internal": true,
         "kinds": [
           "img-srcset"
@@ -687,13 +687,13 @@
         ]
       },
       {
-        "url": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/mark.svg",
+        "url": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/mark.svg",
         "status": "PASS",
         "code": 200,
         "chain": [
           200
         ],
-        "final": "https://priceflagv1-9kvp3xz31-nithin-arus-projects.vercel.app/mark.svg",
+        "final": "https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app/mark.svg",
         "internal": true,
         "kinds": [
           "css-block"
@@ -745,7 +745,7 @@
     "skipped": [
       {
         "page": "index",
-        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review",
+        "raw": "mailto:hello@priceflag.org?subject=Free%20price%20review&body=Store%3A%20%0APrice%20I%20want%20to%20change%3A%20",
         "reason": "scheme"
       },
       {

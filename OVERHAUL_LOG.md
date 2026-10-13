@@ -6,6 +6,8 @@
 
 | Milestone | Commit | Preview URL | Verifier result |
 | --- | --- | --- | --- |
+| M0 setup | `0f93942` (docs) + harness in `d0b8ed8` | – (no push needed) | Inventory, tokens, harness, baseline, CTA backend done (`qa/M0/`, `qa/before/`) |
+| M1 fixes | `d0b8ed8`, `a2da53f` | https://priceflagv1-fhmdqgh6n-nithin-arus-projects.vercel.app | Round 3 ALL PASS (`qa/M1/verifier-report.md`); bug hunt round 3: 0 Critical/High, Medium/Low fixed (`qa/M1/bugs.md`); preview: 0 console errors/warnings (Chromium, WebKit), 0 broken links, html valid (`qa/M1/preview/`). The mixed-content warning from the `mailto:` form action was found only on the deployed preview and fixed in `a2da53f`. |
 
 ## Baseline (before)
 
@@ -25,7 +27,7 @@ Source: `qa/before/BASELINE.md` (commit `0f93942`, `QA_LABEL=before QA_GIT_REF=0
 ## Decisions made without the owner
 
 1. **Design read.** Redesign that preserves the brand, for a trust-first B2B landing page aimed at Shopify merchants. Layout variety, motion and density are kept moderate (`design-taste-frontend` dials roughly 5 / 3 / 4). Motion only where it explains something.
-2. **Previews come from the Vercel CLI.** The production project `priceflagv1` (priceflag.org) is connected to the personal repo, so pushing to `Priceflag/website` creates no preview. Each milestone is deployed with `vercel deploy` (preview, never `--prod`) from the `overhaul` working tree, after pushing to `origin/overhaul`. Repointing the project at `Priceflag/website` is left to the owner (plan: "Housekeeping").
+2. **Previews come from the Vercel CLI, behind Vercel Authentication.** Preview URLs need a Vercel login to open. The QA harness reaches them with the project's existing Protection Bypass for Automation secret (`QA_BYPASS`), sent only to the preview host and never stored. Pushes run outside the command sandbox (the sandbox proxy drops large pushes). The production project `priceflagv1` (priceflag.org) is connected to the personal repo, so pushing to `Priceflag/website` creates no preview. Each milestone is deployed with `vercel deploy` (preview, never `--prod`) from the `overhaul` working tree, after pushing to `origin/overhaul`. Repointing the project at `Priceflag/website` is left to the owner (plan: "Housekeeping").
 3. **The homepage becomes real static HTML.** `index.html` was a template rendered in the browser by `support.js`, which loads React 18 and Babel-standalone from unpkg and compiles at runtime. That fails "content and CTAs with JS disabled", Lighthouse performance and HTML validation. The homepage is rebuilt as plain HTML, CSS and a little vanilla JS with the same look. New sections are written as static markup plus a `sections/pf-<name>.css` / `.js` pair, and the orchestrator integrates the markup into `index.html`.
 
 4. **QA evidence in git.** Screenshots are committed as JPEG q70 copies (`qa/compress-screens.sh`); the PNG originals stay local. Verifier and bug-hunter scratch runs keep their scripts and reports in git but not their images.

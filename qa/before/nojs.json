@@ -1,0 +1,90 @@
+{
+  "check": "nojs",
+  "title": "No-JS rendering (H1, primary CTA, text)",
+  "status": "WARN",
+  "durationMs": 3518,
+  "pages": {
+    "index": {
+      "status": "WARN",
+      "textLength": 0,
+      "h1Visible": false,
+      "h1Text": "",
+      "ctaVisible": false,
+      "ctaCount": 2
+    },
+    "about": {
+      "status": "WARN",
+      "textLength": 1164,
+      "h1Visible": true,
+      "h1Text": "About",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "contact": {
+      "status": "WARN",
+      "textLength": 460,
+      "h1Visible": true,
+      "h1Text": "Contact",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "legal": {
+      "status": "WARN",
+      "textLength": 28800,
+      "h1Visible": true,
+      "h1Text": "Legal",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "signin": {
+      "status": "WARN",
+      "textLength": 274,
+      "h1Visible": true,
+      "h1Text": "Sign in to Priceflag",
+      "ctaVisible": false,
+      "ctaCount": 0
+    }
+  },
+  "data": {
+    "index": {
+      "status": "WARN",
+      "textLength": 0,
+      "h1Visible": false,
+      "h1Text": "",
+      "ctaVisible": false,
+      "ctaCount": 2
+    },
+    "about": {
+      "status": "WARN",
+      "textLength": 1164,
+      "h1Visible": true,
+      "h1Text": "About",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "contact": {
+      "status": "WARN",
+      "textLength": 460,
+      "h1Visible": true,
+      "h1Text": "Contact",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "legal": {
+      "status": "WARN",
+      "textLength": 28800,
+      "h1Visible": true,
+      "h1Text": "Legal",
+      "ctaVisible": false,
+      "ctaCount": 0
+    },
+    "signin": {
+      "status": "WARN",
+      "textLength": 274,
+      "h1Visible": true,
+      "h1Text": "Sign in to Priceflag",
+      "ctaVisible": false,
+      "ctaCount": 0
+    }
+  }
+}

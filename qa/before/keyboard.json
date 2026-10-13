@@ -1,0 +1,2948 @@
+{
+  "check": "keyboard",
+  "title": "Keyboard: tab order, reachability, visible focus (1440 + 375)",
+  "status": "PASS",
+  "durationMs": 9186,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 30,
+          "focused": 30,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag — back to top",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "FAQ",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Sign In",
+              "href": "https://signin.priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "AI PRICING Built for Shopify stores. See it work",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "transform",
+                "opacity",
+                "filter"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "See how it works",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "button",
+              "text": "Step 1: Forecast",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "button",
+              "text": "Step 2: Rollout",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "button",
+              "text": "Step 3: Undo",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "11",
+              "tag": "button",
+              "text": "How does the forecast work, and how much data do I need?",
+              "href": null,
+              "id": "pff1-q0",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "12",
+              "tag": "button",
+              "text": "How is the rollout staged, and will shoppers see different p",
+              "href": null,
+              "id": "pff1-q1",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "13",
+              "tag": "button",
+              "text": "How is this different from an A/B testing app?",
+              "href": null,
+              "id": "pff1-q2",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "14",
+              "tag": "button",
+              "text": "What happens if a price change hurts sales?",
+              "href": null,
+              "id": "pff1-q3",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "15",
+              "tag": "button",
+              "text": "Does it change prices without asking me?",
+              "href": null,
+              "id": "pff1-q4",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "16",
+              "tag": "button",
+              "text": "What happens to my prices if I uninstall?",
+              "href": null,
+              "id": "pff1-q5",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "17",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pfl7cur1m-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "18",
+              "tag": "button",
+              "text": "Send it to me",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "19",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "20",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "21",
+              "tag": "a",
+              "text": "Home",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "22",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "23",
+              "tag": "a",
+              "text": "Partners",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "24",
+              "tag": "a",
+              "text": "Demo",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "25",
+              "tag": "a",
+              "text": "Team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "26",
+              "tag": "a",
+              "text": "Twitter / X",
+              "href": "https://x.com/Priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "27",
+              "tag": "a",
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/company/priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "28",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "29",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 32,
+          "focused": 32,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag — back to top",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "FAQ",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Learn more about the team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "Sign In",
+              "href": "https://signin.priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "AI PRICING Built for Shopify stores. See it work →",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "transform",
+                "opacity",
+                "filter"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "See how it works",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "button",
+              "text": "Step 1: Forecast",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "11",
+              "tag": "button",
+              "text": "Step 2: Rollout",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "12",
+              "tag": "button",
+              "text": "Step 3: Undo",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "13",
+              "tag": "button",
+              "text": "How does the forecast work, and how much data do I need?",
+              "href": null,
+              "id": "pff1-q0",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "14",
+              "tag": "button",
+              "text": "How is the rollout staged, and will shoppers see different p",
+              "href": null,
+              "id": "pff1-q1",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "15",
+              "tag": "button",
+              "text": "How is this different from an A/B testing app?",
+              "href": null,
+              "id": "pff1-q2",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "16",
+              "tag": "button",
+              "text": "What happens if a price change hurts sales?",
+              "href": null,
+              "id": "pff1-q3",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "17",
+              "tag": "button",
+              "text": "Does it change prices without asking me?",
+              "href": null,
+              "id": "pff1-q4",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "18",
+              "tag": "button",
+              "text": "What happens to my prices if I uninstall?",
+              "href": null,
+              "id": "pff1-q5",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "19",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pflx12kf0-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "20",
+              "tag": "button",
+              "text": "Send it to me",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "21",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "22",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "23",
+              "tag": "a",
+              "text": "Home",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "24",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "25",
+              "tag": "a",
+              "text": "Partners",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "26",
+              "tag": "a",
+              "text": "Demo",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "27",
+              "tag": "a",
+              "text": "Team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "28",
+              "tag": "a",
+              "text": "Twitter / X",
+              "href": "https://x.com/Priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "29",
+              "tag": "a",
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/company/priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "30",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "31",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 4,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": null,
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 4,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": null,
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 10,
+          "focused": 10,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 10,
+          "focused": 10,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "style-change",
+              "changed": [
+                "boxShadow",
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "style-change",
+              "changed": [
+                "boxShadow",
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 30,
+          "focused": 30,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag — back to top",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "FAQ",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Sign In",
+              "href": "https://signin.priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "AI PRICING Built for Shopify stores. See it work",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "transform",
+                "opacity",
+                "filter"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "See how it works",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "button",
+              "text": "Step 1: Forecast",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "button",
+              "text": "Step 2: Rollout",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "button",
+              "text": "Step 3: Undo",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "11",
+              "tag": "button",
+              "text": "How does the forecast work, and how much data do I need?",
+              "href": null,
+              "id": "pff1-q0",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "12",
+              "tag": "button",
+              "text": "How is the rollout staged, and will shoppers see different p",
+              "href": null,
+              "id": "pff1-q1",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "13",
+              "tag": "button",
+              "text": "How is this different from an A/B testing app?",
+              "href": null,
+              "id": "pff1-q2",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "14",
+              "tag": "button",
+              "text": "What happens if a price change hurts sales?",
+              "href": null,
+              "id": "pff1-q3",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "15",
+              "tag": "button",
+              "text": "Does it change prices without asking me?",
+              "href": null,
+              "id": "pff1-q4",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "16",
+              "tag": "button",
+              "text": "What happens to my prices if I uninstall?",
+              "href": null,
+              "id": "pff1-q5",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "17",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pfl7cur1m-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "18",
+              "tag": "button",
+              "text": "Send it to me",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "19",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "20",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "21",
+              "tag": "a",
+              "text": "Home",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "22",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "23",
+              "tag": "a",
+              "text": "Partners",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "24",
+              "tag": "a",
+              "text": "Demo",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "25",
+              "tag": "a",
+              "text": "Team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "26",
+              "tag": "a",
+              "text": "Twitter / X",
+              "href": "https://x.com/Priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "27",
+              "tag": "a",
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/company/priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "28",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "29",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 32,
+          "focused": 32,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag — back to top",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "FAQ",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Learn more about the team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "Sign In",
+              "href": "https://signin.priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "AI PRICING Built for Shopify stores. See it work →",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "transform",
+                "opacity",
+                "filter"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "See how it works",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "10",
+              "tag": "button",
+              "text": "Step 1: Forecast",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "11",
+              "tag": "button",
+              "text": "Step 2: Rollout",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "12",
+              "tag": "button",
+              "text": "Step 3: Undo",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "13",
+              "tag": "button",
+              "text": "How does the forecast work, and how much data do I need?",
+              "href": null,
+              "id": "pff1-q0",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "14",
+              "tag": "button",
+              "text": "How is the rollout staged, and will shoppers see different p",
+              "href": null,
+              "id": "pff1-q1",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "15",
+              "tag": "button",
+              "text": "How is this different from an A/B testing app?",
+              "href": null,
+              "id": "pff1-q2",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "16",
+              "tag": "button",
+              "text": "What happens if a price change hurts sales?",
+              "href": null,
+              "id": "pff1-q3",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "17",
+              "tag": "button",
+              "text": "Does it change prices without asking me?",
+              "href": null,
+              "id": "pff1-q4",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "18",
+              "tag": "button",
+              "text": "What happens to my prices if I uninstall?",
+              "href": null,
+              "id": "pff1-q5",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "19",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pflx12kf0-email",
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "20",
+              "tag": "button",
+              "text": "Send it to me",
+              "href": null,
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "21",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "22",
+              "tag": "a",
+              "text": "Get a free price review",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "23",
+              "tag": "a",
+              "text": "Home",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "24",
+              "tag": "a",
+              "text": "About",
+              "href": "/about",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "25",
+              "tag": "a",
+              "text": "Partners",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "26",
+              "tag": "a",
+              "text": "Demo",
+              "href": "#",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "27",
+              "tag": "a",
+              "text": "Team ↗",
+              "href": "https://youtu.be/vfZ26mCQ79A",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "28",
+              "tag": "a",
+              "text": "Twitter / X",
+              "href": "https://x.com/Priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "29",
+              "tag": "a",
+              "text": "LinkedIn",
+              "href": "https://www.linkedin.com/company/priceflag/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "30",
+              "tag": "a",
+              "text": "Contact",
+              "href": "/contact",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "31",
+              "tag": "a",
+              "text": "Legal",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "color",
+                "textDecorationColor"
+              ],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 4,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": null,
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 4,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": null,
+              "tag": "main",
+              "text": "Priceflag forecasts what a price change does to your profit,",
+              "href": null,
+              "id": "main",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Talk to us",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 6,
+          "focused": 6,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:nithin@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "Say hi",
+              "href": "mailto:kabir@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "legal page",
+              "href": "/legal",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 10,
+          "focused": 10,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 10,
+          "focused": 10,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Skip to content",
+              "href": "#main",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "a",
+              "text": "Back to priceflag.org",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "a",
+              "text": "Priceflag home",
+              "href": "index.html",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "5",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "6",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "7",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "8",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "9",
+              "tag": "a",
+              "text": "hello@priceflag.org",
+              "href": "mailto:hello@priceflag.org",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "style-change",
+              "changed": [
+                "boxShadow",
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        },
+        "1440": {
+          "width": 1440,
+          "status": "PASS",
+          "candidates": 5,
+          "focused": 5,
+          "cycled": true,
+          "trappedAt": null,
+          "unreached": [],
+          "invisibleFocus": [],
+          "unknownIndicator": [],
+          "sequence": [
+            {
+              "qa": "0",
+              "tag": "a",
+              "text": "Priceflag",
+              "href": "https://priceflag.org/",
+              "id": null,
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "1",
+              "tag": "input",
+              "text": "",
+              "href": null,
+              "id": "pf-email",
+              "indicator": "style-change",
+              "changed": [
+                "boxShadow",
+                "borderTopColor",
+                "borderBottomColor",
+                "borderLeftColor",
+                "borderRightColor",
+                "backgroundColor"
+              ],
+              "onScreen": true
+            },
+            {
+              "qa": "2",
+              "tag": "button",
+              "text": "Email me a sign-in link",
+              "href": null,
+              "id": "pf-submit",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "3",
+              "tag": "a",
+              "text": "terms",
+              "href": "https://priceflag.org/legal#terms",
+              "id": "pf-terms",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            },
+            {
+              "qa": "4",
+              "tag": "a",
+              "text": "privacy policy",
+              "href": "https://priceflag.org/legal#privacy",
+              "id": "pf-privacy",
+              "indicator": "outline",
+              "changed": [],
+              "onScreen": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

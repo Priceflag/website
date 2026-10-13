@@ -12,3 +12,21 @@ uploads/signin-hero.png
 uploads/hero2.jpg
 
 Priceflag-standalone.html
+
+# Dev-only QA harness and overhaul docs — never deployed. Excluding package.json
+# keeps Vercel treating the site as pure static (no install/build step).
+qa/
+package.json
+package-lock.json
+node_modules/
+docs/
+DESIGN_TOKENS.md
+OVERHAUL_LOG.md
+scripts/
+
+# Overhaul: design sources and server-side scripts that are not part of the site.
+hero-new.png
+uploads/hero2.webp
+integrations/
+.claude/
+.impeccable/

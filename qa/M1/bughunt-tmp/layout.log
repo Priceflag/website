@@ -1,0 +1,117 @@
+w320x640_index {"o":{"docSW":320,"vw":320,"items":[]},"navInfo":{"items":[{"t":"Priceflag home","l":20,"r":39,"top":6,"h":44},{"t":"How it works","l":53,"r":139,"top":6,"h":44},{"t":"FAQ","l":153,"r":180,"top":6,"h":44},{"t":"Sign in","l":219,"r":300,"top":8,"h":40}],"overlap":false,"navH":56,"heroH":601,"ctaBottom":511,"vh":640}}
+w320x640_about {"o":{"docSW":320,"vw":320,"items":[]},"navInfo":{"sheet":[0,640,640],"mainH":493,"mainScroll":1260,"cta":[566,616],"vh":640,"cls":"pf-done pf-done"}}
+w320x640_contact {"o":{"docSW":320,"vw":320,"items":[]},"navInfo":{"sheet":[0,640,640],"mainH":588,"mainScroll":699,"cta":null,"vh":640,"cls":"pf-done pf-done"}}
+w320x640_legal {"o":{"docSW":320,"vw":320,"items":[]},"navInfo":{"sheet":[0,640,640],"mainH":588,"mainScroll":25723,"cta":null,"vh":640,"cls":"pf-done pf-done"}}
+w320x640_signinhtml {"o":{"docSW":320,"vw":320,"items":[]},"navInfo":null}
+w375x812_index {"o":{"docSW":375,"vw":375,"items":[]},"navInfo":{"items":[{"t":"Priceflag home","l":21,"r":40,"top":6,"h":44},{"t":"How it works","l":54,"r":140,"top":6,"h":44},{"t":"FAQ","l":154,"r":181,"top":6,"h":44},{"t":"Sign in","l":273,"r":354,"top":8,"h":40}],"overlap":false,"navH":56,"heroH":757,"ctaBottom":522,"vh":812}}
+w375x812_about {"o":{"docSW":375,"vw":375,"items":[]},"navInfo":{"sheet":[0,812,812],"mainH":665,"mainScroll":1081,"cta":[738,788],"vh":812,"cls":"pf-done pf-done"}}
+w375x812_contact {"o":{"docSW":375,"vw":375,"items":[]},"navInfo":{"sheet":[0,812,812],"mainH":760,"mainScroll":760,"cta":null,"vh":812,"cls":"pf-done pf-done"}}
+w375x812_legal {"o":{"docSW":375,"vw":375,"items":[]},"navInfo":{"sheet":[0,812,812],"mainH":760,"mainScroll":22136,"cta":null,"vh":812,"cls":"pf-done pf-done"}}
+w375x812_signinhtml {"o":{"docSW":375,"vw":375,"items":[]},"navInfo":null}
+w1920x1080_index {"o":{"docSW":1920,"vw":1920,"items":[]},"navInfo":{"items":[{"t":"Priceflag home","l":80,"r":99,"top":6,"h":44},{"t":"How it works","l":129,"r":215,"top":6,"h":44},{"t":"FAQ","l":245,"r":272,"top":6,"h":44},{"t":"About","l":302,"r":342,"top":6,"h":44},{"t":"Contact","l":1677,"r":1729,"top":6,"h":44},{"t":"Sign in","l":1759,"r":1840,"top":8,"h":40}],"overlap":false,"navH":56,"heroH":1025,"ctaBottom":517,"vh":1080}}
+w1920x1080_about {"o":{"docSW":1920,"vw":1920,"items":[]},"navInfo":{"sheet":[230,850,620],"mainH":463,"mainScroll":1003,"cta":[776,826],"vh":1080,"cls":"pf-done pf-done"}}
+w1920x1080_contact {"o":{"docSW":1920,"vw":1920,"items":[]},"navInfo":{"sheet":[230,850,620],"mainH":558,"mainScroll":610,"cta":null,"vh":1080,"cls":"pf-done pf-done"}}
+w1920x1080_legal {"o":{"docSW":1920,"vw":1920,"items":[]},"navInfo":{"sheet":[200,880,680],"mainH":618,"mainScroll":18261,"cta":null,"vh":1080,"cls":"pf-done pf-done"}}
+w1920x1080_signinhtml {"o":{"docSW":1920,"vw":1920,"items":[]},"navInfo":null}
+w2560x1440_index {"o":{"docSW":2560,"vw":2560,"items":[]},"navInfo":{"items":[{"t":"Priceflag home","l":80,"r":99,"top":6,"h":44},{"t":"How it works","l":129,"r":215,"top":6,"h":44},{"t":"FAQ","l":245,"r":272,"top":6,"h":44},{"t":"About","l":302,"r":342,"top":6,"h":44},{"t":"Contact","l":2317,"r":2369,"top":6,"h":44},{"t":"Sign in","l":2399,"r":2480,"top":8,"h":40}],"overlap":false,"navH":56,"heroH":1385,"ctaBottom":517,"vh":1440}}
+w2560x1440_about {"o":{"docSW":2560,"vw":2560,"items":[]},"navInfo":{"sheet":[410,1030,620],"mainH":463,"mainScroll":1003,"cta":[956,1006],"vh":1440,"cls":"pf-done pf-done"}}
+w2560x1440_contact {"o":{"docSW":2560,"vw":2560,"items":[]},"navInfo":{"sheet":[410,1030,620],"mainH":558,"mainScroll":610,"cta":null,"vh":1440,"cls":"pf-done pf-done"}}
+w2560x1440_legal {"o":{"docSW":2560,"vw":2560,"items":[]},"navInfo":{"sheet":[380,1060,680],"mainH":618,"mainScroll":18261,"cta":null,"vh":1440,"cls":"pf-done pf-done"}}
+w2560x1440_signinhtml {"o":{"docSW":2560,"vw":2560,"items":[]},"navInfo":null}
+w844x390_index {"o":{"docSW":844,"vw":844,"items":[]},"navInfo":{"items":[{"t":"Priceflag home","l":47,"r":66,"top":6,"h":44},{"t":"How it works","l":88,"r":174,"top":6,"h":44},{"t":"FAQ","l":196,"r":223,"top":6,"h":44},{"t":"About","l":245,"r":285,"top":6,"h":44},{"t":"Contact","l":642,"r":694,"top":6,"h":44},{"t":"Sign in","l":716,"r":797,"top":8,"h":40}],"overlap":false,"navH":56,"heroH":367,"ctaBottom":346,"vh":390}}
+w844x390_about {"o":{"docSW":844,"vw":844,"items":[]},"navInfo":{"sheet":[14,376,362],"mainH":205,"mainScroll":1003,"cta":[302,352],"vh":390,"cls":"pf-done pf-done"}}
+w844x390_contact {"o":{"docSW":844,"vw":844,"items":[]},"navInfo":{"sheet":[14,376,362],"mainH":300,"mainScroll":610,"cta":null,"vh":390,"cls":"pf-done pf-done"}}
+w844x390_legal {"o":{"docSW":844,"vw":844,"items":[]},"navInfo":{"sheet":[14,376,362],"mainH":300,"mainScroll":18261,"cta":null,"vh":390,"cls":"pf-done pf-done"}}
+w844x390_signinhtml {"o":{"docSW":844,"vw":844,"items":[]},"navInfo":null}
+zoom200_index {"o":{"docSW":640,"vw":640,"items":[]},"extra":{"navH":56,"mainClient":2904,"mainScroll":2904,"vh":400}}
+zoom200_about {"o":{"docSW":640,"vw":640,"items":[]},"extra":{"navH":null,"mainClient":217,"mainScroll":965,"vh":400}}
+zoom200_contact {"o":{"docSW":640,"vw":640,"items":[]},"extra":{"navH":null,"mainClient":312,"mainScroll":603,"vh":400}}
+zoom200_legal {"o":{"docSW":640,"vw":640,"items":[]},"extra":{"navH":null,"mainClient":312,"mainScroll":18085,"vh":400}}
+zoom200_signinhtml {"o":{"docSW":640,"vw":640,"items":[]},"extra":{"navH":null,"mainClient":431,"mainScroll":431,"vh":400}}
+reflow320x256_index {"navH":56,"hdrH":null,"mainClient":3900,"mainScroll":3900,"vh":256,"docSW":320}
+reflow320x256_about {"navH":null,"hdrH":52,"mainClient":109,"mainScroll":1260,"vh":256,"docSW":320}
+reflow320x256_contact {"navH":null,"hdrH":52,"mainClient":204,"mainScroll":699,"vh":256,"docSW":320}
+reflow320x256_legal {"navH":null,"hdrH":52,"mainClient":204,"mainScroll":25723,"vh":256,"docSW":320}
+reflow320x256_signinhtml {"navH":null,"hdrH":70,"mainClient":448,"mainScroll":448,"vh":256,"docSW":320}
+longtext_320 {"docSW":662,"vw":320,"items":[{"el":"A.pf-btn pf-btn--light pf-btn--sm","right":346,"left":217,"text":"Sign in Sign in"},{"el":"DIV.pf-cta","right":425,"left":20,"text":"Get a free price review Get a free price"},{"el":"A.pf-btn","right":425,"left":20,"text":"Get a free price review Get a free price"},{"el":"A.pf-btn pf-btn--ghost","right":342,"left":20,"text":"See how it works See how it works"},{"el":"P.pf-statement","self":"content>box","sw":642,"cw":280,"text":"See the predicted impact on profit befor"},{"el":"H3.","self":"content>box","sw":465,"cw":280,"text":"See what it will do before it goes live."},{"el":"DIV.","right":469,"left":20,"text":"Get a free price review Get a free price"},{"el":"H2.pf-h2","right":469,"left":20,"text":"Get a free price review Get a free price"},{"el":"P.pf-lede","right":469,"left":20,"text":"Tell us your store and the price you are"},{"el":"FORM.pf-form","right":469,"left":20,"text":"Email Email\n              \n             "},{"el":"DIV.pf-form-fields","right":447,"left":42,"text":"Email Email\n              \n             "},{"el":"DIV.pf-form-row","right":447,"left":42,"text":"Email Email\n              \n             "},{"el":"DIV.pf-field","right":447,"left":42,"text":"Email Email"},{"el":"LABEL.","right":447,"left":42,"text":"Email Email"},{"el":"INPUT.","right":447,"left":42,"text":""}]}
+longtext_375 {"docSW":663,"vw":375,"items":[{"el":"A.pf-btn pf-btn--light pf-btn--sm","right":383,"left":254,"text":"Sign in Sign in"},{"el":"DIV.pf-cta","right":426,"left":21,"text":"Get a free price review Get a free price"},{"el":"A.pf-btn","right":426,"left":21,"text":"Get a free price review Get a free price"},{"el":"P.pf-statement","self":"content>box","sw":642,"cw":333,"text":"See the predicted impact on profit befor"},{"el":"H3.","self":"content>box","sw":465,"cw":333,"text":"See what it will do before it goes live."},{"el":"DIV.","right":470,"left":21,"text":"Get a free price review Get a free price"},{"el":"H2.pf-h2","right":470,"left":21,"text":"Get a free price review Get a free price"},{"el":"P.pf-lede","right":470,"left":21,"text":"Tell us your store and the price you are"},{"el":"FORM.pf-form","right":470,"left":21,"text":"Email Email\n              \n             "},{"el":"DIV.pf-form-fields","right":448,"left":43,"text":"Email Email\n              \n             "},{"el":"DIV.pf-form-row","right":448,"left":43,"text":"Email Email\n              \n             "},{"el":"DIV.pf-field","right":448,"left":43,"text":"Email Email"},{"el":"LABEL.","right":448,"left":43,"text":"Email Email"},{"el":"INPUT.","right":448,"left":43,"text":""},{"el":"DIV.pf-field","right":448,"left":43,"text":"Store address Store address"}]}
+longtext_1440 {"docSW":1440,"vw":1440,"items":[{"el":"H3.","self":"content>box","sw":465,"cw":363,"text":"See what it will do before it goes live."}]}
+longtext_about {"docSW":417,"vw":320,"items":[{"el":"H1.pf-sheet-title","right":362,"left":69,"text":"About About Datenschutzgrundverordnung"},{"el":"A.pf-mark","right":417,"left":374,"text":""},{"el":"SPAN.pf-hiker","right":417,"left":374,"text":""}]}
+longtext_contact {"docSW":417,"vw":320,"items":[{"el":"H1.pf-sheet-title","right":362,"left":69,"text":"Contact Contact Datenschutzgrundverordnu"},{"el":"A.pf-mark","right":417,"left":374,"text":""},{"el":"SPAN.pf-hiker","right":417,"left":374,"text":""}]}
+reducedMotion_index {"vis":{"op":"1","smooth":"auto","cls":""},"errs":[]}
+reducedMotion_about {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+reducedMotion_contact {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+reducedMotion_legal {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+reducedMotion_signinhtml {"vis":{"op":"1","smooth":"auto","cls":""},"errs":[]}
+colorScheme_index {"vis":{"op":"1","smooth":"smooth","cls":""},"errs":[]}
+colorScheme_about {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+colorScheme_contact {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+colorScheme_legal {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+colorScheme_signinhtml {"vis":{"op":"1","smooth":"auto","cls":""},"errs":[]}
+forcedColors_index {"vis":{"op":"1","smooth":"smooth","cls":""},"errs":[]}
+forcedColors_about {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+forcedColors_contact {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+forcedColors_legal {"vis":{"op":"1","smooth":"auto","cls":"pf-done"},"errs":[]}
+forcedColors_signinhtml {"vis":{"op":"1","smooth":"auto","cls":""},"errs":[]}
+node:internal/modules/run_main:104
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('a[href^="#"]').first()
+    - locator resolved to <a href="#main" class="pf-skip">Skip to content</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - element is outside of the viewport
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - element is outside of the viewport
+     - retrying click action
+       - waiting 500ms
+
+    at /Users/NithinAwasome/Downloads/CODE/website/qa/M1/bughunt-tmp/layout.mjs:120:53 {
+  log: [
+    `  - waiting for locator('a[href^="#"]').first()`,
+    '    - locator resolved to <a href="#main" class="pf-skip">Skip to content</a>',
+    '  - attempting click action',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - element is outside of the viewport',
+    '    - retrying click action',
+    '    - waiting 20ms',
+    '    2 × waiting for element to be visible, enabled and stable',
+    '      - element is visible, enabled and stable',
+    '      - scrolling into view if needed',
+    '      - done scrolling',
+    '      - element is outside of the viewport',
+    '    - retrying click action',
+    '      - waiting 100ms',
+    '    58 × waiting for element to be visible, enabled and stable',
+    '       - element is visible, enabled and stable',
+    '       - scrolling into view if needed',
+    '       - done scrolling',
+    '       - element is outside of the viewport',
+    '     - retrying click action',
+    '       - waiting 500ms'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v23.11.0

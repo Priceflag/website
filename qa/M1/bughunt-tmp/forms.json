@@ -1,0 +1,565 @@
+{
+  "empty": {
+    "formState": null,
+    "kind": "error",
+    "status": "Check the highlighted fields.",
+    "statusHTML": "Check the highlighted fields.",
+    "active": "rv-email",
+    "emailInvalid": "true",
+    "storeInvalid": "true",
+    "emailErr": "Enter your email so we can send the review.",
+    "storeErr": "Enter your store address.",
+    "values": {
+      "email": "",
+      "store": "",
+      "name": "",
+      "message": ""
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "reqs": []
+  },
+  "emailMatrix": {
+    "a": {
+      "accepted": false,
+      "val": "a",
+      "err": "Enter a full email address, like you@yourstore.com."
+    },
+    "a@b": {
+      "accepted": false,
+      "val": "a@b",
+      "err": "Enter a full email address, like you@yourstore.com."
+    },
+    "a@b.c": {
+      "accepted": false,
+      "val": "a@b.c",
+      "err": "Enter a full email address, like you@yourstore.com."
+    },
+    "User+tag@Sub.Example.CO.uk": {
+      "accepted": true,
+      "val": "User+tag@Sub.Example.CO.uk",
+      "err": ""
+    },
+    "  me@shop.com  ": {
+      "accepted": true,
+      "val": "me@shop.com",
+      "err": ""
+    },
+    "ME@SHOP.COM": {
+      "accepted": true,
+      "val": "ME@SHOP.COM",
+      "err": ""
+    },
+    "a@b..com": {
+      "accepted": true,
+      "val": "a@b..com",
+      "err": ""
+    },
+    "a@@b.com": {
+      "accepted": false,
+      "val": "a@@b.com",
+      "err": "Enter a full email address, like you@yourstore.com."
+    },
+    "a@b.com.": {
+      "accepted": true,
+      "val": "a@b.com.",
+      "err": ""
+    },
+    "\"quoted\"@x.com": {
+      "accepted": true,
+      "val": "\"quoted\"@x.com",
+      "err": ""
+    },
+    "ü@exämple.de": {
+      "accepted": true,
+      "val": "ü@exämple.de",
+      "err": ""
+    },
+    "a@localhost": {
+      "accepted": false,
+      "val": "a@localhost",
+      "err": "Enter a full email address, like you@yourstore.com."
+    },
+    "a b@c.com": {
+      "accepted": false,
+      "val": "a b@c.com",
+      "err": "Enter a full email address, like you@yourstore.com."
+    }
+  },
+  "storeMatrix": {
+    "https://mystore.myshopify.com/products/blue-shirt?variant=1": {
+      "accepted": true,
+      "err": ""
+    },
+    "mystore.com": {
+      "accepted": true,
+      "err": ""
+    },
+    "MyStore.COM": {
+      "accepted": true,
+      "err": ""
+    },
+    "http://shop.co.uk/": {
+      "accepted": true,
+      "err": ""
+    },
+    "shop.com?ref=x": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "www.shop.com:8080": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "café.com": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "shop": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "admin.shopify.com/store/my-store": {
+      "accepted": true,
+      "err": ""
+    },
+    "https://": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "shop.com/collections/all#top": {
+      "accepted": true,
+      "err": ""
+    },
+    "javascript:alert(1)": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "shop.com.": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    "my_store.com": {
+      "accepted": false,
+      "err": "Enter your store address, like yourstore.com."
+    },
+    " shop.com ": {
+      "accepted": true,
+      "err": ""
+    }
+  },
+  "longLengths": {
+    "e": 254,
+    "s": 200,
+    "n": 120,
+    "m": 2000
+  },
+  "longMailto": {
+    "len": 12234,
+    "decodedBodyLen": 2144
+  },
+  "longOverflow": {
+    "sw": 1280,
+    "cw": 1280
+  },
+  "success": {
+    "formState": "sent",
+    "kind": "ok",
+    "status": "Thanks. We have your request and will email Me+test@Sub.Shop.com within 48 hours.",
+    "statusHTML": "Thanks. We have your request and will email <strong>Me+test@Sub.Shop.com</strong> within 48 hours.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "Me+test@Sub.Shop.com",
+      "store": "https://mystore.myshopify.com/products/x",
+      "name": "Jo",
+      "message": "Raise the $40 tee to $44"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": false,
+    "reqs": [
+      {
+        "method": "POST",
+        "ct": "text/plain;charset=utf-8",
+        "body": "{\"email\":\"Me+test@Sub.Shop.com\",\"page\":\"https://priceflag.org/#review?store=https%3A%2F%2Fmystore.myshopify.com%2Fproducts%2Fx&name=Jo&host=localhost%3A8931&msg=Raise%20the%20%2440%20tee%20to%20%2444\",\"source\":\"price-review\",\"store\":\"https://mystore.myshopify.com/products/x\",\"name\":\"Jo\",\"message\":\"Raise the $40 tee to $44\",\"price\":\"\",\"testPrice\":\"\",\"cost\":\"\",\"ua\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\"}"
+      }
+    ]
+  },
+  "successBack": {
+    "formState": null,
+    "kind": null,
+    "status": "",
+    "statusHTML": "",
+    "active": "BODY.",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "Me+test@Sub.Shop.com",
+      "store": "https://mystore.myshopify.com/products/x",
+      "name": "Jo",
+      "message": "Raise the $40 tee to $44"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true
+  },
+  "mode_dup": {
+    "formState": "sent",
+    "kind": "ok",
+    "status": "Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",
+    "statusHTML": "Thanks. We already had a request from <strong>me@shop.com</strong>. If this one is for a different store, <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20A%0A%0Ahello\">email us the details</a>.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "A",
+      "message": "hello"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": false,
+    "mailto": "mailto:hello@priceflag.org?subject=Free price review: shop.com&body=Store: shop.com\nName: A\n\nhello",
+    "reqCount": 1
+  },
+  "mode_busy": {
+    "formState": null,
+    "kind": "error",
+    "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "Something went wrong and your request was not sent. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20A%0A%0Ahello\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "A",
+      "message": "hello"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "mailto": "mailto:hello@priceflag.org?subject=Free price review: shop.com&body=Store: shop.com\nName: A\n\nhello",
+    "reqCount": 1
+  },
+  "mode_abort": {
+    "formState": null,
+    "kind": "error",
+    "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "Something went wrong and your request was not sent. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20A%0A%0Ahello\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "A",
+      "message": "hello"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "mailto": "mailto:hello@priceflag.org?subject=Free price review: shop.com&body=Store: shop.com\nName: A\n\nhello",
+    "reqCount": 1
+  },
+  "mode_html": {
+    "formState": null,
+    "kind": "error",
+    "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "Something went wrong and your request was not sent. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20A%0A%0Ahello\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "A",
+      "message": "hello"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "mailto": "mailto:hello@priceflag.org?subject=Free price review: shop.com&body=Store: shop.com\nName: A\n\nhello",
+    "reqCount": 1
+  },
+  "mode_500": {
+    "formState": null,
+    "kind": "error",
+    "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "Something went wrong and your request was not sent. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20A%0A%0Ahello\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "A",
+      "message": "hello"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "mailto": "mailto:hello@priceflag.org?subject=Free price review: shop.com&body=Store: shop.com\nName: A\n\nhello",
+    "reqCount": 1
+  },
+  "offline": {
+    "formState": null,
+    "kind": "error",
+    "status": "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "You look to be offline, so nothing was sent. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20%0A\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "",
+      "message": ""
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true,
+    "reqs": [
+      {
+        "method": "POST",
+        "ct": "text/plain;charset=utf-8",
+        "body": "{\"email\":\"me@shop.com\",\"page\":\"https://priceflag.org/#review?store=shop.com&name=&host=localhost%3A8931&msg=\",\"source\":\"price-review\",\"store\":\"shop.com\",\"name\":\"\",\"message\":\"\",\"price\":\"\",\"testPrice\":\"\",\"cost\":\"\",\"ua\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\"}"
+      }
+    ]
+  },
+  "offlineRetry": {
+    "kind": "ok",
+    "formState": "sent",
+    "reqs": 1
+  },
+  "doubleSubmit": {
+    "reqCount": 1,
+    "mid": {
+      "btn": "Sending…",
+      "dis": true,
+      "status": ""
+    },
+    "end": {
+      "formState": "sent",
+      "kind": "ok",
+      "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+      "statusHTML": "Thanks. We have your request and will email <strong>me@shop.com</strong> within 48 hours.",
+      "active": "P.pf-form-status",
+      "emailInvalid": null,
+      "storeInvalid": null,
+      "emailErr": "",
+      "storeErr": "",
+      "values": {
+        "email": "me@shop.com",
+        "store": "shop.com",
+        "name": "",
+        "message": ""
+      },
+      "btn": "Get a free price review",
+      "btnDisabled": false,
+      "fieldsVisible": false
+    }
+  },
+  "timeout": {
+    "ms": 15912,
+    "formState": null,
+    "kind": "error",
+    "status": "The request timed out, so we can’t be sure it arrived. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "statusHTML": "The request timed out, so we can’t be sure it arrived. Your details are still here. Try again, or <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&amp;body=Store%3A%20shop.com%0AName%3A%20%0A\">email them to hello@priceflag.org</a> instead.",
+    "active": "P.pf-form-status",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "",
+      "message": ""
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true
+  },
+  "xss": {
+    "dialog": false,
+    "s1kind": "error",
+    "s1html": "Check the highlighted fields.",
+    "s2html": "Thanks. We already had a request from <strong>x\"onmouseover=\"alert(1)@x.com</strong>. If this one is for a different store, <a href=\"mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com%2Fx%22onclick%3D%22alert(5)&amp;body=Store%3A%20shop.com%2Fx%22onclick%3D%22alert(5)%0AName%3A%20%22%3E%3Cb%3E%0A%0A'%22%3C%3E\">email us the details</a>.",
+    "injectedNodes": 0
+  },
+  "keyboard": {
+    "onBtn": "BUTTON:Get a free price review",
+    "afterInvalid": {
+      "active": "rv-email",
+      "status": "Check the highlighted fields.",
+      "emailErr": "Enter a full email address, like you@yourstore.com."
+    },
+    "ax": {
+      "describedby": "rv-email-err",
+      "required": true,
+      "ariaRequired": null,
+      "errId": "Enter a full email address, like you@yourstore.com."
+    },
+    "done": {
+      "formState": "sent",
+      "kind": "ok",
+      "status": "Thanks. We have your request and will email me@shop.combad within 48 hours.",
+      "statusHTML": "Thanks. We have your request and will email <strong>me@shop.combad</strong> within 48 hours.",
+      "active": "P.pf-form-status",
+      "emailInvalid": null,
+      "storeInvalid": null,
+      "emailErr": "",
+      "storeErr": "",
+      "values": {
+        "email": "me@shop.combad",
+        "store": "shop.com",
+        "name": "",
+        "message": ""
+      },
+      "btn": "Get a free price review",
+      "btnDisabled": false,
+      "fieldsVisible": false
+    }
+  },
+  "tabOrder": [
+    "#main|Skip to content",
+    "/",
+    "#how-it-works|How it works",
+    "#faq|FAQ",
+    "/about|About",
+    "/contact|Contact",
+    "https://signin.priceflag.org|Sign in",
+    "#review|Get a free price review",
+    "#how-it-works|See how it works",
+    "SUMMARY|How does the forecast wor",
+    "SUMMARY|How is the rollout staged",
+    "SUMMARY|How is this different fro",
+    "SUMMARY|What happens if a price c",
+    "SUMMARY|Does it change prices wit",
+    "SUMMARY|What happens to my prices",
+    "rv-email",
+    "rv-store",
+    "rv-name",
+    "rv-message",
+    "BUTTON|Get a free price review",
+    "/|Priceflag",
+    "#review|Get a free price review",
+    "/|Home",
+    "#how-it-works|How it works",
+    "#faq|FAQ",
+    "/about|About",
+    "https://youtu.be/vfZ26mCQ79A|Meet the team (video)",
+    "https://x.com/Priceflag/|Twitter / X",
+    "https://www.linkedin.com/company/priceflag/|LinkedIn",
+    "/contact|Contact",
+    "/legal|Legal",
+    "BODY|Skip to content\n\n\n  \n    ",
+    "#main|Skip to content",
+    "/",
+    "#how-it-works|How it works",
+    "#faq|FAQ",
+    "/about|About",
+    "/contact|Contact",
+    "https://signin.priceflag.org|Sign in",
+    "#review|Get a free price review"
+  ],
+  "backBeforeSubmitNoBfcache": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": "my note"
+  },
+  "backAfterSubmitNoBfcache": {
+    "formState": null,
+    "kind": null,
+    "status": "",
+    "statusHTML": "",
+    "active": "BODY.",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "",
+      "message": "my note"
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": true
+  },
+  "honeypot": {
+    "formState": "sent",
+    "kind": "ok",
+    "status": "Thanks. We have your request.",
+    "statusHTML": "Thanks. We have your request.",
+    "active": "BODY.",
+    "emailInvalid": null,
+    "storeInvalid": null,
+    "emailErr": "",
+    "storeErr": "",
+    "values": {
+      "email": "me@shop.com",
+      "store": "shop.com",
+      "name": "",
+      "message": ""
+    },
+    "btn": "Get a free price review",
+    "btnDisabled": false,
+    "fieldsVisible": false,
+    "sent": 0
+  },
+  "payload": {
+    "ct": "text/plain;charset=utf-8",
+    "keys": [
+      "email",
+      "page",
+      "source",
+      "store",
+      "name",
+      "message",
+      "price",
+      "testPrice",
+      "cost",
+      "ua"
+    ],
+    "pageLen": 198,
+    "page": "https://priceflag.org/#review?store=shop.com&name=N&host=localhost%3A8931&msg=mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+    "msgLen": 2000,
+    "price": ""
+  },
+  "webkit_ok": {
+    "kind": "ok",
+    "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+    "active": "P.pf-form-status",
+    "reqs": 1
+  },
+  "webkit_abort": {
+    "kind": "error",
+    "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+    "active": "P.pf-form-status",
+    "reqs": 1
+  }
+}

@@ -4,3 +4,16 @@ node_modules
 
 # agent tooling artifacts
 .playwright-mcp/
+
+# QA harness scratch
+qa/**/tmp/
+.lighthouseci/
+
+# QA: commit JPEG copies of screenshots (qa/compress-screens.sh), keep PNGs local.
+qa/**/screens/*.png
+# Verifier/bug-hunter scratch: their own harness runs and images stay local.
+qa/*-verify*/
+qa/**/bughunt-tmp*/**/*.png
+qa/**/verify-tmp*/**/*.png
+qa/**/bughunt-tmp*/**/*.jpg
+qa/**/verify-tmp*/**/*.jpg

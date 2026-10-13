@@ -1,0 +1,146 @@
+{
+  "check": "lighthouse",
+  "title": "Lighthouse mobile (perf, a11y, best-practices, SEO)",
+  "status": "PASS",
+  "durationMs": 69151,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": []
+    },
+    "about": {
+      "status": "PASS",
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": []
+    },
+    "contact": {
+      "status": "PASS",
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": []
+    },
+    "legal": {
+      "status": "PASS",
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "below": []
+    }
+  },
+  "data": {
+    "scores": {
+      "index": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "about": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "contact": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "legal": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      }
+    },
+    "metrics": {
+      "index": {
+        "first-contentful-paint": 1559.758,
+        "largest-contentful-paint": 1877.398,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1559.758,
+        "runs": 3,
+        "allPerformance": [
+          0.99,
+          0.99,
+          0.99
+        ],
+        "failedAudits": [
+          "image-delivery-insight",
+          "network-dependency-tree-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "about": {
+        "first-contentful-paint": 1557.857,
+        "largest-contentful-paint": 1557.857,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1557.857,
+        "runs": 3,
+        "allPerformance": [
+          0.99,
+          0.99,
+          0.99
+        ],
+        "failedAudits": [
+          "image-delivery-insight",
+          "network-dependency-tree-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "contact": {
+        "first-contentful-paint": 1754.761,
+        "largest-contentful-paint": 1754.761,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1754.761,
+        "runs": 3,
+        "allPerformance": [
+          0.99,
+          0.99,
+          0.99
+        ],
+        "failedAudits": [
+          "image-delivery-insight",
+          "network-dependency-tree-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      },
+      "legal": {
+        "first-contentful-paint": 1733.472,
+        "largest-contentful-paint": 1733.472,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1733.472,
+        "runs": 3,
+        "allPerformance": [
+          0.99,
+          0.99,
+          0.99
+        ],
+        "failedAudits": [
+          "image-delivery-insight",
+          "network-dependency-tree-insight",
+          "render-blocking-insight"
+        ],
+        "warnings": []
+      }
+    }
+  }
+}

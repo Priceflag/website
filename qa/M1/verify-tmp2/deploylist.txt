@@ -1,0 +1,36 @@
+.gitignore
+.vercelignore
+LICENSE
+about.html
+apple-touch-icon.png
+contact.html
+favicon.ico
+favicon.png
+favicon.svg
+index.html
+legal.html
+mark.svg
+og-v7.jpg
+robots.txt
+sections/pf-review.js
+signin.html
+site.css
+sitemap.xml
+uploads/hero-1080.webp
+uploads/hero-1671.webp
+uploads/hero-720.webp
+uploads/summit-lime.webp
+uploads/summit-painting-3-1080.webp
+uploads/summit-painting-3-720.webp
+uploads/summit-painting-3.webp
+vercel.json
+
+--- references not deployed ---
+a <- about.html (MISSING on disk)
+and <- about.html,index.html (MISSING on disk)
+feedback <- contact.html (MISSING on disk)
+rolls <- index.html (MISSING on disk)
+then <- index.html (MISSING on disk)
+in <- legal.html (MISSING on disk)
+noindex <- signin.html (MISSING on disk)
+follow <- signin.html (MISSING on disk)

@@ -1,0 +1,734 @@
+{
+ "msgEmoji/ok": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 32
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "msgEmoji/abort": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 32
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "msgEmojiLong/ok": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 840
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "msgEmojiLong/abort": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 840
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "nameEmojiAt60/ok": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "nameEmojiAt60/abort": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀 rest",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "storeEmojiAt120/ok": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "storeEmojiAt120/abort": {
+  "reqs": 0,
+  "page": null,
+  "ua": null,
+  "s": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa😀x",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ],
+  "mailtoLens": []
+ },
+ "msgCJK/ok": {
+  "reqs": 1,
+  "page": 299,
+  "ua": "note:  価格を変更したい 価格を変更したい 価格を変更したい 価格を変更し",
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A%0A%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%0A%0A%5BNote%20shortened.%20Paste%20the%20rest%20of%20it%20here.%5D"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 720
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "errs": [],
+  "mailtoLens": [
+   1793
+  ]
+ },
+ "msgCJK/abort": {
+  "reqs": 1,
+  "page": 299,
+  "ua": "note:  価格を変更したい 価格を変更したい 価格を変更したい 価格を変更し",
+  "s": {
+   "formState": null,
+   "kind": "error",
+   "status": "Something went wrong and your request was not sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A%0A%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%E6%A0%BC%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%97%E3%81%9F%E3%81%84%20%E4%BE%A1%0A%0A%5BNote%20shortened.%20Paste%20the%20rest%20of%20it%20here.%5D"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 720
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "errs": [],
+  "mailtoLens": [
+   1793
+  ]
+ },
+ "hpLongMsg": {
+  "pageLen": 300,
+  "pageTail": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "hp": 1,
+  "hpInPage": false,
+  "uaLen": 300,
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20Jo%0A%0Axxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "Jo",
+    "message": 1500
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  }
+ },
+ "packOverflow": {
+  "pageLen": 300,
+  "page": "https://priceflag.org/#review?store=https%3A%2F%2Fshop.myshopify.com%2Fproducts%2Fx%3Fa%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D&name=Zo%C",
+  "hasHost": false,
+  "hasMsg": true,
+  "ua": "note: short note",
+  "decode": "DECODE ERROR URI malformed",
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20https%3A%2F%2Fshop.myshopify.com%2Fproducts%2Fx%3Fa%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D&body=Email%3A%20me%40shop.com%0AStore%3A%20https%3A%2F%2Fshop.myshopify.com%2Fproducts%2Fx%3Fa%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26a%3D%2520%26b%3D%C3%BC%26%0AName%3A%20Zo%C3%AB%20%C3%85ngstr%C3%B6m-%C3%91%C3%BA%C3%B1ez%20Zo%C3%AB%20%C3%85ngstr%C3%B6m-%C3%91%C3%BA%C3%B1ez%20Zo%C3%AB%20%C3%85ngstr%C3%B6m-%C3%91%C3%BA%C3%B1ez%0A%0Ashort%20note"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "https://shop.myshopify.com/products/x?a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&a=%20&b=ü&",
+    "name": "Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez Zoë Ångström-Ñúñez ",
+    "message": 10
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  }
+ },
+ "longNameNoNote": {
+  "formState": "sent",
+  "kind": "ok",
+  "status": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note.",
+  "links": [
+   "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN%0A"
+  ],
+  "live": "",
+  "active": "P.pf-form-status",
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+   "message": 0
+  },
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "fieldsVisible": false,
+  "againVisible": true,
+  "ss": "me@shop.com"
+ },
+ "escapeCut": {
+  "len": 300,
+  "tail": "C3%A9%C3%A9%",
+  "dec": "DECODE ERROR URI malformed",
+  "s": "Thanks. We have your request and will email me@shop.com within 48 hours. Your note was longer than our form can store, so please email us the full note."
+ },
+ "mailto/ascii": {
+  "lens": [
+   1800
+  ],
+  "tail": "d word word wo\n\n[Note shortened. Paste the rest of it here.]",
+  "hasEmail": true,
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "status": "Something went wrong and your request was not sent. Your details are still here.",
+  "errs": []
+ },
+ "mailto/nonascii": {
+  "lens": [
+   1799
+  ],
+  "tail": "éééééééééééééé\n\n[Note shortened. Paste the rest of it here.]",
+  "hasEmail": true,
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "status": "Something went wrong and your request was not sent. Your details are still here.",
+  "errs": []
+ },
+ "mailto/emoji": {
+  "lens": [],
+  "tail": null,
+  "hasEmail": null,
+  "btn": "Sending…",
+  "btnDisabled": true,
+  "status": "",
+  "errs": [
+   "pageerror:String contained an illegal UTF-16 sequence."
+  ]
+ },
+ "mailto/newlines": {
+  "lens": [
+   1798
+  ],
+  "tail": "\na\na\na\na\na\na\na\n\n[Note shortened. Paste the rest of it here.]",
+  "hasEmail": true,
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "status": "Something went wrong and your request was not sent. Your details are still here.",
+  "errs": []
+ },
+ "sentFlow": {
+  "after": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "Jo",
+    "message": 2
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reload": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "back": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "navType": "back_forward",
+  "again1": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "rv-store",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "emptyAfterAgain": {
+   "formState": null,
+   "kind": "error",
+   "status": "Check the highlighted fields.",
+   "links": [],
+   "live": "",
+   "active": "rv-email",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "second": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "second.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reloadAfterAgain": {
+   "formState": null,
+   "kind": null,
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "newTab": {
+   "formState": null,
+   "kind": null,
+   "status": "",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "",
+    "store": "",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "reqs": 2
+ },
+ "bfcache": {
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "We already have your request from me@shop.com. We will email you within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  }
+ },
+ "ssBlocked": {
+  "s": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "ERR"
+  },
+  "errs": []
+ },
+ "dup": {
+  "formState": "sent",
+  "kind": "ok",
+  "status": "Thanks. We already had a request from me@shop.com. If this one is for a different store, email us the details.",
+  "links": [
+   "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A"
+  ],
+  "live": "",
+  "active": "P.pf-form-status",
+  "values": {
+   "email": "me@shop.com",
+   "store": "shop.com",
+   "name": "",
+   "message": 0
+  },
+  "btn": "Get a free price review",
+  "btnDisabled": false,
+  "fieldsVisible": false,
+  "againVisible": true,
+  "ss": "me@shop.com"
+ },
+ "slow": {
+  "mid": {
+   "formState": null,
+   "kind": "info",
+   "status": "",
+   "links": [],
+   "live": "Sending your request.",
+   "active": "BODY.",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Sending…",
+   "btnDisabled": true,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "end": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reqs": 1
+ },
+ "offline": {
+  "off": {
+   "formState": null,
+   "kind": "error",
+   "status": "You look to be offline, so nothing was sent. Your details are still here. Try again, or email them to hello@priceflag.org instead.",
+   "links": [
+    "mailto:hello@priceflag.org?subject=Free%20price%20review%3A%20shop.com&body=Email%3A%20me%40shop.com%0AStore%3A%20shop.com%0AName%3A%20%0A"
+   ],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": true,
+   "againVisible": false,
+   "ss": null
+  },
+  "on": {
+   "formState": "sent",
+   "kind": "ok",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours.",
+   "links": [],
+   "live": "",
+   "active": "P.pf-form-status",
+   "values": {
+    "email": "me@shop.com",
+    "store": "shop.com",
+    "name": "",
+    "message": 0
+   },
+   "btn": "Get a free price review",
+   "btnDisabled": false,
+   "fieldsVisible": false,
+   "againVisible": true,
+   "ss": "me@shop.com"
+  },
+  "reqs": 1
+ },
+ "liveFocus": {
+  "mid": {
+   "live": "Sending your request.",
+   "active": "BODY."
+  },
+  "end": {
+   "live": "",
+   "active": "P.pf-form-status",
+   "status": "Thanks. We have your request and will email me@shop.com within 48 hours."
+  },
+  "statusRole": {
+   "role": null,
+   "live": null,
+   "outline": "solid rgb(216, 242, 75)"
+  }
+ }
+}

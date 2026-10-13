@@ -1,0 +1,494 @@
+{
+  "check": "screens",
+  "title": "Screenshots, horizontal overflow, CLS (Chromium 375/768/1440)",
+  "status": "PASS",
+  "durationMs": 27099,
+  "pages": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0.0021287634495027433,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000341502700617284,
+          "shifts": [
+            {
+              "value": 0.00005856481481481482,
+              "t": 367,
+              "sources": [
+                "#text"
+              ]
+            },
+            {
+              "value": 0.00028293788580246917,
+              "t": 372,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000341502700617284,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.00003734567901234568,
+          "shifts": [
+            {
+              "value": 0.00003734567901234568,
+              "t": 390,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00003734567901234568,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    }
+  },
+  "data": {
+    "index": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0.0021287634495027433,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "about": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    },
+    "contact": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "legal": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": {
+            "unlocked": "main"
+          },
+          "status": "PASS"
+        }
+      }
+    },
+    "signin": {
+      "status": "PASS",
+      "widths": {
+        "375": {
+          "width": 375,
+          "cls": 0,
+          "shifts": [],
+          "clsAfterScroll": 0,
+          "overflow": false,
+          "scrollWidth": 375,
+          "innerWidth": 375,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "768": {
+          "width": 768,
+          "cls": 0.000341502700617284,
+          "shifts": [
+            {
+              "value": 0.00005856481481481482,
+              "t": 367,
+              "sources": [
+                "#text"
+              ]
+            },
+            {
+              "value": 0.00028293788580246917,
+              "t": 372,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.000341502700617284,
+          "overflow": false,
+          "scrollWidth": 768,
+          "innerWidth": 768,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        },
+        "1440": {
+          "width": 1440,
+          "cls": 0.00003734567901234568,
+          "shifts": [
+            {
+              "value": 0.00003734567901234568,
+              "t": 390,
+              "sources": [
+                "#text"
+              ]
+            }
+          ],
+          "clsAfterScroll": 0.00003734567901234568,
+          "overflow": false,
+          "scrollWidth": 1440,
+          "innerWidth": 1440,
+          "overflowOffenders": [],
+          "innerScroller": null,
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

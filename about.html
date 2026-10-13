@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Priceflag</title>
-<meta name="description" content="What Priceflag is building — a forecast before a price change, a gradual rollout across your catalogue, and a guardrail that reverts a change on its own. One price for every shopper.">
+<meta name="description" content="What Priceflag is building: a forecast before each price change, a gradual rollout by product, and a guardrail that pauses and alerts you.">
 <link rel="canonical" href="https://priceflag.org/about">
-<link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
-<script>document.documentElement.className+=" pf-boot";</script>
+<link rel="preload" as="image" href="uploads/summit-painting-3.webp" imagesrcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional">
 <style>
   :root{
     --ink:#030818;           /* site background / dark button          */
@@ -307,32 +307,34 @@
       opacity:1 !important;animation:none !important;transform:none !important;
     }
   }
+  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
+  main:focus-visible{outline:2px solid #3f4fb0;outline-offset:-4px;}
 </style>
 </head>
 <body>
 
 <div class="pf-bg" aria-hidden="true">
-  <img src="uploads/summit-painting-3.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+  <img src="uploads/summit-painting-3.webp" srcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
 </div>
 
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="pf-sheet">
 
-  <div class="pf-sheet-top">
-    <a class="pf-arrow" href="index.html" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
+  <header class="pf-sheet-top">
+    <a class="pf-arrow" href="/" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
     <h1 class="pf-sheet-title">About</h1>
-    <a class="pf-mark" href="index.html" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
-  </div>
+    <a class="pf-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  </header>
 
-  <main id="main">
-    <p class="pf-lede">Priceflag forecasts what a price change does to your profit, rolls it out gradually across your products, and reverts it automatically if it stops paying. We build it for ecommerce teams who want evidence behind a price before it goes live.</p>
+  <main id="main" tabindex="0">
+    <p class="pf-lede">Priceflag forecasts what a price change does to your profit, rolls it out gradually across your products, and pauses it and alerts you if it stops paying. We build it for ecommerce teams who want evidence behind a price before it goes live.</p>
 
     <h2>What we are building</h2>
     <ol class="pf-steps">
-      <li><b>A forecast.</b><span>A proposed price is simulated thousands of times before it goes near your storefront, and what comes back is a range of outcomes with the odds attached to each.</span></li>
+      <li><b>A forecast.</b><span>A proposed price is forecast from your own order history before it goes near your storefront, and what comes back is a range of outcomes and a breakeven.</span></li>
       <li><b>A staged rollout.</b><span>A change earns its way across your catalogue a few products at a time, so a bad call reaches a slice of your revenue.</span></li>
-      <li><b>An automatic guardrail.</b><span>When real orders land outside the forecast, the price returns to where it started on its own.</span></li>
+      <li><b>A guardrail that pauses.</b><span>When real orders land outside the forecast, the rollout pauses and we alert you. Every change is journaled, so you can put the old price back in one click.</span></li>
     </ol>
 
     <h2>How we work</h2>
@@ -370,7 +372,7 @@
   }
   function go() {
     if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-go').trim();
+    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-done').trim();
     setTimeout(land, 1200);
   }
 

@@ -1,0 +1,44 @@
+{
+  "A_real_entry_cors": {
+    "at": "2026-10-13T20:15:28.749Z",
+    "ms": 2869,
+    "type": "cors",
+    "status": 200,
+    "redirected": true,
+    "url": "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnRJGndzRy_ZjpS0Tp1a2iDm6KQF_Y-Nr-dLgIQkSLQktcpMMAyqjs41OSirtfp-afriJmOjOwVw35AAaJYHKQng3_YUDmMXCUjQbVpIKX1l7CEnqc6SIC8YM2peIDNYo-Ta2GldpxipFeMeVFs4brd_fFqB5keswzBoKX8pSNgixFXJecw6Kjkqnjabn-Sfy3j9lMdEz2SG2QDf0hpJjn5xhCHRjfbGaXi5S2FDk6TaSrfaQToihNwhkdR3EDGAbL0S3qInnK94gd5N1MuJE17QZpzauQ&lib=M3PK8mPWqDQrsQjcYg8E-9E367ZlpgcS3",
+    "acao": null,
+    "contentType": "application/json; charset=utf-8",
+    "body": "{\"ok\":true}"
+  },
+  "B_dedup_resend": {
+    "at": "2026-10-13T20:15:31.467Z",
+    "ms": 2716,
+    "type": "cors",
+    "status": 200,
+    "redirected": true,
+    "url": "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnQgkohu6J6FKi8d91qnffbMjaSdCZZIUcMvIXxPvM4vu9McoDVcAsAfntNVF30lhzESudPzuv8UxMUODT7ZXhX5v3ifVvYr5coLnL9VmKIWyeq7l_jvf9R_D9VOHq8e7IY8Tm1RGhIv6z5s28z05bzew-WiHWyBqmGIZviN_UMhm4Ym79_pRBD9FV_HJSBseij3BT8FH4qvJwW9YEFzAz2LdNn9qmlA4hk-e57KSxtIWPkLrgfoqcYiUFQ72mo2lDNX-HcJBEBNKC49KtVc5K2Z5_4JJw&lib=M3PK8mPWqDQrsQjcYg8E-9E367ZlpgcS3",
+    "acao": null,
+    "contentType": "application/json; charset=utf-8",
+    "body": "{\"ok\":true,\"duplicate\":true}"
+  },
+  "C_nocors_badpage": {
+    "at": "2026-10-13T20:15:32.285Z",
+    "ms": 818,
+    "type": "opaque",
+    "status": 0,
+    "redirected": false,
+    "url": "",
+    "acao": null,
+    "contentType": null,
+    "body": ""
+  },
+  "D_json_ct_preflight_badpage": {
+    "at": "2026-10-13T20:15:32.517Z",
+    "ms": 232,
+    "error": "TypeError: Failed to fetch"
+  },
+  "E_dead_endpoint": {
+    "at": "2026-10-13T20:15:32.518Z",
+    "error": "TypeError: Failed to fetch"
+  }
+}

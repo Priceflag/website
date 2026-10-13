@@ -6,15 +6,15 @@
 <title>Contact — Priceflag</title>
 <meta name="description" content="Reach Priceflag Syndicate with questions, feedback or issues — the on duty engineers and how to write to each of them.">
 <link rel="canonical" href="https://priceflag.org/contact">
-<link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
-<script>document.documentElement.className+=" pf-boot";</script>
+<link rel="preload" as="image" href="uploads/summit-painting-3.webp" imagesrcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional">
 <style>
   :root{
     --ink:#030818;           /* site background / dark button          */
@@ -274,25 +274,27 @@
       opacity:1 !important;animation:none !important;transform:none !important;
     }
   }
+  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
+  main:focus-visible{outline:2px solid #3f4fb0;outline-offset:-4px;}
 </style>
 </head>
 <body>
 
 <div class="pf-bg" aria-hidden="true">
-  <img src="uploads/summit-painting-3.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+  <img src="uploads/summit-painting-3.webp" srcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
 </div>
 
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="pf-sheet">
 
-  <div class="pf-sheet-top">
-    <a class="pf-arrow" href="index.html" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
+  <header class="pf-sheet-top">
+    <a class="pf-arrow" href="/" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
     <h1 class="pf-sheet-title">Contact</h1>
-    <a class="pf-mark" href="index.html" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
-  </div>
+    <a class="pf-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  </header>
 
-  <main id="main">
+  <main id="main" tabindex="0">
     <p class="pf-lede">Priceflag Syndicate provides needed support for Priceflag. Contact us with questions, feedback, issues or anything else you need help with.</p>
 
     <h2 class="pf-strong">On Duty Engineers</h2>
@@ -335,7 +337,7 @@
   }
   function go() {
     if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-go').trim();
+    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-done').trim();
     setTimeout(land, 1200);
   }
 

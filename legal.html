@@ -6,15 +6,15 @@
 <title>Legal — Priceflag</title>
 <meta name="description" content="The Privacy Policy and Terms of Service governing use of Priceflag, in full. Both drafted and pending legal review.">
 <link rel="canonical" href="https://priceflag.org/legal">
-<link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
-<script>document.documentElement.className+=" pf-boot";</script>
+<link rel="preload" as="image" href="uploads/summit-painting-3.webp" imagesrcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" imagesizes="100vw" fetchpriority="high">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=optional" rel="stylesheet">
 <style>
   :root{
     --ink:#030818;           /* site background / dark button          */
@@ -167,7 +167,7 @@
     font-size:15.5px;line-height:1.4;color:var(--head);
     margin:24px 0 0;
   }
-  .pf-meta{margin:7px 0 0;font-size:13.5px;line-height:1.5;color:#6b7387;}
+  .pf-meta{margin:7px 0 0;font-size:13.5px;line-height:1.5;color:#545c70;}
   .pf-rule{margin:36px 0 0;border:0;border-top:1px solid var(--rule);}
 
   /* title + sentence pairs */
@@ -252,25 +252,27 @@
       opacity:1 !important;animation:none !important;transform:none !important;
     }
   }
+  /* The scroll panel takes keyboard focus; draw its ring inside so the panel's mask can't clip it. */
+  main:focus-visible{outline:2px solid #3f4fb0;outline-offset:-4px;}
 </style>
 </head>
 <body>
 
 <div class="pf-bg" aria-hidden="true">
-  <img src="uploads/summit-painting-3.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+  <img src="uploads/summit-painting-3.webp" srcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
 </div>
 
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="pf-sheet">
 
-  <div class="pf-sheet-top">
-    <a class="pf-arrow" href="index.html" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
+  <header class="pf-sheet-top">
+    <a class="pf-arrow" href="/" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
     <h1 class="pf-sheet-title">Legal</h1>
-    <a class="pf-mark" href="index.html" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
-  </div>
+    <a class="pf-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+  </header>
 
-  <main id="main">
+  <main id="main" tabindex="0">
     <p class="pf-lede">The two documents that govern using Priceflag: the Privacy Policy and the Terms of Service. Both are drafted and pending legal review, so neither is in force yet &mdash; they are here to be read before that changes.</p>
 
     <div class="pf-note"><b>Draft &mdash; pending legal review</b>These were written against Shopify's published requirements for App Store apps, the EU and UK GDPR, and the CCPA as amended by the CPRA. A lawyer has not reviewed them, and one must before Priceflag accepts its first merchant. Facts still to be settled are marked <span class="pf-fill">like this</span>.</div>
@@ -296,9 +298,9 @@
 
     <h3>How We Use Your Information</h3>
     <ul class="pf-list">
-      <li>Run the service: forecasting, staged rollouts, profit calculation, and guardrail rollbacks.</li>
+      <li>Run the service: forecasting, staged rollouts, profit calculation, guardrail pauses, and the rollbacks you start.</li>
       <li>Write price changes back to your store, only for the products and experiments you have enrolled.</li>
-      <li>Notify you when a guardrail is breached, a rollback fires, or an experiment ends.</li>
+      <li>Notify you when a guardrail is breached and a rollout pauses, when a rollback you started finishes, or when an experiment ends.</li>
       <li>Bill you through Shopify, keep account records, and prevent fraud and abuse.</li>
       <li>Debug problems, keep the service secure and available, and improve forecast quality for your store.</li>
       <li>Answer support requests and send service notices. Marketing email goes only to people who asked for it, and every marketing message carries an unsubscribe link.</li>
@@ -383,7 +385,7 @@
     <p>The Privacy Policy above is part of this agreement and is incorporated by reference. Your separate agreements with Shopify continue to apply, and nothing here overrides them.</p>
 
     <h3>Description of Service</h3>
-    <p>Priceflag helps Shopify merchants change prices deliberately. It forecasts the likely effect of a proposed price change from your historical product, pricing and order data; releases a new price across a growing share of the products you selected, in the stages you configure, so every shopper sees the same price; tracks profit against a guardrail threshold you set; and can return the price to the price captured before the rollout if that guardrail is breached. It does not split traffic and it does not vary the price by visitor.</p>
+    <p>Priceflag helps Shopify merchants change prices deliberately. It forecasts the likely effect of a proposed price change from your historical product, pricing and order data; releases a new price across a growing share of the products you selected, in the stages you configure, so every shopper sees the same price; tracks profit against a guardrail threshold you set; pauses the rollout and alerts you if that guardrail is breached; and lets you return each price to the price captured before the rollout. It does not split traffic and it does not vary the price by visitor.</p>
     <p>A forecast is a statistical estimate from past data. It is not a guarantee, not a prediction of revenue, and not advice about what you should charge. What actually happens depends on seasonality, competitors, inventory, marketing and a great many things Priceflag cannot observe. We may add, change or remove features as the product develops; if we materially reduce functionality you depend on, we will give you reasonable notice first.</p>
 
     <h3>Eligibility</h3>
@@ -407,7 +409,7 @@
     </ul>
 
     <h3>What Automation Can and Cannot Promise</h3>
-    <p>Guardrail monitoring and automatic rollback are the features merchants rely on most, so it is worth being exact about what they depend on. Each of these can fail, and a failure means a price stays live when you expected it to be pulled.</p>
+    <p>Guardrail monitoring, which pauses a rollout and alerts you, and rollback are the features merchants rely on most, so it is worth being exact about what they depend on. Each of these can fail, and a failure means a price stays live when you expected it to be paused or pulled.</p>
     <ul class="pf-list">
       <li><strong>Data has to arrive.</strong> Guardrails are evaluated from order data supplied by Shopify. If Shopify's API is slow, rate-limited, degraded or reporting late, a breach can go undetected until the data catches up.</li>
       <li><strong>Our systems have to be running.</strong> An outage, a deploy problem or a bug on our side can delay or prevent a rollback.</li>
@@ -451,7 +453,7 @@
     <p>The service &mdash; the software, the forecasting models, the interface, the documentation, and the Priceflag name and marks &mdash; belongs to us and our licensors. We grant you a limited, non-exclusive, non-transferable, revocable right to use it while your account is in good standing and you comply with these terms. No rights are granted beyond that, and nothing here transfers ownership of anything.</p>
 
     <h3>Shopify and Other Dependencies</h3>
-    <p>Priceflag runs on Shopify and cannot work without it. Your use of Shopify is governed by your agreement with Shopify, not by us. We are not responsible for Shopify's availability, API behaviour, rate limits, data accuracy, deprecations or platform changes, and any of those can stop forecasts, rollouts, guardrail monitoring or automatic rollbacks from working.</p>
+    <p>Priceflag runs on Shopify and cannot work without it. Your use of Shopify is governed by your agreement with Shopify, not by us. We are not responsible for Shopify's availability, API behaviour, rate limits, data accuracy, deprecations or platform changes, and any of those can stop forecasts, rollouts, guardrail monitoring or rollbacks from working.</p>
     <ul class="pf-list">
       <li>You are responsible for keeping your Shopify account in good standing and for the permissions you grant the app.</li>
       <li><strong>Uninstalling revokes our access immediately.</strong> Any price live at that moment stays live, because write access is gone. Return your prices to where you want them <em>before</em> you uninstall.</li>
@@ -478,7 +480,7 @@
       <li>These terms apply from your first use of the service until they are terminated.</li>
       <li>You may leave at any time by cancelling your plan and uninstalling the app from Shopify.</li>
       <li>We may suspend or terminate access for breach, non-payment, legal risk or prolonged inactivity &mdash; with notice where practical, and immediately where the circumstances require it.</li>
-      <li><strong>Settle your prices before you leave.</strong> Termination and uninstall both stop guardrail monitoring and automatic rollback. Whatever price is live at that moment stays live on your storefront until you change it yourself in Shopify. There is no automatic restore on exit.</li>
+      <li><strong>Settle your prices before you leave.</strong> Termination and uninstall both stop guardrail monitoring and rollback. Whatever price is live at that moment stays live on your storefront until you change it yourself in Shopify. There is no automatic restore on exit.</li>
       <li>On termination your right to use the service ends, and we handle your data as set out above. The sections on your prices, automation, your data, intellectual property, disclaimers, liability, indemnification and governing law survive termination, along with any other provision that by its nature should.</li>
     </ul>
 
@@ -526,7 +528,7 @@
   }
   function go() {
     if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-go').trim();
+    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-done').trim();
     setTimeout(land, 1200);
   }
 

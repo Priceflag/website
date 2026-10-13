@@ -1,0 +1,43 @@
+
+## /
+title 40 "Priceflag — Change Shopify prices safely"
+desc 142 "Priceflag forecasts a Shopify price change as a range with a breakeven, rolls it out by product, and pauses and alerts you if it stops paying."
+ogt 62 "Priceflag: forecast a Shopify price change before it goes live"
+ogd 144 "See the likely impact of a new price, then roll it out by product while every shopper sees the same price. Free price review for Shopify brands."
+ogalt 70 "Priceflag for Shopify: forecast a price change and roll it out safely."
+ogurl https://priceflag.org/ canon https://priceflag.org/ robots undefined h1 1 hash links 0 anchors [["#main",true],["#how-it-works",true],["#faq",true],["#review",true],["#how-it-works",true],["#review",true],["#how-it-works",true],["#faq",true]]
+desc==ogd false
+ld 0 valid JSON, types: ["Organization","WebSite","SoftwareApplication","FAQPage"]
+FAQ count ld 6 visible 6
+ Q 0 q-match a-match (byte-exact)
+ Q 1 q-match a-match (byte-exact)
+ Q 2 q-match a-match (byte-exact)
+ Q 3 q-match a-match (byte-exact)
+ Q 4 q-match a-match (byte-exact)
+ Q 5 q-match a-match (byte-exact)
+
+## /about
+title 17 "About — Priceflag"
+desc 138 "What Priceflag is building: a forecast before each price change, a gradual rollout by product, and a guardrail that pauses and alerts you."
+ogurl undefined canon https://priceflag.org/about robots undefined h1 1 hash links 0 anchors [["#main",true]]
+desc==ogd false
+
+## /contact
+title 19 "Contact — Priceflag"
+desc 118 "Reach Priceflag Syndicate with questions, feedback or issues — the on duty engineers and how to write to each of them."
+ogurl undefined canon https://priceflag.org/contact robots undefined h1 1 hash links 0 anchors [["#main",true]]
+desc==ogd false
+
+## /legal
+title 17 "Legal — Priceflag"
+desc 115 "The Privacy Policy and Terms of Service governing use of Priceflag, in full. Both drafted and pending legal review."
+ogurl undefined canon https://priceflag.org/legal robots undefined h1 1 hash links 0 anchors [["#main",true]]
+desc==ogd false
+
+## /signin.html
+title 19 "Sign in – Priceflag"
+desc 68 "Sign in to Priceflag. We email you a link — no password to remember."
+ogt 19 "Sign in – Priceflag"
+ogd 68 "Sign in to Priceflag. We email you a link — no password to remember."
+ogurl undefined canon https://signin.priceflag.org/ robots noindex, follow h1 1 hash links 0 anchors []
+desc==ogd true

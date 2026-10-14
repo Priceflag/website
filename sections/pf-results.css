@@ -37,3 +37,13 @@
 
 /* The label sits directly above every simulated number, so no figure is read without it. */
 .pf-results-tag{display:block;margin:0 0 var(--pf-space-2);color:var(--pf-lime);font-weight:600;font-size:var(--pf-text-body);}
+
+/* Three numbers, one row, one label above and one footnote below. */
+.pf-results-tag{display:block;margin:var(--pf-space-8) 0 var(--pf-space-4);color:var(--pf-lime);font-weight:600;font-size:var(--pf-text-body);}
+.pf-results-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px);}
+.pf-results-row li{min-width:0;display:grid;gap:var(--pf-space-2);align-content:start;}
+.pf-results-row .pf-results-fig{display:block;font-family:var(--pf-sans);font-weight:600;font-size:var(--pf-text-figure);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--pf-cream);}
+.pf-results-what{color:var(--pf-cream-muted);max-width:18em;}
+.pf-results-foot{margin-top:var(--pf-space-8);color:var(--pf-cream-muted);}
+.pf-results-foot a{color:var(--pf-cream);}
+@media (max-width:719px){.pf-results-row{grid-template-columns:minmax(0,1fr);}}

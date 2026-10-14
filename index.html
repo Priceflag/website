@@ -92,7 +92,7 @@
           "name": "Will shoppers see different prices?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin."
+            "text": "No. Every shopper sees the same price at every moment. A rollout adds products, not visitors: 25% of your selection, then 50%, then all."
           }
         },
         {
@@ -100,7 +100,7 @@
           "name": "Do you change prices automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide."
+            "text": "Not without your approval. You approve each change and each rollout step. In the beta, a tripped guardrail pauses the rollout and emails you."
           }
         },
         {
@@ -108,7 +108,7 @@
           "name": "What data do you read?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our privacy policy."
+            "text": "Products, prices, inventory, cost of goods and up to 180 days of orders from Shopify. No customer names, addresses, emails or phones. See our privacy policy."
           }
         },
         {
@@ -116,7 +116,7 @@
           "name": "How accurate is the forecast?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See how we measure."
+            "text": "It gives a range with a breakeven, and says when a product has too few orders. In simulation, 93% of ranges contained the outcome. See how we measure."
           }
         },
         {
@@ -124,7 +124,7 @@
           "name": "What does it cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe."
+            "text": "The price review is free. App pricing isn't published yet; we share it before you install."
           }
         },
         {
@@ -132,7 +132,7 @@
           "name": "How long does setup take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing."
+            "text": "Connecting Shopify is free and takes about 5 minutes. The price review needs no install."
           }
         },
         {
@@ -140,7 +140,7 @@
           "name": "Can I undo everything?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first."
+            "text": "Yes. Every change is journaled with the price it replaced, and Undo restores them. Uninstalling rolls nothing back, so run Undo first."
           }
         },
         {
@@ -148,7 +148,7 @@
           "name": "What about subscriptions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: kabir@priceflag.org."
+            "text": "Products outside your selection keep their price. An included subscription product may move with it, depending on your selling plans. Ask us first: kabir@priceflag.org."
           }
         }
       ]
@@ -195,57 +195,30 @@
       <!-- PIVOT: hero headline (names the platform: Shopify). Listed in OVERHAUL_LOG.md "Pivot-dependent copy". -->
       <h1 class="pf-hero-title" id="hero-title"><span class="pf-hero-title-lead">Change your Shopify prices</span> <span class="pf-hero-title-accent">without losing sales.</span></h1>
       <!-- PIVOT: hero subhead (90-day forecast, rollout by product, pause on a tripped guardrail). -->
-      <p class="pf-hero-sub">See a price change's 90-day impact before it goes live. Roll it out a few products at a time, and we pause it the moment it stops paying.</p>
+      <p class="pf-hero-sub">See a price change's 90-day impact before it goes live. Roll it out a few products at a time; we pause it if it stops paying.</p>
       <div class="pf-hero-actions">
         <!-- PIVOT: CTA text (self-serve vs founder-led). Same label in the nav, closing band and form button. -->
         <a class="pf-btn pf-hero-cta" href="#review" aria-describedby="pf-hero-note">Get my free price review</a>
-        <p class="pf-hero-note" id="pf-hero-note">Free. We send your report within 48 hours. No app install needed.</p>
+        <p class="pf-hero-note" id="pf-hero-note">Free. Your report within 48 hours.</p>
         <a class="pf-hero-alt" href="mailto:hello@priceflag.org?subject=Talk%20to%20a%20founder">Talk to a founder</a>
       </div>
     </div>
 
-    <!-- Example product UI. Arithmetic (integer cents, see qa/briefs/COMMON.md): margin 2400-960 = 1440, 2700-960 = 1740;
-         same-profit loss = 1 - 1440/1740 = 17.24% -> shown as 17.2% (rounded down). Forecast -4% to -11% sits inside it.
-         Stages: 25% of 12 SKUs = 3, 50% = 6, 100% = 12. -->
+    <!-- Example: margin 2400-960 = 1440 -> 2700-960 = 1740 cents; same-profit loss 1 - 1440/1740 = 17.24% -> 17.2% (rounded down). -->
     <figure class="pf-hero-mock" aria-labelledby="pf-mock-title" data-pf-mock>
-        <div class="pf-mock-head">
-          <h2 class="pf-mock-title" id="pf-mock-title">12 SKUs: <span class="pf-mock-pair">$24.00 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $27.00</span></h2>
-          <dl class="pf-mock-meta">
-            <div><dt>Unit cost</dt><dd>$9.60</dd></div>
-            <div><dt>Margin per order</dt><dd><span class="pf-mock-pair">$14.40 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $17.40</span></dd></div>
-          </dl>
-        </div>
-
-        <dl class="pf-mock-figs">
-          <div class="pf-mock-fig">
-            <dt>Breakeven</dt>
-            <dd>You can lose up to <strong>17.2%</strong> of orders and still make the same profit.</dd>
-          </div>
-          <div class="pf-mock-fig">
-            <dt>Forecast range, 90 days</dt>
-            <dd><strong class="pf-mock-num">−4% to −11%</strong> orders over 90 days</dd>
-          </div>
-        </dl>
-
-        <!-- Visual of the two numbers above (orders change from 0% to −20%); the text carries the meaning. -->
-        <div class="pf-mock-range" aria-hidden="true">
-          <div class="pf-mock-track">
-            <span class="pf-mock-band"></span>
-            <span class="pf-mock-mark"></span>
-          </div>
-          <div class="pf-mock-scale"><span>0%</span><span>Breakeven −17.2%</span></div>
-        </div>
-
-        <div class="pf-mock-rollout">
-          <h3 class="pf-mock-label">Rollout by SKU</h3>
-          <ol class="pf-mock-stages" data-stage="100">
-            <li data-step="25"><span class="pf-mock-pct">25%</span> <span class="pf-mock-skus">3 SKUs</span></li>
-            <li data-step="50"><span class="pf-mock-pct">50%</span> <span class="pf-mock-skus">6 SKUs</span></li>
-            <li data-step="100" aria-current="step"><span class="pf-mock-pct">100%</span> <span class="pf-mock-skus">12 SKUs</span></li>
-          </ol>
-          <p class="pf-mock-status" data-pf-mock-status>Live on 12 of 12 SKUs. Every shopper sees the same price.</p>
-        </div>
-      <figcaption class="pf-mock-caption">Example forecast for an illustrative store. Numbers are an example, not a customer result.</figcaption>
+      <h2 class="pf-mock-title" id="pf-mock-title">12 SKUs: <span class="pf-mock-pair">$24.00 <span aria-hidden="true">→</span><span class="pf-visually-hidden">to</span> $27.00</span></h2>
+      <p class="pf-mock-break">Lose up to <strong>17.2%</strong> of orders, keep the same profit.</p>
+      <!-- Breakeven bar: orders change from 0% to −20%, mark at −17.2%. The sentence above carries the meaning. -->
+      <div class="pf-mock-range" aria-hidden="true">
+        <div class="pf-mock-track"><span class="pf-mock-mark"></span></div>
+        <div class="pf-mock-scale"><span>0%</span><span>−17.2%</span></div>
+      </div>
+      <ol class="pf-mock-stages" data-stage="100" aria-label="Rollout by SKU">
+        <li data-step="25"><span class="pf-mock-pct">25%</span></li>
+        <li data-step="50"><span class="pf-mock-pct">50%</span></li>
+        <li data-step="100" aria-current="step"><span class="pf-mock-pct">100%</span></li>
+      </ol>
+      <figcaption class="pf-mock-caption">Example numbers, not a customer result.</figcaption>
     </figure>
   </div>
 </section>
@@ -266,7 +239,12 @@
 </section>
 
 <!-- Section: problem, in merchants' words (M4). Goes right after the hero / proof strip, in the old .pf-statement slot. -->
-<section class="pf-section pf-problem" aria-labelledby="problem-title">
+<section class="pf-problem pf-art" aria-labelledby="problem-title">
+  <picture class="pf-art-media" aria-hidden="true">
+    <img src="uploads/summit-painting-3.webp" srcset="uploads/summit-painting-3-720.webp 720w, uploads/summit-painting-3-1080.webp 1080w, uploads/summit-painting-3.webp 1672w" sizes="100vw" width="1672" height="941" alt="" loading="lazy" decoding="async">
+  </picture>
+  <div class="pf-art-wash" aria-hidden="true"></div>
+  <div class="pf-art-inner">
   <!-- PIVOT: problem section (whose pain we lead with). Listed in OVERHAUL_LOG.md. -->
   <!-- PENDING: replace with real quotes from pilot calls (with permission) -->
   <h2 class="pf-problem-title" id="problem-title">What changing a price feels like today</h2>
@@ -276,6 +254,7 @@
     <li>You find out it hurt weeks later in your P&amp;L.</li>
   </ul>
   <!-- /PIVOT -->
+  </div>
 </section>
 
 <!-- Section: how it works (M4). Replaces the old #how-it-works section; keeps id="how-it-works" and the how-title heading id.
@@ -287,50 +266,34 @@
     <li class="pf-how-step">
       <h3 class="pf-how-name">Connect Shopify</h3>
       <!-- OWNER: confirm "free, 5 minutes" setup time is true -->
-      <p class="pf-how-desc">Free, and it takes about 5 minutes. Connecting changes no prices.</p>
+      <p class="pf-how-desc">Free, about 5 minutes. No prices change.</p>
       <figure class="pf-how-ui" aria-label="Example: a connected store">
         <p class="pf-how-store"><svg class="pf-how-shop" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg><span class="pf-how-domain">yourstore.myshopify.com</span></p>
         <p class="pf-how-ok"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Connected</p>
-        <p class="pf-how-muted">Reading up to 180 days of orders</p>
       </figure>
     </li>
     <li class="pf-how-step">
       <h3 class="pf-how-name">Propose a price</h3>
-      <p class="pf-how-desc">Pick the products and type the new price. Priceflag touches nothing else.</p>
-      <figure class="pf-how-ui" aria-label="Example: a proposed price">
-        <div class="pf-how-price">
-          <p class="pf-how-field"><span class="pf-how-muted">Current price</span> <span class="pf-how-num">$24.00</span></p>
-          <svg class="pf-how-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          <p class="pf-how-field pf-how-field--new"><span class="pf-how-muted">New price</span> <span class="pf-how-num">$27.00</span></p>
-        </div>
-        <p class="pf-how-muted">12 SKUs selected. Unit cost $9.60.</p>
-      </figure>
+      <p class="pf-how-desc">Pick the products and type the new price.</p>
     </li>
     <li class="pf-how-step">
       <h3 class="pf-how-name">See the forecast and the breakeven</h3>
-      <p class="pf-how-desc">The forecast is a range built from your own order history, shown next to your breakeven.</p>
-      <figure class="pf-how-ui" aria-label="Example: forecast and breakeven">
-        <p class="pf-how-break">Lose up to <span class="pf-how-num pf-how-lime">17.2%</span> of orders and keep the same profit.</p>
-        <div class="pf-how-range" aria-hidden="true"><span class="pf-how-band"></span><span class="pf-how-mark"></span></div>
-        <p class="pf-how-key"><span class="pf-how-swatch pf-how-swatch--range" aria-hidden="true"></span>Forecast, next 90 days: <span class="pf-how-num">4%</span> to <span class="pf-how-num">11%</span> fewer orders</p>
-        <p class="pf-how-key"><span class="pf-how-swatch pf-how-swatch--mark" aria-hidden="true"></span>Breakeven: <span class="pf-how-num">17.2%</span> fewer orders</p>
-      </figure>
+      <p class="pf-how-desc">A 90-day range from your own orders, next to your breakeven.</p>
     </li>
     <li class="pf-how-step">
       <h3 class="pf-how-name">Roll out by SKU cohort, with guardrails set before launch</h3>
-      <p class="pf-how-desc">The price goes live on 25% of the selected SKUs, then 50%, then all. Every shopper sees the same price.</p>
+      <p class="pf-how-desc">25% of the SKUs, then 50%, then all. Every shopper sees the same price.</p>
       <figure class="pf-how-ui" aria-label="Example: rollout stages and guardrail">
         <ol class="pf-how-stages" data-pf-rollout>
-          <li><span class="pf-how-stage">25%</span> <span class="pf-how-muted">3 SKUs</span></li>
-          <li><span class="pf-how-stage">50%</span> <span class="pf-how-muted">6 SKUs</span></li>
-          <li><span class="pf-how-stage">All</span> <span class="pf-how-muted">12 SKUs</span></li>
+          <li><span class="pf-how-stage">25%</span></li>
+          <li><span class="pf-how-stage">50%</span></li>
+          <li><span class="pf-how-stage">All</span></li>
         </ol>
         <p class="pf-how-guard"><span class="pf-how-muted">Guardrail</span> Pause if orders fall below the range 2 days in a row</p>
-        <p class="pf-how-muted">If it trips, the rollout pauses and we email you. Every change is journaled and can be undone.</p>
+        <p class="pf-how-muted">If it trips, the rollout pauses and we email you.</p>
       </figure>
     </li>
   </ol>
-  <p class="pf-how-note">Example numbers: a $24.00 product with a $9.60 unit cost, moving to $27.00 across 12 SKUs.</p>
   <!-- /PIVOT -->
 </section>
 
@@ -341,14 +304,14 @@
   <section class="pf-section pf-calc" id="calculator" aria-labelledby="calc-title">
     <!-- PIVOT: calculator heading, lede, field labels and button text (depend on the lead use case and the CTA model). -->
     <h2 class="pf-h2" id="calc-title">Find your breakeven before you change a price</h2>
-    <p class="pf-lede">Enter today's price, the new price and what one unit costs you. Profit per order here is price minus unit cost.</p>
+    <p class="pf-lede">Today's price, the new price and what one unit costs you.</p>
     <div class="pf-calc-panel" data-pf-calc>
       <div class="pf-calc-inputs" role="group" aria-label="Your numbers">
         <div class="pf-calc-field">
           <label for="calc-price">Current price</label>
           <div class="pf-calc-well">
             <span class="pf-calc-cur" aria-hidden="true">$</span>
-            <input id="calc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="24.00" readonly aria-describedby="calc-price-err" data-pf-calc-field="price">
+            <input id="calc-price" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" placeholder="0.00" readonly aria-describedby="calc-price-err" data-pf-calc-field="price">
           </div>
           <p class="pf-calc-err" id="calc-price-err" data-pf-calc-err="price"></p>
         </div>
@@ -356,24 +319,23 @@
           <label for="calc-new">New price</label>
           <div class="pf-calc-well">
             <span class="pf-calc-cur" aria-hidden="true">$</span>
-            <input id="calc-new" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="27.00" readonly aria-describedby="calc-new-err" data-pf-calc-field="newPrice">
+            <input id="calc-new" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" placeholder="0.00" readonly aria-describedby="calc-new-err" data-pf-calc-field="newPrice">
           </div>
           <p class="pf-calc-err" id="calc-new-err" data-pf-calc-err="newPrice"></p>
         </div>
         <div class="pf-calc-field">
-          <label for="calc-cost">Unit cost <span class="pf-calc-hint">(what one unit costs you to make and ship)</span></label>
+          <label for="calc-cost">Unit cost <span class="pf-calc-hint">(to make and ship)</span></label>
           <div class="pf-calc-well">
             <span class="pf-calc-cur" aria-hidden="true">$</span>
-            <input id="calc-cost" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" value="9.60" readonly aria-describedby="calc-cost-err" data-pf-calc-field="cost">
+            <input id="calc-cost" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="24" placeholder="0.00" readonly aria-describedby="calc-cost-err" data-pf-calc-field="cost">
           </div>
           <p class="pf-calc-err" id="calc-cost-err" data-pf-calc-err="cost"></p>
         </div>
-        <p class="pf-calc-note" data-pf-calc-note>These are example numbers. Turn on JavaScript to try your own.</p>
       </div>
       <div class="pf-calc-result">
         <output class="pf-calc-out" for="calc-price calc-new calc-cost" aria-live="polite" aria-atomic="true" data-pf-calc-out>
-          <span class="pf-calc-answer" data-pf-calc-answer>You can lose up to <strong class="pf-calc-figure" data-pf-calc-figure>17.2%</strong> of orders and still make the same profit.</span>
-          <span class="pf-calc-support" data-pf-calc-support>Profit per order goes from $14.40 to $17.40.</span>
+          <span class="pf-calc-answer" data-pf-calc-answer>Enter all three numbers to see your breakeven.</span>
+          <span class="pf-calc-support" data-pf-calc-support></span>
         </output>
         <a class="pf-btn" href="#review" data-pf-calc-cta>Get the full forecast for my store</a>
       </div>
@@ -398,26 +360,26 @@
       <tr>
         <th scope="row">Every shopper sees the same price</th>
         <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
-        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Shoppers are split between prices.</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span></td>
         <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
       </tr>
       <tr>
         <th scope="row">Works without weeks of split traffic</th>
         <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
-        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">It needs weeks of split traffic.</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span></td>
         <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
       </tr>
       <tr>
         <th scope="row">Limits the damage if the price is wrong</th>
-        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span><span class="pf-compare-note">Rolled out by SKU cohort and paused by a guardrail.</span></td>
-        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Partly</span><span class="pf-compare-note">Only the test group sees it.</span></td>
-        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Every product changes at once.</span></td>
+        <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
+        <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Partly</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span></td>
       </tr>
       <tr>
         <th scope="row">Every change journaled and reversible</th>
         <td class="pf-compare-us" data-label="Priceflag"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Yes</span></td>
         <td data-label="Price A/B testing"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="2"></circle><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor"></path></svg>Depends on the app</span></td>
-        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span><span class="pf-compare-note">Unless you keep your own records.</span></td>
+        <td data-label="Changing it all at once"><span class="pf-compare-v"><svg class="pf-compare-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>No</span></td>
       </tr>
     </tbody>
   </table>
@@ -428,45 +390,19 @@
 <!-- Section: results (M6). Simulation numbers only, each labeled "In simulation" with what it was measured across.
      Numbers come from docs/OVERHAUL_PROMPT.md "Honesty guardrails"; add no others. Type: h2, figure, body. -->
 <section class="pf-results" id="results" aria-labelledby="results-title">
-  <h2 class="pf-results-title" id="results-title">How Priceflag performed in simulation</h2>
-  <p class="pf-results-lede">These numbers come from our simulation of test rollouts, not from a live store.</p>
-
+  <h2 class="pf-results-title" id="results-title">How Priceflag performed</h2>
   <!-- PENDING: one quantified pilot result, store name, written permission -->
   <figure class="pf-results-pilot" data-pending="true">
     <p class="pf-results-pilot-text">Pilot result goes here: one number, what it was measured against, and the store's name.</p>
     <figcaption class="pf-results-pilot-who">Store name, with written permission</figcaption>
   </figure>
-
-  <div class="pf-results-feature">
-    <p class="pf-results-tag">In simulation</p>
-    <p class="pf-results-claim"><span class="pf-results-fig">93%</span> of forecast ranges contained the real outcome.</p>
-    <p class="pf-results-base">Measured across our simulated test rollouts. A forecast is a range with a breakeven, and this is how often the outcome landed inside it.</p>
-  </div>
-
-  <ul class="pf-results-list">
-    <li class="pf-results-item">
-      <p class="pf-results-tag">In simulation</p>
-      <p class="pf-results-claim"><span class="pf-results-fig">4.7</span> point median miss between the forecast and the outcome.</p>
-      <p class="pf-results-base">Measured across our simulated test rollouts.</p>
-    </li>
-    <li class="pf-results-item">
-      <p class="pf-results-tag">In simulation</p>
-      <p class="pf-results-claim"><span class="pf-results-fig">82%</span> of demand shocks caught, at a median of day 6.</p>
-      <p class="pf-results-base">Measured across the demand shocks in our simulated test rollouts.</p>
-    </li>
-    <li class="pf-results-item">
-      <p class="pf-results-tag">In simulation</p>
-      <p class="pf-results-claim"><span class="pf-results-fig">7%</span> false pauses, where a guardrail paused a rollout that did not need it.</p>
-      <p class="pf-results-base">Measured across our simulated test rollouts.</p>
-    </li>
-    <li class="pf-results-item">
-      <p class="pf-results-tag">In simulation</p>
-      <p class="pf-results-claim"><span class="pf-results-fig">100%</span> of prices restored after rollback.</p>
-      <p class="pf-results-base">Measured across the rollbacks in our simulated test rollouts.</p>
-    </li>
+  <p class="pf-results-tag">In simulation</p>
+  <ul class="pf-results-row">
+    <li><span class="pf-results-fig">93%</span> <span class="pf-results-what">of forecast ranges contained the outcome</span></li>
+    <li><span class="pf-results-fig">82%</span> <span class="pf-results-what">of demand shocks caught, by day 6 on median</span></li>
+    <li><span class="pf-results-fig">100%</span> <span class="pf-results-what">of prices restored after rollback</span></li>
   </ul>
-
-  <p class="pf-results-links"><a href="/how-we-measure">How we measure</a> <a href="https://github.com/nithinaru/priceflag/blob/main/docs/SIMULATION_RESULTS.md" rel="noopener">Simulation write-up</a></p>
+  <p class="pf-results-foot">Measured on simulated test rollouts, not live stores. <a href="/how-we-measure">How we measure</a></p>
 </section>
 
 <!-- Section: founders (M6). Names and one line each from docs/OVERHAUL_PLAN.md item 9; no other bio facts.
@@ -483,7 +419,7 @@
         <!-- <img src="uploads/founder-nithin-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="Nithin Aruswamy"> -->
       </div>
       <h3 class="pf-founders-name">Nithin Aruswamy</h3>
-      <p class="pf-founders-role">Cofounder. Works on the AI engineering and the forecasting models.</p>
+      <p class="pf-founders-role">Cofounder. Forecasting models.</p>
       <p class="pf-founders-mail"><a href="mailto:nithin@priceflag.org">nithin@priceflag.org</a></p>
     </li>
     <li class="pf-founders-person">
@@ -492,7 +428,7 @@
         <!-- <img src="uploads/founder-kabir-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="Kabir Koratkar"> -->
       </div>
       <h3 class="pf-founders-name">Kabir Koratkar</h3>
-      <p class="pf-founders-role">Cofounder. Works with Shopify merchants and on our pricing research.</p>
+      <p class="pf-founders-role">Cofounder. Merchants and pricing research.</p>
       <p class="pf-founders-mail"><a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a></p>
     </li>
   </ul>
@@ -504,43 +440,43 @@
   <div class="pf-faq-grid">
     <div class="pf-faq-head">
       <h2 class="pf-faq-title" id="faq-title">Questions worth asking</h2>
-      <p class="pf-faq-lede">Short answers about prices, data, cost and undo.</p>
+      
     </div>
     <div class="pf-faq-items">
       <details class="pf-faq-item">
         <summary>Will shoppers see different prices?</summary>
-        <p>No. Every shopper sees the same price for the same product at every moment. A rollout adds products, not visitors: the new price goes live on 25% of the products you selected, then 50%, then all of them. Prices are written to your Shopify catalog like an edit in the admin.</p>
+        <p>No. Every shopper sees the same price at every moment. A rollout adds products, not visitors: 25% of your selection, then 50%, then all.</p>
       </details>
       <details class="pf-faq-item">
         <summary>Do you change prices automatically?</summary>
-        <p>Not without your approval. Priceflag only touches the products you pick, and you approve each change before it is applied, including each step of a rollout. In the beta, a tripped guardrail pauses the rollout and emails you. Nothing else changes until you decide.</p>
+        <p>Not without your approval. You approve each change and each rollout step. In the beta, a tripped guardrail pauses the rollout and emails you.</p>
       </details>
       <details class="pf-faq-item">
         <summary>What data do you read?</summary>
-        <p>Products, variants, prices, inventory, cost of goods where you record it, and orders with their line items, all from your Shopify store. The forecast reads up to the last 180 days of order history. The app is designed to work without customer names, addresses, emails or phones. Details are in our <a href="/legal">privacy policy</a>.</p>
+        <p>Products, prices, inventory, cost of goods and up to 180 days of orders from Shopify. No customer names, addresses, emails or phones. See our <a href="/legal">privacy policy</a>.</p>
       </details>
       <details class="pf-faq-item">
         <summary>How accurate is the forecast?</summary>
-        <p>It gives a range with a breakeven, not a single number, and it tells you when a product has too few orders for a trustworthy range. In simulation, 93% of forecast ranges contained the real outcome, with a 4.7-point median miss. See <a href="/how-we-measure">how we measure</a>.</p>
+        <p>It gives a range with a breakeven, and says when a product has too few orders. In simulation, 93% of ranges contained the outcome. See <a href="/how-we-measure">how we measure</a>.</p>
       </details>
       <!-- OWNER: pricing answer pending -->
       <details class="pf-faq-item">
         <summary>What does it cost?</summary>
-        <p>The price review is free. Pricing for the app is not published yet. We will share it with you before you install, and Shopify shows it again before you subscribe.</p>
+        <p>The price review is free. App pricing isn't published yet; we share it before you install.</p>
       </details>
       <!-- OWNER: confirm -->
       <details class="pf-faq-item">
         <summary>How long does setup take?</summary>
-        <p>Connecting Shopify is free and takes about 5 minutes. The price review needs no install: send us your store and the price you are thinking about changing.</p>
+        <p>Connecting Shopify is free and takes about 5 minutes. The price review needs no install.</p>
       </details>
       <details class="pf-faq-item">
         <summary>Can I undo everything?</summary>
-        <p>Yes, while the app is installed. Every change is journaled with the price it replaced. Undo restores all of them and reads Shopify back to confirm. Uninstalling does not roll anything back: whatever price is live stays live, so run Undo first.</p>
+        <p>Yes. Every change is journaled with the price it replaced, and Undo restores them. Uninstalling rolls nothing back, so run Undo first.</p>
       </details>
       <!-- OWNER: confirm subscription behaviour (Shopify selling plans) -->
       <details class="pf-faq-item">
         <summary>What about subscriptions?</summary>
-        <p>Priceflag only changes the products you select, so a subscription product outside your selection keeps its price. If you include one, its subscription price may move with it, depending on how your selling plans are set up. Ask us before you start: <a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a>.</p>
+        <p>Products outside your selection keep their price. An included subscription product may move with it, depending on your selling plans. Ask us first: <a href="mailto:kabir@priceflag.org">kabir@priceflag.org</a>.</p>
       </details>
     </div>
   </div>
@@ -550,12 +486,16 @@
      The form's ids, names, attributes, data-attributes, hidden inputs, honeypot, noscript and status/live/again elements
      are unchanged from index.html because sections/pf-review.js and qa/tests/review-form.test.mjs depend on them.
      Only wrappers changed: the two inline-style wrappers became .pf-closing-gap and .pf-closing-submit. Type: h2, body, small. -->
-<section class="pf-closing" id="review" aria-labelledby="review-title">
-  <div class="pf-closing-band">
+<section class="pf-closing pf-art" id="review" aria-labelledby="review-title">
+  <picture class="pf-art-media" aria-hidden="true">
+    <img src="uploads/hero-1671.webp" srcset="uploads/hero-720.webp 720w, uploads/hero-1080.webp 1080w, uploads/hero-1671.webp 1671w" sizes="100vw" width="1671" height="941" alt="" loading="lazy" decoding="async">
+  </picture>
+  <div class="pf-art-wash" aria-hidden="true"></div>
+  <div class="pf-closing-band pf-art-inner">
     <div class="pf-closing-head">
       <!-- PIVOT: CTA text (self-serve vs founder-led): heading, button label and micro-copy. Listed in OVERHAUL_LOG.md. -->
       <h2 class="pf-closing-title" id="review-title">See what your next price change will do.</h2>
-      <p class="pf-closing-lede">Tell us your store and the price you are thinking about changing. We send back the forecast range and the breakeven for that change.</p>
+      <p class="pf-closing-lede">Tell us your store and the price. We send back the forecast range and the breakeven.</p>
     </div>
     <!-- The script sends this form. With JavaScript off the fields are hidden and an email link takes their place.
          method="post" with no action keeps typed details out of the URL even if the script fails to load. -->
@@ -590,7 +530,7 @@
         </div>
         <div class="pf-closing-submit">
           <button class="pf-btn" type="submit">Get my free price review</button>
-          <p class="pf-form-note" id="review-note">Free. We send your report within 48 hours. No app install needed.</p>
+          <p class="pf-form-note" id="review-note">Free. Your report within 48 hours.</p>
         </div>
       </div>
       <p class="pf-form-status" data-pf-status tabindex="-1"></p>

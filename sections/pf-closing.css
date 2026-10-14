@@ -1,9 +1,9 @@
 /* ---------- closing CTA band (h2, body, small) ----------
    Layout family: a centered band. One raised navy panel, the heading centered over a single form column,
    the primary button full width at the end of that column. Field styles come from site.css (.pf-form, .pf-field). */
-.pf-closing{padding:var(--pf-section-y) var(--pf-gutter);max-width:var(--pf-max);margin:0 auto;}
-.pf-closing-band{display:grid;justify-items:center;gap:var(--pf-space-9);padding:clamp(40px,7vw,96px) clamp(20px,5vw,64px);
-  border-radius:var(--pf-radius-card);background:var(--pf-navy-900);box-shadow:inset 0 0 0 1px var(--pf-line);}
+.pf-closing{padding:0;}
+.pf-closing-band{display:grid;justify-items:center;gap:var(--pf-space-9);
+  }
 .pf-closing-band > *{min-width:0;width:100%;}
 .pf-closing-head{max-width:30em;text-align:center;}
 .pf-closing-title{font-size:var(--pf-text-h2);line-height:var(--pf-lh-heading);letter-spacing:var(--pf-track-heading);}
@@ -16,3 +16,12 @@
 .pf-closing-submit .pf-btn{width:100%;}
 .pf-closing .pf-form-status{text-align:left;}
 .pf-closing .pf-form-again{justify-self:center;}
+
+/* On the painting: big type and the form straight on the art, no card. A strong centre wash keeps fields and labels at AA. */
+.pf-closing .pf-art-media img{object-position:70% 100%;}
+.pf-closing .pf-art-wash{background:radial-gradient(ellipse 70% 75% at 50% 55%,rgba(3,8,24,.9) 0%,rgba(3,8,24,.82) 55%,rgba(3,8,24,.55) 100%),linear-gradient(180deg,var(--pf-navy-950) 0%,rgba(3,8,24,0) 20%);}
+.pf-closing-title{font-size:var(--pf-text-display);line-height:var(--pf-lh-display);letter-spacing:var(--pf-track-display);text-shadow:var(--pf-text-shadow-art);}
+.pf-closing-head{max-width:none;}
+.pf-closing-title{max-width:13em;margin-inline:auto;}
+.pf-closing-lede{color:var(--pf-cream-strong);text-shadow:var(--pf-text-shadow-art);}
+.pf-closing .pf-field input,.pf-closing .pf-field textarea{background:rgba(3,8,24,.86);}

@@ -73,8 +73,8 @@ for (const width of [1440, 375]) {
       // every button on the page is clickable without errors
       notes.push(`${width} buttons: ` + (await p.$$eval('button', (bs) => bs.map((x) => x.textContent.trim().slice(0, 30)).join(' | '))));
       // results: every number has an "In simulation" label right above it
-      const sim = await p.$$eval('#results .pf-results-claim', (cs) => cs.map((cl) => (cl.previousElementSibling?.textContent || '').trim()));
-      if (sim.length !== 5 || sim.some((t) => t !== 'In simulation')) problems.push('results labels: ' + JSON.stringify(sim));
+      const sim = await p.$eval('#results', (r) => ({ label: r.querySelector('.pf-results-tag')?.textContent.trim(), labelVisible: !!r.querySelector('.pf-results-tag')?.offsetParent, figs: [...r.querySelectorAll('.pf-results-row .pf-results-fig')].map((f) => f.textContent), foot: !!r.querySelector('.pf-results-foot a[href="/how-we-measure"]') }));
+      if (sim.label !== 'In simulation' || !sim.labelVisible || sim.figs.join() !== '93%,82%,100%' || !sim.foot) problems.push('results: ' + JSON.stringify(sim));
     }
     if (errs.length) problems.push(`${width} ${path}: console/network: ${errs.slice(0, 4).join(' || ')}`);
     await p.close();

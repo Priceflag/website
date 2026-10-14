@@ -8,3 +8,11 @@
   .pf-problem-lines li:nth-child(2){margin-left:clamp(48px,7vw,120px);}
   .pf-problem-lines li:nth-child(3){margin-left:clamp(96px,14vw,240px);}
 }
+
+/* On the painting: big type, no card. The wash keeps the lines at AA over the brightest strokes. */
+.pf-problem .pf-art-media img{object-position:60% 35%;}
+.pf-problem .pf-art-wash{background:linear-gradient(90deg,rgba(3,8,24,.88) 0%,rgba(3,8,24,.72) 45%,rgba(3,8,24,.45) 100%),linear-gradient(180deg,var(--pf-navy-950) 0%,rgba(3,8,24,0) 18%,rgba(3,8,24,0) 82%,var(--pf-navy-950) 100%);}
+.pf-problem .pf-art-inner{min-height:min(88vh,900px);display:flex;flex-direction:column;justify-content:center;}
+.pf-problem-title{color:var(--pf-cream-strong);text-shadow:var(--pf-text-shadow-art);}
+.pf-problem-lines li{text-shadow:var(--pf-text-shadow-art);}
+@media (max-width:767px){.pf-problem .pf-art-wash{background:linear-gradient(180deg,var(--pf-navy-950) 0%,rgba(3,8,24,.78) 20%,rgba(3,8,24,.78) 80%,var(--pf-navy-950) 100%);}}

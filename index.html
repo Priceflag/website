@@ -627,7 +627,21 @@
     border-top:1px solid rgba(243,236,222,0.08);
   }
   [data-hero-img]{object-position:right bottom!important;}
-  .pf-hero-wash{background:linear-gradient(90deg, rgba(3,8,24,0.78) 0%, rgba(3,8,24,0.5) 30%, rgba(3,8,24,0) 58%);}
+  /* The painting runs up behind a clear nav. The card starts at the very
+     top and the copy box starts below the nav, so nothing in the hero moves. */
+  [data-hero-card]{top:0!important;height:100vh!important;border-top:0!important;}
+  @supports (height:100lvh){ [data-hero-card]{height:100lvh!important;} }
+  [data-hero-copy]{top:var(--pf-nav-h)!important;}
+  .pf-nav{transition:background-color .3s ease,border-color .3s ease,-webkit-backdrop-filter .3s ease,backdrop-filter .3s ease;border-bottom:1px solid transparent;}
+  .pf-nav a:not(.pf-btn){text-shadow:0 1px 12px rgba(3,8,24,.7);}
+  /* Once the page moves, the nav turns to frosted glass so it still reads
+     over the sections that scroll under it. */
+  .pf-nav.is-solid{
+    background-color:rgba(3,8,24,.62)!important;
+    -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
+    border-bottom-color:rgba(243,236,222,.08);
+  }
+  .pf-hero-wash{background:linear-gradient(180deg, rgba(3,8,24,0.55) 0, rgba(3,8,24,0) 140px),linear-gradient(90deg, rgba(3,8,24,0.78) 0%, rgba(3,8,24,0.5) 30%, rgba(3,8,24,0) 58%);}
   [data-hero-copy]{
     box-sizing:border-box;
     justify-content:space-between!important;
@@ -752,7 +766,7 @@
 </helmet>
 <div ref="{{ scrollerRef }}" class="pf-intro" data-scroller="1" style="font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;">
 
-  <nav class="pf-nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:#030818;">
+  <nav class="pf-nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:transparent;">
     <div style="display:flex;align-items:center;gap:34px;justify-self:start;">
       <a class="pf-nav-item" data-pf-i="1" href="/about" style="font-size:13px;">About</a>
       <a class="pf-nav-item" data-pf-i="2" data-pf-go="faq" href="#" style="font-size:13px;">FAQ</a>
@@ -912,6 +926,9 @@ class Component extends DCLogic {
     const FX = this.FX;
     const vh = window.innerHeight || 1;
     const y  = window.scrollY || window.pageYOffset || 0;
+
+    if (!this._nav) this._nav = document.querySelector('.pf-nav');
+    if (this._nav) this._nav.classList.toggle('is-solid', y > 24);
 
     const copy = this.heroContentRef.current;
     const stmt = this.statementTextRef.current;

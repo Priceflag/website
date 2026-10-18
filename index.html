@@ -634,8 +634,8 @@
   [data-hero-copy]{top:var(--pf-nav-h)!important;}
   .pf-nav{transition:background-color .3s ease,border-color .3s ease,-webkit-backdrop-filter .3s ease,backdrop-filter .3s ease;border-bottom:1px solid transparent;}
   .pf-nav a:not(.pf-btn){text-shadow:0 1px 12px rgba(3,8,24,.7);}
-  /* Once the page moves, the nav turns to frosted glass so it still reads
-     over the sections that scroll under it. */
+  /* Past the hero the nav turns to frosted glass so it still reads over
+     the sections that scroll under it. */
   .pf-nav.is-solid{
     background-color:rgba(3,8,24,.62)!important;
     -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
@@ -928,7 +928,12 @@ class Component extends DCLogic {
     const y  = window.scrollY || window.pageYOffset || 0;
 
     if (!this._nav) this._nav = document.querySelector('.pf-nav');
-    if (this._nav) this._nav.classList.toggle('is-solid', y > 24);
+    // Clear over the painting; frosted once page content starts passing under it.
+    if (this._nav) {
+      const heroSec = this.heroCardRef.current && this.heroCardRef.current.parentElement;
+      const clearUntil = heroSec ? heroSec.offsetHeight - this._nav.offsetHeight : vh * 0.5;
+      this._nav.classList.toggle('is-solid', y > clearUntil);
+    }
 
     const copy = this.heroContentRef.current;
     const stmt = this.statementTextRef.current;

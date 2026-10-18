@@ -45,7 +45,7 @@
       // One shared page background variable, driven by scroll. Every full-width section paints with it,
       // so there are no seams between sections while the page fades navy -> black -> navy.
       ':root { --pf-bg: #030818; }',
-      '[data-screen-label="Hero"], [data-screen-label="Statement"], [data-screen-label="Sections"], .pf-nav, .pfc, .pfd, .pff, .pfl-root, .pfq { background-color: var(--pf-bg) !important; }',
+      '[data-screen-label="Hero"], [data-screen-label="Statement"], [data-screen-label="Sections"], .pfc, .pfd, .pff, .pfl-root, .pfq { background-color: var(--pf-bg) !important; }',
       '.pfw-section { position: relative; z-index: 2; padding: clamp(90px, 10vh, 140px) clamp(20px, 5vw, 64px) clamp(100px, 12vh, 160px); background: transparent; color: #f3ecde; font-family: ' + SANS + '; overflow: hidden; scroll-margin-top: 100px; }',
       '.pfw-wrap { max-width: 1040px; margin: 0 auto; position: relative; }',
       '.pfw-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }',

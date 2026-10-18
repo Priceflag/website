@@ -517,9 +517,9 @@
     padding-right:var(--pf-gutter)!important;
     column-gap:12px;
   }
-  /* children are: [mark/About/FAQ div] [centre link] [Sign In div] */
+  /* children are: [About/FAQ div] [centre mark] [Sign In div] */
   .pf-nav > div:first-of-type{gap:clamp(18px,3.2vw,34px)!important;min-width:0;}
-  .pf-nav > div:first-of-type > a:first-child{flex:none;padding:9px 0;margin:-9px 0;}
+  .pf-nav-mark{flex:none;padding:9px 8px;margin:-9px -8px;}
   .pf-nav > div:last-of-type{flex:none;}
   /* Padding grows the hit box; the equal negative margin hands the space
      back to layout, so spacing is pixel-identical to before. */
@@ -529,9 +529,6 @@
      before it runs out of room, and reads as a 100px-tall stack. */
   .pf-nav a{white-space:nowrap;}
 
-  @media (max-width:900px){
-    [data-pf-i="3"]{font-size:13px!important;}
-  }
   /* Below this the centred link cannot clear the clusters either side at any
      legible size — the three columns overlap and the Sign In pill is pushed
      off the right edge. The row drops to the two that must always work: the
@@ -543,7 +540,11 @@
      viewport. 740 is where it clears 48px, so the row splits below it. */
   @media (max-width:739px){
     .pf-nav{display:flex!important;justify-content:space-between;}
-    [data-pf-i="3"]{display:none!important;}
+    /* The two clusters differ in width, so the mark is pinned to the true
+       centre rather than left to space-between. Legal moves to the footer
+       here so the right cluster clears it. */
+    .pf-nav-mark{position:absolute;left:50%;transform:translateX(-50%);}
+    [data-pf-i="5"]{display:none!important;}
   }
 
   /* Touch tap targets. Height only — the pills keep their width, so the
@@ -554,7 +555,7 @@
       box-sizing:border-box;min-height:44px;
       display:inline-flex;align-items:center;
     }
-    .pf-nav > div:first-of-type > a:first-child{padding:0;margin:0;}
+    .pf-nav-mark{padding:0 8px;margin:0 -8px;}
     [data-pf-i="1"],[data-pf-i="2"],
     [data-pf-i="5"],[data-pf-i="6"]{padding:0 6px;margin:0 -6px;}
     .pf-btn--sm{min-height:44px;}
@@ -574,6 +575,7 @@
      the hit boxes stay separated and Sign In keeps its full width. */
   @media (max-width:359px){
     .pf-nav > div:first-of-type{gap:14px!important;}
+    [data-pf-i="6"]{display:none!important;}
     [data-pf-i="1"],[data-pf-i="2"],
     [data-pf-i="5"],[data-pf-i="6"]{padding:0 4px;margin:0 -4px;}
   }
@@ -752,11 +754,10 @@
 
   <nav class="pf-nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:7px 28px;font-size:13px;background:#030818;">
     <div style="display:flex;align-items:center;gap:34px;justify-self:start;">
-      <a href="#" data-pf-go="top" aria-label="Priceflag — back to top" style="display:inline-flex;align-items:center;color:#f3ecde;font-size:22px;"><span class="pf-hiker" aria-hidden="true"></span></a>
       <a class="pf-nav-item" data-pf-i="1" href="/about" style="font-size:13px;">About</a>
       <a class="pf-nav-item" data-pf-i="2" data-pf-go="faq" href="#" style="font-size:13px;">FAQ</a>
     </div>
-    <a class="pf-nav-item" data-pf-i="3" href="https://youtu.be/vfZ26mCQ79A" target="_blank" rel="noopener noreferrer" style="justify-self:center;color:#d8f24b;font-size:14px;">Learn more about the team ↗</a>
+    <a class="pf-nav-mark" href="#" data-pf-go="top" aria-label="Priceflag — back to top" style="justify-self:center;display:inline-flex;align-items:center;color:#f3ecde;font-size:22px;"><span class="pf-hiker" aria-hidden="true"></span></a>
     <div style="display:flex;align-items:center;gap:22px;justify-self:end;">
       <a class="pf-nav-item" data-pf-i="5" href="/legal" style="font-size:13px;">Legal</a>
       <a class="pf-nav-item" data-pf-i="6" href="/contact" style="font-size:13px;">Contact</a>

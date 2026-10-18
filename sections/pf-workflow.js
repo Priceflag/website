@@ -1,7 +1,7 @@
 /* =====================================================================
    Priceflag — Vertical "Staged & Reversible" workflow section.
    Choreographed SVG timeline showing how Priceflag stages price rollouts
-   and automatically reverts when guardrails are breached.
+   and pauses for the merchant when guardrails are breached.
 
    Usage:
      <script src="./sections/pf-workflow.js"></script>
@@ -312,10 +312,10 @@
         '<g class="pfw-card-group pfw-purple" data-anim="rise" data-delay="3.7" data-dur="0.5">',
           '<rect x="540" y="1050" width="410" height="130" rx="12" fill="#0c0d10" stroke="rgba(147,170,255,0.3)" />',
           '<rect x="556" y="1064" width="96" height="24" rx="4" fill="' + C_PURPLE_DEEP + '" />',
-          '<text x="604" y="1080" text-anchor="middle" font-size="11" letter-spacing="0.06em" fill="#fafafa" font-family="' + MONO + '">AUTO-REVERT</text>',
-          '<text x="664" y="1081" font-size="16" font-weight="600" fill="#f4f4f5">Restoring original prices</text>',
-          '<text x="556" y="1108" font-size="13" fill="#a1a1aa">2 consecutive days tracking below statistical forecast band</text>',
-          '<text x="556" y="1130" font-size="12" font-family="' + MONO + '" fill="' + C_PURPLE + '">Pre-rollout prices retrieved from price journal</text>',
+          '<text x="604" y="1080" text-anchor="middle" font-size="11" letter-spacing="0.06em" fill="#fafafa" font-family="' + MONO + '">PAUSED</text>',
+          '<text x="664" y="1081" font-size="16" font-weight="600" fill="#f4f4f5">Rollout paused, you are notified</text>',
+          '<text x="556" y="1108" font-size="13" fill="#a1a1aa">Daily orders tracking below the forecast band</text>',
+          '<text x="556" y="1130" font-size="12" font-family="' + MONO + '" fill="' + C_PURPLE + '">Recommendation: put back the $24.00 price</text>',
         '</g>',
 
         // Line to Storefront Verified
@@ -326,7 +326,7 @@
           '<circle cx="745" cy="1225" r="18" fill="#08090a" stroke="' + C_GREEN + '" stroke-width="1.5" />',
           '<path d="' + GLYPH_CHECK + '" transform="translate(745 1225)" stroke="' + C_GREEN + '" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round" />',
         '</g>',
-        '<text x="745" y="1255" text-anchor="middle" font-size="13" fill="#a1a1aa" data-anim="fade" data-delay="4.35" data-dur="0.3">Catalog verified</text>',
+        '<text x="745" y="1255" text-anchor="middle" font-size="13" fill="#a1a1aa" data-anim="fade" data-delay="4.35" data-dur="0.3">Awaiting your call</text>',
 
         // Return curve down to main track
         '<path d="M763 1225 H810 A24 24 0 0 1 834 1249 V1266 A24 24 0 0 1 810 1290 H490" stroke="' + C_GREEN + '" stroke-width="1.5" stroke-linecap="round" fill="none" pathLength="1" data-anim="draw" data-delay="4.55" data-dur="0.45" />',
@@ -345,29 +345,29 @@
         '<g class="pfw-card-group pfw-purple" data-anim="rise" data-delay="5.2" data-dur="0.55">',
           '<rect x="510" y="1310" width="440" height="195" rx="12" fill="#0c0d10" stroke="rgba(147,170,255,0.35)" />',
           '<path d="' + GLYPH_CHECK + '" transform="translate(534 1334) scale(0.85)" stroke="' + C_GREEN + '" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />',
-          '<text x="552" y="1339" font-size="15" font-weight="600" fill="#f4f4f5">Reverted while you slept</text>',
+          '<text x="552" y="1339" font-size="15" font-weight="600" fill="#f4f4f5">Paused while you slept</text>',
           '<text x="932" y="1338" text-anchor="end" font-size="11.5" letter-spacing="0.04em" fill="' + C_PURPLE + '" font-family="' + MONO + '">immutable audit</text>',
           '<line x1="510" x2="950" y1="1354.5" y2="1354.5" stroke="rgba(255,255,255,0.07)" />',
 
           // Receipt Rows
           '<text x="528" y="1378" font-size="12.5" fill="#71717a" font-family="' + MONO + '">02:14</text>',
           '<text x="578" y="1378" font-size="12.5" fill="' + C_PURPLE + '" font-family="' + MONO + '">detected</text>',
-          '<text x="648" y="1378" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">2 days below forecast confidence band</text>',
+          '<text x="648" y="1378" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">orders below forecast band</text>',
 
           '<text x="528" y="1402" font-size="12.5" fill="#71717a" font-family="' + MONO + '">02:14</text>',
           '<text x="578" y="1402" font-size="12.5" fill="' + C_PURPLE + '" font-family="' + MONO + '">journal</text>',
-          '<text x="648" y="1402" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">original $24.00 prices restored</text>',
+          '<text x="648" y="1402" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">recommends restoring $24.00</text>',
 
           '<text x="528" y="1426" font-size="12.5" fill="#71717a" font-family="' + MONO + '">02:15</text>',
           '<text x="578" y="1426" font-size="12.5" fill="' + C_PURPLE + '" font-family="' + MONO + '">shopify</text>',
-          '<text x="648" y="1426" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">catalog read back &amp; verified in sync</text>',
+          '<text x="648" y="1426" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">rollout held at current products</text>',
 
           '<text x="528" y="1450" font-size="12.5" fill="#71717a" font-family="' + MONO + '">02:16</text>',
           '<text x="578" y="1450" font-size="12.5" fill="' + C_PURPLE + '" font-family="' + MONO + '">alert</text>',
           '<text x="648" y="1450" font-size="12.5" fill="#e4e4e7" font-family="' + MONO + '">merchant report sent &amp; logged</text>',
 
           '<line x1="510" x2="950" y1="1466.5" y2="1466.5" stroke="rgba(255,255,255,0.07)" />',
-          '<text x="528" y="1488" font-size="12" fill="#71717a">Zero lost sales compounded. Catalog verified safe.</text>',
+          '<text x="528" y="1488" font-size="12" fill="#71717a">No more products changed. Your call from here.</text>',
         '</g>',
       '</svg>'
     ].join('');
@@ -542,10 +542,10 @@
         '<g class="pfw-card-group pfw-purple" data-anim="rise" data-delay="2.4" data-dur="0.4">',
           '<rect x="180" y="1150" width="230" height="110" rx="10" fill="#0c0d10" stroke="rgba(147,170,255,0.3)" />',
           '<rect x="194" y="1162" width="82" height="22" rx="4" fill="' + C_PURPLE_DEEP + '" />',
-          '<text x="235" y="1177" text-anchor="middle" font-size="10" letter-spacing="0.06em" fill="#fafafa" font-family="' + MONO + '">REVERT</text>',
-          '<text x="194" y="1202" font-size="14.5" font-weight="600" fill="#f4f4f5">Restoring prices</text>',
+          '<text x="235" y="1177" text-anchor="middle" font-size="10" letter-spacing="0.06em" fill="#fafafa" font-family="' + MONO + '">PAUSED</text>',
+          '<text x="194" y="1202" font-size="14.5" font-weight="600" fill="#f4f4f5">Rollout paused</text>',
           '<text x="194" y="1222" font-size="11.5" fill="#a1a1aa">Below forecast band</text>',
-          '<text x="194" y="1242" font-size="11" font-family="' + MONO + '" fill="' + C_PURPLE + '">Restoring $24.00 journal</text>',
+          '<text x="194" y="1242" font-size="11" font-family="' + MONO + '" fill="' + C_PURPLE + '">Recommends $24.00</text>',
         '</g>',
 
         '<path d="M300 1260 V1285" stroke="' + C_GREEN + '" stroke-width="1.5" stroke-linecap="round" fill="none" pathLength="1" data-anim="draw" data-delay="2.6" data-dur="0.2" />',
@@ -553,7 +553,7 @@
           '<circle cx="300" cy="1305" r="16" fill="#08090a" stroke="' + C_GREEN + '" stroke-width="1.5" />',
           '<path d="' + GLYPH_CHECK + '" transform="translate(300 1305) scale(0.9)" stroke="' + C_GREEN + '" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round" />',
         '</g>',
-        '<text x="274" y="1310" text-anchor="end" font-size="12" fill="#a1a1aa" data-anim="fade" data-delay="2.8" data-dur="0.3">Verified</text>',
+        '<text x="274" y="1310" text-anchor="end" font-size="12" fill="#a1a1aa" data-anim="fade" data-delay="2.8" data-dur="0.3">Your call</text>',
 
         '<path d="M300 1321 V1341 A22 22 0 0 1 278 1363 H210" stroke="' + C_GREEN + '" stroke-width="1.5" stroke-linecap="round" fill="none" pathLength="1" data-anim="draw" data-delay="2.9" data-dur="0.45" />',
         '<g data-anim="pop" data-delay="3.3" data-dur="0.4" style="transform-box:fill-box;transform-origin:center;">',
@@ -566,7 +566,7 @@
         '<g class="pfw-card-group pfw-purple" data-anim="rise" data-delay="3.5" data-dur="0.5">',
           '<rect x="10" y="1400" width="400" height="186" rx="10" fill="#0c0d10" stroke="rgba(147,170,255,0.35)" />',
           '<path d="' + GLYPH_CHECK + '" transform="translate(28 1424) scale(0.85)" stroke="' + C_GREEN + '" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />',
-          '<text x="46" y="1429" font-size="14.5" font-weight="600" fill="#f4f4f5">Reverted while you slept</text>',
+          '<text x="46" y="1429" font-size="14.5" font-weight="600" fill="#f4f4f5">Paused while you slept</text>',
           '<text x="396" y="1428" text-anchor="end" font-size="11" letter-spacing="0.04em" fill="' + C_PURPLE + '" font-family="' + MONO + '">receipt</text>',
           '<line x1="10" x2="410" y1="1444.5" y2="1444.5" stroke="rgba(255,255,255,0.07)" />',
 
@@ -576,18 +576,18 @@
 
           '<text x="24" y="1490" font-size="12" fill="#71717a" font-family="' + MONO + '">02:14</text>',
           '<text x="70" y="1490" font-size="12" fill="' + C_PURPLE + '" font-family="' + MONO + '">journal</text>',
-          '<text x="142" y="1490" font-size="12" fill="#e4e4e7" font-family="' + MONO + '">original prices restored</text>',
+          '<text x="142" y="1490" font-size="12" fill="#e4e4e7" font-family="' + MONO + '">recommends $24.00</text>',
 
           '<text x="24" y="1512" font-size="12" fill="#71717a" font-family="' + MONO + '">02:15</text>',
           '<text x="70" y="1512" font-size="12" fill="' + C_PURPLE + '" font-family="' + MONO + '">shopify</text>',
-          '<text x="142" y="1512" font-size="12" fill="#e4e4e7" font-family="' + MONO + '">catalog verified safe</text>',
+          '<text x="142" y="1512" font-size="12" fill="#e4e4e7" font-family="' + MONO + '">rollout held</text>',
 
           '<text x="24" y="1534" font-size="12" fill="#71717a" font-family="' + MONO + '">02:16</text>',
           '<text x="70" y="1534" font-size="12" fill="' + C_PURPLE + '" font-family="' + MONO + '">alert</text>',
           '<text x="142" y="1534" font-size="12" fill="#e4e4e7" font-family="' + MONO + '">merchant report sent</text>',
 
           '<line x1="10" x2="410" y1="1548.5" y2="1548.5" stroke="rgba(255,255,255,0.07)" />',
-          '<text x="24" y="1568" font-size="12" fill="#71717a">Zero lost sales compounded. Verified safe.</text>',
+          '<text x="24" y="1568" font-size="12" fill="#71717a">No more products changed. Your call.</text>',
         '</g>',
       '</svg>'
     ].join('');
@@ -758,7 +758,7 @@
           '<div class="pfw-head">',
             '<div class="pfw-eyebrow"><span class="pfw-eyebrow-dot" aria-hidden="true"></span>Autonomous Guardrails</div>',
             '<h2 id="pfw-heading" class="pfw-title">Every price change staged and reversible</h2>',
-            '<p class="pfw-sub">One rollout on production. You pick the catalog slice and test the waters, then our guardrail loop watches live orders and pulls the price if anything slips.</p>',
+            '<p class="pfw-sub">One rollout on production. You pick the catalog slice and test the waters, then our guardrail watches live orders, pauses the rollout if anything slips, and asks you what to do.</p>',
           '</div>',
 
           '<div class="pfw-bar">',

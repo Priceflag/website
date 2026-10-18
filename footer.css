@@ -1,0 +1,260 @@
+/* Footer and pill buttons, copied from index.html's stylesheet so About can carry the same footer. */
+  .pf-btn{
+    --pf-bg:#d8f24b; --pf-fg:#13200a; --pf-glow:216,242,75;
+    position:relative;isolation:isolate;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 32px;border:0;border-radius:999px;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    font-size:16px;font-weight:600;letter-spacing:-0.01em;line-height:1;
+    color:var(--pf-fg);cursor:pointer;text-decoration:none;white-space:nowrap;
+    background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.06) 55%,rgba(255,255,255,0)),var(--pf-bg);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.80),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 1px 2px rgba(3,8,24,.45),
+      0 8px 22px -10px rgba(var(--pf-glow),.42),
+      0 0 0 5px rgba(var(--pf-glow),.07);
+    transition:transform .34s cubic-bezier(.22,1,.36,1),
+               box-shadow .34s cubic-bezier(.22,1,.36,1),
+               filter .34s ease;
+  }
+  /* the sheen ring hugging the pill */
+  .pf-btn::before{
+    content:"";position:absolute;inset:-4px;border-radius:999px;pointer-events:none;
+    border:1px solid rgba(255,255,255,.18);opacity:.55;
+    transition:inset .34s cubic-bezier(.22,1,.36,1),opacity .34s ease,border-color .34s ease;
+  }
+  /* the glass highlight that sweeps across on hover */
+  .pf-btn::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.55) 50%,transparent 64%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+    opacity:0;
+    transition:background-position 1.7s cubic-bezier(.25,.9,.3,1),opacity .34s ease;
+  }
+  .pf-btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.05);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.90),
+      inset 0 -1px 0 rgba(0,0,0,.10),
+      0 2px 4px rgba(3,8,24,.42),
+      0 14px 34px -12px rgba(var(--pf-glow),.55),
+      0 0 0 8px rgba(var(--pf-glow),.10);
+  }
+  .pf-btn:hover::before{inset:-7px;opacity:.9;border-color:rgba(255,255,255,.30);}
+  .pf-btn:hover::after{background-position:175% 0;opacity:1;}
+  .pf-btn:active{
+    transform:translateY(0) scale(.985);
+    transition-duration:.09s;
+    box-shadow:
+      inset 0 2px 4px rgba(0,0,0,.24),
+      inset 0 1px 0 rgba(255,255,255,.35),
+      0 1px 2px rgba(3,8,24,.5);
+  }
+  .pf-btn:focus-visible{outline:2px solid rgba(255,255,255,.85);outline-offset:5px;}
+  .pf-btn,.pf-btn:hover,.pf-btn:focus,.pf-btn:active,.pf-btn:visited{color:var(--pf-fg);}
+  .pf-btn-dot{
+    display:inline-block;width:9px;height:9px;border-radius:50%;
+    background:currentColor;opacity:.75;flex:none;
+  }
+  /* Sign In keeps its cream fill; neutral glow so it doesn't read as lime. */
+  .pf-btn--light{--pf-bg:#f3ecde;--pf-fg:#071238;--pf-glow:243,236,222;}
+  .pf-btn--sm{padding:8px 18px;font-size:13px;gap:7px;}
+  .pf-btn--sm::before{inset:-3px;}
+  .pf-btn--sm:hover::before{inset:-5px;}
+
+  @media (prefers-reduced-motion: reduce){
+    .pf-btn,.pf-btn::before,.pf-btn::after{transition:none;}
+    .pf-btn:hover{transform:none;}
+    .pf-btn::after{display:none;}
+  }
+  /* ---------- footer: the neon slab ----------
+     Everything here is in the stylesheet rather than inline because the dc
+     runtime truncates inline style attribute values at the first comma, and
+     these rules are almost entirely commas: multi-stop box-shadows, rgba(),
+     clamp(), font stacks, transitions and gradients. */
+  /* Fills any elastic-scroll gap below the footer with the same neon. */
+  .pf-foot{box-shadow:0 50vh 0 0 #dcf34a;
+    --pf-ink:#0d1f00;                  /* 13.78:1 on #d8f24b — AAA */
+    --pf-ink-soft:rgba(13,31,0,.68);   /* 5.36:1 on #d8f24b — AA   */
+    --pf-rule:rgba(13,31,0,.20);
+    position:relative;z-index:2;
+    background:#dcf34a;
+    color:var(--pf-ink);
+    border-radius:26px 26px 0 0;
+    overflow:hidden;
+    font-family:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .pf-foot-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 100%;pointer-events:none;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.55) 38%,#000 62%);
+            mask-image:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.55) 38%,#000 62%);}
+  .pf-foot-inner{position:relative;
+    box-sizing:border-box;
+    max-width:1520px;margin:0 auto;
+    padding:clamp(32px,4vw,56px) clamp(20px,4vw,64px) clamp(18px,2.2vw,30px);
+  }
+  /* the page sets a{color:#f3ecde} and a:hover{color:#d8f24b} globally;
+     without these three rules every footer link goes neon-on-neon on hover. */
+  .pf-foot a{color:var(--pf-ink);text-decoration:none;}
+  .pf-foot a:visited{color:var(--pf-ink);}
+  .pf-foot a:hover,.pf-foot a:focus{color:#030818;}
+  .pf-foot a:focus-visible{outline:2px solid #0d1f00;outline-offset:4px;border-radius:3px;}
+
+  .pf-foot-top{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:clamp(30px,4vw,72px);flex-wrap:wrap;
+  }
+  .pf-foot-lead{
+    display:flex;flex-direction:column;align-items:flex-start;
+    gap:clamp(16px,1.8vw,24px);flex:1 1 380px;min-width:0;
+  }
+  .pf-foot-mark{
+    display:inline-flex;align-items:center;gap:.45em;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:clamp(19px,1.5vw,22px);font-weight:400;letter-spacing:-0.01em;line-height:1;
+  }
+  .pf-foot-head{
+    margin:0;
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-weight:400;font-size:clamp(29px,3.4vw,50px);
+    line-height:1.1;letter-spacing:-0.02em;text-wrap:balance;
+  }
+  .pf-foot-shop{white-space:nowrap;}
+  /* Shopify green #95BF47 measures 1.70:1 against #d8f24b, so the mark takes
+     the footer ink colour instead and reads as part of the lockup. */
+  .pf-foot-shop svg{
+    width:.665em;height:.76em;vertical-align:-.035em;margin:0 .17em 0 .07em;fill:currentColor;
+  }
+  .pf-foot-cta{margin-top:clamp(2px,0.6vw,8px);}
+  .pf-foot-cta svg{width:17px;height:17px;flex:none;margin-right:-3px;}
+
+  /* dark pill: a neon pill on neon is invisible, so the fill inverts while the
+     physical language of .pf-btn (radius, inset highlight, lift, sheen) stays. */
+  .pf-btn--dark{
+    --pf-fg:#f4f7ea;
+    background:linear-gradient(180deg,rgba(255,255,255,.17),rgba(255,255,255,0) 52%),#0d1f00;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.24),
+      inset 0 -1px 0 rgba(0,0,0,.35),
+      0 1px 2px rgba(13,31,0,.32),
+      0 10px 26px -10px rgba(13,31,0,.55);
+  }
+  .pf-btn--dark::before{border-color:rgba(13,31,0,.30);opacity:.75;}
+  .pf-btn--dark::after{
+    background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.34) 50%,transparent 66%);
+    background-size:250% 100%;background-repeat:no-repeat;background-position:-75% 0;
+  }
+  .pf-btn--dark:hover{
+    filter:brightness(1.12);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.30),
+      inset 0 -1px 0 rgba(0,0,0,.38),
+      0 2px 4px rgba(13,31,0,.30),
+      0 18px 40px -12px rgba(13,31,0,.62);
+  }
+  .pf-btn--dark:hover::before{border-color:rgba(13,31,0,.46);opacity:1;}
+  .pf-btn--dark:active{
+    box-shadow:
+      inset 0 2px 5px rgba(0,0,0,.45),
+      inset 0 1px 0 rgba(255,255,255,.12),
+      0 1px 2px rgba(13,31,0,.34);
+  }
+  .pf-btn--dark:focus-visible{outline:2px solid #0d1f00;outline-offset:5px;}
+  /* `.pf-foot a` scores 0-1-1 and would otherwise beat `.pf-btn`'s 0-1-0 and
+     repaint the pill's label in the dark ink colour. Re-assert it at 0-2-0. */
+  .pf-foot .pf-btn,
+  .pf-foot .pf-btn:hover,
+  .pf-foot .pf-btn:focus,
+  .pf-foot .pf-btn:active,
+  .pf-foot .pf-btn:visited{color:var(--pf-fg);}
+
+  .pf-foot-nav{
+    display:flex;gap:clamp(34px,5vw,92px);flex:0 1 auto;padding-top:clamp(4px,1vw,10px);
+  }
+  .pf-foot-col{
+    list-style:none;margin:0;padding:0;
+    display:flex;flex-direction:column;gap:clamp(10px,1vw,13px);min-width:max-content;
+  }
+  .pf-foot-link{
+    position:relative;display:inline-flex;align-items:center;gap:9px;
+    font-size:15px;line-height:1.25;letter-spacing:-0.005em;width:max-content;
+  }
+  .pf-foot-link::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;
+    background:currentColor;transform:scaleX(0);transform-origin:left center;
+    transition:transform .34s cubic-bezier(.22,1,.36,1);
+  }
+  /* 15px/1.25 gives a 19px tap target, and the footer is the densest stack of
+     links on the page. Grow the box on touch only — on a mouse the tighter
+     column is the better-looking one, and the underline sweep is keyed to the
+     text box, so the padding goes on the row rather than the anchor. */
+  @media (pointer:coarse){
+    .pf-foot-link{padding-block:13px;}
+    .pf-foot-link::after{bottom:11px;}
+    .pf-foot-col{gap:0;}
+    .pf-foot-legal a{display:inline-block;padding-block:13px;}
+    .pf-foot-mark{display:inline-block;padding-block:13px;}
+  }
+  .pf-foot-link:hover::after,.pf-foot-link:focus-visible::after{transform:scaleX(1);}
+  .pf-foot-link svg{width:15px;height:15px;flex:none;fill:currentColor;}
+
+  /* The giant wordmark is real Hedvig set as SVG <text>. The viewBox is the
+     measured INK box of "Priceflag" at font-size 1000 (x 30 -> 3926, ascender
+     -804, descender +257), so width:100% puts the glyph ink itself flush with
+     the content box rather than leaving the side bearings as a gap.
+     textLength pins the advance to Hedvig's own 3931.02 units, so a fallback
+     serif is squeezed onto the identical measure while the webfont loads. The
+     root <svg> keeps its default overflow:hidden, so no font can push a pixel
+     past the edge and raise a scrollbar. */
+  .pf-foot-word{display:block;width:100%;height:auto;margin-top:clamp(32px,4vw,56px);}
+  .pf-foot-word text{
+    font-family:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
+    font-size:1000px;font-weight:400;fill:#0d1f00;
+  }
+
+  .pf-foot-bar{
+    margin-top:clamp(26px,2.4vw,34px);
+    border-top:1px solid var(--pf-rule);
+    padding-top:clamp(16px,1.6vw,22px);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px clamp(20px,3vw,40px);flex-wrap:wrap;
+    font-size:13.5px;line-height:1.4;letter-spacing:-0.005em;color:var(--pf-ink-soft);
+  }
+  .pf-foot-legal{display:flex;gap:clamp(18px,2.4vw,34px);flex-wrap:wrap;}
+  .pf-foot-legal a{color:var(--pf-ink-soft);}
+  .pf-foot-legal a:hover,.pf-foot-legal a:focus{color:#0d1f00;}
+
+  @media (max-width:900px){
+    .pf-foot-top{flex-direction:column;align-items:stretch;}
+    /* flex-basis is the MAIN axis: once the row turns into a column, the lead's
+       `flex:1 1 380px` becomes a 380px minimum *height* and tears a hole
+       between the CTA and the links. Reset it. */
+    .pf-foot-lead{flex:0 0 auto;}
+    .pf-foot-nav{
+      padding-top:0;
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(14px,3vw,26px) clamp(24px,6vw,60px);
+      max-width:440px;
+    }
+  }
+  @media (max-width:359px){
+    .pf-foot-nav{grid-template-columns:1fr;gap:clamp(10px,3vw,13px);}
+    .pf-foot-col + .pf-foot-col{
+      padding-top:clamp(10px,3vw,13px);
+      border-top:1px solid var(--pf-rule);
+    }
+    .pf-foot-bar{justify-content:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pf-foot-link::after{transition:none;}
+  }
+  /* The giant wordmark is width:100% of the content box, so it can never
+     raise a scrollbar; the top row and the legal bar are the two places
+     that could, and both are already wrapping. This just keeps the CTA
+     from being a full-bleed block once the lead becomes a column. */
+  .pf-foot-cta{align-self:flex-start;}
+  @media (max-width:479px){
+    .pf-foot-word{margin-top:clamp(30px,7vw,44px);}
+  }

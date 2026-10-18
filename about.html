@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Priceflag</title>
-<meta name="description" content="What Priceflag is building — a forecast before a price change, a gradual rollout across your catalogue, and a guardrail that reverts a change on its own. One price for every shopper.">
+<meta name="description" content="Who builds Priceflag and why: a forecast before a price change, a rollout a few products at a time, and a guardrail that pauses and asks you. One price for every shopper.">
 <link rel="canonical" href="https://priceflag.org/about">
 <link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
 <script>document.documentElement.className+=" pf-boot";</script>
@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/footer.css">
 <style>
   :root{
     --ink:#030818;           /* site background / dark button          */
@@ -37,14 +38,16 @@
     font-size:16.5px;font-weight:400;line-height:1.7;
     letter-spacing:-0.005em;
     overflow-wrap:break-word;
-    /* The panel is bound to the screen: the page does not scroll, the panel
-       does not move, and only the copy inside it travels. svh rather than vh
-       so a phone's collapsing toolbar cannot push the button off-screen. */
+  }
+  /* The panel is bound to the first screen: it does not move, and only the
+     copy inside it travels. The page scrolls on to the footer below. svh
+     rather than vh so a phone's collapsing toolbar cannot push the button
+     off-screen. */
+  .pf-screen{
     min-height:100vh;min-height:100svh;
     height:100vh;height:100svh;
     display:flex;align-items:center;justify-content:center;
     padding:clamp(14px,3.5vh,34px) 14px;
-    overflow:hidden;
   }
   ::selection{background:var(--neon);color:#071238;}
 
@@ -237,12 +240,12 @@
   .pf-tear{
     flex:none;height:0;border-top:1px dashed rgba(15,24,48,0.28);
   }
-  .pf-foot{
-    flex:none;
+  .pf-sheet-foot{
+    flex:none;display:flex;gap:10px;
     padding:var(--foot-top) clamp(18px,4vw,28px) var(--foot-bottom);
   }
   .pf-cta{
-    display:block;width:100%;
+    display:block;flex:1 1 0;min-width:0;
     padding:16px 20px;
     background:var(--ink);color:var(--sheet);
     font-family:var(--serif);font-weight:400;font-size:18px;line-height:1;
@@ -253,7 +256,8 @@
   .pf-cta:active{transform:translateY(0);}
 
   @media (max-width:520px){
-    body{font-size:16px;padding:0;}
+    body{font-size:16px;}
+    .pf-screen{padding:0;}
     .pf-sheet{width:100%;height:100%;max-height:100%;}
     .pf-lede{font-size:16.5px;}
   }
@@ -263,7 +267,7 @@
   }
 
   @media print{
-    .pf-bg,.skip,.pf-cta{display:none !important;}
+    .pf-bg,.skip,.pf-cta,.pf-foot{display:none !important;}
     body{background:#fff;color:#1a1a1a;font-size:11pt;line-height:1.5;}
     body{height:auto;display:block;overflow:visible;padding:0;}
     .pf-sheet{width:auto;height:auto;display:block;box-shadow:none;
@@ -307,10 +311,28 @@
       opacity:1 !important;animation:none !important;transform:none !important;
     }
   }
+  /* second CTA: same block, inverted */
+  .pf-cta--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);}
+  .pf-cta--ghost:hover{background:rgba(15,24,48,0.06);color:var(--ink);}
+  .pf-cta{white-space:nowrap;font-size:17px;padding:16px 8px;}
+  @media (max-width:420px){ .pf-cta{font-size:15px;padding:17px 6px;} }
+
+  /* founders */
+  .pf-team{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:14px;}
+  .pf-team li{display:flex;align-items:center;gap:14px;}
+  .pf-team img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;background:rgba(15,24,48,0.08);}
+  .pf-team b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
+  .pf-team span{display:block;font-size:15.5px;line-height:1.5;}
+
+  /* the homepage footer, below the first screen */
+  .pf-foot .pf-hiker{width:0.87em;height:1.6em;margin-block:-0.3em;}
+  .pf-foot h2{margin:0;}
+  .pf-foot a{text-decoration:none;}
 </style>
 </head>
 <body>
 
+<div class="pf-screen">
 <div class="pf-bg" aria-hidden="true">
   <img src="uploads/summit-painting-3.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
 </div>
@@ -326,30 +348,86 @@
   </div>
 
   <main id="main">
-    <p class="pf-lede">Priceflag forecasts what a price change does to your profit, rolls it out gradually across your products, and reverts it automatically if it stops paying. We build it for ecommerce teams who want evidence behind a price before it goes live.</p>
+    <p class="pf-lede">Priceflag forecasts what a price change does to your profit and rolls it out a few products at a time. If orders fall below the forecast, it pauses the rollout, tells you, and recommends what to do next. You decide.</p>
+
+    <h2>Why we're building this</h2>
+    <p>We ran ecommerce stores ourselves, and friends from high school ran dropshipping stores too. Every time, pricing was a blind decision: we picked a number that felt right and hoped. Priceflag is the tool we wanted then.</p>
 
     <h2>What we are building</h2>
     <ol class="pf-steps">
-      <li><b>A forecast.</b><span>A proposed price is simulated thousands of times before it goes near your storefront, and what comes back is a range of outcomes with the odds attached to each.</span></li>
+      <li><b>A forecast.</b><span>Before a new price goes near your storefront, Priceflag checks it against your own order history and shows a range of likely outcomes next to your breakeven, never a single number.</span></li>
       <li><b>A staged rollout.</b><span>A change earns its way across your catalogue a few products at a time, so a bad call reaches a slice of your revenue.</span></li>
-      <li><b>An automatic guardrail.</b><span>When real orders land outside the forecast, the price returns to where it started on its own.</span></li>
+      <li><b>A guardrail that asks you.</b><span>Priceflag checks daily orders against the forecast range. If they fall below it, the rollout pauses and you get a notification with our recommendation. Nothing changes until you decide.</span></li>
     </ol>
 
     <h2>How we work</h2>
     <ul class="pf-pairs">
       <li><b>One price for every shopper.</b><span>Two people looking at the same product on the same day see the same number. We treat that as a constraint on the design.</span></li>
-      <li><b>Ranges, with the odds attached.</b><span>A single predicted number hides how wrong it could be. We show the spread, because the spread is what you have to plan around.</span></li>
-      <li><b>Reversible by default.</b><span>Anything Priceflag does to your catalogue, it can undo. That constraint decides what we build.</span></li>
+      <li><b>Ranges, not promises.</b><span>A single predicted number hides how wrong it could be. We show the spread, because the spread is what you plan around.</span></li>
+      <li><b>You stay in control.</b><span>Priceflag pauses and recommends; you make the call. Putting the old price back is always an option, and Priceflag is designed to restore it exactly as it was.</span></li>
+    </ul>
+
+    <h2>Who we are</h2>
+    <ul class="pf-team">
+      <li><img src="uploads/founder-nithin.webp" alt="Nithin" width="64" height="64" loading="lazy" decoding="async"><div><b>Nithin</b><span>Cofounder. Builds the product.</span></div></li>
+      <li><img src="uploads/founder-kabir.webp" alt="Kabir" width="64" height="64" loading="lazy" decoding="async"><div><b>Kabir</b><span>Cofounder. Talks pricing with merchants all day.</span></div></li>
     </ul>
 
   </main>
 
   <div class="pf-tear" aria-hidden="true"></div>
-  <div class="pf-foot">
-    <a class="pf-cta" href="mailto:hello@priceflag.org">Talk to us</a>
+  <div class="pf-sheet-foot">
+    <a class="pf-cta" href="https://dashboard.priceflag.org/signin" rel="noopener">Get a free price review</a>
+    <a class="pf-cta pf-cta--ghost" href="mailto:hello@priceflag.org">Talk to us</a>
   </div>
 
 </div>
+</div>
+
+  <footer class="pf-foot">
+  <img class="pf-foot-art" src="uploads/summit-lime.webp" alt="" width="1855" height="848" loading="lazy" decoding="async">
+  <div class="pf-foot-inner">
+
+    <div class="pf-foot-top">
+      <div class="pf-foot-lead">
+        <a class="pf-foot-mark" href="/"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
+
+        <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span> &amp; more</h2>
+
+        <a class="pf-btn pf-btn--dark pf-foot-cta" href="https://dashboard.priceflag.org/signin" rel="noopener">
+          Sign up
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+
+      <nav class="pf-foot-nav" aria-label="Footer">
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="/">Home</a></li>
+          <li><a class="pf-foot-link" href="/about">About</a></li>
+                    <li><a class="pf-foot-link" href="/#faq">FAQ</a></li>
+          <li><a class="pf-foot-link" href="https://youtu.be/vfZ26mCQ79A" target="_blank" rel="noopener noreferrer">Team ↗</a></li>
+        </ul>
+        <ul class="pf-foot-col">
+          <li><a class="pf-foot-link" href="https://x.com/Priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
+          <li><a class="pf-foot-link" href="https://www.linkedin.com/company/priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+      <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
+    </svg>
+
+    <div class="pf-foot-bar">
+      <span>Built by Humans in San Francisco&#44; CA</span>
+      <div class="pf-foot-legal">
+        <a href="/contact">Contact</a>
+        <a href="/legal">Legal</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
 
 <script>
 /* Reveal, ordered: the painting is on screen before the ticket arrives.

@@ -170,6 +170,20 @@
   .pf-meta{margin:7px 0 0;font-size:13.5px;line-height:1.5;color:#6b7387;}
   .pf-rule{margin:36px 0 0;border:0;border-top:1px solid var(--rule);}
 
+  /* ---------- sections and contents ----------
+     Each document is its own anchored section so /legal#privacy, #terms and
+     #security land on it. main is the scrolling box, so scroll-margin keeps
+     the heading off the panel's top edge when the browser scrolls main. */
+  main section{scroll-margin-top:18px;}
+  main section > h2:first-child{margin-top:34px;}
+  .pf-toc{margin:22px 0 0;padding:12px 16px 14px;
+    border:1px solid var(--rule);border-radius:8px;}
+  .pf-toc b{display:block;font-size:11.5px;font-weight:700;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--head);}
+  .pf-toc ol{margin:6px 0 0;padding-left:1.25em;}
+  .pf-toc li{margin:4px 0 0;font-size:15.5px;line-height:1.5;}
+  .pf-toc li::marker{color:#8b93a8;}
+
   /* title + sentence pairs */
   .pf-pairs{margin:14px 0 0;padding:0;list-style:none;}
   .pf-pairs li{margin:16px 0 0;}
@@ -271,52 +285,68 @@
   </div>
 
   <main id="main">
-    <p class="pf-lede">The two documents that govern using Priceflag: the Privacy Policy and the Terms of Service. Both are drafted and pending legal review, so neither is in force yet &mdash; they are here to be read before that changes.</p>
+    <p class="pf-lede">The documents that govern using Priceflag: the Privacy Policy, the Terms of Service, and a plain summary of how we secure your data. They are drafted and pending legal review, so none of them is in force yet. They are here to be read before that changes.</p>
 
-    <div class="pf-note"><b>Draft &mdash; pending legal review</b>These were written against Shopify's published requirements for App Store apps, the EU and UK GDPR, and the CCPA as amended by the CPRA. A lawyer has not reviewed them, and one must before Priceflag accepts its first merchant. Facts still to be settled are marked <span class="pf-fill">like this</span>.</div>
+    <div class="pf-note"><b>Draft &mdash; not in force</b>These were written against Shopify's published requirements for apps, the EU and UK GDPR, and the CCPA as amended by the CPRA. A lawyer has not reviewed them, and one must before they take effect.</div>
 
-    <h2 id="privacy">Privacy Policy</h2>
-    <p class="pf-meta">Last updated: <time datetime="2026-09-01">1 September 2026</time> &middot; Effective <span class="pf-fill">[EFFECTIVE DATE]</span> &middot; Not yet in force</p>
+    <nav class="pf-toc" aria-label="On this page">
+      <b>On this page</b>
+      <ol>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#security">Security and data access</a></li>
+      </ol>
+    </nav>
+
+    <section id="privacy" aria-labelledby="privacy-h">
+    <h2 id="privacy-h">Privacy Policy</h2>
+    <p class="pf-meta">Last updated: <time datetime="2026-09-01">1 September 2026</time> &middot; Effective <time datetime="2026-09-01">September 1, 2026</time> &middot; Not yet in force</p>
 
     <h3>Introduction</h3>
-    <p>Priceflag is a pricing tool for Shopify merchants. It forecasts the likely effect of a price change, then releases that change across a growing share of the products you selected, in stages over time, so every visitor sees the same price. It watches profit against a guardrail you set, and pauses the rollout if the guardrail is breached so the price can be put back. It does not test prices on a share of traffic, and it does not show different visitors different prices. This policy covers the Priceflag Shopify app, the Priceflag web application, and the priceflag.org site. The company behind them is Priceflag Syndicate, Inc., established in Delaware, United States at <span class="pf-fill">[REGISTERED ADDRESS]</span>.</p>
+    <p>Priceflag is a pricing tool for Shopify merchants. It forecasts the likely effect of a price change, then releases that change across a growing share of the products you selected, in stages over time, so every visitor sees the same price. Each day it checks orders on the products in a rollout against the forecast range. If orders fall below that range, the rollout pauses so no more products get the new price, we notify you, and we give a recommendation (for example hold, continue, or put the old price back). You decide. Nothing is reverted automatically. It does not test prices on a share of traffic, and it does not show different visitors different prices. This policy covers the Priceflag web platform at dashboard.priceflag.org, the Priceflag Shopify app once it is listed, and the priceflag.org site. The company behind them is Priceflag Syndicate, Inc., a Delaware corporation. You can reach us at <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
     <p>In this policy, &ldquo;you&rdquo; means the merchant, or the person using Priceflag on a merchant's behalf. &ldquo;Your customers&rdquo; means the shoppers who buy from your store. Priceflag is a business tool: we do not build shopper profiles, we do not advertise to your customers, and we do not sell data to anyone.</p>
     <p><strong>Two roles.</strong> For your own account data &mdash; your name, work email, the store you connect, billing details, and how you use the app &mdash; we are the controller under the GDPR and a business under the CCPA. For the data inside your store &mdash; products, prices, inventory, orders, and the limited personal data in order records &mdash; you are the controller and we are the processor, handling it on your documented instructions. Shopify is a separate party with its own agreements with you, and nothing here changes those.</p>
 
     <h3>Information We Collect</h3>
     <ul class="pf-list">
       <li><strong>Account information</strong> &mdash; your name, work email address, the identifier used to sign you in, the Shopify store domains you connect, and the role each teammate holds in your workspace.</li>
-      <li><strong>Billing records</strong> &mdash; Shopify's App Store rules require app charges to run through Shopify's billing, so your payment card is handled by Shopify and never reaches us.</li>
+      <li><strong>Billing records</strong>: Priceflag does not bill through Shopify yet. Any fees during a pilot are agreed with you in writing. Once the app is listed in the Shopify App Store, billing may run through Shopify, and your payment card would then be handled by Shopify, not us.</li>
       <li><strong>Store data read from Shopify</strong> &mdash; products and variants, titles, SKUs, options, inventory levels, cost of goods where you have recorded it, current and historical prices, orders and line items, and store configuration.</li>
-      <li><strong>Usage data</strong> &mdash; the experiments you configure, and every rollout and rollback we execute, plus which screens you open and which features you use.</li>
+      <li><strong>Usage data</strong> &mdash; the experiments you configure, and every rollout, pause and price change we make, plus which screens you open and which features you use.</li>
       <li><strong>Technical data</strong> &mdash; IP address, browser and device type, coarse location derived from IP, and error traces.</li>
       <li><strong>Support correspondence</strong> &mdash; anything you send us by email or in-app chat.</li>
+      <li><strong>Price review requests</strong>: the email address and store URL you give us when you sign up for a free price review or email us.</li>
+      <li><strong>Shopper IP addresses</strong>: the pricing model may use shopper IP addresses, as described below.</li>
     </ul>
-    <p>Shopify classifies order data as <em>protected customer data</em>, and treats name, address, email and phone as a further tier &mdash; <em>protected customer fields</em> &mdash; that an app has to request individually and justify. Priceflag's arithmetic works on quantities, prices, margins and counts, so the app is designed to read order data without requesting those fields. The scopes it actually asks for appear on Shopify's install screen before you approve anything, and that screen is the authoritative record of what we can see.</p>
+    <p>Shopify classifies order data as <em>protected customer data</em>, and treats name, address, email and phone as a further tier &mdash; <em>protected customer fields</em> &mdash; that an app has to request individually and justify. The scopes Priceflag actually asks for appear on Shopify's install screen before you approve anything, and that screen is the authoritative record of what we can see.</p>
+    <p><strong>Shopper IP addresses.</strong> The pricing model may use shopper IP addresses. We handle them securely: encrypted in transit and at rest, with access restricted. We use them only to understand demand (for example approximate region). We never use them to show different shoppers different prices, and we never sell them.</p>
+
+    <h3>Free Price Reviews and Email</h3>
+    <p>There is no waitlist. You can email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> or sign up for a free price review. We use the email address and store URL you give us only to reply to you and to do the review. We do not analyze a store's public data unless the merchant asks us to and gives permission.</p>
 
     <h3>How We Use Your Information</h3>
     <ul class="pf-list">
-      <li>Run the service: forecasting, staged rollouts, profit calculation, and guardrail rollbacks.</li>
+      <li>Run the service: forecasting, staged rollouts, breakeven and margin calculations, and guardrail checks.</li>
       <li>Write price changes back to your store, only for the products and experiments you have enrolled.</li>
-      <li>Notify you when a guardrail is breached, a rollback fires, or an experiment ends.</li>
-      <li>Bill you through Shopify, keep account records, and prevent fraud and abuse.</li>
+      <li>Notify you when a rollout pauses because orders fell below the forecast range, with our recommendation, and when a rollout ends.</li>
+      <li>Bill you for any fees agreed with you, keep account records, and prevent fraud and abuse.</li>
       <li>Debug problems, keep the service secure and available, and improve forecast quality for your store.</li>
       <li>Answer support requests and send service notices. Marketing email goes only to people who asked for it, and every marketing message carries an unsubscribe link.</li>
     </ul>
-    <p>We do not use one merchant's store data to produce forecasts for another, and we do not train shared models on your data unless you separately and explicitly opt in. Protected customer data is used to deliver the features you switched on and nothing else &mdash; Shopify's API terms forbid it, and so does this policy.</p>
+    <p>We do not use one merchant's store data to produce forecasts for another, and we do not train shared models on your data unless you separately and explicitly opt in. We do not send your store data to third-party AI model providers.Protected customer data is used to deliver the features you switched on and nothing else &mdash; Shopify's API terms forbid it, and so does this policy.</p>
     <p>Where the GDPR or UK GDPR applies to data we control, we rely on performance of a contract for accounts, experiments, billing and support; legitimate interests for security, abuse prevention, debugging and aggregate usage; consent for marketing email and non-essential cookies; and legal obligation for tax, accounting and lawful requests. For data inside your store, the lawful basis is yours to determine as controller.</p>
 
     <h3>Shopify Access and Price Writes</h3>
     <ul class="pf-list">
       <li>Priceflag connects through Shopify's standard OAuth install flow. You see the exact permissions before you grant them and can revoke them at any time from your Shopify admin.</li>
-      <li>Write access is used to set a price on a product you enrolled in an experiment, and to restore the prior price during a rollback. Nothing else.</li>
+      <li>Write access is used to set a price on a product you enrolled in an experiment, and to put the previous price back when you choose to. Nothing else.</li>
       <li>We do not modify orders, customers, fulfilment, discounts, or any field outside the pricing fields an experiment touches.</li>
       <li>Every write is recorded with a timestamp, the experiment that triggered it, and the before and after values. That log is visible to you in the app.</li>
       <li>Uninstalling the app revokes our access instantly. Whatever price is live at that moment stays live, so settle your prices before you uninstall.</li>
     </ul>
 
     <h3>Shopify's Privacy Webhooks</h3>
-    <p>Every app in the Shopify App Store has to answer three mandatory compliance webhooks. We verify the HMAC signature on each and reject anything that fails.</p>
+    <p>Shopify requires apps to answer three mandatory compliance webhooks. We verify the HMAC signature on each and reject anything that fails.</p>
     <ul class="pf-list">
       <li><strong>customers/data_request</strong> &mdash; one of your customers has asked you for the data held about them. We return what we hold to you within the 30 days Shopify allows; you answer your customer.</li>
       <li><strong>customers/redact</strong> &mdash; you have asked, on a customer's behalf, that their data be erased. We delete or irreversibly redact the identified customer and order records.</li>
@@ -325,26 +355,30 @@
     <p>Separately, Shopify's API License and Terms of Use require an app to delete every copy of a merchant's data within 30 days of uninstall or termination, except where the law requires us to keep something. We treat that as a hard obligation.</p>
 
     <h3>Data Security</h3>
-    <p>We operate the controls Shopify requires of every app handling protected customer data: encryption in transit and at rest, encrypted backups, defined retention periods, separated test and production environments, staff access limited to those who need it, logging of access to protected customer data, strong authentication on staff accounts, and a written incident response process.</p>
+    <p>We operate the controls Shopify requires of every app handling protected customer data: encryption in transit and at rest, encrypted backups, defined retention periods, separated test and production environments, staff access limited to those who need it, logging of access to protected customer data, strong authentication on staff accounts, and a written incident response process. A plain summary is in <a href="#security">Security and data access</a> below.</p>
     <p><strong>We hold no third-party security certification.</strong> We are not SOC 2 audited and not ISO 27001 certified, and we will not claim either until it is true. If a certification matters to your procurement process, ask us where we stand before you install.</p>
     <p>No system is perfectly secure. If a breach affects personal data we hold, we will notify you without undue delay so you can meet your own obligations as controller, and we will notify regulators where the law requires it &mdash; under the GDPR, within 72 hours of becoming aware where the breach is notifiable.</p>
 
     <h3>Third-Party Services</h3>
-    <p>We use a small number of vendors to run the service. Each is bound by contract to process data only on our instructions and only to provide their service to us, on terms meeting Article 28 of the GDPR.</p>
+    <p>We use a small number of vendors to run the service. Each one that processes personal data for us is bound by contract to process it only on our instructions and only to provide their service to us, on terms meeting Article 28 of the GDPR. These are all the vendors that touch data today:</p>
     <ul class="pf-list">
-      <li><strong>Shopify</strong> &mdash; the platform your store runs on, the source of the data we read, and the channel through which app subscriptions are billed.</li>
-      <li><strong>Cloud hosting and databases</strong> &mdash; <span class="pf-fill">[HOSTING PROVIDER AND REGION]</span>.</li>
-      <li><strong>Operational vendors</strong> &mdash; the providers we use for transactional email, error monitoring, product analytics and support. We will name every one of them, and the country each processes in, on request. We will not add a sub-processor that touches store data without updating that list.</li>
+      <li><strong>Amazon Web Services (AWS)</strong>: hosts the Priceflag product and stores its data.</li>
+      <li><strong>Vercel</strong>: hosts the priceflag.org website.</li>
+      <li><strong>Shopify</strong>: the platform your store runs on and the source of the data we read. Once the app is listed, Shopify may also bill app subscriptions.</li>
+      <li><strong>Stripe</strong>: used for company formation and may process payments in the future. Stripe does not receive store data.</li>
+      <li><strong>Our email provider</strong>: handles mail sent to and from hello@priceflag.org.</li>
     </ul>
+    <p>We use no analytics or error-monitoring vendors today. We do not send your store data to third-party AI model providers. We will update this list before adding a vendor that touches store data.</p>
     <p>Beyond those, we disclose data only where the law compels it, to establish or defend legal claims, to protect the rights and safety of our users or the public, or in a merger, acquisition or sale of assets &mdash; in which case we will tell you before your data becomes subject to a different policy. <strong>We do not sell personal information and we do not share it for cross-context behavioural advertising</strong>, as the CCPA defines those terms. We never have.</p>
 
     <h3>How Long We Keep It</h3>
     <ul class="pf-list">
-      <li><strong>Store, product and order data</strong> &mdash; while the app is installed and the data is needed to run and evaluate your experiments. After uninstall, deleted within the 30 days Shopify's API terms require.</li>
+      <li><strong>Store, product and order data</strong>: we read the store data a forecast needs through Shopify's API. We do not keep copies of order history beyond what a forecast needs. We do not sell it or share it for advertising.</li>
+      <li><strong>What we must keep to run the service</strong>: your shop address, access token, staged prices and rollout history. This is deleted within 30 days of uninstall or a deletion request.</li>
       <li><strong>Account records</strong> &mdash; while your account is open, then deleted after a short wind-down window that lets you reinstall.</li>
-      <li><strong>Experiment history and price-change logs</strong> &mdash; kept while you are a customer, exportable at any time, and removed with the rest of your data when you leave.</li>
+      <li><strong>Price-change logs</strong>: kept while you are a customer, exportable at any time, and deleted with your rollout history within 30 days of uninstall or a deletion request.</li>
       <li><strong>Billing and tax records</strong> &mdash; for the period tax and company law requires, which overrides a deletion request.</li>
-      <li><strong>Technical logs and product analytics</strong> &mdash; for a limited operational period, then deleted or aggregated past the point of re-identification.</li>
+      <li><strong>Technical logs</strong>: for a limited operational period, then deleted or aggregated past the point of re-identification.</li>
     </ul>
     <p>Backups expire on their own rotation, so data removed from live systems can persist in backups briefly before being overwritten.</p>
 
@@ -354,14 +388,14 @@
       <li>Much of this is self-service: your data can be exported from the app, and uninstalling the Shopify app stops further collection immediately.</li>
       <li>For anything else, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. We respond within one month, and may extend by two further months for genuinely complex requests &mdash; we will tell you inside the first month if that happens. We may need to verify who you are first.</li>
       <li>If the request comes from one of <em>your</em> customers, it belongs to you as controller of that data. Forward it and we will give you what you need, or use Shopify's customers/data_request and customers/redact flows, which reach us automatically.</li>
-      <li>You can complain to your data protection authority, whether that is the lead authority in <span class="pf-fill">[HOME JURISDICTION]</span> or the regulator where you live or work.</li>
+      <li>You can complain to the data protection authority where you live or work. Priceflag Syndicate, Inc. is a Delaware corporation based in California, United States.</li>
     </ul>
     <p>We will not discriminate against you, degrade your service, or charge you more for exercising any of these rights.</p>
     <p><strong>California.</strong> The CCPA as amended by the CPRA gives California residents the right to know what personal information we have collected and where it came from, to access and delete it, to correct inaccuracies, to receive it in a portable form, and to limit the use of sensitive personal information. Since 2023 these rights cover business-to-business contexts, so they apply to you as a merchant. The categories we collect are identifiers, commercial information and internet activity. We do not sell or share personal information, so there is nothing to opt out of and no &ldquo;Do Not Sell or Share My Personal Information&rdquo; link; if that changes we will say so here first. For store data we act as a service provider, never retaining, using or disclosing it for our own purposes. Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> to make a request: we confirm within 10 business days and respond within 45 days, extendable once.</p>
-    <p><strong>International transfers.</strong> Our infrastructure runs in <span class="pf-fill">[HOSTING PROVIDER AND REGION]</span>. For transfers of EEA, UK or Swiss personal data to a country without an adequacy decision, we rely on the European Commission's Standard Contractual Clauses (Decision 2021/914), with the UK International Data Transfer Addendum where UK data is involved, plus a transfer risk assessment and supplementary technical measures. You can request a copy of the clauses we rely on.</p>
+    <p><strong>International transfers.</strong> The Priceflag product runs on Amazon Web Services (AWS), and the website is hosted on Vercel.<!-- CONFIRM: AWS region --> For transfers of EEA, UK or Swiss personal data to a country without an adequacy decision, we rely on the European Commission's Standard Contractual Clauses (Decision 2021/914), with the UK International Data Transfer Addendum where UK data is involved, plus a transfer risk assessment and supplementary technical measures. You can request a copy of the clauses we rely on.</p>
 
     <h3>Cookies and Tracking</h3>
-    <p>The site and the app use a small number of cookies and similar technologies. Strictly necessary ones keep you signed in, remember your workspace, and protect against cross-site request forgery; these cannot be switched off. Analytics cookies count visits and show which features get used; where consent is legally required for these, we will ask before setting them.</p>
+    <p>The site and the app use a small number of cookies and similar technologies. Strictly necessary ones keep you signed in, remember your workspace, and protect against cross-site request forgery; these cannot be switched off. There are no analytics cookies today. If we want to add analytics later, we will update this policy first and ask for your consent before setting any analytics cookie, through a consent banner where the law requires it.</p>
     <p>We do not use advertising cookies, cross-site tracking pixels, or any cookie that follows you off our own properties. You can block or clear cookies in your browser, though the app will not function properly without the necessary ones.</p>
 
     <h3>Children's Privacy</h3>
@@ -371,20 +405,27 @@
     <p>We will update this policy as the product changes and as the law does. The date at the top always reflects the current version. For changes that materially affect how we handle your data we will give notice by email or in the app before they take effect, and where the law requires consent we will ask for it.</p>
 
     <h3>Contact Us</h3>
-    <p>Questions about this policy, or a privacy request under it: <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Postal mail, signed data processing agreements, copies of our Standard Contractual Clauses and the current sub-processor list: Priceflag Syndicate, Inc., <span class="pf-fill">[REGISTERED ADDRESS]</span>.</p>
+    <p>Questions about this policy, or a privacy request under it: <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Signed data processing agreements, copies of our Standard Contractual Clauses and the current sub-processor list are available from Priceflag Syndicate, Inc., a Delaware corporation, at the same address.</p>
+    </section>
 
     <hr class="pf-rule">
 
-    <h2 id="terms">Terms of Service</h2>
-    <p class="pf-meta">Last updated: <time datetime="2026-09-01">1 September 2026</time> &middot; Effective <span class="pf-fill">[EFFECTIVE DATE]</span> &middot; Not yet in force</p>
+    <section id="terms" aria-labelledby="terms-h">
+    <h2 id="terms-h">Terms of Service</h2>
+    <p class="pf-meta">Last updated: <time datetime="2026-09-01">1 September 2026</time> &middot; Effective <time datetime="2026-09-01">September 1, 2026</time> &middot; Not yet in force</p>
 
     <h3>Agreement to Terms</h3>
-    <p>These terms are a contract between you and Priceflag Syndicate, Inc.. You accept them by installing the app on a Shopify store, creating an account, or using the service in any way. If you accept on behalf of a company, you confirm you are authorised to bind it, and &ldquo;you&rdquo; means that company. If you do not agree, do not install the app.</p>
+    <p>These terms are a contract between you and Priceflag Syndicate, Inc., a Delaware corporation (&ldquo;Priceflag&rdquo;, &ldquo;we&rdquo; or &ldquo;us&rdquo;). You accept them by connecting a Shopify store, taking part in a pilot or a free price review, creating an account, or using the service in any way. If you accept on behalf of a company, you confirm you are authorised to bind it, and &ldquo;you&rdquo; means that company. If you do not agree, do not use the service.</p>
     <p>The Privacy Policy above is part of this agreement and is incorporated by reference. Your separate agreements with Shopify continue to apply, and nothing here overrides them.</p>
 
+    <h3>Before the App Store Launch</h3>
+    <p>The Priceflag app is not yet listed in the Shopify App Store. Today Priceflag runs as its own web platform at dashboard.priceflag.org, connected to your Shopify store. Pilots and free price reviews before launch are covered by these terms. Any fees during a pilot are agreed with you in writing. Once the app is listed, billing may run through Shopify. Where these terms mention the App Store listing or Shopify billing, those parts apply from then on.</p>
+
     <h3>Description of Service</h3>
-    <p>Priceflag helps Shopify merchants change prices deliberately. It forecasts the likely effect of a proposed price change from your historical product, pricing and order data; releases a new price across a growing share of the products you selected, in the stages you configure, so every shopper sees the same price; tracks profit against a guardrail threshold you set; and can return the price to the price captured before the rollout if that guardrail is breached. It does not split traffic and it does not vary the price by visitor.</p>
-    <p>A forecast is a statistical estimate from past data. It is not a guarantee, not a prediction of revenue, and not advice about what you should charge. What actually happens depends on seasonality, competitors, inventory, marketing and a great many things Priceflag cannot observe. We may add, change or remove features as the product develops; if we materially reduce functionality you depend on, we will give you reasonable notice first.</p>
+    <p>Priceflag helps Shopify merchants change prices deliberately. It forecasts the likely effect of a proposed price change from your historical product, pricing and order data; releases a new price across a growing share of the products you selected, in the stages you configure, so every shopper sees the same price; and checks daily orders on the products in a rollout against the forecast range. If orders fall below that range, the rollout pauses so no more products get the new price, we notify you, and we give a recommendation (for example hold, continue, or put the old price back). You decide what happens next. Nothing is reverted automatically. It does not split traffic and it does not vary the price by visitor.</p>
+    <p><strong>Auto-changes are opt-in, per collection.</strong> By default, Priceflag proposes each price change and you approve it. You can opt in, one collection at a time, to let Priceflag apply changes within limits you set. Auto-changes are off by default, and you can turn them off at any time.</p>
+    <p><strong>Putting a price back.</strong> Putting the old price back is one action by you. Priceflag is designed to restore the previous price and check it in Shopify, but we do not guarantee it.</p>
+    <p>A forecast is a range with a breakeven, estimated from your store's own order history. It is not a guarantee, not a prediction of revenue, and not advice about what you should charge. What actually happens depends on seasonality, competitors, inventory, marketing and a great many things Priceflag cannot observe. We may add, change or remove features as the product develops; if we materially reduce functionality you depend on, we will give you reasonable notice first.</p>
 
     <h3>Eligibility</h3>
     <p>You must be at least 18, capable of forming a binding contract, and operating a genuine business. You must have an active Shopify store and the authority to change prices on it.</p>
@@ -399,7 +440,7 @@
     <h3>Your Prices Remain Your Responsibility</h3>
     <p>This is the most important section on the page, so it is stated plainly.</p>
     <ul class="pf-list">
-      <li><strong>Every price is your decision.</strong> You choose the products, the candidate prices, how many of those products move at each stage, the stage schedule and the guardrail. Priceflag executes the configuration you approved. You remain solely responsible for what you charge and for every commercial consequence of it.</li>
+      <li><strong>Every price is your decision.</strong> You choose the products, the candidate prices, how many of those products move at each stage, the stage schedule and the guardrail. Priceflag executes the configuration you approved or, for a collection where you turned on auto-changes, applies changes within the limits you set. You remain solely responsible for what you charge and for every commercial consequence of it.</li>
       <li><strong>Pricing-law compliance is yours.</strong> That covers consumer protection and price-display rules, reference-price and strikethrough-discount rules such as the EU Omnibus Directive and comparable US state laws, advertising standards, sales tax and VAT treatment, promotion and coupon law, marketplace and sales-channel policies, price-parity commitments you have made, and any obligation to price consistently across markets. We do not review your prices for legality and are not able to.</li>
       <li><strong>Personalised pricing has its own rules.</strong> Some jurisdictions require disclosure when a price has been set by automated means, and some prohibit differentiating price on protected characteristics. Configuring Priceflag in a way that touches those rules is your call and your responsibility.</li>
       <li><strong>Check what you launch.</strong> Confirm cost data, currency, market and product selection before an experiment starts. A wrong input becomes a wrong price on a live storefront within minutes.</li>
@@ -407,15 +448,15 @@
     </ul>
 
     <h3>What Automation Can and Cannot Promise</h3>
-    <p>Guardrail monitoring and automatic rollback are the features merchants rely on most, so it is worth being exact about what they depend on. Each of these can fail, and a failure means a price stays live when you expected it to be pulled.</p>
+    <p>Guardrail checks, pause notifications and putting a price back are the features merchants rely on most, so it is worth being exact about what they depend on. Each of these can fail. A failure can mean a rollout keeps going, or an old price is not put back, when you expected otherwise.</p>
     <ul class="pf-list">
-      <li><strong>Data has to arrive.</strong> Guardrails are evaluated from order data supplied by Shopify. If Shopify's API is slow, rate-limited, degraded or reporting late, a breach can go undetected until the data catches up.</li>
-      <li><strong>Our systems have to be running.</strong> An outage, a deploy problem or a bug on our side can delay or prevent a rollback.</li>
-      <li><strong>We have to still hold write access.</strong> If the app is uninstalled, its permissions revoked, or its access token invalidated, we cannot write any price at all &mdash; including a rollback.</li>
+      <li><strong>Data has to arrive.</strong> Guardrails are checked against order data supplied by Shopify. If Shopify's API is slow, rate-limited, degraded or reporting late, a drop below the forecast range can go undetected until the data catches up.</li>
+      <li><strong>Our systems have to be running.</strong> An outage, a deploy problem or a bug on our side can delay or prevent a pause, a notification, or a price change you asked for.</li>
+      <li><strong>We have to still hold write access.</strong> If the app is uninstalled, its permissions revoked, or its access token invalidated, we cannot write any price at all, including putting an old price back.</li>
       <li><strong>Small samples are noisy.</strong> On a small product selection a guardrail may fire on ordinary variance, or fail to fire on a real decline, simply because too few orders have come in. Confidence improves as more of the selection goes live; it is never absolute.</li>
       <li><strong>Other systems change prices too.</strong> Bulk edits, other apps, sales channels, discount rules and manual admin changes can move a price out from under an experiment. Priceflag records what it wrote, not what everything else wrote.</li>
     </ul>
-    <p>We commit to building these mechanisms carefully and to telling you when they fail. We do not and cannot warrant that a guardrail breach will always be detected or that a rollback will always execute.</p>
+    <p>We commit to building these mechanisms carefully and to telling you when they fail. These features are designed to work as described. We do not and cannot warrant that a drop below the forecast range will always be detected, or that a previous price will always be restored.</p>
 
     <h3>Prohibited Uses</h3>
     <p>You may not, and may not permit anyone else to:</p>
@@ -432,13 +473,13 @@
 
     <h3>Fees and Payments</h3>
     <ul class="pf-list">
-      <li>Shopify requires App Store apps to charge through Shopify's own billing, so your Priceflag subscription is billed by Shopify alongside your Shopify invoice. We never see your card.</li>
-      <li>The plan, price and any free trial are shown in our Shopify App Store listing and again in the app before you subscribe. Those screens are authoritative.</li>
-      <li>Subscriptions renew automatically until cancelled. Cancellation takes effect at the end of the current billing period, and you keep access until then.</li>
+      <li>Priceflag does not bill through Shopify yet. Free price reviews are free. Any fees during a pilot are agreed with you in writing.</li>
+      <li>Once the app is listed, billing may run through Shopify's own billing, alongside your Shopify invoice, and we would never see your card. The plan, price and any free trial would then be shown in our Shopify App Store listing and again in the app before you subscribe. Those screens would be authoritative.</li>
+      <li>Once billing runs through Shopify, subscriptions renew automatically until cancelled. Cancellation takes effect at the end of the current billing period, and you keep access until then.</li>
       <li>Fees are non-refundable except where the law requires otherwise or we agree in writing.</li>
       <li>Prices exclude taxes. You are responsible for any sales, use, VAT or similar tax, other than tax on our income.</li>
       <li>We may change our prices with at least 30 days' notice before your next renewal. If you do not want the new price, cancel before it takes effect.</li>
-      <li>If a charge fails we may suspend the service after reasonable notice. <strong>Suspension does not undo prices already live on your store</strong>, and it stops guardrail monitoring. You remain responsible for whatever is live.</li>
+      <li>If a charge fails we may suspend the service after reasonable notice. <strong>Suspension does not undo prices already live on your store</strong>, and it stops guardrail checks. You remain responsible for whatever is live.</li>
     </ul>
 
     <h3>Your Data</h3>
@@ -451,7 +492,7 @@
     <p>The service &mdash; the software, the forecasting models, the interface, the documentation, and the Priceflag name and marks &mdash; belongs to us and our licensors. We grant you a limited, non-exclusive, non-transferable, revocable right to use it while your account is in good standing and you comply with these terms. No rights are granted beyond that, and nothing here transfers ownership of anything.</p>
 
     <h3>Shopify and Other Dependencies</h3>
-    <p>Priceflag runs on Shopify and cannot work without it. Your use of Shopify is governed by your agreement with Shopify, not by us. We are not responsible for Shopify's availability, API behaviour, rate limits, data accuracy, deprecations or platform changes, and any of those can stop forecasts, rollouts, guardrail monitoring or automatic rollbacks from working.</p>
+    <p>Priceflag runs on Shopify and cannot work without it. Your use of Shopify is governed by your agreement with Shopify, not by us. We are not responsible for Shopify's availability, API behaviour, rate limits, data accuracy, deprecations or platform changes, and any of those can stop forecasts, rollouts, guardrail checks or putting a price back from working.</p>
     <ul class="pf-list">
       <li>You are responsible for keeping your Shopify account in good standing and for the permissions you grant the app.</li>
       <li><strong>Uninstalling revokes our access immediately.</strong> Any price live at that moment stays live, because write access is gone. Return your prices to where you want them <em>before</em> you uninstall.</li>
@@ -464,11 +505,11 @@
 
     <h3>Disclaimer of Warranties</h3>
     <p>To the fullest extent the law permits, the service is provided <strong>&ldquo;as is&rdquo; and &ldquo;as available&rdquo;</strong>, without warranties of any kind, express, implied or statutory, including merchantability, fitness for a particular purpose, title, accuracy and non-infringement.</p>
-    <p>We do not warrant that the service will be uninterrupted, timely, secure or error-free; that any forecast will prove accurate; that a guardrail breach will always be detected; that a rollback will always execute or execute in time; or that using Priceflag will increase your revenue, margin or profit. Priceflag is a tool. It is not financial, tax, legal, accounting or investment advice. Some jurisdictions do not allow certain exclusions, so parts of this section may not apply to you.</p>
+    <p>We do not warrant that the service will be uninterrupted, timely, secure or error-free; that any forecast will prove accurate; that a drop below the forecast range will always be detected; that a previous price will always be restored, or restored in time; or that using Priceflag will increase your revenue, margin or profit. Priceflag is a tool. It is not financial, tax, legal, accounting or investment advice. Some jurisdictions do not allow certain exclusions, so parts of this section may not apply to you.</p>
 
     <h3>Limitation of Liability</h3>
     <p>To the fullest extent the law permits, neither party is liable for indirect, incidental, special, consequential, exemplary or punitive damages, or for lost profits, lost revenue, lost margin, lost sales, lost goodwill, business interruption or lost data, even if warned such losses were possible.</p>
-    <p>Our total aggregate liability arising out of or relating to these terms or the service will not exceed the greater of <span class="pf-fill">[LIABILITY CAP]</span> and the fees you paid us in the twelve months immediately before the event giving rise to the claim. Nothing here limits liability that cannot lawfully be limited, including for fraud, wilful misconduct, or death or personal injury caused by negligence. These limits reflect an allocation of risk that both parties accept, and the fees are set on that basis.</p>
+    <p>Our total aggregate liability arising out of or relating to these terms or the service will not exceed the greater of (a) the fees you paid Priceflag in the 12 months before the claim and (b) US$20. Nothing here limits liability that cannot lawfully be limited, including for fraud, wilful misconduct, or death or personal injury caused by negligence. These limits reflect an allocation of risk that both parties accept, and the fees are set on that basis.</p>
 
     <h3>Indemnification</h3>
     <p>You will defend, indemnify and hold harmless Priceflag and its officers, employees and agents against any third-party claim, and any resulting loss, liability, damages, cost and reasonable legal fees, arising from the prices you set, your use of the service, the data you connect to it, your breach of these terms, or your violation of any law or third-party right. We will notify you promptly of any such claim, give you reasonable control of the defence, and cooperate at your expense. You may not agree a settlement that imposes any obligation or admission on us without our written consent.</p>
@@ -478,7 +519,7 @@
       <li>These terms apply from your first use of the service until they are terminated.</li>
       <li>You may leave at any time by cancelling your plan and uninstalling the app from Shopify.</li>
       <li>We may suspend or terminate access for breach, non-payment, legal risk or prolonged inactivity &mdash; with notice where practical, and immediately where the circumstances require it.</li>
-      <li><strong>Settle your prices before you leave.</strong> Termination and uninstall both stop guardrail monitoring and automatic rollback. Whatever price is live at that moment stays live on your storefront until you change it yourself in Shopify. There is no automatic restore on exit.</li>
+      <li><strong>Settle your prices before you leave.</strong> Termination and uninstall both stop guardrail checks and our ability to put a price back. Whatever price is live at that moment stays live on your storefront until you change it yourself in Shopify. There is no automatic restore on exit.</li>
       <li>On termination your right to use the service ends, and we handle your data as set out above. The sections on your prices, automation, your data, intellectual property, disclaimers, liability, indemnification and governing law survive termination, along with any other provision that by its nature should.</li>
     </ul>
 
@@ -486,7 +527,7 @@
     <p>We may update these terms as the service changes and as the law does. The date at the top reflects the current version. For material changes we will give at least 30 days' notice by email or in the app. Continuing to use the service after a change takes effect means you accept it; if you do not, cancel and uninstall before then.</p>
 
     <h3>Governing Law</h3>
-    <p>These terms are governed by the laws of <span class="pf-fill">[GOVERNING LAW AND VENUE]</span>, without regard to conflict-of-law rules, and the courts there have exclusive jurisdiction &mdash; subject to any mandatory rights you hold where you live or trade. Before filing anything, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> with a description of the dispute and what you want, and give us 30 days to work it out in good faith. That period does not limit either party from seeking urgent injunctive relief.</p>
+    <p>These terms are governed by the laws of the State of Delaware, without regard to conflict-of-law rules, and the state and federal courts located in San Francisco County, California have exclusive jurisdiction &mdash; subject to any mandatory rights you hold where you live or trade. Before filing anything, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a> with a description of the dispute and what you want, and give us 30 days to work it out in good faith. That period does not limit either party from seeking urgent injunctive relief.</p>
 
     <h3>General</h3>
     <ul class="pf-list">
@@ -496,11 +537,26 @@
       <li>You may not assign these terms without our written consent. We may assign them to a successor in a merger, acquisition or sale of substantially all assets.</li>
       <li>Neither party is liable for delay or failure caused by events beyond its reasonable control, including platform outages at Shopify.</li>
       <li>Nothing here creates a partnership, joint venture, agency or employment relationship, and there are no third-party beneficiaries.</li>
-      <li>Notices to you go to the email on your account. Notices to us go to the addresses below.</li>
+      <li>Notices to you go to the email on your account. Notices to us go to the address below.</li>
     </ul>
 
     <h3>Contact Us</h3>
-    <p>Questions about these terms, or anything on this page that looks wrong: <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Formal legal notices: Priceflag Syndicate, Inc., <span class="pf-fill">[REGISTERED ADDRESS]</span>.</p>
+    <p>Questions about these terms, or anything on this page that looks wrong: <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Formal legal notices: Priceflag Syndicate, Inc., a Delaware corporation, at <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
+    </section>
+
+    <hr class="pf-rule">
+
+    <section id="security" aria-labelledby="security-h">
+    <h2 id="security-h">Security and Data Access</h2>
+    <p class="pf-meta">A plain summary. The Privacy Policy above has the full detail.</p>
+    <ul class="pf-pairs">
+      <li><b>What we can access in Shopify</b><span>We ask Shopify for permission to read products and prices, write prices on the products you select, and read orders. Shopify shows you the exact list before you approve anything, and you can revoke it at any time from your Shopify admin.</span><!-- CONFIRM: exact scopes --></li>
+      <li><b>Where your data is stored</b><span>The Priceflag product and its data run on Amazon Web Services (AWS). The priceflag.org website is hosted separately on Vercel.</span></li>
+      <li><b>Encryption</b><span>Your data is encrypted in transit and at rest. Shopper IP addresses are encrypted and access-restricted.</span></li>
+      <li><b>Who can access it</b><span>Only the people at Priceflag who need it to run the service and support you. We do not sell your data or share it for advertising. We do not send your store data to third-party AI model providers.</span></li>
+      <li><b>Deletion</b><span>What we must keep to run the service (shop address, access token, staged prices and rollout history) is deleted within 30 days of uninstall or a deletion request. To ask, email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</span></li>
+    </ul>
+    </section>
 
   </main>
 

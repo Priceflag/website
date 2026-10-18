@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Priceflag</title>
-<meta name="description" content="Reach Priceflag Syndicate with questions, feedback or issues — the on duty engineers and how to write to each of them.">
+<meta name="description" content="Questions, feedback, or just want to nerd out about pricing? Email Nithin and Kabir, the two humans behind Priceflag, at hello@priceflag.org.">
 <link rel="canonical" href="https://priceflag.org/contact">
 <link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
 <script>document.documentElement.className+=" pf-boot";</script>
@@ -191,8 +191,36 @@
   }
   .pf-card p{margin:6px 0 0;font-size:15px;line-height:1.6;}
   .pf-card .pf-act{display:inline-block;margin-top:10px;font-weight:600;font-size:15px;}
+  /* who's who: round photo slot beside the name. The initial sits behind
+     the photo, so the card still looks finished if the image is missing. */
+  .pf-who{display:flex;align-items:flex-start;gap:14px;}
+  .pf-who > div{min-width:0;}
+  .pf-face{
+    position:relative;flex:none;
+    width:56px;height:56px;border-radius:50%;overflow:hidden;
+    background:var(--neon);color:#13200a;
+    display:inline-flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:24px;line-height:1;
+    box-shadow:0 0 0 2px var(--sheet),0 0 0 3px var(--rule);
+  }
+  .pf-face::before{content:attr(data-initial);}
+  .pf-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;}
+  .pf-emoji{display:inline-block;margin-left:2px;transition:transform .3s cubic-bezier(.22,1,.36,1);}
+  .pf-card:hover .pf-emoji{transform:rotate(-12deg) scale(1.15);}
+  .pf-card .pf-who p{margin-top:4px;}
+
+  .pf-inbox{
+    margin:22px 0 0;padding:16px 18px;
+    border:1px dashed rgba(15,24,48,0.28);border-radius:10px;
+    text-align:center;
+  }
+  .pf-inbox p{margin:0;}
+  .pf-inbox-line{font-family:var(--serif);font-size:19px;line-height:1.35;color:var(--head);}
+  .pf-inbox-sub{margin-top:4px !important;font-size:14.5px;}
+
   .pf-say{
-    display:inline-block;margin-top:12px;
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    min-height:44px;
     padding:9px 20px;
     background:var(--ink);color:var(--sheet);
     font-family:var(--serif);font-weight:400;font-size:15.5px;line-height:1.2;
@@ -293,21 +321,36 @@
   </div>
 
   <main id="main">
-    <p class="pf-lede">Priceflag Syndicate provides needed support for Priceflag. Contact us with questions, feedback, issues or anything else you need help with.</p>
+    <p class="pf-lede">Questions, feedback, or just want to nerd out about pricing? We read every email.</p>
 
-    <h2 class="pf-strong">On Duty Engineers</h2>
+    <h2 class="pf-strong">The two humans behind Priceflag 👋</h2>
     <ul class="pf-cards">
       <li class="pf-card">
-        <h3>Nithin &mdash; Cofounder</h3>
-        <p>Works on the product. Any issues with our product, let me know.</p>
-        <a class="pf-say" href="mailto:nithin@priceflag.org">Say hi</a>
+        <div class="pf-who">
+          <span class="pf-face" data-initial="N"><img src="uploads/founder-nithin.webp" alt="Nithin" width="96" height="96" loading="lazy" decoding="async" onerror="this.remove()"></span>
+          <div>
+            <h3>Nithin <span class="pf-emoji" aria-hidden="true">🛠️</span></h3>
+            <p>Builds the product. Something broken? Tell me.</p>
+          </div>
+        </div>
+        <a class="pf-say" href="mailto:hello@priceflag.org?subject=Bug%20report">Report a bug <span aria-hidden="true">🐛</span></a>
       </li>
       <li class="pf-card">
-        <h3>Kabir &mdash; Cofounder</h3>
-        <p>Works on sales, marketing and pricing. Any issues with our pricing or support.</p>
-        <a class="pf-say" href="mailto:kabir@priceflag.org">Say hi</a>
+        <div class="pf-who">
+          <span class="pf-face" data-initial="K"><img src="uploads/founder-kabir.webp" alt="Kabir" width="96" height="96" loading="lazy" decoding="async" onerror="this.remove()"></span>
+          <div>
+            <h3>Kabir <span class="pf-emoji" aria-hidden="true">🏷️</span></h3>
+            <p>Talks pricing all day. Questions about your prices, sales, or a demo? Ask me.</p>
+          </div>
+        </div>
+        <a class="pf-say" href="mailto:hello@priceflag.org?subject=Pricing%20question">Talk pricing <span aria-hidden="true">💬</span></a>
       </li>
     </ul>
+
+    <div class="pf-inbox">
+      <p class="pf-inbox-line"><span aria-hidden="true">📬</span> Email us! <a href="mailto:hello@priceflag.org">hello@priceflag.org</a></p>
+      <p class="pf-inbox-sub">We usually reply within a few hours.</p>
+    </div>
 
     <p>Anything about your data, or about the terms, is covered on the <a href="/legal">legal page</a>.</p>
 

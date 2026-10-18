@@ -73,6 +73,10 @@ window.initPfFaq = (function () {
 
   /* ---- content ------------------------------------------------------ */
 
+  /* An answer is either a plain string or an array of parts, where a part is
+     a string or { text, href } for an inline link. The FAQPage JSON-LD in
+     index.html carries the same questions with the parts joined as plain
+     text; keep the two in sync when editing either. */
   var FAQ = [
     {
       q: 'How does the forecast work, and how much data do I need?',
@@ -88,17 +92,59 @@ window.initPfFaq = (function () {
     },
     {
       q: 'What happens if a price change hurts sales?',
-      a: 'Priceflag checks your orders every day against the expected range. One bad day is noted. Two in a row crosses your limit, and it acts the way you chose: pause the rollout and email you, or restore the original prices automatically. Every change sits in your price journal next to the price it replaced, so Undo puts all of them back with one click and then reads Shopify back to confirm the catalog matches. Afterwards you get an audit trail of what changed, what triggered it and when.'
+      a: 'Priceflag checks daily orders on the products in a rollout against the forecast range. If orders fall below the range, the rollout pauses, so no more products get the new price. Priceflag notifies you and gives a recommendation, for example hold, continue, or put the old price back. You decide. Nothing is reverted automatically. Every change sits in your price journal next to the price it replaced, so putting the old prices back is one action, designed to restore the previous price and check it in Shopify. You also get an audit trail of what changed, what triggered it and when.'
     },
     {
       q: 'Does it change prices without asking me?',
-      a: 'Only if you decide it should. Priceflag only touches the products you pick. By default it proposes and you approve before anything is applied, including before a rollout reaches 100% of your selection. Autonomy is something you grant deliberately, per collection or per product, once you have watched the limits hold, and you can revoke it at any time.'
+      a: 'Not by default. Priceflag only touches the products you pick, and it proposes each change for you to approve before anything is applied. Autonomy per collection is opt-in: you can let Priceflag apply changes in a collection without asking each time, within limits you set. It is off by default, and you can turn it off at any time.'
+    },
+    {
+      q: 'How much does it cost?',
+      a: 'The price review is free right now. Pricing for the Priceflag app is not set yet. If you join a pilot before the app is live, any fee is agreed with you up front, before anything starts.'
+    },
+    {
+      q: 'What data do you read?',
+      a: [
+        'Your products, prices and orders, read through Shopify’s API, because that is what a forecast needs. The pricing model may also use shopper IP addresses, encrypted and access-restricted, only to understand demand such as approximate region. They are never used to show different shoppers different prices, and never sold. We don’t sell your data or share it for advertising, and we don’t keep copies of your order history beyond what a forecast needs. What we must keep to run the service is deleted within 30 days of uninstall. The details are in our ',
+        { text: 'privacy policy', href: '/legal#privacy' },
+        '.'
+      ]
+    },
+    {
+      q: 'How long does setup take?',
+      a: 'About five minutes. Sign up connects your Shopify store, with no code to write.'
+    },
+    /* CONFIRM: subscriptions answer (founder to check before launch) */
+    {
+      q: 'Do you work with subscriptions?',
+      a: 'Not yet. Today Priceflag forecasts prices for one-time product purchases. Subscription pricing isn’t supported yet.'
     },
     {
       q: 'What happens to my prices if I uninstall?',
       a: 'Uninstalling removes our write access, so whatever price is live at that moment stays live. We do not roll anything back on the way out, because a silent rewrite of your catalog would be one more price change you never asked for. If you want the originals back, run Undo from your price journal before you uninstall, or ask us for your price history export and restore them yourself.'
     }
   ];
+
+  /* plain-text form of an answer (used for the JSON-LD sync check) */
+  function answerText(a) {
+    if (typeof a === 'string') return a;
+    var out = '';
+    for (var i = 0; i < a.length; i++) out += typeof a[i] === 'string' ? a[i] : a[i].text;
+    return out;
+  }
+
+  function buildAnswer(a) {
+    var p = el('p', 'pff-a');
+    if (typeof a === 'string') { p.textContent = a; return p; }
+    for (var i = 0; i < a.length; i++) {
+      var part = a[i];
+      if (typeof part === 'string') { p.appendChild(document.createTextNode(part)); continue; }
+      var link = el('a', 'pff-link', part.text);
+      link.href = part.href;
+      p.appendChild(link);
+    }
+    return p;
+  }
 
   /* ---- small helpers ----------------------------------------------- */
 
@@ -118,6 +164,7 @@ window.initPfFaq = (function () {
     '  font-family:\'Inter\',system-ui,\'Helvetica Neue\',Arial,sans-serif;',
     '  -webkit-font-smoothing:antialiased;position:relative;z-index:1;}',
     '.pff *,.pff *::before,.pff *::after{box-sizing:border-box;}',
+    '.pff{scroll-margin-top:var(--pf-nav-h,64px);}',
     /* goldsand rhythm: 1200px content, 64px/24px mobile → 112px/40px desktop.
        The tall rhythm is gated on height as well as width: an iPhone held
        sideways is 844x390, which clears a width-only 768px breakpoint but
@@ -203,6 +250,10 @@ window.initPfFaq = (function () {
     '.pff-a{margin:0;font-size:clamp(14.5px,1.1vw,16px);font-weight:300;',
     '  line-height:1.62;letter-spacing:-0.003em;',
     '  color:rgba(243,236,222,.66);text-wrap:pretty;}',
+    '.pff-link{color:#f3ecde;text-decoration:underline;text-underline-offset:3px;',
+    '  text-decoration-color:rgba(243,236,222,.4);transition:text-decoration-color .25s ' + EASE + ';}',
+    '.pff-link:hover{text-decoration-color:#d8f24b;}',
+    '.pff-link:focus-visible{outline:2px solid rgba(216,242,75,.85);outline-offset:2px;border-radius:2px;}',
 
     /* ---------- narrow ---------- */
     '@media (max-width:640px){',
@@ -307,7 +358,11 @@ window.initPfFaq = (function () {
 
     /* ---------- DOM ---------- */
     var sec = el('section', 'pff');
-    sec.setAttribute('data-screen-label', 'Platforms & FAQ');
+    sec.setAttribute('data-screen-label', 'FAQ');
+    // /#faq from another page: the section is built at runtime, after the
+    // browser has already looked for the fragment, so it gets an id here
+    // and a late scroll below.
+    if (!document.getElementById('faq')) sec.id = 'faq';
 
     var wrap = el('div', 'pff-wrap');
     sec.appendChild(wrap);
@@ -317,7 +372,7 @@ window.initPfFaq = (function () {
     grid.appendChild(buildChrome(
       'FAQ',
       'Questions worth asking',
-      'The six things merchants ask us before they install. Short answers, no hedging.'
+      'What merchants ask us before they connect a store. Short answers, no hedging.'
     ));
 
     var list = el('ul', 'pff-list');
@@ -346,7 +401,7 @@ window.initPfFaq = (function () {
         panel.setAttribute('aria-labelledby', btnId);
         panel.hidden = true;
         var inner = el('div', 'pff-panel-inner');
-        inner.appendChild(el('p', 'pff-a', FAQ[i].a));
+        inner.appendChild(buildAnswer(FAQ[i].a));
         panel.appendChild(inner);
 
         row.appendChild(btn);
@@ -363,6 +418,14 @@ window.initPfFaq = (function () {
     bSec.appendChild(grid);
     wrap.appendChild(bSec);
     host.appendChild(sec);
+
+    // Arrived on /#faq: the fragment had nothing to land on at load, so
+    // scroll once the sections above have had a moment to lay out.
+    if (sec.id === 'faq' && location.hash === '#faq') {
+      later(function () {
+        if (!destroyed && location.hash === '#faq') sec.scrollIntoView({ block: 'start' });
+      }, 400);
+    }
 
     /* ---------- panel mechanics ---------- */
 
@@ -538,5 +601,6 @@ window.initPfFaq = (function () {
   }
 
   initPfFaq.CFG = CFG;          // tunables, reachable without a second global
+  initPfFaq.FAQ = FAQ.map(function (f) { return { q: f.q, a: answerText(f.a) }; });
   return initPfFaq;
 })();

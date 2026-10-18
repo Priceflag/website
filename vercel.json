@@ -8,6 +8,10 @@
   ],
 
   "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/legal.html", "destination": "/legal", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
     {
       "source": "/",
       "has": [{ "type": "host", "value": "signin.priceflag.org" }],

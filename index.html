@@ -109,7 +109,6 @@
 <script src="./sections/pf-workflow.js" defer></script>
 <script src="./sections/pf-faq.js" defer></script>
 <script src="./sections/pf-hero-logos.js" defer></script>
-<script src="./sections/pf-waitlist.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -805,7 +804,6 @@
     <div ref="{{ simRef }}"      data-pf-section="sim"></div>
     <div ref="{{ workflowRef }}" data-pf-section="workflow"></div>
     <div ref="{{ faqRef }}"      data-pf-section="faq"></div>
-    <div ref="{{ waitlistRef }}" data-pf-section="waitlist"></div>
   </section>
 
   <section data-screen-label="Footer" class="pf-foot" role="contentinfo">
@@ -867,7 +865,6 @@ class Component extends DCLogic {
   workflowRef = React.createRef();
   faqRef = React.createRef();
   heroLogosRef = React.createRef(); heroCardRef = React.createRef();
-  waitlistRef = React.createRef();
 
   /* Every scroll tunable in one place. */
   FX = {
@@ -1061,7 +1058,6 @@ class Component extends DCLogic {
     switch (key) {
       case 'top':      return 0;
       case 'bottom':   return document.documentElement.scrollHeight;
-      case 'waitlist': return this._navTarget(this.waitlistRef.current);
       case 'about':    return this._navTarget(this.statementTextRef.current);
       case 'demo':     return this._simTarget();
       case 'workflow':
@@ -1223,7 +1219,6 @@ class Component extends DCLogic {
       ['initPfDemo', this.simRef],
       ['initPfWorkflow', this.workflowRef],
       ['initPfFaq', this.faqRef],
-      ['initPfWaitlist', this.waitlistRef],
       ['initPfHeroLogos', this.heroLogosRef]
     ];
     this.tryMountSections();
@@ -1277,9 +1272,8 @@ class Component extends DCLogic {
       statementTextRef: this.statementTextRef, footerInnerRef: this.footerInnerRef,
       compareRef: this.compareRef, simRef: this.simRef,
       workflowRef: this.workflowRef,
-      faqRef: this.faqRef, waitlistRef: this.waitlistRef,
-      heroLogosRef: this.heroLogosRef, heroCardRef: this.heroCardRef,
-      goJoin: () => this.goTo('waitlist')
+      faqRef: this.faqRef,
+      heroLogosRef: this.heroLogosRef, heroCardRef: this.heroCardRef
     };
   }
 }

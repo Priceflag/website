@@ -596,102 +596,144 @@
   /* ------------------------------------------------------------------
      Animation Controller
      ------------------------------------------------------------------ */
+  function hideEl(el) {
+    if (el._currentAnim) {
+      try { el._currentAnim.cancel(); } catch (e) {}
+      el._currentAnim = null;
+    }
+    var type = el.getAttribute('data-anim');
+    if (type === 'draw') {
+      el.style.opacity = '0';
+      el.style.strokeDasharray = '1';
+      el.style.strokeDashoffset = '1';
+    } else if (type === 'pop') {
+      el.style.opacity = '0';
+      el.style.transform = 'scale(0.4)';
+    } else if (type === 'rise') {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(10px)';
+    } else if (type === 'fade') {
+      el.style.opacity = '0';
+    }
+  }
+
+  function showEl(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+    if (el.getAttribute('pathLength') === '1') {
+      el.style.strokeDashoffset = '0';
+      el.style.strokeDasharray = '1';
+    }
+  }
+
+  function animateEl(el, delay) {
+    var aType = el.getAttribute('data-anim');
+    var dur = parseFloat(el.getAttribute('data-dur') || '0.5') * 1000;
+    var keyframes = null;
+    var easing = EASE_FADE;
+
+    if (aType === 'draw') {
+      keyframes = [
+        { strokeDashoffset: '1', opacity: 0 },
+        { strokeDashoffset: '1', opacity: 1, offset: 0.01 },
+        { strokeDashoffset: '0', opacity: 1 }
+      ];
+      easing = EASE_DRAW;
+    } else if (aType === 'pop') {
+      keyframes = [
+        { transform: 'scale(0.4)', opacity: 0 },
+        { transform: 'scale(1)', opacity: 1 }
+      ];
+      easing = EASE_POP;
+    } else if (aType === 'rise') {
+      keyframes = [
+        { transform: 'translateY(10px)', opacity: 0 },
+        { transform: 'translateY(0)', opacity: 1 }
+      ];
+      easing = EASE_RISE;
+    } else if (aType === 'fade') {
+      keyframes = [{ opacity: 0 }, { opacity: 1 }];
+    }
+    if (!keyframes) return;
+    try {
+      el._currentAnim = el.animate(keyframes, {
+        delay: delay, duration: dur, easing: easing, fill: 'forwards'
+      });
+    } catch (e) {
+      showEl(el);
+    }
+  }
+
+  /* Scroll-driven choreography. Each piece of the timeline animates when it
+     scrolls into view, so the diagram builds as you move down it. A piece
+     that drops back below the viewport (you scrolled up) is reset, so it
+     plays again the next time you come down. Pieces that leave off the top
+     stay drawn. Pieces entering together keep their authored order.
+     Positions come from getBBox(), not getBoundingClientRect(): some pieces
+     live inside <mask>, where the client rect is always empty. */
   function runChoreography(root, isReducedMotion) {
-    var animElements = root.querySelectorAll('[data-anim]');
-    var activeAnimations = [];
+    var els = root.querySelectorAll('[data-anim]');
+    var win = root.ownerDocument.defaultView || window;
+    var i;
+    if (isReducedMotion) {
+      for (i = 0; i < els.length; i++) showEl(els[i]);
+      return function () {};
+    }
+    for (i = 0; i < els.length; i++) { els[i]._shown = false; hideEl(els[i]); }
 
-    // Reset all elements first
-    for (var i = 0; i < animElements.length; i++) {
-      var el = animElements[i];
-      if (el._currentAnim) {
-        el._currentAnim.cancel();
-        el._currentAnim = null;
-      }
-      if (isReducedMotion) {
-        el.style.opacity = '1';
-        el.style.transform = 'none';
-        if (el.getAttribute('pathLength') === '1') {
-          el.style.strokeDashoffset = '0';
-          el.style.strokeDasharray = '1';
-        }
-        continue;
-      }
+    var STAGGER = 120;
+    var LINE = 0.88; // a piece plays once its top passes 88% of the viewport height
 
-      var type = el.getAttribute('data-anim');
-      if (type === 'draw') {
-        el.style.opacity = '0';
-        el.style.strokeDasharray = '1';
-        el.style.strokeDashoffset = '1';
-      } else if (type === 'pop') {
-        el.style.opacity = '0';
-        el.style.transform = 'scale(0.4)';
-      } else if (type === 'rise') {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(10px)';
-      } else if (type === 'fade') {
-        el.style.opacity = '0';
-      }
+    function pieceTop(el) {
+      var svg = el.ownerSVGElement;
+      if (!svg) return el.getBoundingClientRect().top;
+      var r = svg.getBoundingClientRect();
+      if (!r.height) return null; // this SVG is the hidden breakpoint variant
+      var vb = svg.viewBox && svg.viewBox.baseVal;
+      var scale = vb && vb.height ? r.height / vb.height : 1;
+      var b;
+      try { b = el.getBBox(); } catch (e) { return r.top; }
+      return r.top + (b.y - (vb ? vb.y : 0)) * scale;
     }
 
-    if (isReducedMotion) return function () {};
-
-    for (var j = 0; j < animElements.length; j++) {
-      (function (element) {
-        var aType = element.getAttribute('data-anim');
-        var delay = parseFloat(element.getAttribute('data-delay') || '0') * 1000;
-        var dur   = parseFloat(element.getAttribute('data-dur') || '0.5') * 1000;
-
-        var keyframes = null;
-        var easing = EASE_FADE;
-
-        if (aType === 'draw') {
-          keyframes = [
-            { strokeDashoffset: '1', opacity: 0 },
-            { strokeDashoffset: '1', opacity: 1, offset: 0.01 },
-            { strokeDashoffset: '0', opacity: 1 }
-          ];
-          easing = EASE_DRAW;
-        } else if (aType === 'pop') {
-          keyframes = [
-            { transform: 'scale(0.4)', opacity: 0 },
-            { transform: 'scale(1)', opacity: 1 }
-          ];
-          easing = EASE_POP;
-        } else if (aType === 'rise') {
-          keyframes = [
-            { transform: 'translateY(10px)', opacity: 0 },
-            { transform: 'translateY(0)', opacity: 1 }
-          ];
-          easing = EASE_RISE;
-        } else if (aType === 'fade') {
-          keyframes = [
-            { opacity: 0 },
-            { opacity: 1 }
-          ];
-          easing = EASE_FADE;
+    function check() {
+      var vh = win.innerHeight || 1;
+      var entering = [];
+      for (var k = 0; k < els.length; k++) {
+        var el = els[k];
+        var top = pieceTop(el);
+        if (top === null) continue;
+        if (!el._shown && top < vh * LINE) {
+          el._shown = true;
+          entering.push(el);
+        } else if (el._shown && top > vh) {
+          el._shown = false;
+          hideEl(el);
         }
-
-        if (keyframes) {
-          try {
-            var anim = element.animate(keyframes, {
-              delay: delay,
-              duration: dur,
-              easing: easing,
-              fill: 'forwards'
-            });
-            element._currentAnim = anim;
-            activeAnimations.push(anim);
-          } catch (e) {
-            element.style.opacity = '1';
-            element.style.transform = 'none';
-          }
-        }
-      })(animElements[j]);
+      }
+      entering.sort(function (a, b) {
+        return parseFloat(a.getAttribute('data-delay') || '0') - parseFloat(b.getAttribute('data-delay') || '0');
+      });
+      // A fast scroll can bring many pieces in at once; keep the whole group under ~1.2s.
+      var step = entering.length > 1 ? Math.min(STAGGER, 1200 / entering.length) : 0;
+      for (var m = 0; m < entering.length; m++) animateEl(entering[m], m * step);
     }
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      win.requestAnimationFrame(function () { ticking = false; check(); });
+    }
+    win.addEventListener('scroll', onScroll, { passive: true });
+    win.addEventListener('resize', onScroll);
+    check();
 
     return function cancelAll() {
-      for (var k = 0; k < activeAnimations.length; k++) {
-        try { activeAnimations[k].cancel(); } catch (e) {}
+      win.removeEventListener('scroll', onScroll);
+      win.removeEventListener('resize', onScroll);
+      for (var j = 0; j < els.length; j++) {
+        if (els[j]._currentAnim) { try { els[j]._currentAnim.cancel(); } catch (e) {} }
       }
     };
   }
@@ -749,7 +791,6 @@
     ].join('');
 
     var cancelCurrent = null;
-    var hasTriggered = false;
     var sectionEl = root.querySelector('.pfw-section');
 
     function play() {
@@ -861,21 +902,8 @@
     win.addEventListener('resize', onScrollUpdate);
     onScrollUpdate();
 
-    // Scroll trigger via IntersectionObserver
-    var observer = null;
-    if (win.IntersectionObserver) {
-      observer = new win.IntersectionObserver(function (entries) {
-        for (var i = 0; i < entries.length; i++) {
-          if (entries[i].isIntersecting && !hasTriggered) {
-            hasTriggered = true;
-            play();
-          }
-        }
-      }, { threshold: 0.15 });
-      observer.observe(root);
-    } else {
-      play();
-    }
+    // Each timeline piece is observed on its own; see runChoreography.
+    play();
 
     return function cleanup() {
       if (cancelCurrent) cancelCurrent();
@@ -884,7 +912,6 @@
       win.removeEventListener('resize', fitAll);
       win.clearTimeout(fitTimer);
       rootEl.style.removeProperty('--pf-bg');
-      if (observer) observer.disconnect();
       root.innerHTML = '';
     };
   }

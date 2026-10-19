@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("cd-boot");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Priceflag | Pricing without the guesswork</title>
 <meta name="description" content="Priceflag is built by Nithin and Kabir, who ran online stores and priced by guesswork. Forecast a price change, roll it out slowly, stay in control.">
@@ -87,6 +88,7 @@
 <body>
 <a class="cd-skip" href="#main">Skip to content</a>
 <div class="cd-bg" aria-hidden="true"><img src="/uploads/blur.webp" srcset="/uploads/blur-960.webp 960w, /uploads/blur.webp 1920w" sizes="100vw" alt="" width="1920" height="1082" fetchpriority="high" decoding="async"></div>
+<div class="cd-grain" aria-hidden="true"></div>
 
 <main class="cd-card" id="main">
   <div class="cd-head">
@@ -136,5 +138,22 @@
     <a class="cd-pill" href="/contact">Talk to us</a>
   </div>
 </main>
+<script>
+/* Intro: wait for the painting so it never pops in, then run the sequence. */
+(function () {
+  var root = document.documentElement, img = document.querySelector('.cd-bg img'), started = false;
+  function go() {
+    if (started) return; started = true;
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      root.classList.remove('cd-boot'); root.classList.add('cd-go');
+      setTimeout(function () { root.classList.add('cd-done'); }, 2400);
+    }); });
+    setTimeout(function () { root.classList.remove('cd-boot'); root.classList.add('cd-done'); }, 3200);
+  }
+  if (!img || (img.complete && img.naturalWidth)) go();
+  else { img.addEventListener('load', go); img.addEventListener('error', go); if (img.decode) img.decode().then(go, go); }
+  setTimeout(go, 1600);
+})();
+</script>
 </body>
 </html>

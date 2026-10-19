@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("cd-boot");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Legal and trust | Priceflag privacy, terms and security</title>
 <meta name="description" content="Priceflag privacy policy, terms of service and security practices in plain English: what store data we read, how it is protected, and when it is deleted.">
@@ -67,6 +68,7 @@
 <body>
 <a class="cd-skip" href="#main">Skip to content</a>
 <div class="cd-bg" aria-hidden="true"><img src="/uploads/blur.webp" srcset="/uploads/blur-960.webp 960w, /uploads/blur.webp 1920w" sizes="100vw" alt="" width="1920" height="1082" fetchpriority="high" decoding="async"></div>
+<div class="cd-grain" aria-hidden="true"></div>
 
 <main class="cd-card" id="main">
   <div class="cd-head">
@@ -522,6 +524,23 @@
   window.addEventListener('popstate', function () { var p = parse(location.hash); go(p.name, p.anchor); });
   var first = parse(location.hash);
   if (first.name) { doc(first.name).hidden = false; title.textContent = label(first.name); settle(first.name); scrollTo(first.name, first.anchor); }
+})();
+</script>
+<script>
+/* Intro: wait for the painting so it never pops in, then run the sequence. */
+(function () {
+  var root = document.documentElement, img = document.querySelector('.cd-bg img'), started = false;
+  function go() {
+    if (started) return; started = true;
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      root.classList.remove('cd-boot'); root.classList.add('cd-go');
+      setTimeout(function () { root.classList.add('cd-done'); }, 2400);
+    }); });
+    setTimeout(function () { root.classList.remove('cd-boot'); root.classList.add('cd-done'); }, 3200);
+  }
+  if (!img || (img.complete && img.naturalWidth)) go();
+  else { img.addEventListener('load', go); img.addEventListener('error', go); if (img.decode) img.decode().then(go, go); }
+  setTimeout(go, 1600);
 })();
 </script>
 </body>

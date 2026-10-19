@@ -1,26 +1,84 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-
   "rewrites": [
-    { "source": "/about",   "destination": "/about.html" },
-    { "source": "/legal",   "destination": "/legal.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/legal",
+      "destination": "/legal.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/security",
+      "destination": "/security.html"
+    }
   ],
-
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/about.html", "destination": "/about", "permanent": true },
-    { "source": "/legal.html", "destination": "/legal", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/legal.html",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/security.html",
+      "destination": "/security",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "signin.priceflag.org" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "signin.priceflag.org"
+        }
+      ],
       "destination": "https://dashboard.priceflag.org/signin",
       "permanent": true
     },
-    { "source": "/signin.html", "destination": "https://dashboard.priceflag.org/signin", "permanent": true }
+    {
+      "source": "/signin.html",
+      "destination": "https://dashboard.priceflag.org/signin",
+      "permanent": true
+    }
   ],
-
   "headers": [
     {
       "source": "/signin.html",
@@ -29,9 +87,18 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'none'; img-src 'self' https://priceflag.org data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; connect-src https://dashboard.priceflag.org; form-action 'none'; base-uri 'none'; frame-ancestors 'none'"
         },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
       ]
     }
   ]

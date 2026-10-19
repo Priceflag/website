@@ -106,7 +106,7 @@ window.initPfFaq = (function () {
       q: 'What data do you read?',
       a: [
         'Your products, prices and orders, read through Shopify’s API, because that is what a forecast needs. The pricing model may also use shopper IP addresses, encrypted and access-restricted, only to understand demand such as approximate region. They are never used to show different shoppers different prices, and never sold. We don’t sell your data or share it for advertising, and we don’t keep copies of your order history beyond what a forecast needs. What we must keep to run the service is deleted within 30 days of uninstall. The details are in our ',
-        { text: 'privacy policy', href: '/legal#privacy' },
+        { text: 'privacy policy', href: '/privacy' },
         '.'
       ]
     },

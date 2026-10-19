@@ -104,15 +104,13 @@ a.cd-tile:hover{border-color:#dcd9d2;background:#fbfaf8;}
 .cd-doc strong{color:var(--cd-ink);font-weight:600;}
 .cd-note{margin:18px 0 0;font-size:13px;color:var(--cd-muted);}
 
-/* tile to page morph (View Transitions) */
-::view-transition-group(cd-morph){animation-duration:.48s;animation-timing-function:cubic-bezier(.22,1,.36,1);}
-::view-transition-old(cd-morph),::view-transition-new(cd-morph){height:100%;object-fit:cover;object-position:top;}
-::view-transition-old(cd-morph){animation:cd-out .2s ease both;}
-::view-transition-new(cd-morph){animation:cd-in .34s ease .1s both;}
-::view-transition-old(cd-title),::view-transition-new(cd-title){animation-duration:.3s;}
-@keyframes cd-out{to{opacity:0;}}
-@keyframes cd-in{from{opacity:0;}}
-.cd-head h1{view-transition-name:cd-title;}
+/* stage: the hub and each policy are stacked panes; each scrolls on its own */
+.cd-stage{position:relative;flex:1 1 auto;min-height:0;}
+.cd-pane{position:absolute;inset:0;}
+.cd-pane[hidden]{display:none;}
+.cd-doc{z-index:1;will-change:clip-path;}
+.cd-doc-in{will-change:opacity,transform;}
+#hub{transform-origin:50% 40%;}
 
 @media (max-width:520px){
   :root{--cd-gap:10px;}
@@ -120,5 +118,4 @@ a.cd-tile:hover{border-color:#dcd9d2;background:#fbfaf8;}
 }
 @media (prefers-reduced-motion:reduce){
   .cd-tile,.cd-pill{transition:none;}
-  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none !important;}
 }

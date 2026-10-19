@@ -29,8 +29,8 @@
     <a class="cd-back" href="/" aria-label="Back to priceflag.org" data-back><span aria-hidden="true">&larr;</span></a>
     <h1 data-title>Legal &amp; trust</h1>
   </div>
-  <div class="cd-body" data-body>
-    <div id="hub">
+  <div class="cd-stage" data-stage>
+    <div class="cd-body cd-pane" id="hub">
       <p class="cd-intro">Our policies in plain English, how we keep your store data safe, and how to reach us if something's unclear.</p>
       <nav class="cd-tiles" aria-label="Legal pages">
       <a class="cd-tile" href="#privacy" data-doc="privacy">
@@ -56,7 +56,7 @@
       </nav>
       <p class="cd-note">These policies are drafts and not in force yet. Questions in the meantime: <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
     </div>
-    <article class="cd-doc" id="doc-privacy" data-title="Privacy Policy" aria-label="Privacy Policy" hidden>
+    <article class="cd-body cd-pane cd-doc" id="doc-privacy" data-title="Privacy Policy" aria-label="Privacy Policy" hidden><div class="cd-doc-in">
   <p class="pg-updated">Effective September 1, 2026</p>
   <p class="pg-draft"><strong>Draft, not in force yet.</strong> A lawyer still needs to review this. Questions? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
 
@@ -194,8 +194,8 @@
 
   <h2 id="privacy-contact">Contact</h2>
   <p>Questions about this policy, or want to make a privacy request? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Signed data processing agreements, copies of our Standard Contractual Clauses, and the current sub-processor list are available from Priceflag Syndicate, Inc., a Delaware corporation, at the same address.</p>
-    </article>
-    <article class="cd-doc" id="doc-terms" data-title="Terms of Service" aria-label="Terms of Service" hidden>
+    </div></article>
+    <article class="cd-body cd-pane cd-doc" id="doc-terms" data-title="Terms of Service" aria-label="Terms of Service" hidden><div class="cd-doc-in">
   <p class="pg-updated">Effective September 1, 2026</p>
   <p class="pg-draft"><strong>Draft, not in force yet.</strong> A lawyer still needs to review this. Questions? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
 
@@ -337,8 +337,8 @@
 
   <h2 id="terms-contact">Contact</h2>
   <p>Questions about these terms, or spot something that looks wrong? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>. Formal legal notices go to Priceflag Syndicate, Inc., a Delaware corporation, at <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
-    </article>
-    <article class="cd-doc" id="doc-security" data-title="Security" aria-label="Security" hidden>
+    </div></article>
+    <article class="cd-body cd-pane cd-doc" id="doc-security" data-title="Security" aria-label="Security" hidden><div class="cd-doc-in">
   <p class="pg-updated">Effective September 1, 2026</p>
   <p class="pg-draft"><strong>Draft, not in force yet.</strong> A lawyer still needs to review this. Questions? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
 
@@ -370,55 +370,92 @@
 
   <h2 id="security-contact">Questions</h2>
   <p>Security questions, or something that looks off? Email <a href="mailto:hello@priceflag.org">hello@priceflag.org</a>.</p>
-    </article>
+    </div></article>
   </div>
 </main>
 
 <script>
-/* Tiles morph into their policy inside the same card (View Transitions),
-   and back again. Each policy also has a link: /legal#privacy, #terms,
-   #security, and section links like #privacy-cookies. */
+/* A tile grows into its policy inside the same card: the policy pane is
+   revealed with a clip-path that starts as the tile's exact shape and opens
+   to the full card body, while the tiles fade back. Back runs it in reverse.
+   Each policy has a link: /legal#privacy, #terms, #security, and section
+   links like #privacy-cookies. */
 (function () {
+  var stage = document.querySelector('[data-stage]');
   var hub = document.getElementById('hub');
-  var body = document.querySelector('[data-body]');
   var title = document.querySelector('[data-title]');
   var back = document.querySelector('[data-back]');
   var HUB_TITLE = title.textContent;
-  var current = null; // null = hub
+  var NAMES = ['privacy', 'terms', 'security'];
+  var EASE = 'cubic-bezier(.22,1,.36,1)';
+  var current = null, busy = null;
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canAnimate = !reduce && typeof Element.prototype.animate === 'function';
 
-  function tile(name) { return document.querySelector('.cd-tile[data-doc="' + name + '"]'); }
-  function doc(name) { return document.getElementById('doc-' + name); }
+  function tile(n) { return document.querySelector('.cd-tile[data-doc="' + n + '"]'); }
+  function doc(n) { return document.getElementById('doc-' + n); }
   function parse(hash) {
-    var h = (hash || '').replace('#', '');
-    var name = h.split('-')[0];
-    if (!doc(name)) return { name: null, anchor: null };
-    return { name: name, anchor: h.indexOf('-') > 0 ? h : null };
+    var h = (hash || '').replace('#', ''), n = h.split('-')[0];
+    return doc(n) ? { name: n, anchor: h.indexOf('-') > 0 ? h : null } : { name: null, anchor: null };
   }
-  function paint(name, anchor) {
-    hub.hidden = !!name;
-    ['privacy', 'terms', 'security'].forEach(function (n) { doc(n).hidden = n !== name; });
-    title.textContent = name ? doc(name).getAttribute('data-title') : HUB_TITLE;
-    back.setAttribute('aria-label', name ? 'Back to Legal & trust' : 'Back to priceflag.org');
-    document.title = (name ? doc(name).getAttribute('data-title') : 'Legal & trust') + ' | Priceflag';
-    body.scrollTop = 0;
-    if (anchor) { var a = document.getElementById(anchor); if (a) a.scrollIntoView(); }
-    current = name;
+  function label(n) {
+    var t = n ? doc(n).getAttribute('data-title') : HUB_TITLE;
+    document.title = (n ? t : 'Legal & trust') + ' | Priceflag';
+    back.setAttribute('aria-label', n ? 'Back to Legal & trust' : 'Back to priceflag.org');
+    return t;
   }
-  function go(name, anchor) {
-    if (name === current) { if (anchor) paint(name, anchor); return; }
-    var opening = !!name;
-    var t = tile(opening ? name : current);
-    var page = body; // the card's fixed-size body, so the morph never spills past the card
-    if (!document.startViewTransition || reduce || !t) { paint(name, anchor); return; }
-    (opening ? t : page).style.viewTransitionName = 'cd-morph';
-    var vt = document.startViewTransition(function () {
-      (opening ? t : page).style.viewTransitionName = '';
-      paint(name, anchor);
-      (opening ? page : t).style.viewTransitionName = 'cd-morph';
-    });
-    vt.finished.then(clear, clear);
-    function clear() { t.style.viewTransitionName = ''; page.style.viewTransitionName = ''; }
+  function scrollTo(n, anchor) {
+    var pane = doc(n); pane.scrollTop = 0;
+    if (anchor) { var a = document.getElementById(anchor); if (a) pane.scrollTop = a.offsetTop - 16; }
+  }
+  function shape(n) {
+    var s = stage.getBoundingClientRect(), r = tile(n).getBoundingClientRect();
+    return 'inset(' + (r.top - s.top) + 'px ' + (s.right - r.right) + 'px ' + (s.bottom - r.bottom) + 'px ' + (r.left - s.left) + 'px round 18px)';
+  }
+  function swapTitle(text) {
+    if (!canAnimate) { title.textContent = text; return; }
+    title.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 140, easing: 'ease-out' }).onfinish = function () {
+      title.textContent = text;
+      title.animate([{ opacity: 0, transform: 'translateY(3px)' }, { opacity: 1, transform: 'none' }], { duration: 220, easing: EASE });
+    };
+  }
+  function settle(n) {
+    hub.hidden = !!n; hub.style.visibility = '';
+    NAMES.forEach(function (x) { doc(x).hidden = x !== n; });
+    current = n;
+  }
+
+  function open(n, anchor) {
+    var pane = doc(n), from = shape(n);
+    pane.hidden = false; scrollTo(n, anchor);
+    swapTitle(label(n));
+    if (!canAnimate) { settle(n); return; }
+    var inner = pane.firstElementChild;
+    busy = pane.animate([{ clipPath: from }, { clipPath: 'inset(0px 0px 0px 0px round 0px)' }], { duration: 520, easing: EASE });
+    inner.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 360, delay: 160, easing: EASE, fill: 'backwards' });
+    hub.animate([{ opacity: 1, transform: 'scale(1)' }, { opacity: 0, transform: 'scale(.985)' }], { duration: 300, easing: EASE, fill: 'forwards' });
+    busy.onfinish = function () { busy = null; hub.getAnimations().forEach(function (a) { a.cancel(); }); settle(n); };
+  }
+  function close() {
+    var n = current, pane = doc(n);
+    swapTitle(label(null));
+    if (!canAnimate) { settle(null); return; }
+    hub.hidden = false;
+    var to = shape(n), inner = pane.firstElementChild;
+    inner.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160, easing: 'ease-out', fill: 'forwards' });
+    hub.animate([{ opacity: 0, transform: 'scale(.985)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 420, delay: 120, easing: EASE, fill: 'backwards' });
+    busy = pane.animate([{ clipPath: 'inset(0px 0px 0px 0px round 0px)' }, { clipPath: to }], { duration: 460, easing: EASE, fill: 'forwards' });
+    busy.onfinish = function () {
+      busy = null; settle(null);
+      pane.getAnimations().forEach(function (a) { a.cancel(); });
+      inner.getAnimations().forEach(function (a) { a.cancel(); });
+    };
+  }
+  function go(n, anchor) {
+    if (busy) { busy.finish(); }
+    if (n === current) { if (n) scrollTo(n, anchor); return; }
+    if (n && current) { settle(null); }   // policy to policy: jump through the hub
+    if (n) open(n, anchor); else close();
   }
 
   document.addEventListener('click', function (e) {
@@ -440,7 +477,7 @@
   });
   window.addEventListener('popstate', function () { var p = parse(location.hash); go(p.name, p.anchor); });
   var first = parse(location.hash);
-  if (first.name) paint(first.name, first.anchor);
+  if (first.name) { doc(first.name).hidden = false; title.textContent = label(first.name); settle(first.name); scrollTo(first.name, first.anchor); }
 })();
 </script>
 </body>

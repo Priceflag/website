@@ -12,18 +12,6 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms.html"
-    },
-    {
-      "source": "/security",
-      "destination": "/security.html"
     }
   ],
   "redirects": [
@@ -48,19 +36,34 @@
       "permanent": true
     },
     {
-      "source": "/security.html",
-      "destination": "/security",
-      "permanent": true
+      "source": "/privacy",
+      "destination": "/legal#privacy",
+      "permanent": false
     },
     {
-      "source": "/terms.html",
-      "destination": "/terms",
-      "permanent": true
+      "source": "/terms",
+      "destination": "/legal#terms",
+      "permanent": false
+    },
+    {
+      "source": "/security",
+      "destination": "/legal#security",
+      "permanent": false
     },
     {
       "source": "/privacy.html",
-      "destination": "/privacy",
-      "permanent": true
+      "destination": "/legal#privacy",
+      "permanent": false
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/legal#terms",
+      "permanent": false
+    },
+    {
+      "source": "/security.html",
+      "destination": "/legal#security",
+      "permanent": false
     },
     {
       "source": "/",

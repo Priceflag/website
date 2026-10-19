@@ -3,495 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Priceflag</title>
-<meta name="description" content="Who builds Priceflag and why: a forecast before a price change, a rollout a few products at a time, and a guardrail that pauses and asks you. One price for every shopper.">
+<title>About | Priceflag</title>
+<meta name="description" content="Why we are building Priceflag: see what a price change will probably do before it goes live, then roll it out slowly so a bad call stays small.">
 <link rel="canonical" href="https://priceflag.org/about">
-<link rel="preload" as="image" href="uploads/summit-painting-3.webp" fetchpriority="high">
-<script>document.documentElement.className+=" pf-boot";</script>
-<link rel="icon" href="favicon.ico" sizes="48x48">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priceflag">
+<meta property="og:title" content="About | Priceflag">
+<meta property="og:description" content="Why we are building Priceflag: see what a price change will probably do before it goes live, then roll it out slowly so a bad call stays small.">
+<meta property="og:image" content="https://priceflag.org/og-v7.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="/uploads/blur.webp" imagesrcset="/uploads/blur-960.webp 960w, /uploads/blur.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/footer.css">
-<style>
-  :root{
-    --ink:#030818;           /* site background / dark button          */
-    --sheet:#f7f3ea;         /* the panel itself                       */
-    --text:#333c52;          /* body copy on the panel                 */
-    --head:#0f1830;          /* headings and lead-ins                  */
-    --rule:rgba(15,24,48,0.16);
-    --neon:#d8f24b;
-    --serif:'Hedvig Letters Serif',Georgia,Cambria,'Times New Roman',serif;
-    --sans:'Inter',system-ui,'Helvetica Neue',Arial,sans-serif;
-  }
-
-  *,*::before,*::after{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0;
-    background:var(--ink);
-    color:var(--text);
-    font-family:var(--sans);
-    font-size:16.5px;font-weight:400;line-height:1.7;
-    letter-spacing:-0.005em;
-    overflow-wrap:break-word;
-  }
-  /* The panel is bound to the first screen: it does not move, and only the
-     copy inside it travels. The page scrolls on to the footer below. svh
-     rather than vh so a phone's collapsing toolbar cannot push the button
-     off-screen. */
-  .pf-screen{
-    min-height:100vh;min-height:100svh;
-    height:100vh;height:100svh;
-    display:flex;align-items:center;justify-content:center;
-    padding:clamp(14px,3.5vh,34px) 14px;
-  }
-  ::selection{background:var(--neon);color:#071238;}
-
-  /* ---------- the painting ----------
-     A fixed layer rather than background-attachment:fixed, which iOS has
-     never scrolled smoothly. The panel scrolls over a picture that stays
-     put, which is the whole effect. */
-  .pf-bg{position:fixed;inset:0;z-index:-2;}
-  .pf-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
-  /* Just enough wash to sit the panel on something, and to stop the brightest
-     part of the sky competing with it. The picture is meant to stay readable. */
-  .pf-bg::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg,
-      rgba(3,8,24,0.34) 0%, rgba(3,8,24,0.16) 30%,
-      rgba(3,8,24,0.20) 70%, rgba(3,8,24,0.44) 100%);
-  }
-
-  .skip{
-    position:fixed;left:-9999px;top:0;z-index:50;
-    background:var(--neon);color:#13200a;
-    padding:10px 16px;border-radius:0 0 8px 0;
-    font-size:14px;font-weight:600;text-decoration:none;
-  }
-  .skip:focus{left:0;}
-
-  /* ---------- the panel ---------- */
-  .pf-sheet{
-    position:relative;
-    display:flex;flex-direction:column;
-    width:min(620px, 100%);
-    max-height:min(780px, 100%);
-    background:var(--sheet);
-    box-shadow:0 40px 90px -34px rgba(3,8,24,0.92),
-               0 2px 10px rgba(3,8,24,0.25);
-    /* The foot's three parts are declared once and the tear is their sum, so
-       the dashed rule, the punched notches and the button cannot drift apart
-       however the panel is resized. */
-    --cta-h:50px;
-    --foot-top:20px;
-    --foot-bottom:24px;
-    --tear:calc(var(--foot-top) + var(--cta-h) + var(--foot-bottom));
-    --notch:12px;
-  }
-  /* The notches are punched out of the panel so the painting shows through
-     them. Two mask layers intersect; where that is not supported the panel
-     simply keeps square edges and the dashed rule carries the idea alone. */
-  @supports ((-webkit-mask-composite:source-in) or (mask-composite:intersect)){
-    .pf-sheet{
-      -webkit-mask-image:
-        radial-gradient(var(--notch) at 0 calc(100% - var(--tear)), transparent 97%, #000),
-        radial-gradient(var(--notch) at 100% calc(100% - var(--tear)), transparent 97%, #000);
-              mask-image:
-        radial-gradient(var(--notch) at 0 calc(100% - var(--tear)), transparent 97%, #000),
-        radial-gradient(var(--notch) at 100% calc(100% - var(--tear)), transparent 97%, #000);
-      -webkit-mask-composite:source-in;
-              mask-composite:intersect;
-    }
-  }
-
-  /* ---------- panel header ---------- */
-  .pf-sheet-top{
-    flex:none;
-    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-    gap:12px;
-    /* Top inset matches the side inset, so the row sits in an even margin
-       rather than crowding the panel's edge. */
-    padding:clamp(18px,4vw,28px) clamp(18px,4vw,28px) 0;
-    /* The two flanking marks are different sizes, and the title only reads
-       as centred when their optical centres are the same distance in from
-       each edge. Declared here so the arrow can offset itself against the
-       hiker's width instead of guessing at it. */
-    --mark-w:2.7em;
-    --arrow-d:34px;
-  }
-  .pf-sheet-title{
-    grid-column:2;
-    margin:0;
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(21px,3.4vw,25px);line-height:1.2;letter-spacing:-0.01em;
-    color:var(--head);text-align:center;
-  }
-  .pf-arrow{
-    justify-self:start;
-    display:inline-flex;align-items:center;justify-content:center;
-    width:var(--arrow-d);height:var(--arrow-d);border-radius:50%;
-    /* Centres the 34px circle on the same inset the hiker centres on, so the
-       margin is half the difference between the two marks rather than a
-       number that happened to look right. */
-    margin-left:calc((var(--mark-w) - var(--arrow-d)) / 2);
-    color:var(--head);text-decoration:none;
-    transition:background-color .2s ease;
-  }
-  /* The glyph is sized on the span, not the link: --mark-w is set in em, and
-     an em on the link itself would resolve against the arrow's own type size
-     rather than the panel's, throwing the offset above out by 3px. */
-  .pf-arrow span{font-size:19px;line-height:1;}
-  .pf-arrow:hover{background:rgba(15,24,48,0.07);}
-  .pf-mark{
-    justify-self:end;
-    display:inline-flex;align-items:center;
-    color:var(--head);text-decoration:none;
-  }
-  .pf-hiker{
-    display:none;width:var(--mark-w);height:2.5em;margin-block:-0.35em;flex:none;
-    background-color:currentColor;
-    -webkit-mask:url(mark.svg) center/contain no-repeat;
-            mask:url(mark.svg) center/contain no-repeat;
-  }
-  @supports ((mask-image:url(mark.svg)) or (-webkit-mask-image:url(mark.svg))){
-    .pf-hiker{display:inline-block;}
-  }
-
-  /* ---------- panel body ---------- */
-  /* min-height:0 is what lets a flex child actually scroll rather than
-     growing the panel past its bound. */
-  main{
-    flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
-    padding:clamp(18px,3.4vw,24px) clamp(18px,4vw,28px) clamp(20px,3.4vw,26px);
-  }
-  main::-webkit-scrollbar{width:9px;}
-  main::-webkit-scrollbar-thumb{
-    background:rgba(15,24,48,0.20);border-radius:99px;
-    border:3px solid var(--sheet);}
-  main::-webkit-scrollbar-thumb:hover{background:rgba(15,24,48,0.32);}
-  main{scrollbar-width:thin;scrollbar-color:rgba(15,24,48,0.24) transparent;}
-
-  .pf-lede{margin:0;font-size:17px;line-height:1.65;color:var(--head);}
-  p{margin:15px 0 0;}
-  a{color:#3f4fb0;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
-  a:hover{color:var(--head);}
-  :focus-visible{outline:2px solid #3f4fb0;outline-offset:3px;border-radius:2px;}
-  strong{color:var(--head);font-weight:600;}
-
-  h2{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(20px,3vw,23px);line-height:1.25;letter-spacing:-0.01em;
-    color:var(--head);
-    margin:34px 0 0;
-  }
-
-  /* title + sentence pairs */
-  .pf-pairs{margin:14px 0 0;padding:0;list-style:none;}
-  .pf-pairs li{margin:16px 0 0;}
-  .pf-pairs b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
-  .pf-pairs span{display:block;margin-top:2px;font-size:15.5px;line-height:1.6;}
-
-  /* the numbered three — same title/sentence pair, with the count showing */
-  ol.pf-steps{margin:14px 0 0;padding-left:1.45em;}
-  ol.pf-steps li{margin:16px 0 0;}
-  ol.pf-steps li::marker{color:#8b93a8;font-weight:600;font-size:15.5px;}
-  ol.pf-steps b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
-  ol.pf-steps span{display:block;margin-top:2px;font-size:15.5px;line-height:1.6;}
-
-  ul.pf-list{margin:14px 0 0;padding-left:1.15em;}
-  ul.pf-list li{margin:9px 0 0;font-size:15.5px;line-height:1.6;}
-  ul.pf-list li::marker{color:#8b93a8;}
-
-  /* routed cards — one column, this panel is too narrow for two */
-  .pf-cards{margin:16px 0 0;padding:0;list-style:none;}
-  .pf-card{
-    margin:12px 0 0;padding:16px 18px;
-    border:1px solid var(--rule);border-radius:10px;
-    background:rgba(15,24,48,0.025);
-  }
-  .pf-card h3{
-    margin:0;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--head);
-  }
-  .pf-card p{margin:6px 0 0;font-size:15px;line-height:1.6;}
-  .pf-card .pf-act{display:inline-block;margin-top:10px;font-weight:600;font-size:15px;}
-
-  /* placeholders still to be filled in */
-  .pf-fill{
-    font-family:var(--sans);font-weight:600;font-size:0.94em;
-    color:#3d4413;background:rgba(216,242,75,0.55);
-    border-bottom:1px dashed rgba(61,68,19,0.5);
-    padding:1px 5px;border-radius:3px;
-  }
-
-  .pf-note{
-    margin:20px 0 0;padding:14px 16px;
-    border:1px solid rgba(61,68,19,0.28);border-left-width:3px;
-    border-radius:8px;background:rgba(216,242,75,0.18);
-    font-size:14.5px;line-height:1.6;color:#3d4413;
-  }
-  .pf-note b{display:block;font-size:11.5px;font-weight:700;letter-spacing:0.14em;
-    text-transform:uppercase;margin-bottom:5px;}
-
-  /* ---------- tear line + button ---------- */
-  .pf-tear{
-    flex:none;height:0;border-top:1px dashed rgba(15,24,48,0.28);
-  }
-  .pf-sheet-foot{
-    flex:none;display:flex;gap:10px;
-    padding:var(--foot-top) clamp(18px,4vw,28px) var(--foot-bottom);
-  }
-  .pf-cta{
-    display:block;flex:1 1 0;min-width:0;
-    padding:16px 20px;
-    background:var(--ink);color:var(--sheet);
-    font-family:var(--serif);font-weight:400;font-size:18px;line-height:1;
-    text-align:center;text-decoration:none;
-    transition:background-color .22s ease,transform .22s cubic-bezier(.22,1,.36,1);
-  }
-  .pf-cta:hover{background:#101a38;color:var(--sheet);transform:translateY(-1px);}
-  .pf-cta:active{transform:translateY(0);}
-
-  @media (max-width:520px){
-    body{font-size:16px;}
-    .pf-screen{padding:0;}
-    .pf-sheet{width:100%;height:100%;max-height:100%;}
-    .pf-lede{font-size:16.5px;}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
-  }
-
-  @media print{
-    .pf-bg,.skip,.pf-cta,.pf-foot{display:none !important;}
-    body{background:#fff;color:#1a1a1a;font-size:11pt;line-height:1.5;}
-    body{height:auto;display:block;overflow:visible;padding:0;}
-    .pf-sheet{width:auto;height:auto;display:block;box-shadow:none;
-      -webkit-mask-image:none;mask-image:none;}
-    main{overflow:visible;}
-    a{color:#000;}
-    .pf-fill{background:#fff;color:#000;border-bottom:1px dashed #000;}
-    h2{page-break-after:avoid;}
-  }
-  /* ---------- reveal ----------
-     The card used to paint on the bare ink background and the painting
-     arrived after it, which read as the ticket flashing up on black. So the
-     card is held back until the image is decoded, then the two land in
-     order: picture first, ticket a beat later.
-
-     `pf-boot` is set by an inline script in the head, so the hidden state
-     only ever exists when the script that clears it is running. With no JS
-     nothing is hidden and the page just renders. */
-  .pf-boot .pf-bg,
-  .pf-boot .pf-sheet{opacity:0;}
-  .pf-go .pf-bg  {animation:pfBgIn   760ms cubic-bezier(.22,1,.36,1) both;}
-  .pf-go .pf-sheet{animation:pfCardIn 620ms cubic-bezier(.22,1,.36,1) 220ms both;}
-  /* The resting state, forced on a timer whatever happened to the animation.
-     A starved environment never runs the keyframes, so without this the card
-     would sit at opacity 0 forever. */
-  .pf-done .pf-bg,
-  .pf-done .pf-sheet{animation:none;opacity:1;transform:none;}
-
-  @keyframes pfBgIn{
-    from{opacity:0;transform:scale(1.035);}
-    to  {opacity:1;transform:scale(1);}
-  }
-  @keyframes pfCardIn{
-    from{opacity:0;transform:translateY(16px) scale(.972);}
-    to  {opacity:1;transform:translateY(0) scale(1);}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .pf-boot .pf-bg,.pf-boot .pf-sheet,
-    .pf-go .pf-bg,.pf-go .pf-sheet{
-      opacity:1 !important;animation:none !important;transform:none !important;
-    }
-  }
-  /* second CTA: same block, inverted */
-  .pf-cta--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);}
-  .pf-cta--ghost:hover{background:rgba(15,24,48,0.06);color:var(--ink);}
-  .pf-cta{white-space:nowrap;font-size:17px;padding:16px 8px;}
-  @media (max-width:420px){ .pf-cta{font-size:14px;padding:17px 4px;} .pf-sheet-foot{gap:8px;} }
-
-  /* founders */
-  .pf-team{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:14px;}
-  .pf-team li{display:flex;align-items:center;gap:14px;}
-  .pf-team img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;background:rgba(15,24,48,0.08);}
-  .pf-team b{display:block;font-weight:600;font-size:15.5px;color:var(--head);}
-  .pf-team span{display:block;font-size:15.5px;line-height:1.5;}
-
-  /* ---------- tidier sections ---------- */
-  main{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);}
-  .pf-sheet-top{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);}
-  .pf-sheet-foot{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);}
-  .pf-lede{font-family:var(--serif);font-size:clamp(19px,2.4vw,22px);line-height:1.45;letter-spacing:-0.01em;}
-  .pf-sec{margin-top:30px;padding-top:26px;border-top:1px solid var(--rule);}
-  .pf-sec h2{margin:0;}
-  .pf-kicker{display:block;margin:0 0 6px;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6b7387;}
-  .pf-sec > p{margin-top:12px;}
-  ol.pf-steps{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px;counter-reset:s;}
-  ol.pf-steps li{margin:0;display:grid;grid-template-columns:30px 1fr;gap:4px 14px;padding:14px 16px;border:1px solid var(--rule);border-radius:12px;background:rgba(15,24,48,0.02);counter-increment:s;}
-  ol.pf-steps li::before{content:counter(s);grid-row:span 2;width:30px;height:30px;border-radius:50%;background:var(--neon);color:#0d1f00;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;}
-  ol.pf-steps span{margin-top:0;}
-  .pf-pairs{display:grid;gap:14px;}
-  .pf-pairs li{margin:0;}
-  .pf-team{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;}
-  .pf-team li{padding:14px;border:1px solid var(--rule);border-radius:12px;background:rgba(15,24,48,0.02);align-items:flex-start;}
-  .pf-team img{width:56px;height:56px;}
-
-  /* the homepage footer, below the first screen */
-  .pf-foot .pf-hiker{width:0.87em;height:1.6em;margin-block:-0.3em;}
-  .pf-foot h2{margin:0;}
-  .pf-foot a{text-decoration:none;}
-</style>
+<link rel="stylesheet" href="/card.css">
 </head>
 <body>
+<a class="cd-skip" href="#main">Skip to content</a>
+<div class="cd-bg" aria-hidden="true"><img src="/uploads/blur.webp" srcset="/uploads/blur-960.webp 960w, /uploads/blur.webp 1920w" sizes="100vw" alt="" width="1920" height="1082" fetchpriority="high" decoding="async"></div>
 
-<div class="pf-screen">
-<div class="pf-bg" aria-hidden="true">
-  <img src="uploads/summit-painting-3.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
-</div>
-
-<a class="skip" href="#main">Skip to content</a>
-
-<div class="pf-sheet">
-
-  <div class="pf-sheet-top">
-    <a class="pf-arrow" href="/" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
-    <h1 class="pf-sheet-title">About</h1>
-    <a class="pf-mark" href="/" aria-label="Priceflag home"><span class="pf-hiker" aria-hidden="true"></span></a>
+<main class="cd-card" id="main">
+  <div class="cd-head">
+    <a class="cd-back" href="/" aria-label="Back to priceflag.org"><span aria-hidden="true">&larr;</span></a>
+    <h1>About</h1>
   </div>
+  <div class="cd-body">
+    <p class="cd-lede">Pricing, minus the guesswork. See what a price change will probably do before it goes live, then roll it out slowly so a bad call stays small.</p>
 
-  <main id="main">
-    <p class="pf-lede">Pricing, minus the guesswork. See what a price change will probably do before it goes live, then roll it out slowly so a bad call stays small.</p>
-
-    <section class="pf-sec">
-      <span class="pf-kicker">Why</span>
-      <h2>We've been there.</h2>
+    <section class="cd-sec" aria-labelledby="why-h">
+      <span class="cd-kicker">Why</span>
+      <h2 id="why-h">We've been there.</h2>
       <p>We ran our own online stores, and so did a bunch of our friends from high school. Every time we had to pick a price, we basically guessed and hoped. Priceflag is the tool we wished we'd had.</p>
     </section>
 
-    <section class="pf-sec">
-      <span class="pf-kicker">What we're building</span>
-      <h2>Three things, done well.</h2>
-      <ol class="pf-steps">
+    <section class="cd-sec" aria-labelledby="build-h">
+      <span class="cd-kicker">What we're building</span>
+      <h2 id="build-h">Three things, done well.</h2>
+      <ol class="cd-steps">
         <li><b>A forecast first.</b><span>Pick some products and a new price. You get a range of what could happen to orders and profit, plus your breakeven, from your own order history. Not one magic number.</span></li>
         <li><b>A slow rollout.</b><span>The new price goes live on a few products, then more, then all of them.</span></li>
         <li><b>A guardrail that asks you.</b><span>If orders drop below the forecast, we pause the rollout, let you know, and suggest what to do next. You make the call.</span></li>
       </ol>
     </section>
 
-    <section class="pf-sec">
-      <span class="pf-kicker">How we build</span>
-      <h2>A few rules we stick to.</h2>
-      <ul class="pf-pairs">
+    <section class="cd-sec" aria-labelledby="rules-h">
+      <span class="cd-kicker">How we build</span>
+      <h2 id="rules-h">A few rules we stick to.</h2>
+      <ul class="cd-rules">
         <li><b>Same price for everyone.</b><span>Two shoppers, same product, same day, same price. Always.</span></li>
         <li><b>Ranges over promises.</b><span>A single number hides how wrong it could be. We show you the spread so you can plan for it.</span></li>
         <li><b>You're in charge.</b><span>We pause and suggest. Nothing big happens to your store without you saying so.</span></li>
       </ul>
     </section>
 
-    <section class="pf-sec">
-      <span class="pf-kicker">The team</span>
-      <h2>Who's behind it.</h2>
-      <ul class="pf-team">
-        <li><img src="uploads/founder-nithin.webp" alt="Nithin" width="56" height="56" loading="lazy" decoding="async"><div><b>Nithin</b><span>Co-founder. Builds the product, from the forecasts to the dashboard.</span></div></li>
-        <li><img src="uploads/founder-kabir.webp" alt="Kabir" width="56" height="56" loading="lazy" decoding="async"><div><b>Kabir</b><span>Co-founder. Talks pricing with merchants all day.</span></div></li>
-      </ul>
-    </section>
-
-  </main>
-
-  <div class="pf-tear" aria-hidden="true"></div>
-  <div class="pf-sheet-foot">
-    <a class="pf-cta" href="https://dashboard.priceflag.org/signin" rel="noopener">Get a free price review</a>
-    <a class="pf-cta pf-cta--ghost" href="/contact">Talk to us</a>
-  </div>
-
-</div>
-</div>
-
-  <footer class="pf-foot">
-  <img class="pf-foot-art" src="uploads/summit-lime.webp" alt="" width="1855" height="848" loading="lazy" decoding="async">
-  <div class="pf-foot-inner">
-
-    <div class="pf-foot-top">
-      <div class="pf-foot-lead">
-        <a class="pf-foot-mark" href="/"><span class="pf-hiker" aria-hidden="true"></span>Priceflag</a>
-
-        <h2 class="pf-foot-head">A tool for <span class="pf-foot-shop"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M388.3 104.1a4.66 4.66 0 0 0-4.4-4c-2 0-37.2-.8-37.2-.8s-21.6-20.8-29.6-28.8V503.2L442.8 472S388.7 106.5 388.3 104.1zM288.7 70.5a116.67 116.67 0 0 0-7.2-17.6C271 32.9 255.4 22 237 22a15 15 0 0 0-4 .4c-.4-.8-1.2-1.2-1.6-2C223.4 11.6 213 7.6 200.6 8c-24 .8-48 18-67.3 48.8-13.6 21.6-24 48.8-26.8 70.1-27.6 8.4-46.8 14.4-47.2 14.8-14 4.4-14.4 4.8-16 18C42.1 169.6 5 456.8 5 456.8L307.9 509V65.7a41.66 41.66 0 0 0-4.4.4S297.9 67.7 288.7 70.5zM233.4 87.7c-16 4.8-33.6 10.4-50.8 15.6 4.8-18.8 14.4-37.6 25.6-50 4.4-4.4 10.4-9.6 17.2-12.8C232.2 54.9 233.8 74.1 233.4 87.7zM200.6 24.4A27.48 27.48 0 0 1 215 28c-6.4 3.2-12.8 8.4-18.8 14.4-15.2 16.4-26.8 42-31.6 66.5-14.4 4.4-28.8 8.8-42 12.8C131.3 83.3 163.8 25.2 200.6 24.4zM154.2 244.6c1.6 25.6 69.3 31.2 73.3 91.7 2.8 47.6-25.2 80.1-65.7 82.5-48.8 3.2-75.7-25.6-75.7-25.6l10.4-44s26.8 20.4 48.4 18.8c14-.8 19.2-12.4 18.8-20.4-2-33.6-57.2-31.6-60.9-86.9-3.2-46.4 27.2-93.3 94.5-97.7 26-1.6 39.2 4.8 39.2 4.8L221.4 225.4s-17.2-8-37.6-6.4C154.2 221 153.8 239.8 154.2 244.6zM249.4 82.9c0-12.4-1.6-30-7.6-44.8 19.6 3.6 29.2 25.6 33.2 38.8C267.4 79.3 258.6 81.7 249.4 82.9z"></path></svg>Shopify</span> &amp; more</h2>
-
-        <a class="pf-btn pf-btn--dark pf-foot-cta" href="https://dashboard.priceflag.org/signin" rel="noopener">
-          Sign up
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4.5 12h13.2M12.6 6.2l5.8 5.8-5.8 5.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </a>
+    <section class="cd-sec" aria-labelledby="team-h">
+      <span class="cd-kicker">The team</span>
+      <h2 id="team-h">Who's behind it.</h2>
+      <div class="cd-people">
+        <article class="cd-person"><div class="cd-who"><img src="/uploads/founder-nithin.webp" alt="Nithin" width="48" height="48" loading="lazy" decoding="async"><div><span class="cd-name">Nithin</span><span class="cd-role">Co-founder</span></div></div><p style="margin-bottom:0">Builds the product, from the forecasts to the dashboard.</p></article>
+        <article class="cd-person"><div class="cd-who"><img src="/uploads/founder-kabir.webp" alt="Kabir" width="48" height="48" loading="lazy" decoding="async"><div><span class="cd-name">Kabir</span><span class="cd-role">Co-founder</span></div></div><p style="margin-bottom:0">Talks pricing with merchants all day.</p></article>
       </div>
-
-      <nav class="pf-foot-nav" aria-label="Footer">
-        <ul class="pf-foot-col">
-          <li><a class="pf-foot-link" href="/">Home</a></li>
-          <li><a class="pf-foot-link" href="/about">About</a></li>
-                    <li><a class="pf-foot-link" href="/#faq">FAQ</a></li>
-          <li><a class="pf-foot-link" href="/contact">Contact</a></li>
-          <li><a class="pf-foot-link" href="/legal">Legal</a></li>
-        </ul>
-        <ul class="pf-foot-col">
-          <li><a class="pf-foot-link" href="https://x.com/Priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>Twitter / X</a></li>
-          <li><a class="pf-foot-link" href="https://www.linkedin.com/company/priceflag/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>LinkedIn</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <svg class="pf-foot-word" viewBox="30 -804 3896 1061" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
-      <text x="0" y="0" textLength="3931.02" lengthAdjust="spacingAndGlyphs">Priceflag</text>
-    </svg>
-
-    <div class="pf-foot-bar">
-      <span>Built by Humans in San Francisco&#44; CA</span>
-      <span>&copy; 2026 Priceflag</span>
-    </div>
-
+    </section>
   </div>
-</footer>
-
-<script>
-/* Reveal, ordered: the painting is on screen before the ticket arrives.
-   Three independent paths fire the same once-only go(): decode() when the
-   browser can tell us the image is actually paintable, load/error as the
-   plain fallback, and a timer so a slow or dead image can never hold the
-   page hostage. go() then hands over to the resting class on another timer,
-   because CSS animations do not run in every environment this ships to but
-   setTimeout does. */
-(function () {
-  var root = document.documentElement;
-  var img  = document.querySelector('.pf-bg img');
-  var fired = false, landed = false;
-
-  function land() {
-    if (landed) return; landed = true;
-    root.className = (root.className.replace(/\bpf-go\b/, '') + ' pf-done').trim();
-  }
-  function go() {
-    if (fired) return; fired = true;
-    root.className = (root.className.replace(/\bpf-boot\b/, '') + ' pf-go').trim();
-    setTimeout(land, 1200);
-  }
-
-  if (!img) { go(); }
-  else {
-    if (img.complete && img.naturalWidth) { go(); }
-    img.addEventListener('load', go, { once: true });
-    img.addEventListener('error', go, { once: true });
-    if (img.decode) { img.decode().then(go)['catch'](go); }
-  }
-  setTimeout(go, 1600);        // never block on a slow image
-  setTimeout(land, 3200);      // and never leave the card hidden
-})();
-</script>
-
+  <div class="cd-foot">
+    <a class="cd-pill cd-pill--dark" href="https://dashboard.priceflag.org/signin" rel="noopener">Get a free price review</a>
+    <a class="cd-pill" href="/contact">Talk to us</a>
+  </div>
+</main>
 </body>
 </html>

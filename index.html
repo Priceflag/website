@@ -486,6 +486,7 @@
     gap:10px clamp(20px,3vw,40px);flex-wrap:wrap;
     font-size:13.5px;line-height:1.4;letter-spacing:-0.005em;color:var(--pf-ink-soft);
   }
+  .pf-foot-bar .pf-badge img{height:24px;}
   .pf-foot-legal{display:flex;gap:clamp(18px,2.4vw,34px);flex-wrap:wrap;}
   .pf-foot-legal a{color:var(--pf-ink-soft);}
   .pf-foot-legal a:hover,.pf-foot-legal a:focus{color:#0d1f00;}
@@ -736,8 +737,15 @@
 
   /* ---------- hero bottom row ---------- */
   .pf-hero-foot{
-    display:flex;align-items:flex-end;width:100%;color:#f3ecde;
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:14px 24px;flex-wrap:wrap;width:100%;color:#f3ecde;
   }
+  /* Inception badge: sized to the "Works with" line, never louder than it. */
+  .pf-badge{display:inline-flex;flex:none;opacity:.82;transition:opacity .2s;}
+  .pf-badge:hover,.pf-badge:focus-visible{opacity:1;}
+  .pf-badge img{display:block;width:auto;height:28px;}
+  .pf-hero-foot .pf-badge{filter:drop-shadow(0 1px 8px rgba(3,8,24,0.7));}
+  .pf-badge:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:3px;}
   .pf-works{
     display:flex;align-items:center;gap:16px;font-size:clamp(14px,1.2vw,17px);
     text-shadow:0 1px 12px rgba(3,8,24,0.85),0 1px 3px rgba(3,8,24,0.9);
@@ -755,6 +763,7 @@
     .pf-sub{font-size:16px;text-shadow:0 1px 4px rgba(3,8,24,0.95),0 1px 16px rgba(3,8,24,0.8)!important;}
     .pf-hero-foot{margin-top:auto;}
     .pf-works{font-size:14px;}
+    .pf-badge img{height:24px;}
   }
   @media (max-width:767px) and (max-height:700px){
     .pf-sub{display:none;}
@@ -832,6 +841,7 @@
           </div>
           <div class="pf-hero-foot">
             <div class="pf-works"><span class="pf-works-label">Works with</span><span ref="{{ heroLogosRef }}" class="pf-hero-logos" data-pf-section="hero-logos"></span><span>Shopify &amp; more</span></div>
+            <a class="pf-badge" href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer"><img src="uploads/nvidia-inception-light.png" alt="Member of NVIDIA Inception Program" width="934" height="330" decoding="async"></a>
           </div>
         </div>
       </div>
@@ -886,6 +896,7 @@
 
     <div class="pf-foot-bar">
       <span>Built by Humans in San Francisco&#44; CA</span>
+      <a class="pf-badge" href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener noreferrer"><img src="uploads/nvidia-inception-dark.png" alt="Member of NVIDIA Inception Program" width="934" height="330" loading="lazy" decoding="async"></a>
       <span>&copy; 2026 Priceflag</span>
     </div>
 
